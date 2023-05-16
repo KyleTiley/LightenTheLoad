@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b6dcuilyu25t0"
+path="res://.godot/imported/house_type08.obj-74c578f263c4d932e4cbdfa12393c940.mesh"
+
+[deps]
+
+files=["res://.godot/imported/house_type08.obj-74c578f263c4d932e4cbdfa12393c940.mesh"]
+
+source_file="res://Resources/Suburb OBJ format/house_type08.obj"
+dest_files=["res://.godot/imported/house_type08.obj-74c578f263c4d932e4cbdfa12393c940.mesh", "res://.godot/imported/house_type08.obj-74c578f263c4d932e4cbdfa12393c940.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
