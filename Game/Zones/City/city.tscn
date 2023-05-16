@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://cu2odsqj50net"]
+[gd_scene load_steps=2 format=3 uid="uid://cu2odsqj50net"]
+
+[ext_resource type="ArrayMesh" uid="uid://vexcqjiowmaq" path="res://Resources/City OBJ format/low_wideA.obj" id="1_mhkdf"]
 
 [node name="City" type="Node3D"]
+
+[node name="LowWideA" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_mhkdf")
