@@ -1,2 +1,4 @@
 res://Game/game.tscn
 res://Game/Zones/City/city.tscn
+res://Game/Zones/City/city.gd
+res://Game/Zones/zone.gd

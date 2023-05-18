@@ -1,8 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://cu2odsqj50net"]
+[gd_scene load_steps=4 format=3 uid="uid://cu2odsqj50net"]
 
 [ext_resource type="ArrayMesh" uid="uid://vexcqjiowmaq" path="res://Resources/City OBJ format/low_wideA.obj" id="1_mhkdf"]
+[ext_resource type="Script" path="res://Game/Zones/City/city.gd" id="1_qhuk1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qe6ai"]
+size = Vector3(1, 1.12094, 0.504402)
 
 [node name="City" type="Node3D"]
+script = ExtResource("1_qhuk1")
 
 [node name="LowWideA" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_mhkdf")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.550649, 0)
+shape = SubResource("BoxShape3D_qe6ai")
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]

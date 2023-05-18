@@ -1,2 +1,6 @@
-Area3D
+ColorRect
+Control
+Node
 CollisionShape3D
+Area3D
+Camera3D
