@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://nr2piybbnnrq"]
+
+[ext_resource type="Script" path="res://Game/Zones/Suburb/suburb.gd" id="1_hm5ky"]
+[ext_resource type="ArrayMesh" uid="uid://c6c1u77aiu1uj" path="res://Resources/Suburb OBJ format/house_type16.obj" id="2_fjty0"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2so8e"]
+size = Vector3(0.817449, 1.13741, 0.902975)
+
+[node name="Suburb" type="Node3D"]
+script = ExtResource("1_hm5ky")
+
+[node name="HouseType16" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_fjty0")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.566051, 0)
+shape = SubResource("BoxShape3D_2so8e")
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]

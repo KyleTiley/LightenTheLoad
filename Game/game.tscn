@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnr6wxp56hiqv"]
+[gd_scene load_steps=6 format=3 uid="uid://cnr6wxp56hiqv"]
 
 [ext_resource type="PackedScene" uid="uid://cu2odsqj50net" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
+[ext_resource type="PackedScene" uid="uid://nr2piybbnnrq" path="res://Game/Zones/Suburb/suburb.tscn" id="2_eiul1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6nbfv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -27,10 +28,13 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="City" parent="GameWorld" instance=ExtResource("1_hjasl")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 44.8635, -5.10658, 7.79111)
 
 [node name="Camera3D" type="Camera3D" parent="GameWorld"]
-transform = Transform3D(-0.998187, -0.0155796, -0.0581439, -0.0278825, 0.975722, 0.21723, 0.0533479, 0.218457, -0.974387, 0, 120, -244)
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 75, 100)
+
+[node name="Suburb" parent="GameWorld" instance=ExtResource("2_eiul1")]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -64, 0, 0)
 
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3
