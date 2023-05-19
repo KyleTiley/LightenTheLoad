@@ -1,5 +1,8 @@
 res://Game/game.tscn
 res://Game/Zones/City/city.tscn
 res://Game/Zones/Suburb/suburb.tscn
-res://Game/Zones/Suburb/suburb.gd
+res://Game/Zones/Township/township.tscn
+res://Game/Zones/City/city.gd
 res://Game/Zones/zone.gd
+res://Game/game.gd
+res://Game/GameUI/GameUI.gd

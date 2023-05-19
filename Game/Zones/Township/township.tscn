@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c88hw4ownnv02"]
+
+[ext_resource type="ArrayMesh" uid="uid://bb2u4yrjy7qk1" path="res://Resources/Urban OBJ format/wallA.obj" id="1_1jmmu"]
+[ext_resource type="Script" path="res://Game/Zones/Township/township.gd" id="1_r55h5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8obki"]
+size = Vector3(1.01435, 1.0103, 1.01586)
+
+[node name="Township" type="Node3D"]
+script = ExtResource("1_r55h5")
+
+[node name="WallA" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_1jmmu")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.498773, 0)
+shape = SubResource("BoxShape3D_8obki")
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]
