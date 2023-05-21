@@ -67,5 +67,3 @@ offset_bottom = 100.0
 text = "Zone: 
 Elec Used: 
 Happiness: "
-
-[connection signal="displayInfo" from="GameWorld/Zones" to="GameUI" method="_on_zones_display_info"]

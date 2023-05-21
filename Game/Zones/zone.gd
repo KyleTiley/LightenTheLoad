@@ -14,7 +14,6 @@ signal displayInfo
 
 #Game Functions
 func _ready():
-	displayInfo.emit()
 	pass
 
 func _process(delta):
@@ -33,3 +32,4 @@ func _on_area_3d_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == 1:
 			print(name + " has used " + str(electricityUsed) + " electricity")
+			Zone.displayInfo.emit()
