@@ -30,6 +30,7 @@ func IncreaseHappiness():
 #Click methods
 func _on_area_3d_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
+		# if the event is left mouse click
 		if event.pressed and event.button_index == 1:
-			print(name + " has used " + str(electricityUsed) + " electricity")
-			Zone.displayInfo.emit()
+			# have to use Zone declaration here otherwise subclasses cannot emit signal for some dumb fucking reason
+			Zone.displayInfo.emit(name, electricityUsed)
