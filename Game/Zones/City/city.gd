@@ -1,4 +1,5 @@
-extends "res://Game/Zones/zone.gd"
+extends Zone
 
 func _ready():
 	electricityUsage = 50
+	displayInfo.emit()

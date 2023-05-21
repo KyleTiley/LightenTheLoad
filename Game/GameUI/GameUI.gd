@@ -1,4 +1,4 @@
 extends Control
 
-func _on_zones_text_changer_signal():
-	print("YES")
+func _on_zones_display_info():
+	print("DONE")

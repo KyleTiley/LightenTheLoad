@@ -10,11 +10,12 @@ var maxHappiness
 var currentHappiness
 
 #Signals
-signal text_changer_signal
+signal displayInfo
 
 #Game Functions
 func _ready():
-	print("START")
+	displayInfo.emit()
+	pass
 
 func _process(delta):
 	UseElectricity()
@@ -31,5 +32,4 @@ func IncreaseHappiness():
 func _on_area_3d_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == 1:
-			print("hdhjfjdf")
-			emit_signal("text_changer_signal")
+			print(name + " has used " + str(electricityUsed) + " electricity")

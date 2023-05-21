@@ -39,10 +39,10 @@ transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 75, 100
 script = ExtResource("1_wd5ph")
 
 [node name="City" parent="GameWorld/Zones" instance=ExtResource("1_hjasl")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 44.8635, -5.10658, 7.79111)
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 60.0262, -5.10658, -42.2593)
 
 [node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("2_eiul1")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -64, 0, 0)
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -82.4596, 0, -33.136)
 
 [node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_mwjgk")]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -12.0421, 0, -94.8441)
@@ -68,4 +68,4 @@ text = "Zone:
 Elec Used: 
 Happiness: "
 
-[connection signal="text_changer_signal" from="GameWorld/Zones" to="GameUI" method="_on_zones_text_changer_signal"]
+[connection signal="displayInfo" from="GameWorld/Zones" to="GameUI" method="_on_zones_display_info"]
