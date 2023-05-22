@@ -1,36 +1,52 @@
 extends Node
 
-#Electricity Variables
+# General Variables
+var timerCounter = 0
+
+# Electricity Variables
 var isUsingElectricity = true
 var electricityUsage = 0
 var electricityUsed = 0
 
-#Happiness Variables
+# Happiness Variables
+var isHappy = true
 var maxHappiness
-var currentHappiness
+var currentHappiness = 0
 
-#Signals
+# Signals
+# Sends data to UI to display
 signal displayInfo
 
-#Game Functions
+# Game Functions
 func _ready():
-	pass
+	print(name + "s loaded")
+
+func _physics_process(delta):
+	timerCounter += delta
 
 func _process(delta):
-	UseElectricity()
+	if timerCounter > 10:
+		UseElectricity()
+		HappinessController()
+		timerCounter = 0
 
-#Electricity Functions
+# Electricity Functions
 func UseElectricity():
-	electricityUsed += electricityUsage
+	if isUsingElectricity:
+		electricityUsed += electricityUsage
 
-#Happiness Functions
-func IncreaseHappiness():
+# Happiness Functions
+func HappinessController():
+	if isHappy:
+		currentHappiness += 10
+	else:
+		currentHappiness -= 10
 	currentHappiness = clamp(currentHappiness, 0, 100)
 
-#Click methods
+# Click methods
 func _on_area_3d_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
-		#If the event is left mouse click
+		# If the event is left mouse click
 		if event.pressed and event.button_index == 1:
-			#Have to use Zone declaration here otherwise subclasses cannot emit signal for some dumb fucking reason
-			Zone.displayInfo.emit(name, electricityUsed)
+			# Have to use Zone declaration here otherwise subclasses cannot emit signal for some dumb fucking reason
+			Zone.displayInfo.emit(name, electricityUsed, currentHappiness)

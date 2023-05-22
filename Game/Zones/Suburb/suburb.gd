@@ -1,5 +1,5 @@
 extends Zone
 
-#Declarations for Suburb
+# Declarations for Suburb
 func _ready():
 	electricityUsage = 20

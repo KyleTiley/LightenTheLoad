@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://cnr6wxp56hiqv"]
+[gd_scene load_steps=9 format=3 uid="uid://cnr6wxp56hiqv"]
 
 [ext_resource type="PackedScene" uid="uid://cu2odsqj50net" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
-[ext_resource type="Script" path="res://Game/Zones/zone.gd" id="1_wd5ph"]
 [ext_resource type="Script" path="res://Game/game.gd" id="1_wkqvr"]
 [ext_resource type="PackedScene" uid="uid://nr2piybbnnrq" path="res://Game/Zones/Suburb/suburb.tscn" id="2_eiul1"]
 [ext_resource type="PackedScene" uid="uid://c88hw4ownnv02" path="res://Game/Zones/Township/township.tscn" id="3_mwjgk"]
@@ -36,7 +35,6 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 75, 100)
 
 [node name="Zones" type="Node3D" parent="GameWorld"]
-script = ExtResource("1_wd5ph")
 
 [node name="City" parent="GameWorld/Zones" instance=ExtResource("1_hjasl")]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 60.0262, -5.10658, -42.2593)
@@ -49,6 +47,7 @@ transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -12.0421, 0, -94.8441)
 
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_right = -1920.0
