@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba72oii3uuvkd"]
+
+[ext_resource type="Script" path="res://Game/Zones/Stadium/Stadium.gd" id="1_f11wg"]
+[ext_resource type="ArrayMesh" uid="uid://d20gbj24jlwx4" path="res://Resources/City OBJ format/roof_corner.obj" id="2_2gfyu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vqrel"]
+size = Vector3(0.417881, 0.0823926, 0.446874)
+
+[node name="Stadium" type="Node3D"]
+script = ExtResource("1_f11wg")
+
+[node name="HouseType16" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_2gfyu")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00749785, 0.040726, 0)
+shape = SubResource("BoxShape3D_vqrel")
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]

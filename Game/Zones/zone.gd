@@ -1,8 +1,7 @@
 extends Node
 
-# General Variables
+# VARIABLES
 var timerCounter = 0
-var selectedZone = "none"
 
 # Electricity Variables
 var isUsingElectricity = true
@@ -15,10 +14,10 @@ var isHappy = true
 var maxHappiness
 var currentHappiness = 50	# Start at the middle happy point
 
-# Signals
-# Sends data to UI to display
-signal displayInfo
+# SIGNALS
+signal ZoneClicked
 
+# FUNCTIONS
 # Game Functions
 func _ready():
 	print(name + "s loaded")
@@ -26,7 +25,7 @@ func _ready():
 func _physics_process(delta):
 	timerCounter += delta
 
-func _process(delta):
+func _process(_delta):
 	# The game updates parameters every second
 	if timerCounter > 1:
 		UseElectricity()
@@ -52,11 +51,9 @@ func HappinessController():
 	if currentHappiness <= 0:
 		print("GAME OVER")
 
-# Click methods
-func _on_area_3d_input_event(camera, event, position, normal, shape_idx):
+# Display Functions
+func _on_area_3d_input_event(_camera, event, _position, _normal, _shape_idx):
 	if event is InputEventMouseButton:
 		# If the event is left mouse click
 		if event.pressed and event.button_index == 1:
-			# Have to use Zone declaration here otherwise subclasses cannot emit signal for some dumb fucking reason
-			selectedZone = name
-			Zone.displayInfo.emit(name, electricityUsed, currentHappiness)
+			Zone.ZoneClicked.emit(name)

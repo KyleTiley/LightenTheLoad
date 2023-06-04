@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cnr6wxp56hiqv"]
+[gd_scene load_steps=10 format=3 uid="uid://cnr6wxp56hiqv"]
 
 [ext_resource type="PackedScene" uid="uid://cu2odsqj50net" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
 [ext_resource type="Script" path="res://Game/game.gd" id="1_wkqvr"]
 [ext_resource type="PackedScene" uid="uid://nr2piybbnnrq" path="res://Game/Zones/Suburb/suburb.tscn" id="2_eiul1"]
 [ext_resource type="PackedScene" uid="uid://c88hw4ownnv02" path="res://Game/Zones/Township/township.tscn" id="3_mwjgk"]
+[ext_resource type="PackedScene" uid="uid://ba72oii3uuvkd" path="res://Game/Zones/Stadium/stadium.tscn" id="5_2j06i"]
 [ext_resource type="Script" path="res://Game/GameUI/GameUI.gd" id="6_huegx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6nbfv"]
@@ -45,6 +46,9 @@ transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -82.4596, 0, -33.136)
 [node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_mwjgk")]
 transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -12.0421, 0, -94.8441)
 
+[node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("5_2j06i")]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3
 anchor_top = 0.667
@@ -56,10 +60,12 @@ script = ExtResource("6_huegx")
 
 [node name="HUD" type="Control" parent="GameUI"]
 layout_mode = 1
+anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_top = -360.0
 offset_right = 360.0
+grow_vertical = 0
 
 [node name="ColorRect" type="ColorRect" parent="GameUI/HUD"]
 layout_mode = 1
@@ -72,6 +78,7 @@ grow_vertical = 2
 
 [node name="Info" type="Control" parent="GameUI"]
 layout_mode = 1
+anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -99,5 +106,5 @@ offset_bottom = 0.00012207
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
-text = "Zone has used 0 electricity
-and is at 50 Happiness"
+
+[connection signal="displayInfo" from="." to="GameUI" method="_on_game_display_info"]
