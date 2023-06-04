@@ -1,8 +1,9 @@
+Control
+Container
 TextEdit
 Node3D
 RichTextLabel
 ColorRect
-Control
 Node
 CollisionShape3D
 Area3D

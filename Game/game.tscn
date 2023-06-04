@@ -47,22 +47,57 @@ transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -12.0421, 0, -94.8441)
 
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3
+anchor_top = 0.667
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.360046
+grow_vertical = 0
+script = ExtResource("6_huegx")
+
+[node name="HUD" type="Control" parent="GameUI"]
+layout_mode = 1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -360.0
+offset_right = 360.0
+
+[node name="ColorRect" type="ColorRect" parent="GameUI/HUD"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1920.0
-offset_bottom = -1080.0
-script = ExtResource("6_huegx")
+offset_bottom = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="GameUI"]
-layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 200.0
+[node name="Info" type="Control" parent="GameUI"]
+layout_mode = 1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1560.0
+offset_top = -270.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="TextEdit" type="TextEdit" parent="GameUI"]
-layout_mode = 0
-offset_right = 500.0
-offset_bottom = 200.0
-text = "Zone: 
-Elec Used: 
-Happiness: "
+[node name="ColorRect2" type="ColorRect" parent="GameUI/Info"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="GameUI/Info"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 6.10352e-05
+offset_bottom = 0.00012207
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "Zone has used 0 electricity
+and is at 50 Happiness"
