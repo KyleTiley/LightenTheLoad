@@ -29,7 +29,7 @@ script = ExtResource("1_wkqvr")
 environment = SubResource("Environment_qyedd")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="GameWorld"]
-transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0.880066, 0, 63.3678)
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="GameWorld"]
@@ -38,16 +38,16 @@ transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 
 [node name="Zones" type="Node3D" parent="GameWorld"]
 
 [node name="City" parent="GameWorld/Zones" instance=ExtResource("1_hjasl")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 114.893, 0, -204.373)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 115.773, 0, -141.005)
 
 [node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("2_eiul1")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -119.88, 1.52588e-05, -9.18774)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -64.3034, 1.52588e-05, 27.3272)
 
 [node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_mwjgk")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 111.33, -4.57764e-05, -16.8007)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 66.3578, -4.57764e-05, 23.1338)
 
 [node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("5_2j06i")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -113.488, 0, -207.122)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -112.608, 0, -143.754)
 
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3
