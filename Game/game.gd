@@ -30,7 +30,6 @@ func SelectZone(_name):
 			displayInfo.emit(selectedZone, Stadium.electricityUsed, Stadium.currentHappiness)
 
 func _on_game_ui_toggle_power():
-	print(selectedZone)
 	match selectedZone:
 		"City":
 			City.isUsingElectricity = !City.isUsingElectricity

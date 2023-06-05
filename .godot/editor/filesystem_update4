@@ -7,3 +7,5 @@ res://Menu/menu.tscn
 res://Game/Zones/zone.gd
 res://Menu/menu.gd
 res://Game/game.gd
+res://Game/GameUI/timer.gd
+res://Game/GameUI/Clock.gd

@@ -45,9 +45,9 @@ func UseElectricity():
 # Happiness Functions
 func HappinessController():
 	if isHappy:
-		currentHappiness += 10
+		currentHappiness += 1
 	else:
-		currentHappiness -= 10
+		currentHappiness -= 1
 	currentHappiness = clamp(currentHappiness, 0, 100)	# Keeps happiness between 0 and 100
 	# If a zone hits 0 happiness the game is over
 	if currentHappiness <= 0:
@@ -59,4 +59,3 @@ func _on_area_3d_input_event(_camera, event, _position, _normal, _shape_idx):
 		# If the event is left mouse click
 		if event.pressed and event.button_index == 1:
 			Zone.ZoneClicked.emit(name)
-			print(isUsingElectricity)

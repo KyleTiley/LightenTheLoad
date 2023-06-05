@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://e2iviql4xnt4"]
+[gd_scene load_steps=11 format=3 uid="uid://e2iviql4xnt4"]
 
 [ext_resource type="PackedScene" uid="uid://dq6gk82lhks61" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
 [ext_resource type="Script" path="res://Game/game.gd" id="1_wkqvr"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c88hw4ownnv02" path="res://Game/Zones/Township/township.tscn" id="3_mwjgk"]
 [ext_resource type="PackedScene" uid="uid://uywo76jqw6r3" path="res://Game/Zones/Stadium/stadium.tscn" id="5_2j06i"]
 [ext_resource type="Script" path="res://Game/GameUI/gameui.gd" id="6_da8r3"]
+[ext_resource type="Script" path="res://Game/GameUI/Clock.gd" id="7_dumu4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6nbfv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -51,12 +52,24 @@ transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -124.335, 0, -183.511)
 
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3
-anchor_top = 0.667
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -0.360046
 grow_vertical = 0
+mouse_filter = 1
 script = ExtResource("6_da8r3")
+
+[node name="Clock" type="Control" parent="GameUI"]
+layout_mode = 1
+script = ExtResource("7_dumu4")
+
+[node name="Label" type="Label" parent="GameUI/Clock"]
+layout_mode = 0
+offset_right = 159.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 50
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="HUD" type="Control" parent="GameUI"]
 layout_mode = 1
@@ -132,6 +145,9 @@ offset_right = -35.0
 offset_bottom = -35.0
 grow_horizontal = 0
 grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "ON/
+OFF"
 
 [connection signal="displayInfo" from="." to="GameUI" method="_on_game_display_info"]
 [connection signal="TogglePower" from="GameUI" to="." method="_on_game_ui_toggle_power"]

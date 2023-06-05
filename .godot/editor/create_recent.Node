@@ -1,9 +1,10 @@
-Button
-Control
-Container
-TextEdit
-Node3D
+Label
 RichTextLabel
+TextEdit
+Control
+Button
+Container
+Node3D
 ColorRect
 Node
 CollisionShape3D
