@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ci663lc606022"
+path="res://.godot/imported/sign_billboard.obj-278180b82ff01ba40bc7fb40ff4f2604.mesh"
+
+[deps]
+
+files=["res://.godot/imported/sign_billboard.obj-278180b82ff01ba40bc7fb40ff4f2604.mesh"]
+
+source_file="res://Resources/City OBJ format/sign_billboard.obj"
+dest_files=["res://.godot/imported/sign_billboard.obj-278180b82ff01ba40bc7fb40ff4f2604.mesh", "res://.godot/imported/sign_billboard.obj-278180b82ff01ba40bc7fb40ff4f2604.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

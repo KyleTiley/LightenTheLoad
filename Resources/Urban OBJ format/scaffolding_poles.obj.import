@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cblj266hoefc5"
+path="res://.godot/imported/scaffolding_poles.obj-cc5506589fe1da4d9bfb4d4f13f67ef3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/scaffolding_poles.obj-cc5506589fe1da4d9bfb4d4f13f67ef3.mesh"]
+
+source_file="res://Resources/Urban OBJ format/scaffolding_poles.obj"
+dest_files=["res://.godot/imported/scaffolding_poles.obj-cc5506589fe1da4d9bfb4d4f13f67ef3.mesh", "res://.godot/imported/scaffolding_poles.obj-cc5506589fe1da4d9bfb4d4f13f67ef3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

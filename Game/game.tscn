@@ -1,7 +1,110 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnr6wxp56hiqv"]
+[gd_scene load_steps=10 format=3 uid="uid://cnr6wxp56hiqv"]
 
-[ext_resource type="PackedScene" uid="uid://cu2odsqj50net" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
+[ext_resource type="PackedScene" uid="uid://dq6gk82lhks61" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
+[ext_resource type="Script" path="res://Game/game.gd" id="1_wkqvr"]
+[ext_resource type="PackedScene" uid="uid://b45fejmjvr6kp" path="res://Game/Zones/Suburb/suburb.tscn" id="2_eiul1"]
+[ext_resource type="PackedScene" uid="uid://c88hw4ownnv02" path="res://Game/Zones/Township/township.tscn" id="3_mwjgk"]
+[ext_resource type="PackedScene" uid="uid://ba72oii3uuvkd" path="res://Game/Zones/Stadium/stadium.tscn" id="5_2j06i"]
+[ext_resource type="Script" path="res://Game/GameUI/GameUI.gd" id="6_huegx"]
 
-[node name="Game" type="Node3D"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6nbfv"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[node name="City" parent="." instance=ExtResource("1_hjasl")]
+[sub_resource type="Sky" id="Sky_hwsu8"]
+sky_material = SubResource("ProceduralSkyMaterial_6nbfv")
+
+[sub_resource type="Environment" id="Environment_qyedd"]
+background_mode = 2
+sky = SubResource("Sky_hwsu8")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Game" type="Node"]
+script = ExtResource("1_wkqvr")
+
+[node name="GameWorld" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="GameWorld"]
+environment = SubResource("Environment_qyedd")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="GameWorld"]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0.880066, 0, 63.3678)
+shadow_enabled = true
+
+[node name="Camera3D" type="Camera3D" parent="GameWorld"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 100, 100)
+
+[node name="Zones" type="Node3D" parent="GameWorld"]
+
+[node name="City" parent="GameWorld/Zones" instance=ExtResource("1_hjasl")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 115.773, 0, -141.005)
+
+[node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("2_eiul1")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -64.3034, 1.52588e-05, 27.3272)
+
+[node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_mwjgk")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 66.3578, -4.57764e-05, 23.1338)
+
+[node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("5_2j06i")]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -112.608, 0, -143.754)
+
+[node name="GameUI" type="Control" parent="."]
+layout_mode = 3
+anchor_top = 0.667
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -0.360046
+grow_vertical = 0
+script = ExtResource("6_huegx")
+
+[node name="HUD" type="Control" parent="GameUI"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -360.0
+offset_right = 360.0
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="GameUI/HUD"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 6.10352e-05
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Info" type="Control" parent="GameUI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1560.0
+offset_top = -270.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect2" type="ColorRect" parent="GameUI/Info"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextEdit" type="TextEdit" parent="GameUI/Info"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 6.10352e-05
+offset_bottom = 0.00012207
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+
+[connection signal="displayInfo" from="." to="GameUI" method="_on_game_display_info"]

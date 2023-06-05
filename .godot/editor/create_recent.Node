@@ -1,2 +1,10 @@
-Area3D
+Control
+Container
+TextEdit
+Node3D
+RichTextLabel
+ColorRect
+Node
 CollisionShape3D
+Area3D
+Camera3D

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dquebeyw7yhuv"
+path="res://.godot/imported/roofMetal_poles.obj-681adebfd71143d037bbbe08e4600b30.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roofMetal_poles.obj-681adebfd71143d037bbbe08e4600b30.mesh"]
+
+source_file="res://Resources/Urban OBJ format/roofMetal_poles.obj"
+dest_files=["res://.godot/imported/roofMetal_poles.obj-681adebfd71143d037bbbe08e4600b30.mesh", "res://.godot/imported/roofMetal_poles.obj-681adebfd71143d037bbbe08e4600b30.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

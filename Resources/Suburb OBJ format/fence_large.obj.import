@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bne4ho0wk1hyy"
+path="res://.godot/imported/fence_large.obj-f9e25f7f8285eb6f1102314c25bc5cfb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/fence_large.obj-f9e25f7f8285eb6f1102314c25bc5cfb.mesh"]
+
+source_file="res://Resources/Suburb OBJ format/fence_large.obj"
+dest_files=["res://.godot/imported/fence_large.obj-f9e25f7f8285eb6f1102314c25bc5cfb.mesh", "res://.godot/imported/fence_large.obj-f9e25f7f8285eb6f1102314c25bc5cfb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

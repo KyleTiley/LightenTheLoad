@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://duei7lgeil8so"
+path="res://.godot/imported/roadAsphalt_side.obj-0d9bec6b0738d2f57b45eefa908c5c3d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/roadAsphalt_side.obj-0d9bec6b0738d2f57b45eefa908c5c3d.mesh"]
+
+source_file="res://Resources/Urban OBJ format/roadAsphalt_side.obj"
+dest_files=["res://.godot/imported/roadAsphalt_side.obj-0d9bec6b0738d2f57b45eefa908c5c3d.mesh", "res://.godot/imported/roadAsphalt_side.obj-0d9bec6b0738d2f57b45eefa908c5c3d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
