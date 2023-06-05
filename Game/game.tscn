@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://cnr6wxp56hiqv"]
 
-[ext_resource type="PackedScene" uid="uid://cu2odsqj50net" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
+[ext_resource type="PackedScene" uid="uid://dq6gk82lhks61" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
 [ext_resource type="Script" path="res://Game/game.gd" id="1_wkqvr"]
-[ext_resource type="PackedScene" uid="uid://nr2piybbnnrq" path="res://Game/Zones/Suburb/suburb.tscn" id="2_eiul1"]
+[ext_resource type="PackedScene" uid="uid://b45fejmjvr6kp" path="res://Game/Zones/Suburb/suburb.tscn" id="2_eiul1"]
 [ext_resource type="PackedScene" uid="uid://c88hw4ownnv02" path="res://Game/Zones/Township/township.tscn" id="3_mwjgk"]
 [ext_resource type="PackedScene" uid="uid://ba72oii3uuvkd" path="res://Game/Zones/Stadium/stadium.tscn" id="5_2j06i"]
 [ext_resource type="Script" path="res://Game/GameUI/GameUI.gd" id="6_huegx"]
@@ -33,21 +33,21 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="GameWorld"]
-transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 75, 100)
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 100, 100)
 
 [node name="Zones" type="Node3D" parent="GameWorld"]
 
 [node name="City" parent="GameWorld/Zones" instance=ExtResource("1_hjasl")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 60.0262, -5.10658, -42.2593)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 114.893, 0, -204.373)
 
 [node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("2_eiul1")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -82.4596, 0, -33.136)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -119.88, 1.52588e-05, -9.18774)
 
 [node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_mwjgk")]
-transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, -12.0421, 0, -94.8441)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 111.33, -4.57764e-05, -16.8007)
 
 [node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("5_2j06i")]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -113.488, 0, -207.122)
 
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3

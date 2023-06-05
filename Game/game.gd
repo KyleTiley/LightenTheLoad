@@ -15,6 +15,7 @@ func _ready():
 func _process(_delta):
 	SelectZone(selectedZone)
 
+# Emits display info based on the recently selected Zone
 func SelectZone(_name):
 	selectedZone = _name
 	match _name:
