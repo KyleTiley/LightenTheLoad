@@ -1,6 +1,5 @@
 extends Node
 
-
 # VARIABLES
 var selectedZone: String
 
@@ -11,14 +10,15 @@ signal displayInfo
 # FUNCTIONS
 func _ready():
 	Zone.ZoneClicked.connect(SelectZone)
-
+	GameUI.TogglePower.connect(_on_game_ui_toggle_power)
+	
 func _process(_delta):
 	SelectZone(selectedZone)
 
 # Emits display info based on the recently selected Zone
 func SelectZone(_name):
 	selectedZone = _name
-	match _name:
+	match selectedZone:
 		"City":
 			displayInfo.emit(selectedZone, City.electricityUsed, City.currentHappiness)
 		"Township":
@@ -27,3 +27,15 @@ func SelectZone(_name):
 			displayInfo.emit(selectedZone, Suburb.electricityUsed, Suburb.currentHappiness)
 		"Stadium":
 			displayInfo.emit(selectedZone, Stadium.electricityUsed, Stadium.currentHappiness)
+
+func _on_game_ui_toggle_power():
+	print(selectedZone)
+	match selectedZone:
+		"City":
+			City.isUsingElectricity = !City.isUsingElectricity
+		"Township":
+			Township.isUsingElectricity = !Township.isUsingElectricity
+		"Suburb":
+			Suburb.isUsingElectricity = !Suburb.isUsingElectricity
+		"Stadium":
+			Stadium.isUsingElectricity = !Stadium.isUsingElectricity

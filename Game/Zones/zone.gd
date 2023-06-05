@@ -35,6 +35,7 @@ func _process(_delta):
 # Electricity Functions
 func UseElectricity():
 	if isUsingElectricity:
+		isHappy = true
 		electricityUsed += electricityUsage
 		allocatedElectricity -= electricityUsage
 	else:
@@ -57,3 +58,4 @@ func _on_area_3d_input_event(_camera, event, _position, _normal, _shape_idx):
 		# If the event is left mouse click
 		if event.pressed and event.button_index == 1:
 			Zone.ZoneClicked.emit(name)
+			print(isUsingElectricity)

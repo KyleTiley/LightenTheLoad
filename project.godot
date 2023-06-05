@@ -22,6 +22,7 @@ City="*res://Game/Zones/City/city.gd"
 Suburb="*res://Game/Zones/Suburb/suburb.gd"
 Township="*res://Game/Zones/Township/township.gd"
 Stadium="*res://Game/Zones/Stadium/Stadium.gd"
+GameUI="*res://Game/GameUI/GameUI.gd"
 
 [display]
 

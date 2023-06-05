@@ -41,13 +41,13 @@ transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 115.773, 0, -141.005)
 
 [node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("2_eiul1")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -64.3034, 1.52588e-05, 27.3272)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -59.1885, 1.52588e-05, 7.95052)
 
 [node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_mwjgk")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 66.3578, -4.57764e-05, 23.1338)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 61.242, -4.57764e-05, 6.29522)
 
 [node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("5_2j06i")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -112.608, 0, -143.754)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -124.335, 0, -183.511)
 
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3
@@ -107,4 +107,32 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
 
+[node name="PowerButton" type="Control" parent="GameUI"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -270.0
+offset_top = -270.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="GameUI/PowerButton"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -235.0
+offset_top = -235.0
+offset_right = -35.0
+offset_bottom = -35.0
+grow_horizontal = 0
+grow_vertical = 0
+
 [connection signal="displayInfo" from="." to="GameUI" method="_on_game_display_info"]
+[connection signal="TogglePower" from="GameUI" to="." method="_on_game_ui_toggle_power"]
+[connection signal="pressed" from="GameUI/PowerButton/Button" to="GameUI" method="_on_button_pressed"]
