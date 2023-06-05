@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cnr6wxp56hiqv"]
+[gd_scene load_steps=10 format=3 uid="uid://e2iviql4xnt4"]
 
 [ext_resource type="PackedScene" uid="uid://dq6gk82lhks61" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
 [ext_resource type="Script" path="res://Game/game.gd" id="1_wkqvr"]
 [ext_resource type="PackedScene" uid="uid://b45fejmjvr6kp" path="res://Game/Zones/Suburb/suburb.tscn" id="2_eiul1"]
 [ext_resource type="PackedScene" uid="uid://c88hw4ownnv02" path="res://Game/Zones/Township/township.tscn" id="3_mwjgk"]
-[ext_resource type="PackedScene" uid="uid://ba72oii3uuvkd" path="res://Game/Zones/Stadium/stadium.tscn" id="5_2j06i"]
-[ext_resource type="Script" path="res://Game/GameUI/GameUI.gd" id="6_huegx"]
+[ext_resource type="PackedScene" uid="uid://uywo76jqw6r3" path="res://Game/Zones/Stadium/stadium.tscn" id="5_2j06i"]
+[ext_resource type="Script" path="res://Game/GameUI/gameui.gd" id="6_da8r3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6nbfv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -56,7 +56,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -0.360046
 grow_vertical = 0
-script = ExtResource("6_huegx")
+script = ExtResource("6_da8r3")
 
 [node name="HUD" type="Control" parent="GameUI"]
 layout_mode = 1

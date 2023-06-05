@@ -23,7 +23,8 @@ func _ready():
 	print(name + "s loaded")
 
 func _physics_process(delta):
-	timerCounter += delta
+	if(Game.gameHasStarted):
+		timerCounter += delta
 
 func _process(_delta):
 	# The game updates parameters every second

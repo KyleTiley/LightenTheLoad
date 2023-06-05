@@ -3,6 +3,7 @@ res://Game/Zones/Suburb/suburb.tscn
 res://Game/Zones/Township/township.tscn
 res://Game/Zones/Stadium/stadium.tscn
 res://Game/Zones/City/city.tscn
-res://Game/GameUI/GameUI.gd
-res://Game/game.gd
+res://Menu/menu.tscn
 res://Game/Zones/zone.gd
+res://Menu/menu.gd
+res://Game/game.gd

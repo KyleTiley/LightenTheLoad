@@ -1,6 +1,7 @@
 extends Node
 
 # VARIABLES
+var gameHasStarted = false
 var selectedZone: String
 
 # SIGNALS
