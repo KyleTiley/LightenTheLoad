@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://uywo76jqw6r3"]
+[gd_scene load_steps=4 format=3 uid="uid://ba72oii3uuvkd"]
 
 [ext_resource type="Script" path="res://Game/Zones/Stadium/stadium.gd" id="1_5iao8"]
 [ext_resource type="PackedScene" uid="uid://y18ljijkvgx4" path="res://Game/Zones/Stadium/Stadium.glb" id="2_0878n"]

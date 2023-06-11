@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://b45fejmjvr6kp"]
+[gd_scene load_steps=4 format=3 uid="uid://nr2piybbnnrq"]
 
 [ext_resource type="Script" path="res://Game/Zones/Suburb/suburb.gd" id="1_hm5ky"]
 [ext_resource type="PackedScene" uid="uid://b7c80unm1bcl6" path="res://Game/Zones/Suburb/Suburb.glb" id="2_g7184"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dq6gk82lhks61"]
+[gd_scene load_steps=4 format=3 uid="uid://cu2odsqj50net"]
 
 [ext_resource type="Script" path="res://Game/Zones/City/city.gd" id="1_qhuk1"]
 [ext_resource type="PackedScene" uid="uid://jgi2ow8r74od" path="res://Game/Zones/City/City.glb" id="2_rr4k5"]

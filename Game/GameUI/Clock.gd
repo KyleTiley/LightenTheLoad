@@ -6,14 +6,14 @@ extends Control
 # VARIABLES
 var clockCounter = 0
 var clockMinutes = 0
-var clockHours = 0
+# This determines the starting hour of the player's shift
+var clockHours = 8
 
 # SIGNALS
 #signal DayOver
 
 # FUNCTIONS
 func _physics_process(delta):
-	print(clockCounter)
 	clockCounter += delta
 	if clockCounter > 1:
 		clockMinutes += 1
@@ -21,11 +21,12 @@ func _physics_process(delta):
 	if clockMinutes == 60:
 		clockMinutes = 0
 		clockHours += 1
-	if clockHours == 25:
-		clockHours = 0
-		print("DAY OVER")
+	if clockHours == 16:
+		print("SHIFT OVER")
 	# Update the clock
 	ChangeClockText()
 
 func ChangeClockText():
-	label.text = str(clockHours) + ":" + str(clockMinutes)
+	# Formats the clock
+	var timeLabel : String = "%02d:%02d" % [clockHours, clockMinutes]
+	label.text = timeLabel

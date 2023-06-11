@@ -21,13 +21,13 @@ func SelectZone(_name):
 	selectedZone = _name
 	match selectedZone:
 		"City":
-			displayInfo.emit(selectedZone, City.electricityUsed, City.currentHappiness)
+			displayInfo.emit(selectedZone, City.electricityUsed, City.currentHappiness, City.isUsingElectricity)
 		"Township":
-			displayInfo.emit(selectedZone, Township.electricityUsed, Township.currentHappiness)
+			displayInfo.emit(selectedZone, Township.electricityUsed, Township.currentHappiness, Township.isUsingElectricity)
 		"Suburb":
-			displayInfo.emit(selectedZone, Suburb.electricityUsed, Suburb.currentHappiness)
+			displayInfo.emit(selectedZone, Suburb.electricityUsed, Suburb.currentHappiness, Suburb.isUsingElectricity)
 		"Stadium":
-			displayInfo.emit(selectedZone, Stadium.electricityUsed, Stadium.currentHappiness)
+			displayInfo.emit(selectedZone, Stadium.electricityUsed, Stadium.currentHappiness, Stadium.isUsingElectricity)
 
 func _on_game_ui_toggle_power():
 	match selectedZone:
