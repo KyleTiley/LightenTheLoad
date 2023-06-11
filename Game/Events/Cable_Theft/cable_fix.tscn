@@ -24,7 +24,8 @@ curve = SubResource("Curve3D_l7gms")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
 unique_name_in_owner = true
-transform = Transform3D(-0.999901, 0, -0.0140833, 0, 1, 0, 0.0140833, 0, -0.999901, 0.266617, -4.29153e-05, -0.39992)
+transform = Transform3D(-0.999901, 0, -0.0140833, 0, 1, 0, 0.0140833, 0, -0.999901, 0.203949, -4.29153e-05, -4.84928)
+progress = 4.45
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow3D"]
 unique_name_in_owner = true
@@ -43,14 +44,14 @@ transform = Transform3D(110.291, 0, 0, 0, 1, 0, 0, 0, 87.1179, 0, 0, 0)
 mesh = SubResource("PlaneMesh_uh6en")
 
 [node name="Node2D" parent="." instance=ExtResource("3_4wssa")]
-position = Vector2(30, 121)
+position = Vector2(-832, 6)
 scale = Vector2(1.721, 1.721)
 
 [node name="Timer_Show" parent="." instance=ExtResource("4_q58bs")]
-position = Vector2(2, -1)
+position = Vector2(14, 104)
 
 [node name="Node2D2" parent="." instance=ExtResource("5_ksdbm")]
-position = Vector2(8, -5)
+position = Vector2(0, -19)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 86.8214, 0)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.957214, 86.8214, -39.5697)

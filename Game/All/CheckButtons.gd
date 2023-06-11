@@ -5,6 +5,8 @@ func _process(delta):
 		self.disabled = true
 	if Global.disable_check_buttons == false:
 		self.disabled = false
+	if Global.switch_counter == 5:
+		Global.enable_minigame_retun_button = true
 
 func _toggled(button_pressed):
 	blah()
