@@ -1,2 +1,11 @@
-res://Game/game.tscn
-res://Game/Zones/City/city.tscn
+res://Game/All/timer_show.tscn
+res://Game/Events/Cable_Theft/cable_fix.tscn
+res://Game/Events/Cable_Theft/cable_fix.gd
+res://Game/Events/Cable_Theft/Global.gd
+res://Game/All/Button.tscn
+res://Game/All/Minigame_1.tscn
+res://Game/Events/Cable_Theft/PathFollow3D.gd
+res://Game/All/MiniGame.gd
+res://Game/All/CheckButtons.gd
+res://Game/All/Button.gd
+res://Game/All/cable_fix.gd

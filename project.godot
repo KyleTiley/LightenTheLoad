@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="WIL_GameProject"
-run/main_scene="res://Game/game.tscn"
+run/main_scene="res://Game/Events/Cable_Theft/cable_fix.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://Game/All/icon.svg"
+
+[autoload]
+
+Global="*res://Game/Events/Cable_Theft/Global.gd"
+
+[filesystem]
+
+import/fbx/enabled=false
 
 [rendering]
 
