@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cu2odsqj50net" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
 [ext_resource type="Script" path="res://Game/game.gd" id="1_wkqvr"]
-[ext_resource type="PackedScene" uid="uid://nr2piybbnnrq" path="res://Game/Zones/Suburb/suburb.tscn" id="2_eiul1"]
+[ext_resource type="PackedScene" uid="uid://b45fejmjvr6kp" path="res://Game/Zones/Suburb/suburb.tscn" id="2_eiul1"]
 [ext_resource type="PackedScene" uid="uid://c88hw4ownnv02" path="res://Game/Zones/Township/township.tscn" id="3_mwjgk"]
 [ext_resource type="PackedScene" uid="uid://ba72oii3uuvkd" path="res://Game/Zones/Stadium/stadium.tscn" id="5_2j06i"]
 [ext_resource type="Script" path="res://Game/GameUI/gameui.gd" id="6_da8r3"]
@@ -66,22 +66,22 @@ layout_mode = 1
 anchors_preset = 0
 script = ExtResource("7_dumu4")
 
-[node name="Label" type="Label" parent="GameUI/Clock"]
+[node name="TimeLabel" type="Label" parent="GameUI/Clock"]
 layout_mode = 0
+offset_top = 79.0
 offset_right = 159.0
-offset_bottom = 79.0
+offset_bottom = 158.0
 theme_override_font_sizes/font_size = 50
 text = "00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="GameUI/Clock"]
+[node name="DayLabel" type="Label" parent="GameUI/Clock"]
 layout_mode = 0
-offset_left = 159.0
-offset_right = 266.0
+offset_right = 159.0
 offset_bottom = 79.0
 theme_override_font_sizes/font_size = 50
-text = "Wed"
+text = "Day"
 horizontal_alignment = 1
 vertical_alignment = 1
 

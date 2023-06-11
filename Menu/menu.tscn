@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dnpdtsrec3dx3"]
+[gd_scene load_steps=3 format=3 uid="uid://dnpdtsrec3dx3"]
 
 [ext_resource type="Script" path="res://Menu/menu.gd" id="1_pjnvx"]
+[ext_resource type="Texture2D" uid="uid://b6omledgrwcoq" path="res://Menu/eskmom.png" id="2_g1y6l"]
 
 [node name="Menus" type="Node"]
 
@@ -14,9 +15,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_pjnvx")
 
-[node name="MainMenu" type="MarginContainer" parent="MenuControl"]
+[node name="MainMenu" type="Control" parent="MenuControl"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,48 +27,95 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="MenuControl/MainMenu"]
-layout_mode = 2
+[node name="Background" type="ColorRect" parent="MenuControl/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.192157, 0, 0.831373, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MenuControl/MainMenu"]
+[node name="MarginContainer" type="MarginContainer" parent="MenuControl/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuControl/MainMenu/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 100
 alignment = 1
 
-[node name="ButtonPanel" type="Panel" parent="MenuControl/MainMenu/VBoxContainer"]
-self_modulate = Color(1, 1, 1, 0)
+[node name="TextureRect" type="TextureRect" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_g1y6l")
 
-[node name="PlayButton" type="Button" parent="MenuControl/MainMenu/VBoxContainer/ButtonPanel"]
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
-offset_left = 380.0
-offset_top = 4.0
-offset_right = 580.0
-offset_bottom = 54.0
-theme_override_font_sizes/font_size = 30
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="ButtonPlay" type="Button" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
 text = "Play"
 
-[node name="HowToButton" type="Button" parent="MenuControl/MainMenu/VBoxContainer/ButtonPanel"]
+[node name="ButtonRules" type="Button" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-offset_left = 380.0
-offset_top = 58.0
-offset_right = 580.0
-offset_bottom = 108.0
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "How To Play"
 
-[node name="SettingsButton" type="Button" parent="MenuControl/MainMenu/VBoxContainer/ButtonPanel"]
+[node name="ButtonSettings" type="Button" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
-offset_left = 852.0
-offset_top = 71.0
-offset_right = 1052.0
-offset_bottom = 121.0
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 50
 text = "Settings"
 
-[node name="HowToMenu" type="MarginContainer" parent="MenuControl"]
+[node name="PanelContainer" type="PanelContainer" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="ButtonMonday" type="Button" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Monday"
+
+[node name="ButtonTuesday" type="Button" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Tuesday"
+
+[node name="ButtonWednesday" type="Button" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Wednesday"
+
+[node name="ButtonThursday" type="Button" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Thursday"
+
+[node name="ButtonFriday" type="Button" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 50
+text = "Friday"
+
+[node name="HowToMenu" type="Control" parent="MenuControl"]
 layout_mode = 1
-anchors_preset = -1
 anchor_left = 1.0
 anchor_right = 2.0
 anchor_bottom = 1.0
@@ -73,13 +123,17 @@ grow_vertical = 0
 
 [node name="ColorRect" type="ColorRect" parent="MenuControl/HowToMenu"]
 layout_mode = 2
+offset_right = 1920.0
+offset_bottom = 1080.0
 color = Color(0.137255, 0.341176, 0.176471, 1)
 
 [node name="Panel" type="Panel" parent="MenuControl/HowToMenu"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+offset_right = 1920.0
+offset_bottom = 1080.0
 
-[node name="BackButton" type="Button" parent="MenuControl/HowToMenu/Panel"]
+[node name="ButtonBackRules" type="Button" parent="MenuControl/HowToMenu/Panel"]
 layout_mode = 2
 offset_left = 1735.0
 offset_top = 50.0
@@ -88,9 +142,8 @@ offset_bottom = 100.0
 theme_override_font_sizes/font_size = 30
 text = "Back"
 
-[node name="SettingsMenu" type="MarginContainer" parent="MenuControl"]
+[node name="SettingsMenu" type="Control" parent="MenuControl"]
 layout_mode = 1
-anchors_preset = -1
 anchor_left = -1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
@@ -98,13 +151,17 @@ grow_vertical = 2
 
 [node name="ColorRect" type="ColorRect" parent="MenuControl/SettingsMenu"]
 layout_mode = 2
+offset_right = 1920.0
+offset_bottom = 1080.0
 color = Color(0.509804, 0.145098, 0.145098, 1)
 
 [node name="Panel" type="Panel" parent="MenuControl/SettingsMenu"]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 2
+offset_right = 1920.0
+offset_bottom = 1080.0
 
-[node name="BackButton2" type="Button" parent="MenuControl/SettingsMenu/Panel"]
+[node name="ButtonBackSettings" type="Button" parent="MenuControl/SettingsMenu/Panel"]
 layout_mode = 2
 offset_left = 1762.0
 offset_top = 23.0
@@ -122,9 +179,9 @@ offset_bottom = 333.0
 min_value = -30.0
 max_value = 0.0
 
-[connection signal="pressed" from="MenuControl/MainMenu/VBoxContainer/ButtonPanel/PlayButton" to="MenuControl" method="_on_play_button_pressed"]
-[connection signal="pressed" from="MenuControl/MainMenu/VBoxContainer/ButtonPanel/HowToButton" to="MenuControl" method="_on_how_to_button_pressed"]
-[connection signal="pressed" from="MenuControl/MainMenu/VBoxContainer/ButtonPanel/SettingsButton" to="MenuControl" method="_on_settings_button_pressed"]
-[connection signal="pressed" from="MenuControl/HowToMenu/Panel/BackButton" to="MenuControl" method="_on_back_button_pressed"]
-[connection signal="pressed" from="MenuControl/SettingsMenu/Panel/BackButton2" to="MenuControl" method="_on_back_button_2_pressed"]
+[connection signal="pressed" from="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ButtonPlay" to="MenuControl" method="_on_play_button_pressed"]
+[connection signal="pressed" from="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ButtonRules" to="MenuControl" method="_on_how_to_button_pressed"]
+[connection signal="pressed" from="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ButtonSettings" to="MenuControl" method="_on_settings_button_pressed"]
+[connection signal="pressed" from="MenuControl/HowToMenu/Panel/ButtonBackRules" to="MenuControl" method="_on_back_button_pressed"]
+[connection signal="pressed" from="MenuControl/SettingsMenu/Panel/ButtonBackSettings" to="MenuControl" method="_on_back_button_2_pressed"]
 [connection signal="value_changed" from="MenuControl/SettingsMenu/Panel/HSlider" to="MenuControl" method="_on_h_slider_value_changed"]

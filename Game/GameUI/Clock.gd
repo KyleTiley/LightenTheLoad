@@ -1,7 +1,7 @@
 extends Control
 
 # REFERENCES
-@onready var label = $Label
+@onready var timeLabel = $TimeLabel
 
 # VARIABLES
 var clockCounter = 0
@@ -19,7 +19,8 @@ func _physics_process(delta):
 
 func _process(_delta):
 	if clockCounter > 1:
-		clockMinutes += 1
+		# Clock goes up by 5 minutes at a time
+		clockMinutes += 5
 		clockCounter = 0
 	if clockMinutes == 60:
 		clockMinutes = 0
@@ -31,5 +32,5 @@ func _process(_delta):
 
 func ChangeClockText():
 	# Formats the clock
-	var timeLabel : String = "%02d:%02d" % [clockHours, clockMinutes]
-	label.text = timeLabel
+	var time : String = "%02d:%02d" % [clockHours, clockMinutes]
+	timeLabel.text = time

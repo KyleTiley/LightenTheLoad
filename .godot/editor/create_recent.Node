@@ -1,8 +1,13 @@
+Button
+VBoxContainer
+PanelContainer
+MarginContainer
 Panel
+HBoxContainer
+TextureRect
+Control
 RichTextLabel
 ColorRect
-Button
-Control
 Label
 TextEdit
 Container

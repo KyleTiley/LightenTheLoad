@@ -27,7 +27,6 @@ func move_camera_left():
 
 func _on_play_button_pressed():
 	get_tree().change_scene_to_file("res://Game/game.tscn")
-#	Game.gameHasStarted = true
 
 func _on_how_to_button_pressed():
 	if(canClick):
