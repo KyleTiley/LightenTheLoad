@@ -1,11 +1,12 @@
-Label
+Panel
 RichTextLabel
-TextEdit
-Control
+ColorRect
 Button
+Control
+Label
+TextEdit
 Container
 Node3D
-ColorRect
 Node
 CollisionShape3D
 Area3D

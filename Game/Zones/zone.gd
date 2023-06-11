@@ -23,6 +23,7 @@ func _ready():
 	print(name + "s loaded")
 
 func _physics_process(delta):
+	print(Game.gameHasStarted)
 	if(Game.gameHasStarted):
 		timerCounter += delta
 

@@ -6,3 +6,7 @@ res://Game/Zones/Stadium/stadium.tscn
 res://Game/GameUI/gameui.gd
 res://Game/GameUI/Clock.gd
 res://Game/game.gd
+res://Menu/menu.gd
+res://Menu/menu.tscn
+res://Game/Zones/zone.gd
+res://Game/PopUp/PopUp.gd

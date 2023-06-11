@@ -1,37 +1,39 @@
 2a60927148abd1d33b818b535e306557
 ::res://::1686476908
 icon.svg::CompressedTexture2D::4661030618748602686::1684231491::1684231498::1::::<><>::
-::res://Game/::1686322241
-game.gd::GDScript::-1::1686322219::0::1::::<>Node<>::
-game.tscn::PackedScene::5722313503355201021::1686322241::0::1::::<><>::uid://cu2odsqj50net<>res://Game/game.gd<>uid://nr2piybbnnrq<>uid://c88hw4ownnv02<>uid://ba72oii3uuvkd<>res://Game/GameUI/gameui.gd<>res://Game/GameUI/Clock.gd
-::res://Game/GameUI/::1686322219
-Clock.gd::GDScript::-1::1686322219::0::1::::<>Control<>::
-gameui.gd::GDScript::-1::1686322219::0::1::::<>Control<>::
-::res://Game/Zones/::1686322219
-zone.gd::GDScript::-1::1686322219::0::1::::<>Node<>::
-::res://Game/Zones/City/::1686322241
+::res://Game/::1686482826
+game.gd::GDScript::-1::1686482783::0::1::::<>Node<>::
+game.tscn::PackedScene::5722313503355201021::1686482783::0::1::::<><>::uid://cu2odsqj50net<>res://Game/game.gd<>uid://nr2piybbnnrq<>uid://c88hw4ownnv02<>uid://ba72oii3uuvkd<>res://Game/GameUI/gameui.gd<>res://Game/GameUI/Clock.gd
+PopUp.gd::GDScript::-1::1686482838::0::1::::<>Control<>::
+::res://Game/GameUI/::1686482299
+Clock.gd::GDScript::-1::1686482299::0::1::::<>Control<>::
+gameui.gd::GDScript::-1::1686480443::0::1::::<>Control<>::
+::res://Game/PopUp/::1686482826
+::res://Game/Zones/::1686482353
+zone.gd::GDScript::-1::1686482353::0::1::::<>Node<>::
+::res://Game/Zones/City/::1686482751
 city.gd::GDScript::-1::1685901212::0::1::::<>Zone<>::
 City.glb::PackedScene::644620582480191619::1686322219::1686322219::1::::<><>::
-city.tscn::PackedScene::6233212805374088855::1686322241::0::1::::<><>::res://Game/Zones/City/city.gd<>res://Game/Zones/City/City.glb
-::res://Game/Zones/Stadium/::1686322241
+city.tscn::PackedScene::6233212805374088855::1686482751::0::1::::<><>::res://Game/Zones/City/city.gd<>uid://jgi2ow8r74od
+::res://Game/Zones/Stadium/::1686482751
 stadium.gd::GDScript::-1::1686322219::0::1::::<>Zone<>::
 Stadium.glb::PackedScene::1740229858904280491::1686322219::1686322219::1::::<><>::
-stadium.tscn::PackedScene::2454145565587342731::1686322241::0::1::::<><>::res://Game/Zones/Stadium/stadium.gd<>res://Game/Zones/Stadium/Stadium.glb
-::res://Game/Zones/Suburb/::1686322241
+stadium.tscn::PackedScene::2454145565587342731::1686482751::0::1::::<><>::res://Game/Zones/Stadium/stadium.gd<>uid://y18ljijkvgx4
+::res://Game/Zones/Suburb/::1686482751
 suburb.gd::GDScript::-1::1685869435::0::1::::<>Zone<>::
 Suburb.glb::PackedScene::4638641812356644741::1686322219::1686322219::1::::<><>::
-suburb.tscn::PackedScene::949215992136110622::1686322241::0::1::::<><>::res://Game/Zones/Suburb/suburb.gd<>res://Game/Zones/Suburb/Suburb.glb
-::res://Game/Zones/Township/::1686322241
+suburb.tscn::PackedScene::949215992136110622::1686482751::0::1::::<><>::res://Game/Zones/Suburb/suburb.gd<>uid://b7c80unm1bcl6
+::res://Game/Zones/Township/::1686482751
 township.gd::GDScript::-1::1685901206::0::1::::<>Zone<>::
 Township.glb::PackedScene::3114143713569452540::1686322219::1686322219::1::::<><>::
-township.tscn::PackedScene::7157663525562420153::1686322241::0::1::::<><>::res://Game/Zones/Township/township.gd<>res://Game/Zones/Township/Township.glb
-::res://Menu/::1686322219
-menu.gd::GDScript::-1::1686322219::0::1::::<>Control<>::
-menu.tscn::PackedScene::8102899737614610038::1686322219::0::1::::<><>::res://Menu/menu.gd
+township.tscn::PackedScene::7157663525562420153::1686482751::0::1::::<><>::res://Game/Zones/Township/township.gd<>uid://bkmrqyy2d81dw
+::res://Menu/::1686482751
+menu.gd::GDScript::-1::1686482309::0::1::::<>Control<>::
+menu.tscn::PackedScene::8102899737614610038::1686482751::0::1::::<><>::res://Menu/menu.gd
 ::res://Resources/::1686322219
 Fuze Box.glb::PackedScene::34146269639807802::1686322219::1686322219::1::::<><>::
 Truck.glb::PackedScene::6261890131779351948::1686322219::1686322219::1::::<><>::
-::res://Resources/City OBJ format/::1685869537
+::res://Resources/City OBJ format/::1686476917
 detail_awning.obj::Mesh::3399385773011318751::1634123199::1686476911::1::::<><>::
 detail_awningWide.obj::Mesh::8342504972055213402::1634123199::1686476911::1::::<><>::
 detail_overhang.obj::Mesh::4733470781722225682::1634123199::1686476911::1::::<><>::
@@ -88,7 +90,7 @@ wall_windowC.obj::Mesh::797735055829794031::1634123209::1686476916::1::::<><>::
 wall_windowD.obj::Mesh::8220114860117588626::1634123209::1686476916::1::::<><>::
 wall_windowE.obj::Mesh::7271697837173495622::1634123209::1686476917::1::::<><>::
 wall_windowF.obj::Mesh::291038406161809521::1634123210::1686476917::1::::<><>::
-::res://Resources/Suburb OBJ format/::1685869537
+::res://Resources/Suburb OBJ format/::1686476918
 driveway_long.obj::Mesh::1130825753759199571::1606855133::1686476917::1::::<><>::
 driveway_short.obj::Mesh::3592828817531044090::1606855133::1686476917::1::::<><>::
 fence_large.obj::Mesh::3308907230312308820::1606855133::1686476917::1::::<><>::
@@ -125,7 +127,7 @@ path_tilesLong.obj::Mesh::551752819515182275::1606855138::1686476915::1::::<><>:
 path_tilesShort.obj::Mesh::8244404502935305737::1606855138::1686476915::1::::<><>::
 tree_large.obj::Mesh::4794465807659246031::1606855138::1686476915::1::::<><>::
 tree_small.obj::Mesh::6926217649051911884::1606855139::1686476915::1::::<><>::
-::res://Resources/Urban OBJ format/::1685869537
+::res://Resources/Urban OBJ format/::1686476916
 balconyLadder_bottom.obj::Mesh::1450596668100237182::1616280222::1686476916::1::::<><>::uid://da3a00i8gukbq
 balconyLadder_top.obj::Mesh::5668316684234341568::1616280223::1686476916::1::::<><>::uid://da3a00i8gukbq
 balcony_typeA.obj::Mesh::611597932348781286::1616280222::1686476916::1::::<><>::uid://da3a00i8gukbq

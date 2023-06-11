@@ -14,7 +14,10 @@ var clockHours = 8
 
 # FUNCTIONS
 func _physics_process(delta):
-	clockCounter += delta
+	if(Game.gameHasStarted):
+		clockCounter += delta
+
+func _process(_delta):
 	if clockCounter > 1:
 		clockMinutes += 1
 		clockCounter = 0

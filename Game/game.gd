@@ -39,3 +39,7 @@ func _on_game_ui_toggle_power():
 			Suburb.isUsingElectricity = !Suburb.isUsingElectricity
 		"Stadium":
 			Stadium.isUsingElectricity = !Stadium.isUsingElectricity
+
+func _on_pop_up_button_pressed():
+	# Must use Game. reference here in order to change the global variable
+	Game.gameHasStarted = true
