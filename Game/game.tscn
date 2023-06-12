@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cnr6wxp56hiqv"]
+[gd_scene load_steps=15 format=3 uid="uid://8eryo08mgnmt"]
 
 [ext_resource type="PackedScene" uid="uid://cu2odsqj50net" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
 [ext_resource type="Script" path="res://Game/game.gd" id="1_wkqvr"]
@@ -6,8 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://c88hw4ownnv02" path="res://Game/Zones/Township/township.tscn" id="3_mwjgk"]
 [ext_resource type="PackedScene" uid="uid://ba72oii3uuvkd" path="res://Game/Zones/Stadium/stadium.tscn" id="5_2j06i"]
 [ext_resource type="Script" path="res://Game/GameUI/gameui.gd" id="6_da8r3"]
+[ext_resource type="PackedScene" uid="uid://cisjfx1vn2dy5" path="res://Game/Environment/environment.tscn" id="6_r23qx"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock.gd" id="7_dumu4"]
 [ext_resource type="Script" path="res://Game/PopUp/PopUp.gd" id="8_en5ax"]
+[ext_resource type="PackedScene" uid="uid://c8bje22y0kyra" path="res://Game/Characters/LightBulb/light_bulb_idle.tscn" id="8_o12n5"]
+[ext_resource type="Texture2D" uid="uid://bifc2fr5br82t" path="res://Game/GameUI/Buttons/Green 1.png" id="9_ldxfo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6nbfv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -35,21 +38,24 @@ transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="GameWorld"]
-transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 100, 100)
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766045, 0, -0.766045, 0.642788, 0, 100, 100)
 
 [node name="Zones" type="Node3D" parent="GameWorld"]
 
 [node name="City" parent="GameWorld/Zones" instance=ExtResource("1_hjasl")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 115.773, 0, -141.005)
+transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 66.0593, 19.5573, -87.0696)
 
 [node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("2_eiul1")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -59.1885, 1.52588e-05, 7.95052)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -31.5897, 10.3609, 14.8685)
 
 [node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_mwjgk")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 61.242, -4.57764e-05, 6.29522)
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 110.503, 1.83999, 16.9072)
 
 [node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("5_2j06i")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -124.335, 0, -183.511)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -111.225, 9.8864, -116.402)
+
+[node name="Environment" parent="GameWorld" instance=ExtResource("6_r23qx")]
+transform = Transform3D(150, 0, 0, 0, 150, 0, 0, 0, 150, 0, 0, -128.661)
 
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3
@@ -103,6 +109,9 @@ offset_bottom = 6.10352e-05
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="LightBulbIdle" parent="GameUI/HUD" instance=ExtResource("8_o12n5")]
+position = Vector2(170, 170)
+
 [node name="Info" type="Control" parent="GameUI"]
 layout_mode = 1
 anchors_preset = 3
@@ -145,6 +154,15 @@ offset_left = -270.0
 offset_top = -270.0
 grow_horizontal = 0
 grow_vertical = 0
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/PowerButton"]
+layout_mode = 0
+offset_left = -18.0
+offset_top = -114.0
+offset_right = 300.0
+offset_bottom = 375.0
+texture = ExtResource("9_ldxfo")
+expand_mode = 1
 
 [node name="Button" type="Button" parent="GameUI/PowerButton"]
 layout_mode = 1

@@ -1,10 +1,11 @@
+TextureRect
+AnimatedSprite2D
 Button
 VBoxContainer
 PanelContainer
 MarginContainer
 Panel
 HBoxContainer
-TextureRect
 Control
 RichTextLabel
 ColorRect
