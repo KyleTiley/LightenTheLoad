@@ -1,8 +1,7 @@
+res://Game/GameUI
+res://Game
 res://Game/Environment
 res://Game/Characters
-res://Game
-res://Menu
-res://Game/GameUI
 res://Game/Zones/Stadium
 res://Game/Zones/Township
 res://Game/Zones/Suburb
