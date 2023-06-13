@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b6omledgrwcoq"
-path="res://.godot/imported/eskmom.png-72a4a4bd007c5e2f7c66a60904f57497.ctex"
+path="res://.godot/imported/eskmom.png-543c0a91cb5daa857f3e9aebc70122bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Menu/eskmom.png"
-dest_files=["res://.godot/imported/eskmom.png-72a4a4bd007c5e2f7c66a60904f57497.ctex"]
+source_file="res://MainMenu/eskmom.png"
+dest_files=["res://.godot/imported/eskmom.png-543c0a91cb5daa857f3e9aebc70122bb.ctex"]
 
 [params]
 

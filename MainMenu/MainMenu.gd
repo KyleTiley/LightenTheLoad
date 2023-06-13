@@ -2,14 +2,20 @@ extends Control
 
 @onready var camera = $"../MenuCamera"
 @onready var game_scene
+var day: String
 #@onready var main_audio_bus = AudioServer.get_bus_index("Master")
 
 var move_camera_width = 1920	# Width of menu pages
-var canClick
+var canClick	# Stops spam clicking buttons breaking the tween
 
 func _ready():
 	game_scene = load("res://Game/game.tscn")
 	canClick = true
+
+# Launches into game
+func LaunchGame(_day):
+	Game.DayControl(_day)
+	get_tree().change_scene_to_file("res://Game/game.tscn")
 
 func move_camera_right():
 	var tween = create_tween()
@@ -26,7 +32,8 @@ func move_camera_left():
 	canClick = true
 
 func _on_play_button_pressed():
-	get_tree().change_scene_to_file("res://Game/game.tscn")
+	# show the days
+	pass
 
 func _on_how_to_button_pressed():
 	if(canClick):
@@ -55,3 +62,23 @@ func _on_back_button_2_pressed():
 #		AudioServer.set_bus_mute(main_audio_bus, true)
 #	else:
 #		AudioServer.set_bus_mute(main_audio_bus, false)
+
+func _on_button_monday_pressed():
+	day = "Monday"
+	LaunchGame(day)
+
+func _on_button_tuesday_pressed():
+	day = "Tuesday"
+	LaunchGame(day)
+
+func _on_button_wednesday_pressed():
+	day = "Wednesday"
+	LaunchGame(day)
+
+func _on_button_thursday_pressed():
+	day = "Thursday"
+	LaunchGame(day)
+
+func _on_button_friday_pressed():
+	day = "Friday"
+	LaunchGame(day)
