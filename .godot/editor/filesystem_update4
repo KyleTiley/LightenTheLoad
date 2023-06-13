@@ -3,16 +3,5 @@ res://Game/Zones/City/city.tscn
 res://Game/Zones/Suburb/suburb.tscn
 res://Game/Zones/Township/township.tscn
 res://Game/Zones/Stadium/stadium.tscn
-res://Menu/menu.tscn
 res://Game/Characters/LightBulb/light_bulb_idle.tscn
 res://Game/Environment/environment.tscn
-res://Menu/menu.gd
-res://Game/game.gd
-res://Game/GameUI/Clock.gd
-res://MainMenu/menu.tscn
-res://MainMenu/MainMenu.tscn
-res://Game/World/World.tscn
-res://Game/UserInterface/UserInterface.tscn
-res://Game/Zones/zone.gd
-res://Game/UserInterface/gameui.gd
-res://Game/Game.gd

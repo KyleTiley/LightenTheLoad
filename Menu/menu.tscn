@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://xd2xkt5gnvl4"]
+[gd_scene load_steps=3 format=3 uid="uid://dnpdtsrec3dx3"]
 
-[ext_resource type="Script" path="res://MainMenu/MainMenu.gd" id="1_7q5ce"]
-[ext_resource type="Texture2D" uid="uid://b6omledgrwcoq" path="res://MainMenu/eskmom.png" id="2_1rnij"]
+[ext_resource type="Script" path="res://Menu/menu.gd" id="1_pjnvx"]
+[ext_resource type="Texture2D" uid="uid://b6omledgrwcoq" path="res://Menu/eskmom.png" id="2_g1y6l"]
 
 [node name="Menus" type="Node"]
 
@@ -17,7 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-script = ExtResource("1_7q5ce")
+script = ExtResource("1_pjnvx")
 
 [node name="MainMenu" type="Control" parent="MenuControl"]
 layout_mode = 1
@@ -57,13 +57,12 @@ alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_1rnij")
+texture = ExtResource("2_g1y6l")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_override_constants/separation = 106
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
@@ -89,7 +88,6 @@ layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer"]
 layout_mode = 2
-theme_override_constants/separation = 15
 
 [node name="ButtonMonday" type="Button" parent="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
 layout_mode = 2
@@ -184,11 +182,6 @@ max_value = 0.0
 [connection signal="pressed" from="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ButtonPlay" to="MenuControl" method="_on_play_button_pressed"]
 [connection signal="pressed" from="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ButtonRules" to="MenuControl" method="_on_how_to_button_pressed"]
 [connection signal="pressed" from="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ButtonSettings" to="MenuControl" method="_on_settings_button_pressed"]
-[connection signal="pressed" from="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/ButtonMonday" to="MenuControl" method="_on_button_monday_pressed"]
-[connection signal="pressed" from="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/ButtonTuesday" to="MenuControl" method="_on_button_tuesday_pressed"]
-[connection signal="pressed" from="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/ButtonWednesday" to="MenuControl" method="_on_button_wednesday_pressed"]
-[connection signal="pressed" from="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/ButtonThursday" to="MenuControl" method="_on_button_thursday_pressed"]
-[connection signal="pressed" from="MenuControl/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/ButtonFriday" to="MenuControl" method="_on_button_friday_pressed"]
 [connection signal="pressed" from="MenuControl/HowToMenu/Panel/ButtonBackRules" to="MenuControl" method="_on_back_button_pressed"]
 [connection signal="pressed" from="MenuControl/SettingsMenu/Panel/ButtonBackSettings" to="MenuControl" method="_on_back_button_2_pressed"]
 [connection signal="value_changed" from="MenuControl/SettingsMenu/Panel/HSlider" to="MenuControl" method="_on_h_slider_value_changed"]
