@@ -8,9 +8,10 @@ extends Control
 signal TogglePower
 
 # FUNCTIONS
-func _on_game_hide_info():
-	textLabel.text = "Click on a zone to disable/enable their power"
+func _on_game_hide_info(_toDo):
 	powerButton.hide()
+	if _toDo == "None":
+		textLabel.text = "Click on a zone to disable/enable their power"
 
 func _on_game_display_info(_name, _electricity, _happiness, _isUsingElectricity):
 	textLabel.text = _name + " has used " + str(_electricity) + " units of electricity" + '\n' + "and is at " + str(_happiness) + " happiness"

@@ -2,7 +2,7 @@ extends Node
 
 # VARIABLES
 var gameHasStarted = false
-var selectedZone = "None"
+var selectedZone = "NULL"
 var dayOfWeek: String
 
 # SIGNALS
@@ -22,8 +22,6 @@ func _process(_delta):
 func SelectZone(_name):
 	selectedZone = _name
 	match selectedZone:
-		"None":
-			hideInfo.emit()
 		"City":
 			displayInfo.emit(selectedZone, City.electricityUsed, City.currentHappiness, City.isUsingElectricity)
 		"Township":
@@ -32,6 +30,10 @@ func SelectZone(_name):
 			displayInfo.emit(selectedZone, Suburb.electricityUsed, Suburb.currentHappiness, Suburb.isUsingElectricity)
 		"Stadium":
 			displayInfo.emit(selectedZone, Stadium.electricityUsed, Stadium.currentHappiness, Stadium.isUsingElectricity)
+		"None":
+			hideInfo.emit(selectedZone)
+		"NULL":
+			hideInfo.emit(selectedZone)
 
 func _on_game_ui_toggle_power():
 	match selectedZone:
@@ -47,3 +49,4 @@ func _on_game_ui_toggle_power():
 func _on_pop_up_button_pressed():
 	# Must use Game. reference here in order to change the global variable
 	Game.gameHasStarted = true
+	selectedZone = "None"
