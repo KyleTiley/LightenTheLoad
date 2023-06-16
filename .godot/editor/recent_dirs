@@ -1,9 +1,4 @@
-res://Game/Zones/Stadium
-res://Game/GameUI
+res://Game/GameUI/Characters
 res://Game
-res://Game/Environment
-res://Game/Characters
-res://Game/Zones/Township
-res://Game/Zones/Suburb
-res://Game/Zones/City
-res://Game/Zones
+res://MainMenu
+res://

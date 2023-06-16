@@ -1,39 +1,33 @@
-[gd_scene load_steps=14 format=3 uid="uid://8eryo08mgnmt"]
+[gd_scene load_steps=9 format=3 uid="uid://dhxi4w6ieeryj"]
 
-[ext_resource type="PackedScene" uid="uid://cu2odsqj50net" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
-[ext_resource type="Script" path="res://Game/game.gd" id="1_wkqvr"]
-[ext_resource type="PackedScene" uid="uid://b45fejmjvr6kp" path="res://Game/Zones/Suburb/suburb.tscn" id="2_eiul1"]
-[ext_resource type="PackedScene" uid="uid://c88hw4ownnv02" path="res://Game/Zones/Township/township.tscn" id="3_mwjgk"]
-[ext_resource type="PackedScene" uid="uid://ba72oii3uuvkd" path="res://Game/Zones/Stadium/stadium.tscn" id="5_2j06i"]
-[ext_resource type="Script" path="res://Game/GameUI/gameui.gd" id="6_da8r3"]
-[ext_resource type="PackedScene" uid="uid://cisjfx1vn2dy5" path="res://Game/Environment/environment.tscn" id="6_r23qx"]
-[ext_resource type="Script" path="res://Game/GameUI/Clock.gd" id="7_dumu4"]
-[ext_resource type="Script" path="res://Game/PopUp/PopUp.gd" id="8_en5ax"]
-[ext_resource type="PackedScene" uid="uid://c8bje22y0kyra" path="res://Game/Characters/LightBulb/light_bulb_idle.tscn" id="8_o12n5"]
+[ext_resource type="PackedScene" uid="uid://cu2odsqj50net" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_b44qx"]
+[ext_resource type="PackedScene" uid="uid://dx7wr27c0njgs" path="res://Game/GameUI/Characters/light_bulb.tscn" id="1_wo4ky"]
+[ext_resource type="PackedScene" uid="uid://ba72oii3uuvkd" path="res://Game/GameWorld/Zones/Stadium/stadium.tscn" id="2_1w2ap"]
+[ext_resource type="PackedScene" uid="uid://b45fejmjvr6kp" path="res://Game/GameWorld/Zones/Suburb/suburb.tscn" id="3_1bpdg"]
+[ext_resource type="PackedScene" uid="uid://c88hw4ownnv02" path="res://Game/GameWorld/Zones/Township/township.tscn" id="4_kab6v"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6nbfv"]
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 
-[sub_resource type="Sky" id="Sky_hwsu8"]
-sky_material = SubResource("ProceduralSkyMaterial_6nbfv")
+[sub_resource type="Sky" id="Sky_sao6l"]
+sky_material = SubResource("ProceduralSkyMaterial_d1ttg")
 
-[sub_resource type="Environment" id="Environment_qyedd"]
+[sub_resource type="Environment" id="Environment_rauqn"]
 background_mode = 2
-sky = SubResource("Sky_hwsu8")
+sky = SubResource("Sky_sao6l")
 tonemap_mode = 2
 glow_enabled = true
 
 [node name="Game" type="Node"]
-script = ExtResource("1_wkqvr")
 
 [node name="GameWorld" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="GameWorld"]
-environment = SubResource("Environment_qyedd")
+environment = SubResource("Environment_rauqn")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="GameWorld"]
-transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0.880066, 0, 63.3678)
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="GameWorld"]
@@ -41,20 +35,17 @@ transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766045, 0, -0.766045, 0.642788, 
 
 [node name="Zones" type="Node3D" parent="GameWorld"]
 
-[node name="City" parent="GameWorld/Zones" instance=ExtResource("1_hjasl")]
-transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 66.0593, 19.5573, -87.0696)
+[node name="City" parent="GameWorld/Zones" instance=ExtResource("1_b44qx")]
 
-[node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("2_eiul1")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -31.5897, 10.3609, 14.8685)
+[node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("2_1w2ap")]
 
-[node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_mwjgk")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 110.503, 1.83999, 16.9072)
+[node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("3_1bpdg")]
 
-[node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("5_2j06i")]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -111.225, 9.8864, -116.402)
+[node name="Township" parent="GameWorld/Zones" instance=ExtResource("4_kab6v")]
 
-[node name="Environment" parent="GameWorld" instance=ExtResource("6_r23qx")]
-transform = Transform3D(150, 0, 0, 0, 150, 0, 0, 0, 150, 0, 0, -128.661)
+[node name="Environment" type="Node3D" parent="GameWorld"]
+
+[node name="Events" type="Node3D" parent="GameWorld"]
 
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3
@@ -64,164 +55,44 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-script = ExtResource("6_da8r3")
 
 [node name="Clock" type="Control" parent="GameUI"]
-layout_mode = 1
 anchors_preset = 0
-script = ExtResource("7_dumu4")
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="TimeLabel" type="Label" parent="GameUI/Clock"]
+[node name="Day" type="Label" parent="GameUI/Clock"]
 layout_mode = 0
-offset_top = 79.0
-offset_right = 159.0
-offset_bottom = 158.0
-theme_override_font_sizes/font_size = 50
-text = "00:00"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="DayLabel" type="Label" parent="GameUI/Clock"]
-layout_mode = 0
-offset_right = 159.0
-offset_bottom = 79.0
-theme_override_font_sizes/font_size = 50
+offset_right = 40.0
+offset_bottom = 23.0
 text = "Day"
-horizontal_alignment = 1
-vertical_alignment = 1
 
-[node name="HUD" type="Control" parent="GameUI"]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -360.0
-offset_right = 360.0
-grow_vertical = 0
-
-[node name="ColorRect" type="ColorRect" parent="GameUI/HUD"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = 6.10352e-05
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="LightBulbIdle" parent="GameUI/HUD" instance=ExtResource("8_o12n5")]
-position = Vector2(170, 170)
-
-[node name="Info" type="Control" parent="GameUI"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -1560.0
-offset_top = -270.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect2" type="ColorRect" parent="GameUI/Info"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="TextEdit" type="TextEdit" parent="GameUI/Info"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 6.10352e-05
-offset_bottom = 0.00012207
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 60
-
-[node name="PowerButton" type="Control" parent="GameUI"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -270.0
-offset_top = -270.0
-grow_horizontal = 0
-grow_vertical = 0
-
-[node name="Button" type="Button" parent="GameUI/PowerButton"]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -235.0
-offset_top = -235.0
-offset_right = -35.0
-offset_bottom = -35.0
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_font_sizes/font_size = 50
-text = "Power
-Toggle"
-
-[node name="PopUp" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 500.0
-offset_top = 228.0
-offset_right = -420.0
-offset_bottom = -352.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("8_en5ax")
-
-[node name="Panel (used to stop clicking)" type="Panel" parent="PopUp"]
-self_modulate = Color(1, 1, 1, 0)
+[node name="Time" type="Label" parent="GameUI/Clock"]
 layout_mode = 0
-offset_left = -500.0
-offset_top = -228.0
-offset_right = 1420.0
-offset_bottom = 852.0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "00:00"
 
-[node name="ColorRect" type="ColorRect" parent="PopUp"]
+[node name="Popup" type="Control" parent="GameUI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Bar" type="Control" parent="GameUI"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0.290196, 0.290196, 1)
+anchor_right = 0.085
+anchor_bottom = 0.096
+offset_right = 72.8
+offset_bottom = 64.32
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PopUp"]
+[node name="PowerButton" type="TextureButton" parent="GameUI/Bar"]
 layout_mode = 0
-offset_left = 143.0
-offset_top = 123.0
-offset_right = 870.0
-offset_bottom = 301.0
-theme_override_font_sizes/normal_font_size = 50
-text = "This is where we should put info on how to play the game"
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="PopUpButton" type="Button" parent="PopUp"]
+[node name="GameInfo" type="RichTextLabel" parent="GameUI/Bar"]
 layout_mode = 0
-offset_left = 396.0
-offset_top = 349.0
-offset_right = 596.0
-offset_bottom = 449.0
-theme_override_font_sizes/font_size = 50
-text = "PLAY"
+offset_right = 40.0
+offset_bottom = 40.0
 
-[connection signal="displayInfo" from="." to="GameUI" method="_on_game_display_info"]
-[connection signal="hideInfo" from="." to="GameUI" method="_on_game_hide_info"]
-[connection signal="TogglePower" from="GameUI" to="." method="_on_game_ui_toggle_power"]
-[connection signal="pressed" from="GameUI/PowerButton/Button" to="GameUI" method="_on_button_pressed"]
-[connection signal="pressed" from="PopUp/PopUpButton" to="." method="_on_pop_up_button_pressed"]
-[connection signal="pressed" from="PopUp/PopUpButton" to="PopUp" method="_on_pop_up_button_pressed"]
+[node name="LightBulb" parent="GameUI/Bar" instance=ExtResource("1_wo4ky")]

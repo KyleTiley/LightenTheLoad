@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cisjfx1vn2dy5"]
-
-[ext_resource type="PackedScene" uid="uid://e0rbxkuf2om0" path="res://Game/Environment/Terrain.V3.glb" id="1_5o261"]
-
-[node name="Environment" type="Node3D"]
-
-[node name="TerrainV3" parent="." instance=ExtResource("1_5o261")]
