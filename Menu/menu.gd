@@ -25,8 +25,11 @@ func move_camera_left():
 	await get_tree().create_timer(1).timeout
 	canClick = true
 
-func _on_play_button_pressed():
+func StartGame():
 	get_tree().change_scene_to_file("res://Game/game.tscn")
+
+func _on_play_button_pressed():
+	pass
 
 func _on_how_to_button_pressed():
 	if(canClick):
@@ -55,3 +58,23 @@ func _on_back_button_2_pressed():
 #		AudioServer.set_bus_mute(main_audio_bus, true)
 #	else:
 #		AudioServer.set_bus_mute(main_audio_bus, false)
+
+func _on_button_monday_pressed():
+	Game.dayOfWeek = "Monday"
+	StartGame()
+
+func _on_button_tuesday_pressed():
+	Game.dayOfWeek = "Tuesday"
+	StartGame()
+
+func _on_button_wednesday_pressed():
+	Game.dayOfWeek = "Wednesday"
+	StartGame()
+
+func _on_button_thursday_pressed():
+	Game.dayOfWeek = "Thursday"
+	StartGame()
+
+func _on_button_friday_pressed():
+	Game.dayOfWeek = "Friday"
+	StartGame()

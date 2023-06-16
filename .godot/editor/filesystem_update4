@@ -5,3 +5,9 @@ res://Game/Zones/Township/township.tscn
 res://Game/Zones/Stadium/stadium.tscn
 res://Game/Characters/LightBulb/light_bulb_idle.tscn
 res://Game/Environment/environment.tscn
+res://Menu/menu.tscn
+res://Menu/menu.gd
+res://Game/game.gd
+res://Game/GameUI/Clock.gd
+res://Game/PopUp/PopUp.gd
+res://Game/GameUI/gameui.gd

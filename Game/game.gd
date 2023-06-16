@@ -2,11 +2,13 @@ extends Node
 
 # VARIABLES
 var gameHasStarted = false
-var selectedZone: String
+var selectedZone = "None"
+var dayOfWeek: String
 
 # SIGNALS
 # Sends data to UI to display
 signal displayInfo
+signal hideInfo
 
 # FUNCTIONS
 func _ready():
@@ -20,6 +22,8 @@ func _process(_delta):
 func SelectZone(_name):
 	selectedZone = _name
 	match selectedZone:
+		"None":
+			hideInfo.emit()
 		"City":
 			displayInfo.emit(selectedZone, City.electricityUsed, City.currentHappiness, City.isUsingElectricity)
 		"Township":

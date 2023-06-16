@@ -2,6 +2,7 @@ extends Control
 
 # REFERENCES
 @onready var timeLabel = $TimeLabel
+@onready var dayLabel = $DayLabel
 
 # VARIABLES
 var clockCounter = 0
@@ -13,6 +14,9 @@ var clockHours = 8
 #signal DayOver
 
 # FUNCTIONS
+func _ready():
+	dayLabel.text = Game.dayOfWeek
+
 func _physics_process(delta):
 	if(Game.gameHasStarted):
 		clockCounter += delta

@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://8eryo08mgnmt"]
+[gd_scene load_steps=14 format=3 uid="uid://8eryo08mgnmt"]
 
 [ext_resource type="PackedScene" uid="uid://cu2odsqj50net" path="res://Game/Zones/City/city.tscn" id="1_hjasl"]
 [ext_resource type="Script" path="res://Game/game.gd" id="1_wkqvr"]
@@ -10,7 +10,6 @@
 [ext_resource type="Script" path="res://Game/GameUI/Clock.gd" id="7_dumu4"]
 [ext_resource type="Script" path="res://Game/PopUp/PopUp.gd" id="8_en5ax"]
 [ext_resource type="PackedScene" uid="uid://c8bje22y0kyra" path="res://Game/Characters/LightBulb/light_bulb_idle.tscn" id="8_o12n5"]
-[ext_resource type="Texture2D" uid="uid://bifc2fr5br82t" path="res://Game/GameUI/Buttons/Green 1.png" id="9_ldxfo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6nbfv"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -155,15 +154,6 @@ offset_top = -270.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="TextureRect" type="TextureRect" parent="GameUI/PowerButton"]
-layout_mode = 0
-offset_left = -18.0
-offset_top = -114.0
-offset_right = 300.0
-offset_bottom = 375.0
-texture = ExtResource("9_ldxfo")
-expand_mode = 1
-
 [node name="Button" type="Button" parent="GameUI/PowerButton"]
 layout_mode = 1
 anchors_preset = 3
@@ -230,6 +220,7 @@ theme_override_font_sizes/font_size = 50
 text = "PLAY"
 
 [connection signal="displayInfo" from="." to="GameUI" method="_on_game_display_info"]
+[connection signal="hideInfo" from="." to="GameUI" method="_on_game_hide_info"]
 [connection signal="TogglePower" from="GameUI" to="." method="_on_game_ui_toggle_power"]
 [connection signal="pressed" from="GameUI/PowerButton/Button" to="GameUI" method="_on_button_pressed"]
 [connection signal="pressed" from="PopUp/PopUpButton" to="." method="_on_pop_up_button_pressed"]
