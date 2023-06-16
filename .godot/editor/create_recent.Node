@@ -1,3 +1,5 @@
+Node
+SubViewport
 BoxContainer
 Container
 HBoxContainer
@@ -12,7 +14,6 @@ CollisionShape3D
 DirectionalLight3D
 MeshInstance3D
 Camera3D
-Node
 PathFollow3D
 Path3D
 RichTextLabel
