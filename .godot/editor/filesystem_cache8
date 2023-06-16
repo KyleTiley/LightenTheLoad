@@ -1,21 +1,35 @@
 2a60927148abd1d33b818b535e306557
-::res://::1686486654
-::res://Game/::1686481262
-::res://Game/All/::1686487000
-Button.tscn::PackedScene::260866317640818143::1686487000::0::1::::<><>::res://Game/All/Button.gd
+::res://::1686830714
+DB_Board.tscn::PackedScene::5522801438326998609::1686731330::0::1::::<><>::res://Game/Zones/Suburb/Fuze Box Minigame.gd<>res://Switch_1.gd<>res://Switch_2.gd<>res://Switch_3.gd<>res://Switch_4.gd<>res://Switch_5.gd<>res://Switch_6.gd<>res://Switch_7.gd<>res://Switch_8.gd<>res://Switch_9.gd
+Switch_1.gd::GDScript::-1::1686694183::0::1::::<>Button<>::
+Switch_2.gd::GDScript::-1::1686694342::0::1::::<>Button<>::
+Switch_3.gd::GDScript::-1::1686694342::0::1::::<>Button<>::
+Switch_4.gd::GDScript::-1::1686694342::0::1::::<>Button<>::
+Switch_5.gd::GDScript::-1::1686694342::0::1::::<>Button<>::
+Switch_6.gd::GDScript::-1::1686694342::0::1::::<>Button<>::
+Switch_7.gd::GDScript::-1::1686694342::0::1::::<>Button<>::
+Switch_8.gd::GDScript::-1::1686694342::0::1::::<>Button<>::
+Switch_9.gd::GDScript::-1::1686694342::0::1::::<>Button<>::
+::res://Game/::1686663061
+::res://Game/All/::1686731329
+Button2.gd::GDScript::-1::1686730095::0::1::::<>Button<>::
+Button3.gd::GDScript::-1::1686514897::0::1::::<>Button<>::
+Button.gd::GDScript::-1::1686692295::0::1::::<>Button<>::
+Button.tscn::PackedScene::260866317640818143::1686731329::0::1::::<><>::res://Game/All/Button.gd<>res://Game/All/Button2.gd<>res://Game/All/Button3.gd
+cable_fix.gd::GDScript::-1::1686694538::0::1::::<>Node3D<>::
+CheckButtons.gd::GDScript::-1::1686514993::0::1::::<>CheckButton<>::
 icon.svg::CompressedTexture2D::4661030618748602686::1684233710::1685963335::1::::<><>::
-Minigame_1.tscn::PackedScene::308052121532135981::1686487000::0::1::::<><>::res://Game/All/MiniGame.gd<>res://Game/All/CheckButtons.gd
-MiniGame.gd::GDScript::-1::1686486494::0::1::::<>Node2D<>::
-CheckButtons.gd::GDScript::-1::1686486521::0::1::::<>CheckButton<>::
-Button.gd::GDScript::-1::1686486996::0::1::::<>Button<>::
-timer_show.tscn::PackedScene::1204188408407241805::1686487000::0::1::::<><>::
+MiniGame.gd::GDScript::-1::1686513710::0::1::::<>Node2D<>::
+Minigame_1.tscn::PackedScene::308052121532135981::1686693309::0::1::::<><>::res://Game/All/MiniGame.gd<>res://Game/All/CheckButtons.gd
+timer_show.tscn::PackedScene::1204188408407241805::1686731329::0::1::::<><>::
 Truck.glb::PackedScene::1459320662813803445::1686481500::1686481501::1::::<><>::
 ::res://Game/Events/::1686482204
-::res://Game/Events/Cable_Theft/::1686487000
-cable_fix.tscn::PackedScene::3769784265997288792::1686487053::0::1::::<><>::res://Game/Events/Cable_Theft/cable_fix.gd<>uid://u152eu2jw8ib<>uid://dymoviftbvyd<>uid://rfk2pcky0wg8<>uid://enhtq5jmy8aj
-cable_fix.gd::GDScript::-1::1686486974::0::1::::<>Node3D<>::
-Global.gd::GDScript::-1::1686485384::0::1::::<>Node<>::
+::res://Game/Events/Cable_Theft/::1686742159
+cable_fix.tscn::PackedScene::1827405654294446400::1686742159::0::1::::<><>::uid://u152eu2jw8ib<>res://Game/All/cable_fix.gd<>uid://dymoviftbvyd<>uid://rfk2pcky0wg8<>res://Game/Zones/Suburb/Fuze Box Minigame.gd<>res://Switch_1.gd<>res://Switch_2.gd<>res://Switch_3.gd<>res://Switch_4.gd<>res://Switch_5.gd<>res://Switch_6.gd<>res://Switch_7.gd<>res://Switch_8.gd<>res://Switch_9.gd
+Global.gd::GDScript::-1::1686514343::0::1::::<>Node<>::
 PathFollow3D.gd::GDScript::-1::1686486297::0::1::::<>Node3D<>::
 ::res://Game/Zones/::1684687684
 ::res://Game/Zones/City/::1686481275
-::res://Game/Zones/Suburb/::1684234093
+::res://Game/Zones/Suburb/::1686731275
+Fuze Box Minigame.gd::GDScript::-1::1686731275::0::1::::<>Node3D<>::
+Fuze Box.glb::PackedScene::5079608140501716186::1686663095::1686663085::1::::<><>::

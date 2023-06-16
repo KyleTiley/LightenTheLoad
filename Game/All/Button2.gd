@@ -12,7 +12,7 @@ func _process(delta):
 			temp_bool = 1
 
 func _button_pressed():
-	if Global.switch_counter == 5:
-		temp_bool = 0
-		Global.return_vehicle = true
-		self.disabled = true
+	#if Global.switch_counter == 9:
+	temp_bool = 0
+	Global.return_vehicle = true
+	#self.disabled = true

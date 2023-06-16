@@ -1,19 +1,6 @@
-[gd_scene load_steps=94 format=3 uid="uid://1bhdsncucyxc"]
+[gd_scene load_steps=88 format=3 uid="uid://ckxjy6d5fl7ub"]
 
-[ext_resource type="PackedScene" uid="uid://u152eu2jw8ib" path="res://Game/All/Truck.glb" id="1_438oh"]
-[ext_resource type="Script" path="res://Game/All/cable_fix.gd" id="1_dlvqv"]
-[ext_resource type="PackedScene" uid="uid://dymoviftbvyd" path="res://Game/All/Button.tscn" id="3_4wssa"]
-[ext_resource type="PackedScene" uid="uid://rfk2pcky0wg8" path="res://Game/All/timer_show.tscn" id="4_q58bs"]
-[ext_resource type="Script" path="res://Game/Zones/Suburb/Fuze Box Minigame.gd" id="5_vb4jr"]
-
-[sub_resource type="Curve3D" id="Curve3D_l7gms"]
-_data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.266617, -4.29153e-05, -0.39992, 0, 0, 0, 0, 0, 0, -0.266617, -4.29153e-05, -38.2591, 0, 0, 0, 0, 0, 0, 26.928, -4.29153e-05, -63.5874, 0, 0, 0, 0, 0, 0, 83.4501, -4.29153e-05, -70.7859),
-"tilts": PackedFloat32Array(0, 0, 0, 0)
-}
-point_count = 4
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_uh6en"]
+[ext_resource type="Script" path="res://Game/Zones/Suburb/Fuze Box Minigame.gd" id="2_hp6ma"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_22i7k"]
 resource_name = "Box "
@@ -1277,151 +1264,97 @@ shadow_mesh = SubResource("ArrayMesh_kcwit")
 
 [sub_resource type="BoxMesh" id="BoxMesh_u16n8"]
 
-[node name="Cable_Fix" type="Node3D"]
-script = ExtResource("1_dlvqv")
-metadata/_edit_horizontal_guides_ = [12.0]
+[node name="Node3D" type="Node3D"]
 
-[node name="Path3D" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68303, 0)
-curve = SubResource("Curve3D_l7gms")
-
-[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-unique_name_in_owner = true
-transform = Transform3D(-0.999901, 0, -0.0140833, 0, 1, 0, 0.0140833, 0, -0.999901, 0.203949, -4.29153e-05, -4.84928)
-progress = 4.45
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow3D"]
-unique_name_in_owner = true
-
-[node name="Truck" parent="Path3D/PathFollow3D/MeshInstance3D" instance=ExtResource("1_438oh")]
-unique_name_in_owner = true
-transform = Transform3D(-1, 0, -8.75443e-08, 0, 1, 0, 8.75443e-08, 0, -1, 0, 0, 0)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.461934, 0.886914, 0, -0.886914, -0.461934, 0, 0, 0, 1, 0, 41.9239, 0)
-
-[node name="Ground" type="Node3D" parent="."]
-
-[node name="Plane" type="MeshInstance3D" parent="Ground"]
-transform = Transform3D(110.291, 0, 0, 0, 1, 0, 0, 0, 87.1179, 0, 0, 0)
-mesh = SubResource("PlaneMesh_uh6en")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.957214, 15.6163, 9.54231)
-projection = 1
-size = 166.621
-
-[node name="UI" type="Node" parent="."]
-
-[node name="Node2D" parent="UI" instance=ExtResource("3_4wssa")]
-position = Vector2(-832, 6)
-scale = Vector2(1.721, 1.721)
-
-[node name="Timer_Show" parent="UI" instance=ExtResource("4_q58bs")]
-position = Vector2(78, 596)
-
-[node name="Window_Minigame" type="Window" parent="."]
-unique_name_in_owner = true
-snap_2d_transforms_to_pixel = true
-snap_2d_vertices_to_pixel = true
-initial_position = 1
-size = Vector2i(400, 400)
-mode = 1
-visible = false
-
-[node name="Node3D" type="Node3D" parent="Window_Minigame"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -267.522, 0, 0)
-
-[node name="Fuze Box" type="Node3D" parent="Window_Minigame/Node3D"]
+[node name="Fuze Box" type="Node3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.00402765, -3.48196, -5.98263)
-script = ExtResource("5_vb4jr")
+script = ExtResource("2_hp6ma")
 
-[node name="PoweBox Casing" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="PoweBox Casing" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(3.56589, 0, 0, 0, 2.60959, 0, 0, 0, 0.341424, 0, 6.27796, 0)
 mesh = SubResource("ArrayMesh_xmhid")
 skeleton = NodePath("")
 
-[node name="Switch Housing" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Switch Housing" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.277094, 1.69274, 6.29629, -0.253506)
 mesh = SubResource("ArrayMesh_6pknr")
 skeleton = NodePath("")
 
-[node name="Cube" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(0.109363, 0, 0, 0, 0.109363, 0, 0, 0, 0.109363, 0.533792, 5.51213, -0.346387)
 mesh = SubResource("ArrayMesh_8j17v")
 skeleton = NodePath("")
 
-[node name="Cube001" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube001" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(0.109363, 0, 0, 0, 0.109363, 0, 0, 0, 0.109363, 0.198032, 5.51213, -0.346387)
 mesh = SubResource("ArrayMesh_6jahe")
 skeleton = NodePath("")
 
-[node name="Cube028" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube028" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(0.109363, 0, 0, 0, 0.109363, 0, 0, 0, 0.109363, -0.20378, 5.51213, -0.346387)
 mesh = SubResource("ArrayMesh_2o556")
 skeleton = NodePath("")
 
-[node name="Cube029" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube029" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(0.109363, 0, 0, 0, 0.109363, 0, 0, 0, 0.109363, -0.597335, 5.51213, -0.346387)
 mesh = SubResource("ArrayMesh_h03m5")
 skeleton = NodePath("")
 
-[node name="Cylinder" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cylinder" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(4.76584e-09, -2.38292e-09, -0.0799574, -0.0799574, 4.76584e-09, -2.38292e-09, 2.38292e-09, 0.0799574, 0, 2.55099, 6.0451, -0.666388)
 mesh = SubResource("ArrayMesh_jett2")
 skeleton = NodePath("")
 
-[node name="Switch Housing001" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Switch Housing001" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(0, 0.15403, 0, -0.173227, 0, 0, 0, 0, 0.176728, 2.54385, 6.10359, -0.537569)
 mesh = SubResource("ArrayMesh_2l7u4")
 skeleton = NodePath("")
 
-[node name="Cylinder001" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cylinder001" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(4.76584e-09, -2.38292e-09, -0.0799574, -0.0799574, 4.76584e-09, -2.38292e-09, 2.38292e-09, 0.0799574, 0, 2.55099, 6.25613, -0.666388)
 mesh = SubResource("ArrayMesh_wtqg7")
 skeleton = NodePath("")
 
-[node name="Cylinder002" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cylinder002" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(4.76584e-09, -2.38292e-09, -0.0799574, -0.0799574, 4.76584e-09, -2.38292e-09, 2.38292e-09, 0.0799574, 0, 2.55099, 6.45727, -0.666388)
 mesh = SubResource("ArrayMesh_fg63v")
 skeleton = NodePath("")
 
-[node name="Cylinder003" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cylinder003" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(4.76584e-09, -2.38292e-09, -0.0799574, -0.0799574, 4.76584e-09, -2.38292e-09, 2.38292e-09, 0.0799574, 0, 2.55099, 6.65181, -0.666388)
 mesh = SubResource("ArrayMesh_wslwy")
 skeleton = NodePath("")
 
-[node name="Cylinder004" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cylinder004" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(4.76584e-09, -2.38292e-09, -0.0799574, -0.0799574, 4.76584e-09, -2.38292e-09, 2.38292e-09, 0.0799574, 0, 2.55099, 6.84965, -0.666388)
 mesh = SubResource("ArrayMesh_5388f")
 skeleton = NodePath("")
 
-[node name="Cylinder005" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cylinder005" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(4.76584e-09, -2.38292e-09, -0.0799574, -0.0799574, 4.76584e-09, -2.38292e-09, 2.38292e-09, 0.0799574, 0, 2.55099, 5.84726, -0.666388)
 mesh = SubResource("ArrayMesh_n0d0x")
 skeleton = NodePath("")
 
-[node name="Cube002" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube002" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.143304, 1.69274, 6.29629, -0.471723)
 mesh = SubResource("ArrayMesh_go751")
 skeleton = NodePath("")
 
-[node name="Switch_1" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Switch_1" type="MeshInstance3D" parent="Fuze Box"]
 unique_name_in_owner = true
 transform = Transform3D(0.114291, 1.59326e-08, 4.52355e-09, -1.12737e-08, 0.124203, 0.0799943, 4.03674e-09, -0.104219, 0.0953335, 2.09448, 6.35384, -0.540541)
 mesh = SubResource("ArrayMesh_aym0p")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_1"]
+[node name="Area3D" type="Area3D" parent="Fuze Box/Switch_1"]
 transform = Transform3D(1, -7.10543e-15, -7.10543e-15, 3.55271e-15, 1, 2.98023e-08, 7.10543e-15, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_1/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fuze Box/Switch_1/Area3D"]
 transform = Transform3D(1, 0, 2.84217e-14, -7.10543e-15, 1, 2.98023e-08, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_6aj4n")
 
-[node name="Button1" type="Button" parent="Window_Minigame/Node3D/Fuze Box/Switch_1/Area3D/CollisionShape3D"]
-visible = false
+[node name="Button1" type="Button" parent="Fuze Box/Switch_1/Area3D/CollisionShape3D"]
 offset_left = 407.0
 offset_top = 290.0
 offset_right = 461.0
@@ -1429,25 +1362,25 @@ offset_bottom = 321.0
 rotation = 1.57683
 flat = true
 
-[node name="Cube004" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube004" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.143304, 1.22775, 6.29629, -0.471723)
 mesh = SubResource("ArrayMesh_p1bv8")
 skeleton = NodePath("")
 
-[node name="Switch_2" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Switch_2" type="MeshInstance3D" parent="Fuze Box"]
 unique_name_in_owner = true
 transform = Transform3D(0.114291, -1.50958e-08, 3.99453e-09, 1.05096e-08, 0.124203, -0.0799943, 4.02975e-09, 0.104219, 0.0953335, 1.62949, 6.35384, -0.54054)
 mesh = SubResource("ArrayMesh_mgqx0")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_2"]
+[node name="Area3D" type="Area3D" parent="Fuze Box/Switch_2"]
 transform = Transform3D(1, -7.10543e-15, -7.10543e-15, 3.55271e-15, 1, 2.98023e-08, 7.10543e-15, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_2/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fuze Box/Switch_2/Area3D"]
 transform = Transform3D(1, 0, 2.84217e-14, -7.10543e-15, 1, 2.98023e-08, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_6aj4n")
 
-[node name="Button2" type="Button" parent="Window_Minigame/Node3D/Fuze Box/Switch_2/Area3D/CollisionShape3D"]
+[node name="Button2" type="Button" parent="Fuze Box/Switch_2/Area3D/CollisionShape3D"]
 offset_left = 448.0
 offset_top = 291.0
 offset_right = 502.0
@@ -1455,25 +1388,25 @@ offset_bottom = 322.0
 rotation = 1.57683
 flat = true
 
-[node name="Cube006" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube006" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.143304, 0.720166, 6.29629, -0.471723)
 mesh = SubResource("ArrayMesh_3ltvj")
 skeleton = NodePath("")
 
-[node name="Switch_3" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Switch_3" type="MeshInstance3D" parent="Fuze Box"]
 unique_name_in_owner = true
 transform = Transform3D(0.114291, 1.59326e-08, 4.52355e-09, -1.12737e-08, 0.124203, 0.0799943, 4.03674e-09, -0.104219, 0.0953335, 1.12191, 6.35384, -0.540541)
 mesh = SubResource("ArrayMesh_qns4m")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_3"]
+[node name="Area3D" type="Area3D" parent="Fuze Box/Switch_3"]
 transform = Transform3D(1, -7.10543e-15, -7.10543e-15, 3.55271e-15, 1, 2.98023e-08, 7.10543e-15, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_3/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fuze Box/Switch_3/Area3D"]
 transform = Transform3D(1, 0, 2.84217e-14, -7.10543e-15, 1, 2.98023e-08, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_6aj4n")
 
-[node name="Button3" type="Button" parent="Window_Minigame/Node3D/Fuze Box/Switch_3/Area3D/CollisionShape3D"]
+[node name="Button3" type="Button" parent="Fuze Box/Switch_3/Area3D/CollisionShape3D"]
 offset_left = 492.0
 offset_top = 290.0
 offset_right = 546.0
@@ -1481,25 +1414,25 @@ offset_bottom = 321.0
 rotation = 1.57683
 flat = true
 
-[node name="Cube008" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube008" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.143304, 0.233881, 6.29629, -0.471723)
 mesh = SubResource("ArrayMesh_a8of4")
 skeleton = NodePath("")
 
-[node name="Switch_4" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Switch_4" type="MeshInstance3D" parent="Fuze Box"]
 unique_name_in_owner = true
 transform = Transform3D(0.114291, 1.59326e-08, 4.52355e-09, -1.12737e-08, 0.124203, 0.0799943, 4.03674e-09, -0.104219, 0.0953335, 0.635627, 6.35384, -0.540541)
 mesh = SubResource("ArrayMesh_f3bfq")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_4"]
+[node name="Area3D" type="Area3D" parent="Fuze Box/Switch_4"]
 transform = Transform3D(1, -7.10543e-15, -7.10543e-15, 3.55271e-15, 1, 2.98023e-08, 7.10543e-15, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_4/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fuze Box/Switch_4/Area3D"]
 transform = Transform3D(1, 0, 2.84217e-14, -7.10543e-15, 1, 2.98023e-08, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_6aj4n")
 
-[node name="Button4" type="Button" parent="Window_Minigame/Node3D/Fuze Box/Switch_4/Area3D/CollisionShape3D"]
+[node name="Button4" type="Button" parent="Fuze Box/Switch_4/Area3D/CollisionShape3D"]
 offset_left = 536.326
 offset_top = 290.187
 offset_right = 590.326
@@ -1507,25 +1440,25 @@ offset_bottom = 321.187
 rotation = 1.57683
 flat = true
 
-[node name="Cube010" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube010" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.143304, -0.272991, 6.29629, -0.471723)
 mesh = SubResource("ArrayMesh_xfxfn")
 skeleton = NodePath("")
 
-[node name="Switch_5" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Switch_5" type="MeshInstance3D" parent="Fuze Box"]
 unique_name_in_owner = true
 transform = Transform3D(0.114291, 1.59326e-08, 4.52355e-09, -1.12737e-08, 0.124203, 0.0799943, 4.03674e-09, -0.104219, 0.0953335, 0.128755, 6.35384, -0.540541)
 mesh = SubResource("ArrayMesh_clxje")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_5"]
+[node name="Area3D" type="Area3D" parent="Fuze Box/Switch_5"]
 transform = Transform3D(1, -7.10543e-15, -7.10543e-15, 3.55271e-15, 1, 2.98023e-08, 7.10543e-15, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_5/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fuze Box/Switch_5/Area3D"]
 transform = Transform3D(1, 0, 2.84217e-14, -7.10543e-15, 1, 2.98023e-08, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_6aj4n")
 
-[node name="Button5" type="Button" parent="Window_Minigame/Node3D/Fuze Box/Switch_5/Area3D/CollisionShape3D"]
+[node name="Button5" type="Button" parent="Fuze Box/Switch_5/Area3D/CollisionShape3D"]
 offset_left = 579.326
 offset_top = 290.187
 offset_right = 633.326
@@ -1533,25 +1466,25 @@ offset_bottom = 321.187
 rotation = 1.57683
 flat = true
 
-[node name="Cube012" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube012" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.143304, -0.775604, 6.29629, -0.471723)
 mesh = SubResource("ArrayMesh_xf1sy")
 skeleton = NodePath("")
 
-[node name="Switch_6" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Switch_6" type="MeshInstance3D" parent="Fuze Box"]
 unique_name_in_owner = true
 transform = Transform3D(0.114291, 1.59326e-08, 4.52355e-09, -1.12737e-08, 0.124203, 0.0799943, 4.03674e-09, -0.104219, 0.0953335, -0.373858, 6.35384, -0.540541)
 mesh = SubResource("ArrayMesh_08u6i")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_6"]
+[node name="Area3D" type="Area3D" parent="Fuze Box/Switch_6"]
 transform = Transform3D(1, -7.10543e-15, -7.10543e-15, 3.55271e-15, 1, 2.98023e-08, 7.10543e-15, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_6/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fuze Box/Switch_6/Area3D"]
 transform = Transform3D(1, 0, 2.84217e-14, -7.10543e-15, 1, 2.98023e-08, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_6aj4n")
 
-[node name="Button6" type="Button" parent="Window_Minigame/Node3D/Fuze Box/Switch_6/Area3D/CollisionShape3D"]
+[node name="Button6" type="Button" parent="Fuze Box/Switch_6/Area3D/CollisionShape3D"]
 offset_left = 623.0
 offset_top = 291.0
 offset_right = 677.0
@@ -1559,25 +1492,25 @@ offset_bottom = 322.0
 rotation = 1.57683
 flat = true
 
-[node name="Cube014" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube014" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.143304, -1.26118, 6.29629, -0.471723)
 mesh = SubResource("ArrayMesh_ria14")
 skeleton = NodePath("")
 
-[node name="Switch_7" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Switch_7" type="MeshInstance3D" parent="Fuze Box"]
 unique_name_in_owner = true
 transform = Transform3D(0.114291, -1.50958e-08, 3.99453e-09, 1.05096e-08, 0.124203, -0.0799943, 4.02975e-09, 0.104219, 0.0953335, -0.859433, 6.35384, -0.540541)
 mesh = SubResource("ArrayMesh_5y3qw")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_7"]
+[node name="Area3D" type="Area3D" parent="Fuze Box/Switch_7"]
 transform = Transform3D(1, -7.10543e-15, -7.10543e-15, 3.55271e-15, 1, 2.98023e-08, 7.10543e-15, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_7/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fuze Box/Switch_7/Area3D"]
 transform = Transform3D(1, 0, 2.84217e-14, -7.10543e-15, 1, 2.98023e-08, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_6aj4n")
 
-[node name="Button7" type="Button" parent="Window_Minigame/Node3D/Fuze Box/Switch_7/Area3D/CollisionShape3D"]
+[node name="Button7" type="Button" parent="Fuze Box/Switch_7/Area3D/CollisionShape3D"]
 offset_left = 667.0
 offset_top = 290.374
 offset_right = 721.0
@@ -1585,25 +1518,25 @@ offset_bottom = 321.374
 rotation = 1.57683
 flat = true
 
-[node name="Cube016" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube016" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.143304, -1.76805, 6.29629, -0.471723)
 mesh = SubResource("ArrayMesh_adxlm")
 skeleton = NodePath("")
 
-[node name="Switch_8" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Switch_8" type="MeshInstance3D" parent="Fuze Box"]
 unique_name_in_owner = true
 transform = Transform3D(0.114291, 1.59326e-08, 4.52355e-09, -1.12737e-08, 0.124203, 0.0799943, 4.03674e-09, -0.104219, 0.0953335, -1.36631, 6.35384, -0.540541)
 mesh = SubResource("ArrayMesh_0ovld")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_8"]
+[node name="Area3D" type="Area3D" parent="Fuze Box/Switch_8"]
 transform = Transform3D(1, -7.10543e-15, -7.10543e-15, 3.55271e-15, 1, 2.98023e-08, 7.10543e-15, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_8/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fuze Box/Switch_8/Area3D"]
 transform = Transform3D(1, 0, 2.84217e-14, -7.10543e-15, 1, 2.98023e-08, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_6aj4n")
 
-[node name="Button8" type="Button" parent="Window_Minigame/Node3D/Fuze Box/Switch_8/Area3D/CollisionShape3D"]
+[node name="Button8" type="Button" parent="Fuze Box/Switch_8/Area3D/CollisionShape3D"]
 offset_left = 712.0
 offset_top = 290.374
 offset_right = 766.0
@@ -1611,25 +1544,25 @@ offset_bottom = 321.374
 rotation = 1.57683
 flat = true
 
-[node name="Cube018" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube018" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.143304, -2.27492, 6.29629, -0.471723)
 mesh = SubResource("ArrayMesh_a02gb")
 skeleton = NodePath("")
 
-[node name="Switch_9" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Switch_9" type="MeshInstance3D" parent="Fuze Box"]
 unique_name_in_owner = true
 transform = Transform3D(0.114291, 1.59326e-08, 4.52355e-09, -1.12737e-08, 0.124203, 0.0799943, 4.03674e-09, -0.104219, 0.0953335, -1.87318, 6.35384, -0.540541)
 mesh = SubResource("ArrayMesh_t3n1y")
 skeleton = NodePath("")
 
-[node name="Area3D" type="Area3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_9"]
+[node name="Area3D" type="Area3D" parent="Fuze Box/Switch_9"]
 transform = Transform3D(1, -7.10543e-15, -7.10543e-15, 3.55271e-15, 1, 2.98023e-08, 7.10543e-15, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Window_Minigame/Node3D/Fuze Box/Switch_9/Area3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Fuze Box/Switch_9/Area3D"]
 transform = Transform3D(1, 0, 2.84217e-14, -7.10543e-15, 1, 2.98023e-08, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_6aj4n")
 
-[node name="Button9" type="Button" parent="Window_Minigame/Node3D/Fuze Box/Switch_9/Area3D/CollisionShape3D"]
+[node name="Button9" type="Button" parent="Fuze Box/Switch_9/Area3D/CollisionShape3D"]
 offset_left = 756.0
 offset_top = 290.374
 offset_right = 810.0
@@ -1637,124 +1570,149 @@ offset_bottom = 321.374
 rotation = 1.57683
 flat = true
 
-[node name="Cube020" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube020" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(0.442978, 0, 0, 0, -0.297617, 0, 0, 0, 0.143304, -2.43635, 6.67793, -0.471723)
 mesh = SubResource("ArrayMesh_ba567")
 skeleton = NodePath("")
 
-[node name="Cube021" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube021" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(0.0506282, 0, 0, 0, -0.0482544, 0, 0, 0, 0.124449, -2.25838, 6.6608, -0.540541)
 mesh = SubResource("ArrayMesh_saaii")
 skeleton = NodePath("")
 
-[node name="Cube023" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube023" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(0.0506282, 0, 0, 0, -0.0482544, 0, 0, 0, 0.124449, -2.25838, 6.25616, -0.540541)
 mesh = SubResource("ArrayMesh_06j0h")
 skeleton = NodePath("")
 
-[node name="Cube025" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube025" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(0.0506282, 0, 0, 0, -0.0482544, 0, 0, 0, 0.124449, -2.25838, 6.25616, -0.540541)
 mesh = SubResource("ArrayMesh_7jd2u")
 skeleton = NodePath("")
 
-[node name="Cube026" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube026" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(0.442978, 0, 0, 0, -0.297617, 0, 0, 0, 0.143304, -2.43635, 5.94318, -0.471723)
 mesh = SubResource("ArrayMesh_pp7up")
 skeleton = NodePath("")
 
-[node name="Cube027" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube027" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(0.0506282, 0, 0, 0, -0.0482544, 0, 0, 0, 0.124449, -2.25838, 5.92605, -0.540541)
 mesh = SubResource("ArrayMesh_3x7pr")
 skeleton = NodePath("")
 
-[node name="Cube022" type="MeshInstance3D" parent="Window_Minigame/Node3D/Fuze Box"]
+[node name="Cube022" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(0.442978, 0, 0, 0, -0.297617, 0, 0, 0, 0.143304, -2.43635, 6.28248, -0.471723)
 mesh = SubResource("ArrayMesh_ap3q7")
 skeleton = NodePath("")
 
-[node name="Camera3D" type="Camera3D" parent="Window_Minigame/Node3D"]
+[node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.75979, -4.17676)
-visible = false
 projection = 1
 size = 7.39617
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Window_Minigame/Node3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(13.2779, 0, 0, 0, 10.3087, 0, 0, 0, 1, 0, 2.64078, -6.47616)
 mesh = SubResource("BoxMesh_u16n8")
 
-[node name="BoxContainer" type="BoxContainer" parent="Window_Minigame"]
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -4.0
-offset_right = 200.0
-offset_bottom = 11.0
-grow_vertical = 2
-scale = Vector2(2.207, 2.207)
-pivot_offset = Vector2(-65.341, 13.133)
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.154383, 0.988011, 0, -0.988011, 0.154383, 0, 533.234, 439.279)
 
-[node name="Button1" type="Button" parent="Window_Minigame/BoxContainer"]
-layout_mode = 2
+[node name="Button1" type="Button" parent="."]
+offset_left = 407.0
+offset_top = 290.0
+offset_right = 461.0
+offset_bottom = 321.0
+rotation = 1.57683
 flat = true
 
-[node name="Button2" type="Button" parent="Window_Minigame/BoxContainer"]
-layout_mode = 2
+[node name="Button2" type="Button" parent="."]
+offset_left = 448.0
+offset_top = 291.0
+offset_right = 502.0
+offset_bottom = 322.0
+rotation = 1.57683
 flat = true
 
-[node name="Button3" type="Button" parent="Window_Minigame/BoxContainer"]
-layout_mode = 2
+[node name="Button3" type="Button" parent="."]
+offset_left = 492.0
+offset_top = 290.0
+offset_right = 546.0
+offset_bottom = 321.0
+rotation = 1.57683
 flat = true
 
-[node name="Button4" type="Button" parent="Window_Minigame/BoxContainer"]
-layout_mode = 2
+[node name="Button4" type="Button" parent="."]
+offset_left = 536.326
+offset_top = 290.187
+offset_right = 590.326
+offset_bottom = 321.187
+rotation = 1.57683
 flat = true
 
-[node name="Button5" type="Button" parent="Window_Minigame/BoxContainer"]
-layout_mode = 2
+[node name="Button5" type="Button" parent="."]
+offset_left = 579.326
+offset_top = 290.187
+offset_right = 633.326
+offset_bottom = 321.187
+rotation = 1.57683
 flat = true
 
-[node name="Button6" type="Button" parent="Window_Minigame/BoxContainer"]
-layout_mode = 2
+[node name="Button6" type="Button" parent="."]
+offset_left = 623.0
+offset_top = 291.0
+offset_right = 677.0
+offset_bottom = 322.0
+rotation = 1.57683
 flat = true
 
-[node name="Button7" type="Button" parent="Window_Minigame/BoxContainer"]
-layout_mode = 2
+[node name="Button7" type="Button" parent="."]
+offset_left = 667.0
+offset_top = 290.374
+offset_right = 721.0
+offset_bottom = 321.374
+rotation = 1.57683
 flat = true
 
-[node name="Button8" type="Button" parent="Window_Minigame/BoxContainer"]
-layout_mode = 2
+[node name="Button8" type="Button" parent="."]
+offset_left = 712.0
+offset_top = 290.374
+offset_right = 766.0
+offset_bottom = 321.374
+rotation = 1.57683
 flat = true
 
-[node name="Button9" type="Button" parent="Window_Minigame/BoxContainer"]
-layout_mode = 2
+[node name="Button9" type="Button" parent="."]
+offset_left = 756.0
+offset_top = 290.374
+offset_right = 810.0
+offset_bottom = 321.374
+rotation = 1.57683
 flat = true
 
-[connection signal="visibility_changed" from="Window_Minigame" to="Window_Minigame/Node3D/Fuze Box" method="_on_window_minigame_visibility_changed"]
-[connection signal="input_event" from="Window_Minigame/Node3D/Fuze Box/Switch_1/Area3D" to="Window_Minigame/Node3D/Fuze Box" method="_on_area_3d_input_event" flags=18]
-[connection signal="pressed" from="Window_Minigame/Node3D/Fuze Box/Switch_1/Area3D/CollisionShape3D/Button1" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_1_pressed" flags=18]
-[connection signal="input_event" from="Window_Minigame/Node3D/Fuze Box/Switch_2/Area3D" to="Window_Minigame/Node3D/Fuze Box" method="_on_area_3d_input_event" flags=18]
-[connection signal="pressed" from="Window_Minigame/Node3D/Fuze Box/Switch_2/Area3D/CollisionShape3D/Button2" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_2_pressed" flags=18]
-[connection signal="input_event" from="Window_Minigame/Node3D/Fuze Box/Switch_3/Area3D" to="Window_Minigame/Node3D/Fuze Box" method="_on_area_3d_input_event" flags=18]
-[connection signal="pressed" from="Window_Minigame/Node3D/Fuze Box/Switch_3/Area3D/CollisionShape3D/Button3" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_3_pressed" flags=18]
-[connection signal="input_event" from="Window_Minigame/Node3D/Fuze Box/Switch_4/Area3D" to="Window_Minigame/Node3D/Fuze Box" method="_on_area_3d_input_event" flags=18]
-[connection signal="pressed" from="Window_Minigame/Node3D/Fuze Box/Switch_4/Area3D/CollisionShape3D/Button4" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_4_pressed" flags=18]
-[connection signal="input_event" from="Window_Minigame/Node3D/Fuze Box/Switch_5/Area3D" to="Window_Minigame/Node3D/Fuze Box" method="_on_area_3d_input_event" flags=18]
-[connection signal="pressed" from="Window_Minigame/Node3D/Fuze Box/Switch_5/Area3D/CollisionShape3D/Button5" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_5_pressed" flags=18]
-[connection signal="input_event" from="Window_Minigame/Node3D/Fuze Box/Switch_6/Area3D" to="Window_Minigame/Node3D/Fuze Box" method="_on_area_3d_input_event" flags=18]
-[connection signal="pressed" from="Window_Minigame/Node3D/Fuze Box/Switch_6/Area3D/CollisionShape3D/Button6" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_6_pressed" flags=18]
-[connection signal="input_event" from="Window_Minigame/Node3D/Fuze Box/Switch_7/Area3D" to="Window_Minigame/Node3D/Fuze Box" method="_on_area_3d_input_event" flags=18]
-[connection signal="pressed" from="Window_Minigame/Node3D/Fuze Box/Switch_7/Area3D/CollisionShape3D/Button7" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_7_pressed" flags=18]
-[connection signal="input_event" from="Window_Minigame/Node3D/Fuze Box/Switch_8/Area3D" to="Window_Minigame/Node3D/Fuze Box" method="_on_area_3d_input_event" flags=18]
-[connection signal="pressed" from="Window_Minigame/Node3D/Fuze Box/Switch_8/Area3D/CollisionShape3D/Button8" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_8_pressed" flags=18]
-[connection signal="input_event" from="Window_Minigame/Node3D/Fuze Box/Switch_9/Area3D" to="Window_Minigame/Node3D/Fuze Box" method="_on_area_3d_input_event" flags=18]
-[connection signal="pressed" from="Window_Minigame/Node3D/Fuze Box/Switch_9/Area3D/CollisionShape3D/Button9" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_9_pressed" flags=18]
-[connection signal="pressed" from="Window_Minigame/BoxContainer/Button1" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_1_pressed" flags=18]
-[connection signal="ready" from="Window_Minigame/BoxContainer/Button1" to="." method="_on_button_1_ready"]
-[connection signal="pressed" from="Window_Minigame/BoxContainer/Button2" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_2_pressed" flags=18]
-[connection signal="pressed" from="Window_Minigame/BoxContainer/Button3" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_3_pressed" flags=18]
-[connection signal="pressed" from="Window_Minigame/BoxContainer/Button4" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_4_pressed" flags=18]
-[connection signal="pressed" from="Window_Minigame/BoxContainer/Button5" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_5_pressed" flags=18]
-[connection signal="pressed" from="Window_Minigame/BoxContainer/Button6" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_6_pressed" flags=18]
-[connection signal="pressed" from="Window_Minigame/BoxContainer/Button7" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_7_pressed" flags=18]
-[connection signal="pressed" from="Window_Minigame/BoxContainer/Button8" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_8_pressed" flags=18]
-[connection signal="pressed" from="Window_Minigame/BoxContainer/Button9" to="Window_Minigame/Node3D/Fuze Box" method="_on_button_9_pressed" flags=18]
+[connection signal="input_event" from="Fuze Box/Switch_1/Area3D" to="Fuze Box" method="_on_area_3d_input_event"]
+[connection signal="pressed" from="Fuze Box/Switch_1/Area3D/CollisionShape3D/Button1" to="Fuze Box" method="_on_button_1_pressed"]
+[connection signal="input_event" from="Fuze Box/Switch_2/Area3D" to="Fuze Box" method="_on_area_3d_input_event"]
+[connection signal="pressed" from="Fuze Box/Switch_2/Area3D/CollisionShape3D/Button2" to="Fuze Box" method="_on_button_2_pressed"]
+[connection signal="input_event" from="Fuze Box/Switch_3/Area3D" to="Fuze Box" method="_on_area_3d_input_event"]
+[connection signal="pressed" from="Fuze Box/Switch_3/Area3D/CollisionShape3D/Button3" to="Fuze Box" method="_on_button_3_pressed"]
+[connection signal="input_event" from="Fuze Box/Switch_4/Area3D" to="Fuze Box" method="_on_area_3d_input_event"]
+[connection signal="pressed" from="Fuze Box/Switch_4/Area3D/CollisionShape3D/Button4" to="Fuze Box" method="_on_button_4_pressed"]
+[connection signal="input_event" from="Fuze Box/Switch_5/Area3D" to="Fuze Box" method="_on_area_3d_input_event"]
+[connection signal="pressed" from="Fuze Box/Switch_5/Area3D/CollisionShape3D/Button5" to="Fuze Box" method="_on_button_5_pressed"]
+[connection signal="input_event" from="Fuze Box/Switch_6/Area3D" to="Fuze Box" method="_on_area_3d_input_event"]
+[connection signal="pressed" from="Fuze Box/Switch_6/Area3D/CollisionShape3D/Button6" to="Fuze Box" method="_on_button_6_pressed"]
+[connection signal="input_event" from="Fuze Box/Switch_7/Area3D" to="Fuze Box" method="_on_area_3d_input_event"]
+[connection signal="pressed" from="Fuze Box/Switch_7/Area3D/CollisionShape3D/Button7" to="Fuze Box" method="_on_button_7_pressed"]
+[connection signal="input_event" from="Fuze Box/Switch_8/Area3D" to="Fuze Box" method="_on_area_3d_input_event"]
+[connection signal="pressed" from="Fuze Box/Switch_8/Area3D/CollisionShape3D/Button8" to="Fuze Box" method="_on_button_8_pressed"]
+[connection signal="input_event" from="Fuze Box/Switch_9/Area3D" to="Fuze Box" method="_on_area_3d_input_event"]
+[connection signal="pressed" from="Fuze Box/Switch_9/Area3D/CollisionShape3D/Button9" to="Fuze Box" method="_on_button_9_pressed"]
+[connection signal="pressed" from="Button1" to="Fuze Box" method="_on_button_1_pressed"]
+[connection signal="pressed" from="Button2" to="Fuze Box" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="Fuze Box" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Button4" to="Fuze Box" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Button5" to="Fuze Box" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Button6" to="Fuze Box" method="_on_button_6_pressed"]
+[connection signal="pressed" from="Button7" to="Fuze Box" method="_on_button_7_pressed"]
+[connection signal="pressed" from="Button8" to="Fuze Box" method="_on_button_8_pressed"]
+[connection signal="pressed" from="Button9" to="Fuze Box" method="_on_button_9_pressed"]

@@ -3,10 +3,11 @@ extends Node3D
 func _process(delta: float):
 	const move_speed = 50.0
 	
-	if %PathFollow3D.progress_ratio >= 0.9:
+	if %PathFollow3D.progress_ratio >= 0.9 and Global.return_vehicle == false:
 		%MeshInstance3D.rotation_degrees.y = 180.0
 		Global.start_maintanance = false
 		Global.disable_check_buttons = false
+		%"Window_Minigame".popup()
 
 	if Global.start_maintanance == true:
 		%PathFollow3D.progress += move_speed * delta
@@ -18,3 +19,6 @@ func _process(delta: float):
 			Global.enable_minigame_start_button = false
 			Global.reset_mini_game = true
 			Global.return_vehicle = false
+			Global.switch_counter = 0
+
+

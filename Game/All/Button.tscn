@@ -16,10 +16,11 @@ text = "Start"
 script = ExtResource("1_f2186")
 
 [node name="Button2" type="Button" parent="."]
+visible = false
 offset_left = 1090.0
-offset_top = 34.0
-offset_right = 1151.0
-offset_bottom = 65.0
+offset_top = 39.0
+offset_right = 1136.0
+offset_bottom = 70.0
 disabled = true
 text = "Return"
 script = ExtResource("2_rjisy")
