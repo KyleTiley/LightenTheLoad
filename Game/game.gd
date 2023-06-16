@@ -4,6 +4,7 @@ extends Node
 var gameHasStarted = false
 var selectedZone = "NULL"
 var dayOfWeek: String
+var allocatedElectricity
 
 # SIGNALS
 # Sends data to UI to display
@@ -14,6 +15,7 @@ signal hideInfo
 func _ready():
 	Zone.ZoneClicked.connect(SelectZone)
 	GameUI.TogglePower.connect(_on_game_ui_toggle_power)
+	allocatedElectricity = 10000
 	
 func _process(_delta):
 	SelectZone(selectedZone)
@@ -34,6 +36,15 @@ func SelectZone(_name):
 			hideInfo.emit(selectedZone)
 		"NULL":
 			hideInfo.emit(selectedZone)
+
+func GameOver(_reason):
+	match _reason:
+		"Power":
+			print("Game lost due to no power")
+		"Happy":
+			print("Game lost due to no happiness")
+		"Win":
+			print("You have made it to the next day")
 
 func _on_game_ui_toggle_power():
 	match selectedZone:

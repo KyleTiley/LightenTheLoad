@@ -5,7 +5,6 @@ var timerCounter = 0
 
 # Electricity Variables
 var isUsingElectricity = true
-var allocatedElectricity = 10000
 var electricityUsage = 0
 var electricityUsed = 0
 
@@ -38,7 +37,8 @@ func UseElectricity():
 	if isUsingElectricity:
 		isHappy = true
 		electricityUsed += electricityUsage
-		allocatedElectricity -= electricityUsage
+#		Game.allocatedElectricity -= electricityUsage
+		print(name + " has used " + str(Game.allocatedElectricity))
 	else:
 		isHappy = false	# If a zone has no power it will be unhappy
 
@@ -51,7 +51,7 @@ func HappinessController():
 	currentHappiness = clamp(currentHappiness, 0, 100)	# Keeps happiness between 0 and 100
 	# If a zone hits 0 happiness the game is over
 	if currentHappiness <= 0:
-		print("GAME OVER")
+		Game.GameOver("Happy")
 
 # Display Functions
 func _on_area_3d_input_event(_camera, event, _position, _normal, _shape_idx):

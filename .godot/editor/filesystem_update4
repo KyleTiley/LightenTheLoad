@@ -11,3 +11,4 @@ res://Game/game.gd
 res://Game/GameUI/Clock.gd
 res://Game/PopUp/PopUp.gd
 res://Game/GameUI/gameui.gd
+res://Game/Zones/zone.gd
