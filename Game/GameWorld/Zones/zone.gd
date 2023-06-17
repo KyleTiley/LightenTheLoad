@@ -3,6 +3,7 @@ extends Node
 # SIGNALS
 
 signal use_total_electricity
+signal zone_clicked
 
 # VARIABLES
 
@@ -19,6 +20,7 @@ var current_happiness = 50
 # Runs all controllers
 func run_controllers():
 	electricity_controller()
+	happiness_controller()
 
 # Controlls electricity usage
 func electricity_controller():
@@ -37,11 +39,11 @@ func happiness_controller():
 	# Keeps happiness between 0 and 100
 	current_happiness = clamp(current_happiness, 0, 100)
 	if current_happiness <= 0:
-		pass #???
+		pass #??? end game
 
 # Click function for zone
 func _on_area_3d_input_event(_camera, event, _position, _normal, _shape_idx):
 	if event is InputEventMouseButton:
 		# If the event is left mouse click
 		if event.pressed and event.button_index == 1:
-			print(electricity_used)
+			zone_clicked.emit()

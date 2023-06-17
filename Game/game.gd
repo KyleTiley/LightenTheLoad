@@ -4,6 +4,11 @@ extends Node
 
 signal game_timer
 
+# REFERENCES
+
+var zone = "res://Game/GameWorld/Zones/zone.gd"
+
+
 # VARIABLES
 
 var timer_counter = 0
@@ -13,6 +18,7 @@ var selected_zone
 # FUNCTIONS
 
 func _ready():
+#	zone.zone_clicked.connect(temp_display)
 	set_total_allocated_electricity(Global.day_of_the_week)
 
 # Increments timer
@@ -41,6 +47,20 @@ func set_total_allocated_electricity(_day):
 		"Friday":
 			total_allocated_electricity = 18000
 
+func temp_display():
+	print("FUCK")
 
-func _on_game_timer():
+func _on_city_zone_clicked():
+	pass # Replace with function body.
+
+
+func _on_stadium_zone_clicked():
+	pass # Replace with function body.
+
+
+func _on_township_zone_clicked():
+	pass # Replace with function body.
+
+
+func _on_suburb_zone_clicked():
 	pass # Replace with function body.
