@@ -95,64 +95,6 @@ text = "00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Popup" type="Control" parent="GameUI"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("7_hrlhj")
-
-[node name="Panel" type="Panel" parent="GameUI/Popup"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="GameUI/Popup"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 460.0
-offset_top = 270.0
-offset_right = -460.0
-offset_bottom = -310.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0.490196, 0.490196, 1)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="GameUI/Popup/ColorRect"]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.05
-anchor_top = 0.05
-anchor_right = 0.95
-anchor_bottom = 0.65
-offset_bottom = 50.0
-grow_horizontal = 2
-theme_override_font_sizes/normal_font_size = 50
-text = "default text"
-
-[node name="PopupButton" type="Button" parent="GameUI/Popup/ColorRect"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 425.0
-offset_top = -100.0
-offset_right = -425.0
-offset_bottom = -20.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 50
-text = "PLAY"
-
 [node name="InfoBar" type="Control" parent="GameUI"]
 layout_mode = 1
 anchors_preset = 12
@@ -225,6 +167,64 @@ color = Color(0.364706, 1, 1, 1)
 [node name="LightBulb" parent="GameUI/InfoBar/Portrait" instance=ExtResource("1_wo4ky")]
 position = Vector2(150, 150)
 
+[node name="Popup" type="Control" parent="GameUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_hrlhj")
+
+[node name="Panel" type="Panel" parent="GameUI/Popup"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameUI/Popup"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 460.0
+offset_top = 270.0
+offset_right = -460.0
+offset_bottom = -310.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.490196, 0.490196, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GameUI/Popup/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.65
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 50
+text = "default text"
+
+[node name="PopupButton" type="Button" parent="GameUI/Popup/ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 425.0
+offset_top = -100.0
+offset_right = -425.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
 [connection signal="game_timer" from="." to="GameWorld/Zones/City" method="_on_game_game_timer"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/Stadium" method="_on_game_game_timer"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/Township" method="_on_game_game_timer"]
@@ -234,5 +234,5 @@ position = Vector2(150, 150)
 [connection signal="zone_clicked" from="GameWorld/Zones/Stadium" to="." method="_on_stadium_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Township" to="." method="_on_township_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Suburb" to="." method="_on_suburb_zone_clicked"]
-[connection signal="pressed" from="GameUI/Popup/ColorRect/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]
 [connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]
+[connection signal="pressed" from="GameUI/Popup/ColorRect/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]

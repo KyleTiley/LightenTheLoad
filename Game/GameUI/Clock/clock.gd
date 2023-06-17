@@ -19,11 +19,12 @@ func _process(_delta):
 		clock_hours += 1
 		clock_minutes = 0
 	if clock_hours == 16:
-		print("DAY OVER")
+		Global.game_has_started = false
+		Global.next_day()
 	change_clock_time()
 
 func _on_game_game_timer():
-		clock_minutes += 5
+		clock_minutes += 60
 
 func change_clock_time():
 	var _time : String = "%02d:%02d" % [clock_hours, clock_minutes]

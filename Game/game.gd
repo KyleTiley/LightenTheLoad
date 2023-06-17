@@ -18,8 +18,8 @@ var selected_zone
 # FUNCTIONS
 
 func _ready():
-#	zone.zone_clicked.connect(temp_display)
 	set_total_allocated_electricity(Global.day_of_the_week)
+#	zone.zone_clicked.connect(temp_display)
 
 # Increments timer
 func _physics_process(delta):
