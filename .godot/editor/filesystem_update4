@@ -7,3 +7,11 @@ res://OldGame/Zones/City/city.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.tscn
 res://MainMenu/main_menu.gd
 res://global.gd
+res://Game/GameUI/Clock/clock.gd
+res://Game/GameWorld/Zones/City/city.gd
+res://Game/GameWorld/Zones/zone.gd
+res://Game/GameWorld/Zones/Stadium/stadium.gd
+res://Game/GameWorld/Zones/Township/township.tscn
+res://Game/GameWorld/Zones/Suburb/suburb.tscn
+res://Game/GameWorld/Zones/Suburb/suburb.gd
+res://Game/GameWorld/Zones/Township/township.gd

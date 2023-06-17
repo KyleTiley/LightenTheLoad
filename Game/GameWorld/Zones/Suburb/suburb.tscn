@@ -1,22 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://b45fejmjvr6kp"]
+[gd_scene load_steps=4 format=3 uid="uid://da71hvmgak7ff"]
 
-[ext_resource type="Script" path="res://OldGame/Zones/Suburb/suburb.gd" id="1_l1dii"]
-[ext_resource type="PackedScene" uid="uid://b7c80unm1bcl6" path="res://OldGame/Zones/Suburb/Suburb.glb" id="2_i70oj"]
+[ext_resource type="PackedScene" uid="uid://bu0f8d3u0hdpm" path="res://Game/GameWorld/Zones/Suburb/Suburb.glb" id="1_lx8c4"]
+[ext_resource type="Script" path="res://Game/GameWorld/Zones/Suburb/suburb.gd" id="1_svdwy"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_2so8e"]
-size = Vector3(14.4874, 2.15167, 14.4995)
+[sub_resource type="BoxShape3D" id="BoxShape3D_koen1"]
+size = Vector3(15, 5, 15)
 
 [node name="Suburb" type="Node3D"]
-script = ExtResource("1_l1dii")
+script = ExtResource("1_svdwy")
 
-[node name="Suburb" parent="." instance=ExtResource("2_i70oj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.427861, 0)
+[node name="Suburb" parent="." instance=ExtResource("1_lx8c4")]
 
 [node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.427861, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.657757, 0)
-shape = SubResource("BoxShape3D_2so8e")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.21484, 0)
+shape = SubResource("BoxShape3D_koen1")
 
 [connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]

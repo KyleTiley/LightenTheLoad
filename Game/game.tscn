@@ -1,6 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://dhxi4w6ieeryj"]
+[gd_scene load_steps=10 format=3 uid="uid://dhxi4w6ieeryj"]
 
+[ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
+[ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
 [ext_resource type="PackedScene" uid="uid://dx7wr27c0njgs" path="res://Game/GameUI/Characters/light_bulb.tscn" id="1_wo4ky"]
+[ext_resource type="PackedScene" uid="uid://c8jicq5bwrdnu" path="res://Game/GameWorld/Zones/Stadium/stadium.tscn" id="2_p7jbk"]
+[ext_resource type="PackedScene" uid="uid://cqhiu8fvdw425" path="res://Game/GameWorld/Zones/Township/township.tscn" id="3_v308r"]
+[ext_resource type="PackedScene" uid="uid://da71hvmgak7ff" path="res://Game/GameWorld/Zones/Suburb/suburb.tscn" id="4_0fdj6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -31,6 +36,17 @@ transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766045, 0, -0.766045, 0.642788, 
 
 [node name="Zones" type="Node3D" parent="GameWorld"]
 
+[node name="City" parent="GameWorld/Zones" instance=ExtResource("1_61u5i")]
+
+[node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("2_p7jbk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8412, 0, 0)
+
+[node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_v308r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30.2833)
+
+[node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("4_0fdj6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.8571, 0, 0)
+
 [node name="Environment" type="Node3D" parent="GameWorld"]
 
 [node name="Events" type="Node3D" parent="GameWorld"]
@@ -46,20 +62,34 @@ mouse_filter = 1
 
 [node name="Clock" type="Control" parent="GameUI"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 300.0
+offset_bottom = 150.0
+script = ExtResource("1_edsui")
 
 [node name="Day" type="Label" parent="GameUI/Clock"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 72.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
 text = "Day"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Time" type="Label" parent="GameUI/Clock"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -72.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
 text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Popup" type="Control" parent="GameUI"]
 anchors_preset = 0
@@ -68,10 +98,21 @@ offset_bottom = 40.0
 
 [node name="Bar" type="Control" parent="GameUI"]
 layout_mode = 1
-anchor_right = 0.085
-anchor_bottom = 0.096
-offset_right = 72.8
-offset_bottom = 64.32
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="GameUI/Bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="PowerButton" type="TextureButton" parent="GameUI/Bar"]
 layout_mode = 0
@@ -83,4 +124,23 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="LightBulb" parent="GameUI/Bar" instance=ExtResource("1_wo4ky")]
+[node name="Portrait" type="Control" parent="GameUI/Bar"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -300.0
+offset_right = 300.0
+grow_vertical = 0
+
+[node name="ColorRect2" type="ColorRect" parent="GameUI/Bar/Portrait"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.364706, 1, 1, 1)
+
+[node name="LightBulb" parent="GameUI/Bar/Portrait" instance=ExtResource("1_wo4ky")]
+position = Vector2(150, 150)

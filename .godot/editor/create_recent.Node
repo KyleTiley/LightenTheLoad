@@ -1,9 +1,12 @@
+CollisionShape3D
+Area3D
+Control
+ColorRect
 AnimatedSprite2D
 RichTextLabel
 TextureButton
 Label
 Node3D
-Control
 Node
 TextureRect
 Button
@@ -12,9 +15,6 @@ PanelContainer
 MarginContainer
 Panel
 HBoxContainer
-ColorRect
 TextEdit
 Container
-CollisionShape3D
-Area3D
 Camera3D
