@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cemuny7ht0hok"
-path="res://.godot/imported/Fuze Box.glb-220c03442c3c4d99824cbfc88882392f.scn"
+path="res://.godot/imported/Fuze Box.glb-d103c42162105ed8e050369cac006ea2.scn"
 
 [deps]
 
-source_file="res://Game/Zones/Suburb/Fuze Box.glb"
-dest_files=["res://.godot/imported/Fuze Box.glb-220c03442c3c4d99824cbfc88882392f.scn"]
+source_file="res://Game/All/Fuze Box.glb"
+dest_files=["res://.godot/imported/Fuze Box.glb-d103c42162105ed8e050369cac006ea2.scn"]
 
 [params]
 
