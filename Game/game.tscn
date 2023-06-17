@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dhxi4w6ieeryj"]
+[gd_scene load_steps=11 format=3 uid="uid://dhxi4w6ieeryj"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
+[ext_resource type="Script" path="res://Game/game.gd" id="1_vwxi5"]
 [ext_resource type="PackedScene" uid="uid://dx7wr27c0njgs" path="res://Game/GameUI/Characters/light_bulb.tscn" id="1_wo4ky"]
 [ext_resource type="PackedScene" uid="uid://c8jicq5bwrdnu" path="res://Game/GameWorld/Zones/Stadium/stadium.tscn" id="2_p7jbk"]
 [ext_resource type="PackedScene" uid="uid://cqhiu8fvdw425" path="res://Game/GameWorld/Zones/Township/township.tscn" id="3_v308r"]
@@ -21,6 +22,7 @@ tonemap_mode = 2
 glow_enabled = true
 
 [node name="Game" type="Node"]
+script = ExtResource("1_vwxi5")
 
 [node name="GameWorld" type="Node3D" parent="."]
 

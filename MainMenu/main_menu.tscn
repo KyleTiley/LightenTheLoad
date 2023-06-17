@@ -50,26 +50,31 @@ theme_override_constants/separation = 10
 [node name="ButtonMonday" type="Button" parent="PlayMenu/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+disabled = true
 text = "Monday"
 
 [node name="ButtonTuesday" type="Button" parent="PlayMenu/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+disabled = true
 text = "Tuesday"
 
 [node name="ButtonWednesday" type="Button" parent="PlayMenu/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+disabled = true
 text = "Wednesday"
 
 [node name="ButtonThursday" type="Button" parent="PlayMenu/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+disabled = true
 text = "Thursday"
 
 [node name="ButtonFriday" type="Button" parent="PlayMenu/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
+disabled = true
 text = "Friday"
 
 [connection signal="pressed" from="PlayMenu/PanelContainer/VBoxContainer/ButtonMonday" to="." method="_on_button_monday_pressed"]

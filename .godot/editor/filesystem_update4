@@ -15,3 +15,4 @@ res://Game/GameWorld/Zones/Township/township.tscn
 res://Game/GameWorld/Zones/Suburb/suburb.tscn
 res://Game/GameWorld/Zones/Suburb/suburb.gd
 res://Game/GameWorld/Zones/Township/township.gd
+res://Game/game.gd

@@ -1,5 +1,21 @@
 extends Node
 
+# REFERENCES
+
+@onready var monday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonMonday
+@onready var tuesday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonTuesday
+@onready var wednesday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonWednesday
+@onready var thursday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonThursday
+@onready var friday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonFriday
+
+# FUNCTIONS
+
+func _ready():
+	if Global.monday_unlocked:
+		monday_button.disabled = false
+	if Global.tuesday_unlocked:
+		tuesday_button.disabled = false
+
 func StartGame():
 	Global.change_scene("Game")
 
