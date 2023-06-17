@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cu2odsqj50net"]
 
 [ext_resource type="Script" path="res://Game/GameWorld/Zones/City/city.gd" id="1_xtan1"]
-[ext_resource type="PackedScene" uid="uid://jgi2ow8r74od" path="res://Game/GameWorld/Zones/City/City.glb" id="2_55j7f"]
+[ext_resource type="PackedScene" uid="uid://jgi2ow8r74od" path="res://OldGame/Zones/City/City.glb" id="2_55j7f"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qe6ai"]
 size = Vector3(15.2896, 9.5129, 15.3264)

@@ -1,13 +1,14 @@
 [gd_scene load_steps=2 format=3 uid="uid://blk752tav070r"]
 
-[ext_resource type="Texture2D" uid="uid://b6omledgrwcoq" path="res://Menu/eskmom.png" id="2_u8ovv"]
+[ext_resource type="Script" path="res://MainMenu/main_menu.gd" id="1_ohyn0"]
 
 [node name="MainMenu" type="Node"]
+script = ExtResource("1_ohyn0")
 
 [node name="MenuCamera" type="Camera2D" parent="."]
 position = Vector2(960, 540)
 
-[node name="Menus" type="Control" parent="."]
+[node name="PlayMenu" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,15 +18,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="MainMenu" type="Control" parent="Menus"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Background" type="ColorRect" parent="Menus/MainMenu"]
+[node name="Background" type="ColorRect" parent="PlayMenu"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -34,158 +27,53 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.192157, 0, 0.831373, 1)
 
-[node name="MarginContainer" type="MarginContainer" parent="Menus/MainMenu"]
+[node name="PanelContainer" type="PanelContainer" parent="PlayMenu"]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -143.5
+offset_top = -200.5
+offset_right = 143.5
+offset_bottom = 200.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_top = 100
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 100
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menus/MainMenu/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 100
-alignment = 1
-
-[node name="TextureRect" type="TextureRect" parent="Menus/MainMenu/MarginContainer/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PlayMenu/PanelContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_u8ovv")
+theme_override_constants/separation = 10
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Menus/MainMenu/MarginContainer/VBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 25
-
-[node name="ButtonPlay" type="Button" parent="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Play"
-
-[node name="ButtonRules" type="Button" parent="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "How To Play"
-
-[node name="ButtonSettings" type="Button" parent="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 50
-text = "Settings"
-
-[node name="PanelContainer" type="PanelContainer" parent="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer"]
-layout_mode = 2
-
-[node name="ButtonMonday" type="Button" parent="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+[node name="ButtonMonday" type="Button" parent="PlayMenu/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Monday"
 
-[node name="ButtonTuesday" type="Button" parent="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+[node name="ButtonTuesday" type="Button" parent="PlayMenu/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Tuesday"
 
-[node name="ButtonWednesday" type="Button" parent="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+[node name="ButtonWednesday" type="Button" parent="PlayMenu/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Wednesday"
 
-[node name="ButtonThursday" type="Button" parent="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+[node name="ButtonThursday" type="Button" parent="PlayMenu/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Thursday"
 
-[node name="ButtonFriday" type="Button" parent="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer"]
+[node name="ButtonFriday" type="Button" parent="PlayMenu/PanelContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 50
 text = "Friday"
 
-[node name="HowToMenu" type="Control" parent="Menus"]
-visible = false
-layout_mode = 1
-anchor_left = 1.0
-anchor_right = 2.0
-anchor_bottom = 1.0
-grow_vertical = 0
-
-[node name="ColorRect" type="ColorRect" parent="Menus/HowToMenu"]
-layout_mode = 2
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0.137255, 0.341176, 0.176471, 1)
-
-[node name="Panel" type="Panel" parent="Menus/HowToMenu"]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 2
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="ButtonBackRules" type="Button" parent="Menus/HowToMenu/Panel"]
-layout_mode = 2
-offset_left = 1735.0
-offset_top = 50.0
-offset_right = 1862.0
-offset_bottom = 100.0
-theme_override_font_sizes/font_size = 30
-text = "Back"
-
-[node name="SettingsMenu" type="Control" parent="Menus"]
-visible = false
-layout_mode = 1
-anchor_left = -1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="ColorRect" parent="Menus/SettingsMenu"]
-layout_mode = 2
-offset_right = 1920.0
-offset_bottom = 1080.0
-color = Color(0.509804, 0.145098, 0.145098, 1)
-
-[node name="Panel" type="Panel" parent="Menus/SettingsMenu"]
-layout_mode = 2
-offset_right = 1920.0
-offset_bottom = 1080.0
-
-[node name="ButtonBackSettings" type="Button" parent="Menus/SettingsMenu/Panel"]
-layout_mode = 2
-offset_left = 1762.0
-offset_top = 23.0
-offset_right = 1890.0
-offset_bottom = 73.0
-theme_override_font_sizes/font_size = 30
-text = "Back"
-
-[node name="HSlider" type="HSlider" parent="Menus/SettingsMenu/Panel"]
-layout_mode = 0
-offset_left = 244.0
-offset_top = 217.0
-offset_right = 744.0
-offset_bottom = 333.0
-min_value = -30.0
-max_value = 0.0
-
-[connection signal="pressed" from="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ButtonPlay" to="Menus" method="_on_play_button_pressed"]
-[connection signal="pressed" from="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ButtonRules" to="Menus" method="_on_how_to_button_pressed"]
-[connection signal="pressed" from="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/ButtonSettings" to="Menus" method="_on_settings_button_pressed"]
-[connection signal="pressed" from="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/ButtonMonday" to="Menus" method="_on_button_monday_pressed"]
-[connection signal="pressed" from="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/ButtonTuesday" to="Menus" method="_on_button_tuesday_pressed"]
-[connection signal="pressed" from="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/ButtonWednesday" to="Menus" method="_on_button_wednesday_pressed"]
-[connection signal="pressed" from="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/ButtonThursday" to="Menus" method="_on_button_thursday_pressed"]
-[connection signal="pressed" from="Menus/MainMenu/MarginContainer/VBoxContainer/HBoxContainer/PanelContainer/VBoxContainer/ButtonFriday" to="Menus" method="_on_button_friday_pressed"]
-[connection signal="pressed" from="Menus/HowToMenu/Panel/ButtonBackRules" to="Menus" method="_on_back_button_pressed"]
-[connection signal="pressed" from="Menus/SettingsMenu/Panel/ButtonBackSettings" to="Menus" method="_on_back_button_2_pressed"]
-[connection signal="value_changed" from="Menus/SettingsMenu/Panel/HSlider" to="Menus" method="_on_h_slider_value_changed"]
+[connection signal="pressed" from="PlayMenu/PanelContainer/VBoxContainer/ButtonMonday" to="." method="_on_button_monday_pressed"]
+[connection signal="pressed" from="PlayMenu/PanelContainer/VBoxContainer/ButtonTuesday" to="." method="_on_button_tuesday_pressed"]
+[connection signal="pressed" from="PlayMenu/PanelContainer/VBoxContainer/ButtonWednesday" to="." method="_on_button_wednesday_pressed"]
+[connection signal="pressed" from="PlayMenu/PanelContainer/VBoxContainer/ButtonThursday" to="." method="_on_button_thursday_pressed"]
+[connection signal="pressed" from="PlayMenu/PanelContainer/VBoxContainer/ButtonFriday" to="." method="_on_button_friday_pressed"]
