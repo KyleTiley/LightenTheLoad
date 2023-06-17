@@ -13,3 +13,4 @@ res://Game/GameWorld/Zones/Township/township.gd
 res://Game/GameWorld/Zones/Suburb/suburb.gd
 res://global.gd
 res://MainMenu/main_menu.gd
+res://Game/popup.gd

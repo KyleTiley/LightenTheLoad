@@ -22,4 +22,3 @@ func change_scene(_scene):
 	match _scene:
 		"Game":
 			get_tree().change_scene_to_file(game)
-			game_has_started = true
