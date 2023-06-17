@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dhxi4w6ieeryj"]
+[gd_scene load_steps=13 format=3 uid="uid://dhxi4w6ieeryj"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cqhiu8fvdw425" path="res://Game/GameWorld/Zones/Township/township.tscn" id="3_v308r"]
 [ext_resource type="PackedScene" uid="uid://da71hvmgak7ff" path="res://Game/GameWorld/Zones/Suburb/suburb.tscn" id="4_0fdj6"]
 [ext_resource type="Script" path="res://Game/popup.gd" id="7_hrlhj"]
+[ext_resource type="Script" path="res://Game/infobar.gd" id="8_enkx3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -35,7 +36,7 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="GameWorld"]
-transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766045, 0, -0.766045, 0.642788, 0, 100, 100)
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766045, 0, -0.766045, 0.642788, 0, 20, 20)
 
 [node name="Zones" type="Node3D" parent="GameWorld"]
 
@@ -152,7 +153,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "PLAY"
 
-[node name="Bar" type="Control" parent="GameUI"]
+[node name="InfoBar" type="Control" parent="GameUI"]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -161,26 +162,49 @@ anchor_bottom = 1.0
 offset_top = -200.0
 grow_horizontal = 2
 grow_vertical = 0
+script = ExtResource("8_enkx3")
 
-[node name="ColorRect" type="ColorRect" parent="GameUI/Bar"]
+[node name="ColorRect" type="ColorRect" parent="GameUI/InfoBar"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+color = Color(0.490196, 0.192157, 0.196078, 1)
 
-[node name="PowerButton" type="TextureButton" parent="GameUI/Bar"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="GameInfo" type="RichTextLabel" parent="GameUI/InfoBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.156
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.48
+offset_top = 25.0
+offset_right = -320.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 50
+text = "Click on a zone to toggle its power on or off"
 
-[node name="GameInfo" type="RichTextLabel" parent="GameUI/Bar"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="PowerButton" type="Button" parent="GameUI/InfoBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.875
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Power:
+On / Off"
 
-[node name="Portrait" type="Control" parent="GameUI/Bar"]
+[node name="Portrait" type="Control" parent="GameUI/InfoBar"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -189,7 +213,7 @@ offset_top = -300.0
 offset_right = 300.0
 grow_vertical = 0
 
-[node name="ColorRect2" type="ColorRect" parent="GameUI/Bar/Portrait"]
+[node name="ColorRect2" type="ColorRect" parent="GameUI/InfoBar/Portrait"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -198,11 +222,13 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.364706, 1, 1, 1)
 
-[node name="LightBulb" parent="GameUI/Bar/Portrait" instance=ExtResource("1_wo4ky")]
+[node name="LightBulb" parent="GameUI/InfoBar/Portrait" instance=ExtResource("1_wo4ky")]
 position = Vector2(150, 150)
 
-[connection signal="zone_timer" from="." to="GameWorld/Zones/City" method="_on_game_zone_timer"]
-[connection signal="zone_timer" from="." to="GameWorld/Zones/Stadium" method="_on_game_zone_timer"]
-[connection signal="zone_timer" from="." to="GameWorld/Zones/Township" method="_on_game_zone_timer"]
-[connection signal="zone_timer" from="." to="GameWorld/Zones/Suburb" method="_on_game_zone_timer"]
+[connection signal="game_timer" from="." to="GameWorld/Zones/City" method="_on_game_game_timer"]
+[connection signal="game_timer" from="." to="GameWorld/Zones/Stadium" method="_on_game_game_timer"]
+[connection signal="game_timer" from="." to="GameWorld/Zones/Township" method="_on_game_game_timer"]
+[connection signal="game_timer" from="." to="GameWorld/Zones/Suburb" method="_on_game_game_timer"]
+[connection signal="game_timer" from="." to="GameUI/Clock" method="_on_game_game_timer"]
 [connection signal="pressed" from="GameUI/Popup/ColorRect/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]
+[connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]

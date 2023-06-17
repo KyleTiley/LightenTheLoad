@@ -7,22 +7,24 @@ signal use_total_electricity
 # VARIABLES
 
 # Electricity variables
-var is_using_electricity
+var is_using_electricity = true
 var electricity_usage
-var electricity_used
+var electricity_used = 0
 # Happiness variables
-var is_happy
-var current_happiness
-var total_happiness
+var is_happy = true
+var current_happiness = 50
 
 # FUNCTIONS
+
+# Runs all controllers
+func run_controllers():
+	electricity_controller()
 
 # Controlls electricity usage
 func electricity_controller():
 	if is_using_electricity:
 		is_happy = true
 		electricity_used += electricity_usage
-		
 	else:
 		is_happy = false
 
@@ -42,4 +44,4 @@ func _on_area_3d_input_event(_camera, event, _position, _normal, _shape_idx):
 	if event is InputEventMouseButton:
 		# If the event is left mouse click
 		if event.pressed and event.button_index == 1:
-			print(name)
+			print(electricity_used)

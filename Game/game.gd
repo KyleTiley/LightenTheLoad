@@ -2,11 +2,11 @@ extends Node
 
 # SIGNALS
 
-signal zone_timer
+signal game_timer
 
 # VARIABLES
 
-var game_timer = 0
+var timer_counter = 0
 var total_allocated_electricity
 var selected_zone
 
@@ -14,18 +14,17 @@ var selected_zone
 
 func _ready():
 	set_total_allocated_electricity(Global.day_of_the_week)
-	print(total_allocated_electricity)
 
 # Increments timer
 func _physics_process(delta):
 	if Global.game_has_started:
-		game_timer += delta
+		timer_counter += delta
 
 # Delegates tasks every second
 func _process(_delta):
-	if game_timer > 1:
-		zone_timer.emit()
-		game_timer = 0
+	if timer_counter > 1:
+		game_timer.emit()
+		timer_counter = 0
 
 # Sets how much electricity can be used throughout each day
 # ??? might use this later to set a whole bunch of stuff as a generic function 
@@ -41,3 +40,7 @@ func set_total_allocated_electricity(_day):
 			total_allocated_electricity = 16000
 		"Friday":
 			total_allocated_electricity = 18000
+
+
+func _on_game_timer():
+	pass # Replace with function body.

@@ -4,23 +4,31 @@ extends Control
 
 @onready var popup_text = $ColorRect/RichTextLabel
 # Unique variables for each day
-var city_loadshedding_offset
+var loadshedding_offset
+var city_loadshedding_offset = 2
+var suburb_loadshedding_offset = 4
+var twonship_loadshedding_offset = 6
+var stadium_loadshedding_offset = 8
 var daily_event_reminder: String
 
 func _ready():
 	# Sets unique variables for each day
 	match Global.day_of_the_week:
 		"Monday":
-			city_loadshedding_offset = 1
+			loadshedding_offset = 2
+			daily_event_reminder = "Good luck for your first day!"
 		"Tuesday":
-			city_loadshedding_offset = 2
-			daily_event_reminder = "Watch out for cable theft!"
+			loadshedding_offset = 4
+			daily_event_reminder = "Watch out for cable theft today!"
 		"Wednesday":
-			city_loadshedding_offset = 3
+			loadshedding_offset = 6
+			daily_event_reminder = "Weather Forecast: Rainstorms!"
 		"Thursday":
-			city_loadshedding_offset = 4
+			loadshedding_offset = 8
+			daily_event_reminder = "Budget has been cut for the rest of the week!"
 		"Friday":
-			city_loadshedding_offset = 5
+			loadshedding_offset = 0
+			daily_event_reminder = "Big Game Today at the Stadium!"
 	# Empties text
 	popup_text.text = ""
 	# Displays all relevent info on the popup

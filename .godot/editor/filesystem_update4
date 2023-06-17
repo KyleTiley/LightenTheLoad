@@ -14,3 +14,5 @@ res://Game/GameWorld/Zones/Suburb/suburb.gd
 res://global.gd
 res://MainMenu/main_menu.gd
 res://Game/popup.gd
+res://Game/GameUI/Clock/clock.gd
+res://Game/infobar.gd
