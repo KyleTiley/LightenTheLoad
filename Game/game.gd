@@ -6,19 +6,25 @@ signal game_timer
 signal display_info
 
 # REFERENCES
-
-var zone = "res://Game/GameWorld/Zones/zone.gd"
+@onready var city_zone = $GameWorld/Zones/City
+@onready var suburb_zone = $GameWorld/Zones/Suburb
+@onready var stadium_zone = $GameWorld/Zones/Stadium
+@onready var township_zone = $GameWorld/Zones/Township
 
 # VARIABLES
 
 var timer_counter = 0
 var total_allocated_electricity
+var active_zone
+var active_zone_name
+var active_zone_is_using_electricity
+var active_zone_electricity_used
+var active_zone_current_happiness
 
 # FUNCTIONS
 
 func _ready():
 	set_total_allocated_electricity(Global.day_of_the_week)
-#	zone.zone_clicked.connect(temp_display)
 
 # Increments timer
 func _physics_process(delta):
@@ -30,6 +36,9 @@ func _process(_delta):
 	if timer_counter > 1:
 		game_timer.emit()
 		timer_counter = 0
+	if active_zone != null:
+		# Tells the active zone to display its information
+		active_zone.get_zone_info()
 
 # Sets how much electricity can be used throughout each day
 # ??? might use this later to set a whole bunch of stuff as a generic function 
@@ -56,13 +65,17 @@ func selected_zone_manager(_name, _is_using_electricity, _electricity_used, _cur
 
 # Individual zone click functions to store variables
 func _on_city_zone_clicked(_name, _is_using_electricity, _electricity_used, _current_happiness):
+	active_zone = city_zone
 	selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness)
 
 func _on_stadium_zone_clicked(_name, _is_using_electricity, _electricity_used, _current_happiness):
+	active_zone = stadium_zone
 	selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness)
 
 func _on_township_zone_clicked(_name, _is_using_electricity, _electricity_used, _current_happiness):
+	active_zone = township_zone
 	selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness)
 
 func _on_suburb_zone_clicked(_name, _is_using_electricity, _electricity_used, _current_happiness):
+	active_zone = suburb_zone
 	selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness)

@@ -43,10 +43,12 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766045, 0, -0.766045, 0.642788, 0, 20, 20)
 
 [node name="Zones" type="Node3D" parent="GameWorld"]
-visible = false
 
 [node name="City" parent="GameWorld/Zones" instance=ExtResource("1_61u5i")]
 transform = Transform3D(0.545561, 0, -0.838071, 0, 1, 0, 0.838071, 0, 0.545561, 1.0374, -1.72011, -3.52384)
+
+[node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("4_0fdj6")]
+transform = Transform3D(0.672202, 0, -0.332632, 0, 0.75, 0, 0.332632, 0, 0.672202, 10.2237, -0.66745, 9.99552)
 
 [node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("2_p7jbk")]
 transform = Transform3D(0.99854, 0, -0.0540091, 0, 1, 0, 0.0540091, 0, 0.99854, 25.2654, -1.88875, -7.37432)
@@ -54,18 +56,15 @@ transform = Transform3D(0.99854, 0, -0.0540091, 0, 1, 0, 0.0540091, 0, 0.99854, 
 [node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_v308r")]
 transform = Transform3D(-0.637743, 0, -0.394694, 0, 0.75, 0, 0.394694, 0, -0.637743, -8.2588, -0.205477, 9.72965)
 
-[node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("4_0fdj6")]
-transform = Transform3D(0.672202, 0, -0.332632, 0, 0.75, 0, 0.332632, 0, 0.672202, 10.2237, -0.66745, 9.99552)
-
 [node name="Environment" parent="GameWorld" instance=ExtResource("6_o23yh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39546, 0, -35.617)
-visible = false
 
 [node name="Events" type="Node3D" parent="GameWorld"]
 visible = false
 
 [node name="Game Level" parent="GameWorld" instance=ExtResource("7_anif8")]
 transform = Transform3D(0.957788, 0, -0.287478, 0, 1, 0, 0.287478, 0, 0.957788, 0, 0, 1.81378)
+visible = false
 
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3
@@ -260,8 +259,8 @@ text = "PLAY"
 [connection signal="game_timer" from="." to="GameWorld/Zones/Suburb" method="_on_game_game_timer"]
 [connection signal="game_timer" from="." to="GameUI/Clock" method="_on_game_game_timer"]
 [connection signal="zone_clicked" from="GameWorld/Zones/City" to="." method="_on_city_zone_clicked"]
+[connection signal="zone_clicked" from="GameWorld/Zones/Suburb" to="." method="_on_suburb_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Stadium" to="." method="_on_stadium_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Township" to="." method="_on_township_zone_clicked"]
-[connection signal="zone_clicked" from="GameWorld/Zones/Suburb" to="." method="_on_suburb_zone_clicked"]
 [connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]
 [connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]

@@ -6,10 +6,7 @@ signal use_total_electricity
 signal zone_clicked
 
 # REFERENCES
-@onready var city_zone = "res://Game/GameWorld/Zones/City/city.gd"
-@onready var suburb_zone = "res://Game/GameWorld/Zones/Suburb/suburb.gd"
-@onready var stadium_zone = "res://Game/GameWorld/Zones/Stadium/stadium.gd"
-@onready var township_zone = "res://Game/GameWorld/Zones/Township/township.gd"
+
 
 # VARIABLES
 var active_zone
@@ -48,7 +45,6 @@ func electricity_controller():
 # Controlls happiness usage
 func happiness_controller():
 	if is_happy:
-		print(current_happiness)
 		current_happiness += happiness_gain
 	else:
 		current_happiness -= happiness_loss
@@ -63,12 +59,8 @@ func _on_area_3d_input_event(_camera, event, _position, _normal, _shape_idx):
 	if event is InputEventMouseButton:
 		# If the event is left mouse click
 		if event.pressed and event.button_index == 1:
-			match name:
-				"City":
-					active_zone = city_zone
-				"Suburb":
-					active_zone = suburb_zone
-				"Stadium":
-					active_zone = stadium_zone
-				"Township":
-					active_zone = township_zone
+			get_zone_info()
+
+# Gets the zone's information
+func get_zone_info():
+	zone_clicked.emit(name, is_using_electricity, electricity_used, current_happiness)
