@@ -14,12 +14,7 @@ signal display_info
 # VARIABLES
 
 var timer_counter = 0
-var total_allocated_electricity
 var active_zone
-var active_zone_name
-var active_zone_is_using_electricity
-var active_zone_electricity_used
-var active_zone_current_happiness
 
 # FUNCTIONS
 
@@ -45,15 +40,15 @@ func _process(_delta):
 func set_total_allocated_electricity(_day):
 	match _day:
 		"Monday":
-			total_allocated_electricity = 10000
+			Global.total_allocated_electricity = 10000
 		"Tuesday":
-			total_allocated_electricity = 12000
+			Global.total_allocated_electricity = 12000
 		"Wednesday":
-			total_allocated_electricity = 14000
+			Global.total_allocated_electricity = 14000
 		"Thursday":
-			total_allocated_electricity = 16000
+			Global.total_allocated_electricity = 16000
 		"Friday":
-			total_allocated_electricity = 18000
+			Global.total_allocated_electricity = 18000
 
 # Delegates info regarding the currently selected zone
 func selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness):
@@ -79,3 +74,6 @@ func _on_township_zone_clicked(_name, _is_using_electricity, _electricity_used, 
 func _on_suburb_zone_clicked(_name, _is_using_electricity, _electricity_used, _current_happiness):
 	active_zone = suburb_zone
 	selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness)
+
+func _on_info_bar_toggle_power():
+	active_zone.toggle_zone_power()

@@ -39,6 +39,7 @@ func electricity_controller():
 	if is_using_electricity:
 		is_happy = true
 		electricity_used += electricity_usage
+		Global.total_allocated_electricity -= electricity_usage
 	else:
 		is_happy = false
 
@@ -64,3 +65,7 @@ func _on_area_3d_input_event(_camera, event, _position, _normal, _shape_idx):
 # Gets the zone's information
 func get_zone_info():
 	zone_clicked.emit(name, is_using_electricity, electricity_used, current_happiness)
+
+# Toggles the power of a zone on and off
+func toggle_zone_power():
+	is_using_electricity = !is_using_electricity

@@ -142,6 +142,7 @@ theme_override_font_sizes/normal_font_size = 50
 text = "Click on a zone to toggle its power on or off"
 
 [node name="PowerButton" type="Button" parent="GameUI/InfoBar"]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.875
@@ -177,6 +178,14 @@ color = Color(0.364706, 1, 1, 1)
 
 [node name="LightBulb" parent="GameUI/InfoBar/Portrait" instance=ExtResource("1_wo4ky")]
 position = Vector2(150, 150)
+
+[node name="PowerLeftLabel" type="Label" parent="GameUI/InfoBar"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = -175.0
+offset_right = 250.0
+offset_bottom = -100.0
+theme_override_font_sizes/font_size = 50
 
 [node name="Popup" type="Control" parent="GameUI"]
 layout_mode = 1
@@ -262,5 +271,6 @@ text = "PLAY"
 [connection signal="zone_clicked" from="GameWorld/Zones/Suburb" to="." method="_on_suburb_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Stadium" to="." method="_on_stadium_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Township" to="." method="_on_township_zone_clicked"]
+[connection signal="toggle_power" from="GameUI/InfoBar" to="." method="_on_info_bar_toggle_power"]
 [connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]
 [connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]

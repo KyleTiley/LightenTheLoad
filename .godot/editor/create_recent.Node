@@ -1,3 +1,4 @@
+Label
 ColorRect
 Control
 Container
@@ -10,7 +11,6 @@ Panel
 CollisionShape3D
 Area3D
 AnimatedSprite2D
-Label
 Node3D
 Node
 VBoxContainer
