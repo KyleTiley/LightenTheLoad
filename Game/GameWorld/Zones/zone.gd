@@ -6,7 +6,7 @@ signal use_total_electricity
 signal zone_clicked
 
 # REFERENCES
-@onready var city_zone = get_node("City")
+@onready var city_zone = "res://Game/GameWorld/Zones/City/city.gd"
 @onready var suburb_zone = "res://Game/GameWorld/Zones/Suburb/suburb.gd"
 @onready var stadium_zone = "res://Game/GameWorld/Zones/Stadium/stadium.gd"
 @onready var township_zone = "res://Game/GameWorld/Zones/Township/township.gd"
@@ -16,11 +16,13 @@ var active_zone
 
 # Electricity variables
 var is_using_electricity = true
-var electricity_usage
 var electricity_used = 0
+var electricity_usage
 # Happiness variables
 var is_happy = true
 var current_happiness = 50
+var happiness_loss
+var happiness_gain
 
 # FUNCTIONS
 
@@ -46,13 +48,15 @@ func electricity_controller():
 # Controlls happiness usage
 func happiness_controller():
 	if is_happy:
-		current_happiness += 1
+		print(current_happiness)
+		current_happiness += happiness_gain
 	else:
-		current_happiness -= 1
+		current_happiness -= happiness_loss
 	# Keeps happiness between 0 and 100
 	current_happiness = clamp(current_happiness, 0, 100)
-	if current_happiness <= 0:
-		Global.change_scene("Menu")
+	if current_happiness == 0:
+		print("GAME OVER")
+		Global.change_scene("MainMenu")
 
 # Click function for zone
 func _on_area_3d_input_event(_camera, event, _position, _normal, _shape_idx):

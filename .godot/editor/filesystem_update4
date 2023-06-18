@@ -11,3 +11,7 @@ res://Game/GameUI/Popup/popup.gd
 res://global.gd
 res://Game/GameWorld/Environment/environment.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.tscn
+res://Game/GameWorld/Zones/zone.gd
+res://Game/GameWorld/Zones/Township/township.gd
+res://Game/GameWorld/Zones/Suburb/suburb.gd
+res://Game/GameWorld/Zones/City/city.gd

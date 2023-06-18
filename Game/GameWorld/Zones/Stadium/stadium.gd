@@ -2,6 +2,8 @@ extends "res://Game/GameWorld/Zones/zone.gd"
 
 func _ready():
 	electricity_usage = 5
+	happiness_gain = 10
+	happiness_loss = 10
 
 func _on_game_game_timer():
 	run_controllers()
