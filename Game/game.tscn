@@ -8,8 +8,8 @@
 [ext_resource type="PackedScene" uid="uid://cqhiu8fvdw425" path="res://Game/GameWorld/Zones/Township/township.tscn" id="3_v308r"]
 [ext_resource type="PackedScene" uid="uid://da71hvmgak7ff" path="res://Game/GameWorld/Zones/Suburb/suburb.tscn" id="4_0fdj6"]
 [ext_resource type="PackedScene" uid="uid://caq1m8cmbily" path="res://Game/GameWorld/Environment/environment.tscn" id="6_o23yh"]
-[ext_resource type="Script" path="res://Game/popup.gd" id="7_hrlhj"]
-[ext_resource type="Script" path="res://Game/infobar.gd" id="8_enkx3"]
+[ext_resource type="Script" path="res://Game/GameUI/InfoBar/infobar.gd" id="8_0p0d2"]
+[ext_resource type="Script" path="res://Game/GameUI/Popup/popup.gd" id="10_cp3k4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -107,7 +107,7 @@ anchor_bottom = 1.0
 offset_top = -200.0
 grow_horizontal = 2
 grow_vertical = 0
-script = ExtResource("8_enkx3")
+script = ExtResource("8_0p0d2")
 
 [node name="ColorRect" type="ColorRect" parent="GameUI/InfoBar"]
 layout_mode = 1
@@ -177,7 +177,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("7_hrlhj")
+script = ExtResource("10_cp3k4")
 
 [node name="Panel" type="Panel" parent="GameUI/Popup"]
 visible = false

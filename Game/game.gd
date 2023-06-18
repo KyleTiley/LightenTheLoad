@@ -13,7 +13,6 @@ var zone = "res://Game/GameWorld/Zones/zone.gd"
 
 var timer_counter = 0
 var total_allocated_electricity
-var selected_zone
 
 # FUNCTIONS
 
