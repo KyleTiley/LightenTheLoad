@@ -6,7 +6,7 @@ signal use_total_electricity
 signal zone_clicked
 
 # REFERENCES
-@onready var city_zone = "res://Game/GameWorld/Zones/City/city.gd"
+@onready var city_zone = get_node("City")
 @onready var suburb_zone = "res://Game/GameWorld/Zones/Suburb/suburb.gd"
 @onready var stadium_zone = "res://Game/GameWorld/Zones/Stadium/stadium.gd"
 @onready var township_zone = "res://Game/GameWorld/Zones/Township/township.gd"
@@ -28,7 +28,7 @@ func _process(_delta):
 	# Emits the zone clicked signal for the most recently selected zone
 	if active_zone != null:
 		print(active_zone)
-#		active_zone.zone_clicked.emit(name, is_using_electricity, electricity_used, current_happiness)
+		active_zone.zone_clicked.emit(name, is_using_electricity, electricity_used, current_happiness)
 
 # Runs all controllers
 func run_controllers():
