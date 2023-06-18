@@ -39,12 +39,11 @@ func happiness_controller():
 	# Keeps happiness between 0 and 100
 	current_happiness = clamp(current_happiness, 0, 100)
 	if current_happiness <= 0:
-		pass #??? end game
+		Global.change_scene("Menu")
 
 # Click function for zone
 func _on_area_3d_input_event(_camera, event, _position, _normal, _shape_idx):
 	if event is InputEventMouseButton:
 		# If the event is left mouse click
 		if event.pressed and event.button_index == 1:
-			print(name)
-			zone_clicked.emit()
+			zone_clicked.emit(name, is_using_electricity, electricity_used, current_happiness)

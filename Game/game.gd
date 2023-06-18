@@ -3,6 +3,7 @@ extends Node
 # SIGNALS
 
 signal game_timer
+signal display_info
 
 # REFERENCES
 
@@ -46,20 +47,23 @@ func set_total_allocated_electricity(_day):
 		"Friday":
 			total_allocated_electricity = 18000
 
-func temp_display():
-	print("FUCK")
+# Delegates info regarding the currently selected zone
+func selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness):
+	var selected_zone = _name
+	var is_using_electricity = _is_using_electricity
+	var electricity_used = _electricity_used
+	var current_happiness = _current_happiness
+	display_info.emit(selected_zone, is_using_electricity, electricity_used, current_happiness)
 
-func _on_city_zone_clicked():
-	pass # Replace with function body.
+# Individual zone click functions to store variables
+func _on_city_zone_clicked(_name, _is_using_electricity, _electricity_used, _current_happiness):
+	selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness)
 
+func _on_stadium_zone_clicked(_name, _is_using_electricity, _electricity_used, _current_happiness):
+	selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness)
 
-func _on_stadium_zone_clicked():
-	pass # Replace with function body.
+func _on_township_zone_clicked(_name, _is_using_electricity, _electricity_used, _current_happiness):
+	selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness)
 
-
-func _on_township_zone_clicked():
-	pass # Replace with function body.
-
-
-func _on_suburb_zone_clicked():
-	pass # Replace with function body.
+func _on_suburb_zone_clicked(_name, _is_using_electricity, _electricity_used, _current_happiness):
+	selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness)

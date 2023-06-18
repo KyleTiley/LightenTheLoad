@@ -9,7 +9,8 @@ signal toggle_power
 
 # FUNCTIONS
 
-func display_info(_name, _electricity, _happiness, _using_electricity):
+func display_info(_name, _using_electricity, _electricity, _happiness):
+	game_info.text = ""
 	game_info.text += _name + " has used " + str(_electricity) + " units of electricity" + '\n'
 	game_info.text += " and is at " + str(_happiness) + " happiness"
 	power_button.visible = true
@@ -23,3 +24,6 @@ func _on_power_button_pressed():
 
 func update_power_button():
 	power_button.text = "thing"
+
+func _on_game_display_info(_selected_zone, _is_using_electricity, _electricity_used, _current_happiness):
+	display_info(_selected_zone, _is_using_electricity, _electricity_used, _current_happiness)

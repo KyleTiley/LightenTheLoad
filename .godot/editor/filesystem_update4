@@ -10,3 +10,4 @@ res://Game/game.gd
 res://Game/GameWorld/Zones/zone.gd
 res://Game/GameWorld/Environment/environment.tscn
 res://Game/GameUI/Clock/clock.gd
+res://Game/infobar.gd

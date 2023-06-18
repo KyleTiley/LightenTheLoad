@@ -228,6 +228,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "PLAY"
 
+[connection signal="display_info" from="." to="GameUI/InfoBar" method="_on_game_display_info"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/City" method="_on_game_game_timer"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/Stadium" method="_on_game_game_timer"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/Township" method="_on_game_game_timer"]
