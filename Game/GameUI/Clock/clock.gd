@@ -24,7 +24,7 @@ func _process(_delta):
 	change_clock_time()
 
 func _on_game_game_timer():
-		clock_minutes += 60
+	clock_minutes += 5
 
 func change_clock_time():
 	var _time : String = "%02d:%02d" % [clock_hours, clock_minutes]

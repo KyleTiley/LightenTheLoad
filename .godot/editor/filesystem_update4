@@ -8,11 +8,5 @@ res://Game/GameWorld/Zones/Suburb/suburb.tscn
 res://Game/GameWorld/Zones/Township/township.tscn
 res://Game/game.gd
 res://Game/GameWorld/Zones/zone.gd
-res://Game/GameWorld/Zones/City/city.gd
-res://Game/GameWorld/Zones/Township/township.gd
-res://Game/GameWorld/Zones/Suburb/suburb.gd
-res://global.gd
-res://MainMenu/main_menu.gd
-res://Game/popup.gd
+res://Game/GameWorld/Environment/environment.tscn
 res://Game/GameUI/Clock/clock.gd
-res://Game/infobar.gd

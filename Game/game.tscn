@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://dhxi4w6ieeryj"]
+[gd_scene load_steps=14 format=3 uid="uid://dhxi4w6ieeryj"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c8jicq5bwrdnu" path="res://Game/GameWorld/Zones/Stadium/stadium.tscn" id="2_p7jbk"]
 [ext_resource type="PackedScene" uid="uid://cqhiu8fvdw425" path="res://Game/GameWorld/Zones/Township/township.tscn" id="3_v308r"]
 [ext_resource type="PackedScene" uid="uid://da71hvmgak7ff" path="res://Game/GameWorld/Zones/Suburb/suburb.tscn" id="4_0fdj6"]
+[ext_resource type="PackedScene" uid="uid://caq1m8cmbily" path="res://Game/GameWorld/Environment/environment.tscn" id="6_o23yh"]
 [ext_resource type="Script" path="res://Game/popup.gd" id="7_hrlhj"]
 [ext_resource type="Script" path="res://Game/infobar.gd" id="8_enkx3"]
 
@@ -41,17 +42,19 @@ transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766045, 0, -0.766045, 0.642788, 
 [node name="Zones" type="Node3D" parent="GameWorld"]
 
 [node name="City" parent="GameWorld/Zones" instance=ExtResource("1_61u5i")]
+transform = Transform3D(0.545561, 0, -0.838071, 0, 1, 0, 0.838071, 0, 0.545561, 1.0374, -1.72011, -3.52384)
 
 [node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("2_p7jbk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.8412, 0, 0)
+transform = Transform3D(0.99854, 0, -0.0540091, 0, 1, 0, 0.0540091, 0, 0.99854, 25.2654, -1.88875, -7.37432)
 
 [node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_v308r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30.2833)
+transform = Transform3D(-0.637743, 0, -0.394694, 0, 0.75, 0, 0.394694, 0, -0.637743, -8.2588, -0.205477, 9.72965)
 
 [node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("4_0fdj6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.8234, 0, 0)
+transform = Transform3D(0.672202, 0, -0.332632, 0, 0.75, 0, 0.332632, 0, 0.672202, 10.2237, -0.66745, 9.99552)
 
-[node name="Environment" type="Node3D" parent="GameWorld"]
+[node name="Environment" parent="GameWorld" instance=ExtResource("6_o23yh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39546, 0, -35.617)
 
 [node name="Events" type="Node3D" parent="GameWorld"]
 

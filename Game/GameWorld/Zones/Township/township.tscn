@@ -4,17 +4,18 @@
 [ext_resource type="Script" path="res://Game/GameWorld/Zones/Township/township.gd" id="1_lose1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kxkc7"]
-size = Vector3(15, 5, 15)
+size = Vector3(15.5, 8, 15.5)
 
 [node name="Township" type="Node3D"]
 script = ExtResource("1_lose1")
 
 [node name="Township" parent="." instance=ExtResource("1_841op")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.429, 1.64, -7.755)
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.826745, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.99773, 0)
 shape = SubResource("BoxShape3D_kxkc7")
 
 [connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]

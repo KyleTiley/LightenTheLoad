@@ -8,7 +8,6 @@ signal game_timer
 
 var zone = "res://Game/GameWorld/Zones/zone.gd"
 
-
 # VARIABLES
 
 var timer_counter = 0
