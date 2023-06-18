@@ -1,10 +1,11 @@
-TextureRect
+ColorRect
 Control
+Container
+TextureRect
 Button
 HBoxContainer
 TextureButton
 RichTextLabel
-ColorRect
 Panel
 CollisionShape3D
 Area3D
@@ -16,5 +17,4 @@ VBoxContainer
 PanelContainer
 MarginContainer
 TextEdit
-Container
 Camera3D

@@ -8,3 +8,6 @@ res://Game/GameUI/Clock/clock.gd
 res://MainMenu/main_menu.tscn
 res://MainMenu/main_menu.gd
 res://Game/GameUI/Popup/popup.gd
+res://global.gd
+res://Game/GameWorld/Environment/environment.tscn
+res://Game/GameWorld/Zones/Stadium/stadium.tscn

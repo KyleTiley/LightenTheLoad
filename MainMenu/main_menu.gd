@@ -2,12 +2,12 @@ extends Node
 
 # REFERENCES
 
-@onready var button_panel = $PlayMenu/PanelContainer
-@onready var monday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonMonday
-@onready var tuesday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonTuesday
-@onready var wednesday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonWednesday
-@onready var thursday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonThursday
-@onready var friday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonFriday
+@onready var button_container = $PlayMenu/ButtonContainer
+@onready var monday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonMonday
+@onready var tuesday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonTuesday
+@onready var wednesday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonWednesday
+@onready var thursday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonThursday
+@onready var friday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonFriday
 
 # FUNCTIONS
 
@@ -43,7 +43,7 @@ func _on_button_friday_pressed():
 	StartGame()
 
 func _on_play_button_pressed():
-	button_panel.show()
+	button_container.show()
 
 func _on_settings_button_pressed():
 	print("OPTIONS")
