@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://dhxi4w6ieeryj"]
+[gd_scene load_steps=17 format=3 uid="uid://cg31em10epawl"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -8,8 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://cqhiu8fvdw425" path="res://Game/GameWorld/Zones/Township/township.tscn" id="3_v308r"]
 [ext_resource type="PackedScene" uid="uid://da71hvmgak7ff" path="res://Game/GameWorld/Zones/Suburb/suburb.tscn" id="4_0fdj6"]
 [ext_resource type="PackedScene" uid="uid://caq1m8cmbily" path="res://Game/GameWorld/Environment/environment.tscn" id="6_o23yh"]
+[ext_resource type="PackedScene" uid="uid://dscgenki4uhit" path="res://Game/GameWorld/Environment/Game Level.glb" id="7_anif8"]
 [ext_resource type="Script" path="res://Game/GameUI/InfoBar/infobar.gd" id="8_0p0d2"]
 [ext_resource type="Script" path="res://Game/GameUI/Popup/popup.gd" id="10_cp3k4"]
+[ext_resource type="Texture2D" uid="uid://bv7udoh684mcg" path="res://Game/GameUI/Popup/Bubbles Square.png" id="12_hbq03"]
+[ext_resource type="Texture2D" uid="uid://drkdqcls3f43n" path="res://Game/GameUI/Popup/Bubbles Line.png" id="13_5trs7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -40,6 +43,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766045, 0, -0.766045, 0.642788, 0, 20, 20)
 
 [node name="Zones" type="Node3D" parent="GameWorld"]
+visible = false
 
 [node name="City" parent="GameWorld/Zones" instance=ExtResource("1_61u5i")]
 transform = Transform3D(0.545561, 0, -0.838071, 0, 1, 0, 0.838071, 0, 0.545561, 1.0374, -1.72011, -3.52384)
@@ -55,8 +59,13 @@ transform = Transform3D(0.672202, 0, -0.332632, 0, 0.75, 0, 0.332632, 0, 0.67220
 
 [node name="Environment" parent="GameWorld" instance=ExtResource("6_o23yh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39546, 0, -35.617)
+visible = false
 
 [node name="Events" type="Node3D" parent="GameWorld"]
+visible = false
+
+[node name="Game Level" parent="GameWorld" instance=ExtResource("7_anif8")]
+transform = Transform3D(0.957788, 0, -0.287478, 0, 1, 0, 0.287478, 0, 0.957788, 0, 0, 1.81378)
 
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3
@@ -188,20 +197,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="GameUI/Popup"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="PopupBubble" type="Control" parent="GameUI/Popup"]
+anchors_preset = 0
 offset_left = 460.0
 offset_top = 270.0
-offset_right = -460.0
-offset_bottom = -310.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0.490196, 0.490196, 1)
+offset_right = 1460.0
+offset_bottom = 770.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="GameUI/Popup/ColorRect"]
+[node name="TextureRect" type="TextureRect" parent="GameUI/Popup/PopupBubble"]
+layout_mode = 0
+offset_left = -242.0
+offset_top = -192.0
+offset_right = 1806.0
+offset_bottom = 832.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("12_hbq03")
+
+[node name="TextureRect2" type="TextureRect" parent="GameUI/Popup/PopupBubble"]
+layout_mode = 0
+offset_left = -394.0
+offset_top = -163.0
+offset_right = 630.0
+offset_bottom = 861.0
+rotation = 0.226893
+texture = ExtResource("13_5trs7")
+flip_h = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GameUI/Popup/PopupBubble"]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.05
@@ -210,21 +232,24 @@ anchor_right = 0.95
 anchor_bottom = 0.65
 offset_bottom = 50.0
 grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 50
 text = "default text"
 
-[node name="PopupButton" type="Button" parent="GameUI/Popup/ColorRect"]
+[node name="PopupButton" type="Button" parent="GameUI/Popup/PopupBubble"]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 7
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 425.0
-offset_top = -100.0
-offset_right = -425.0
-offset_bottom = -20.0
+offset_left = -66.0
+offset_top = -190.0
+offset_right = 63.0
+offset_bottom = -110.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "PLAY"
 
@@ -239,4 +264,4 @@ text = "PLAY"
 [connection signal="zone_clicked" from="GameWorld/Zones/Township" to="." method="_on_township_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Suburb" to="." method="_on_suburb_zone_clicked"]
 [connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]
-[connection signal="pressed" from="GameUI/Popup/ColorRect/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]
+[connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]

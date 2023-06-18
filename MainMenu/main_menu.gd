@@ -2,6 +2,7 @@ extends Node
 
 # REFERENCES
 
+@onready var button_panel = $PlayMenu/PanelContainer
 @onready var monday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonMonday
 @onready var tuesday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonTuesday
 @onready var wednesday_button = $PlayMenu/PanelContainer/VBoxContainer/ButtonWednesday
@@ -40,3 +41,9 @@ func _on_button_thursday_pressed():
 func _on_button_friday_pressed():
 	Global.day_of_the_week = "Friday"
 	StartGame()
+
+func _on_play_button_pressed():
+	button_panel.show()
+
+func _on_settings_button_pressed():
+	print("OPTIONS")

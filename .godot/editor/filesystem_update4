@@ -1,13 +1,10 @@
-res://Game/game.tscn
+res://DB_Board.tscn
+res://Game/Events/Cable_Theft/PathFollow3D.gd
+res://test.tscn
+res://Game/All/Fuze Box Minigame.gd
 res://Game/GameWorld/Zones/Stadium/stadium.gd
-res://MainMenu/main_menu.tscn
-res://Game/GameUI/Characters/light_bulb.tscn
-res://Game/GameWorld/Zones/City/city.tscn
-res://Game/GameWorld/Zones/Stadium/stadium.tscn
-res://Game/GameWorld/Zones/Suburb/suburb.tscn
-res://Game/GameWorld/Zones/Township/township.tscn
-res://Game/game.gd
-res://Game/GameWorld/Zones/zone.gd
-res://Game/GameWorld/Environment/environment.tscn
+res://Game/game.tscn
 res://Game/GameUI/Clock/clock.gd
-res://Game/infobar.gd
+res://MainMenu/main_menu.tscn
+res://MainMenu/main_menu.gd
+res://Game/GameUI/Popup/popup.gd

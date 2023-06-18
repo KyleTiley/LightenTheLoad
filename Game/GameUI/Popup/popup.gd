@@ -2,7 +2,7 @@ extends Control
 
 # VARIABLES
 
-@onready var popup_text = $ColorRect/RichTextLabel
+@onready var popup_text = $PopupBubble/RichTextLabel
 # Unique variables for each day
 var loadshedding_offset
 var city_loadshedding_offset = 2
