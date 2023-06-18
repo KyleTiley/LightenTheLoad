@@ -7,7 +7,7 @@ func _process(delta):
 	if Global.switch_counter == 9:
 		Global.enable_minigame_retun_button = true
 		Global.return_vehicle = true
-		get_tree().change_scene_to_file("res://Game/Events/Cable_Theft/cable_fix.tscn")
+#		get_tree().change_scene_to_file("res://Game/Events/Cable_Theft/cable_fix.tscn")
 
 func _on_area_3d_1_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
