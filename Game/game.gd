@@ -35,8 +35,7 @@ func _process(_delta):
 		# Tells the active zone to display its information
 		active_zone.get_zone_info()
 
-# Sets how much electricity can be used throughout each day
-# ??? might use this later to set a whole bunch of stuff as a generic function 
+# Sets unique variables for each day
 func set_total_allocated_electricity(_day):
 	match _day:
 		"Monday":
@@ -46,9 +45,9 @@ func set_total_allocated_electricity(_day):
 		"Wednesday":
 			Global.total_allocated_electricity = 14000
 		"Thursday":
-			Global.total_allocated_electricity = 16000
+			Global.total_allocated_electricity = 8000
 		"Friday":
-			Global.total_allocated_electricity = 18000
+			Global.total_allocated_electricity = 1000
 
 # Delegates info regarding the currently selected zone
 func selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness):
@@ -75,5 +74,6 @@ func _on_suburb_zone_clicked(_name, _is_using_electricity, _electricity_used, _c
 	active_zone = suburb_zone
 	selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness)
 
+# Calls to toggle the active zone's power on or off
 func _on_info_bar_toggle_power():
 	active_zone.toggle_zone_power()

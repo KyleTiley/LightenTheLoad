@@ -25,6 +25,7 @@ func change_scene(_scene):
 		"Game":
 			get_tree().change_scene_to_file(game)
 		"MainMenu":
+			game_has_started = false
 			get_tree().change_scene_to_file(main_menu)
 
 func next_day():

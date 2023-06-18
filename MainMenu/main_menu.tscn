@@ -92,6 +92,7 @@ text = "Monday"
 [node name="ButtonTuesday" type="Button" parent="PlayMenu/ButtonContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 disabled = true
 text = "Tuesday"
@@ -99,6 +100,7 @@ text = "Tuesday"
 [node name="ButtonWednesday" type="Button" parent="PlayMenu/ButtonContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 disabled = true
 text = "Wednesday"
@@ -106,6 +108,7 @@ text = "Wednesday"
 [node name="ButtonThursday" type="Button" parent="PlayMenu/ButtonContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 disabled = true
 text = "Thursday"
@@ -113,6 +116,7 @@ text = "Thursday"
 [node name="ButtonFriday" type="Button" parent="PlayMenu/ButtonContainer/VBoxContainer"]
 custom_minimum_size = Vector2(300, 100)
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 disabled = true
 text = "Friday"

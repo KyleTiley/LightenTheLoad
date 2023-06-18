@@ -16,6 +16,12 @@ func _ready():
 		monday_button.disabled = false
 	if Global.tuesday_unlocked:
 		tuesday_button.disabled = false
+	if Global.wednesday_unlocked:
+		wednesday_button.disabled = false
+	if Global.thursday_unlocked:
+		thursday_button.disabled = false
+	if Global.friday_unlocked:
+		friday_button.disabled = false
 
 func StartGame():
 	Global.change_scene("Game")
