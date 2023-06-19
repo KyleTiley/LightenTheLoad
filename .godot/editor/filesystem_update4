@@ -1,4 +1,2 @@
-res://DB_Board.tscn
-res://Game/Events/Cable_Theft/PathFollow3D.gd
 res://test.tscn
-res://Game/All/Fuze Box Minigame.gd
+res://Game/Events/Cable_Theft/PathFollow3D.gd

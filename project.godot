@@ -17,7 +17,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Global="*res://Game/Events/Cable_Theft/Global.gd"
+Global="*res://global.gd"
 
 [display]
 
