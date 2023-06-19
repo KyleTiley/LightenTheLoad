@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dymoviftbvyd"]
+
+[ext_resource type="Script" path="res://Game/All/Button.gd" id="1_f2186"]
+[ext_resource type="Script" path="res://Game/All/Button3.gd" id="3_2ebd4"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1090.0
+offset_top = 2.0
+offset_right = 1136.0
+offset_bottom = 33.0
+disabled = true
+text = "Start"
+script = ExtResource("1_f2186")
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 484.0
+offset_top = 336.0
+offset_right = 525.0
+offset_bottom = 367.0
+text = "Play"
+script = ExtResource("3_2ebd4")

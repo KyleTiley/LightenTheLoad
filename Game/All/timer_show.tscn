@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://rfk2pcky0wg8"]
+
+[sub_resource type="GDScript" id="GDScript_f34b7"]
+script/source = "extends Timer
+
+func _process(delta: float):
+	if Global.maintanance:
+		wait_time -= 1 * delta
+		var timeleft = int(wait_time)
+		print(timeleft)
+		Global.g_timer = timeleft
+		%RichTextLabel.text = str(timeleft)
+		if timeleft <= 0:
+			Global.enable_minigame_start_button = true
+			Global.maintanance = false
+			timeleft = 2
+			wait_time = 2
+			Global.g_timer = 2
+			%RichTextLabel.text = str(timeleft)
+			Global.reset_mini_game = true
+			pass
+			
+			print(timeleft)
+"
+
+[node name="Timer_Show" type="Node2D"]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+script = SubResource("GDScript_f34b7")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+offset_right = 169.0
+offset_bottom = 23.0
+text = "Maintanance : 10's"

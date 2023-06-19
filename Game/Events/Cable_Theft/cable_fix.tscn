@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://1bhdsncucyxc"]
+
+[ext_resource type="PackedScene" uid="uid://u152eu2jw8ib" path="res://Game/All/Truck.glb" id="1_438oh"]
+[ext_resource type="Script" path="res://Game/All/cable_fix.gd" id="1_dlvqv"]
+[ext_resource type="PackedScene" uid="uid://dymoviftbvyd" path="res://Game/All/Button.tscn" id="3_4wssa"]
+[ext_resource type="PackedScene" uid="uid://rfk2pcky0wg8" path="res://Game/All/timer_show.tscn" id="4_q58bs"]
+
+[sub_resource type="Curve3D" id="Curve3D_l7gms"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.266617, -4.29153e-05, -0.39992, 0, 0, 0, 0, 0, 0, -0.266617, -4.29153e-05, -38.2591, 0, 0, 0, 0, 0, 0, 26.928, -4.29153e-05, -63.5874, 0, 0, 0, 0, 0, 0, 83.4501, -4.29153e-05, -70.7859),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uh6en"]
+
+[node name="Cable_Fix" type="Node"]
+script = ExtResource("1_dlvqv")
+metadata/_edit_horizontal_guides_ = [12.0]
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68303, 0)
+curve = SubResource("Curve3D_l7gms")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+unique_name_in_owner = true
+transform = Transform3D(-0.999901, 0, -0.0140833, 0, 1, 0, 0.0140833, 0, -0.999901, 0.203949, -4.29153e-05, -4.84928)
+progress = 4.45
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow3D"]
+unique_name_in_owner = true
+
+[node name="Truck" parent="Path3D/PathFollow3D/MeshInstance3D" instance=ExtResource("1_438oh")]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.75443e-08, 0, 1, 0, 8.75443e-08, 0, -1, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.461934, 0.886914, -1.21147e-08, -0.534265, -0.278263, 0.798205, 0.707939, 0.368718, 0.602386, 0, 88.0804, 22.97)
+light_energy = 0.42
+
+[node name="Ground" type="Node3D" parent="."]
+
+[node name="Plane" type="MeshInstance3D" parent="Ground"]
+transform = Transform3D(110.291, 0, 0, 0, 1, 0, 0, 0, 87.1179, 0, 0, 0)
+mesh = SubResource("PlaneMesh_uh6en")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -0.957214, 15.6163, 9.54231)
+projection = 1
+size = 166.621
+
+[node name="UI" type="Node" parent="."]
+
+[node name="Node2D" parent="UI" instance=ExtResource("3_4wssa")]
+position = Vector2(-832, 6)
+scale = Vector2(1.721, 1.721)
+
+[node name="Timer_Show" parent="UI" instance=ExtResource("4_q58bs")]
+position = Vector2(78, 596)

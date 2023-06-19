@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://cp6xo6ehsulgj"]
+
+[ext_resource type="Script" path="res://Game/All/cable_fix.gd" id="1_kr63e"]
+[ext_resource type="PackedScene" uid="uid://dymoviftbvyd" path="res://Game/All/Button.tscn" id="2_eq4yy"]
+[ext_resource type="PackedScene" uid="uid://rfk2pcky0wg8" path="res://Game/All/timer_show.tscn" id="3_djf71"]
+[ext_resource type="PackedScene" uid="uid://u152eu2jw8ib" path="res://Game/All/Truck.glb" id="4_2daiy"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_thbp7"]
+
+[sub_resource type="Curve3D" id="Curve3D_7thu5"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0.266617, -4.29153e-05, -0.39992, 0, 0, 0, 0, 0, 0, -0.266617, -4.29153e-05, -38.2591, 0, 0, 0, 0, 0, 0, 26.928, -4.29153e-05, -63.5874, 0, 0, 0, 0, 0, 0, 83.4501, -4.29153e-05, -70.7859),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_kr63e")
+
+[node name="Node2D" parent="." instance=ExtResource("2_eq4yy")]
+position = Vector2(-165, -5)
+
+[node name="Timer_Show" parent="." instance=ExtResource("3_djf71")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(429.181, 0, 0, 0, 1, 0, 0, 0, 110.931, 0, -0.0521905, 0)
+mesh = SubResource("PlaneMesh_thbp7")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.012409, 0.999923, 0, -0.999923, 0.012409, 0, 16.5844, 0)
+projection = 1
+size = 358.577
+
+[node name="Path3D2" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.68303, 0)
+curve = SubResource("Curve3D_7thu5")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D2"]
+unique_name_in_owner = true
+transform = Transform3D(-0.999901, 0, -0.0140833, 0, 1, 0, 0.0140833, 0, -0.999901, 0.266617, -4.29153e-05, -0.39992)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D2/PathFollow3D"]
+unique_name_in_owner = true
+transform = Transform3D(1.455, 0, 0, 0, 1.455, 0, 0, 0, 1.455, 0, 0, 0)
+
+[node name="Truck" parent="Path3D2/PathFollow3D/MeshInstance3D" instance=ExtResource("4_2daiy")]
+unique_name_in_owner = true
+transform = Transform3D(-1, 0, -8.75443e-08, 0, 1, 0, 8.75443e-08, 0, -1, 0, 0, 0)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.86523, 0.501375, 0, -0.501375, 0.86523, 0, 75.678, 0)
