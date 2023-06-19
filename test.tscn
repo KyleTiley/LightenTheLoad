@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cp6xo6ehsulgj"]
+[gd_scene load_steps=7 format=3 uid="uid://csoujbuobodu3"]
 
 [ext_resource type="Script" path="res://Game/All/cable_fix.gd" id="1_kr63e"]
 [ext_resource type="PackedScene" uid="uid://dymoviftbvyd" path="res://Game/All/Button.tscn" id="2_eq4yy"]

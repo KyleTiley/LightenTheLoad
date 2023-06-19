@@ -1,56 +1,72 @@
 2a60927148abd1d33b818b535e306557
-::res://::1687159751
-global.gd::GDScript::-1::1687104188::0::1::::<>Node<>::
-icon.svg::CompressedTexture2D::1232284458929523310::1687090274::1687090274::1::::<><>::
-::res://Game/::1687104513
-game.gd::GDScript::-1::1687104508::0::1::::<>Node<>::
-game.tscn::PackedScene::5253363462902555599::1687104513::0::1::::<><>::uid://wr1r3nxugw24<>res://Game/GameUI/Clock/clock.gd<>res://Game/game.gd<>uid://dx7wr27c0njgs<>uid://c8jicq5bwrdnu<>uid://cqhiu8fvdw425<>uid://da71hvmgak7ff<>uid://caq1m8cmbily<>uid://dscgenki4uhit<>res://Game/GameUI/InfoBar/infobar.gd<>res://Game/GameUI/Popup/popup.gd<>uid://bv7udoh684mcg<>uid://drkdqcls3f43n
-::res://Game/GameUI/::1687090274
-::res://Game/GameUI/Characters/::1687090274
-light_bulb.tscn::PackedScene::8841033142910202298::1687090274::0::1::::<><>::
-::res://Game/GameUI/Characters/Idle/::1687090274
-Idle0000.png::CompressedTexture2D::2113669855722880034::1687090274::1687090274::1::::<><>::
-Idle0005.png::CompressedTexture2D::40681759499938822::1687090274::1687090274::1::::<><>::
-Idle0006.png::CompressedTexture2D::2351256110274650396::1687090274::1687090274::1::::<><>::
-Idle0007.png::CompressedTexture2D::2982761855930486339::1687090274::1687090274::1::::<><>::
-Idle0009.png::CompressedTexture2D::4914365456875548593::1687090274::1687090274::1::::<><>::
-Idle0010.png::CompressedTexture2D::1199209722955983004::1687090274::1687090274::1::::<><>::
-Idle0015.png::CompressedTexture2D::581082461803830483::1687090274::1687090274::1::::<><>::
-::res://Game/GameUI/Clock/::1687104470
-clock.gd::GDScript::-1::1687104470::0::1::::<>Control<>::
-::res://Game/GameUI/InfoBar/::1687103777
-infobar.gd::GDScript::-1::1687103777::0::1::::<>Control<>::
-::res://Game/GameUI/Popup/::1687092792
-Bubbles Line 2.png::CompressedTexture2D::1216236872506622972::1687092373::1687092441::1::::<><>::
-Bubbles Line.png::CompressedTexture2D::8373327017042264097::1687092360::1687092441::1::::<><>::
-Bubbles Square.png::CompressedTexture2D::3927666933053021842::1687092342::1687092441::1::::<><>::
-Bubbles.png::CompressedTexture2D::2477215762222531145::1687092325::1687092441::1::::<><>::
-popup.gd::GDScript::-1::1687092792::0::1::::<>Control<>::
-::res://Game/GameWorld/::1687093524
-::res://Game/GameWorld/Environment/::1687104514
-environment.tscn::PackedScene::141396271167558774::1687104514::0::1::::<><>::uid://b1xqh28la1jm
-Game Level.glb::PackedScene::8427162135858851631::1687090274::1687090274::1::::<><>::
-Terrain.glb::PackedScene::125288139666962870::1687090274::1687090274::1::::<><>::
-::res://Game/GameWorld/Zones/::1687103757
-zone.gd::GDScript::-1::1687103757::0::1::::<>Node<>::
-::res://Game/GameWorld/Zones/City/::1687100500
-city.gd::GDScript::-1::1687100500::0::1::::<>Node<>::
-City.glb::PackedScene::7276361032559904116::1687090274::1687090274::1::::<><>::
-city.tscn::PackedScene::1580859473972305051::1687090274::0::1::::<><>::uid://dbwyurg5o511i<>res://Game/GameWorld/Zones/City/city.gd
-::res://Game/GameWorld/Zones/Stadium/::1687104514
-stadium.gd::GDScript::-1::1687100481::0::1::::<>Node<>::
-Stadium.glb::PackedScene::8983888554817620347::1687090274::1687090274::1::::<><>::
-stadium.tscn::PackedScene::7108142801550991970::1687104514::0::1::::<><>::res://Game/GameWorld/Zones/Stadium/stadium.gd<>uid://d084ljyndf1il
-::res://Game/GameWorld/Zones/Suburb/::1687100511
-suburb.gd::GDScript::-1::1687100511::0::1::::<>Node<>::
-Suburb.glb::PackedScene::3842169718234907102::1687090274::1687090274::1::::<><>::
-suburb.tscn::PackedScene::7226914403379527103::1687090274::0::1::::<><>::uid://bu0f8d3u0hdpm<>res://Game/GameWorld/Zones/Suburb/suburb.gd
-::res://Game/GameWorld/Zones/Township/::1687100516
-township.gd::GDScript::-1::1687100516::0::1::::<>Node<>::
-Township.glb::PackedScene::8421843249173586801::1687090274::1687090274::1::::<><>::
-township.tscn::PackedScene::5910836703646997224::1687090274::0::1::::<><>::uid://dr8ur7hj6wcg4<>res://Game/GameWorld/Zones/Township/township.gd
-::res://MainMenu/::1687104619
-main_menu.gd::GDScript::-1::1687104371::0::1::::<>Node<>::
-main_menu.tscn::PackedScene::3181139706348550075::1687104619::0::1::::<><>::res://MainMenu/main_menu.gd<>uid://b32gmntm3ldd0
-::res://MainMenu/MenuBackgrounds/::1687092246
-Main Menu 1.png::CompressedTexture2D::4407832949138993507::1687092238::1687092240::1::::<><>::
+::res://::1687160325
+DB_Board.tscn::PackedScene::-1::1687160128::0::1::::<><>::
+global.gd::GDScript::-1::1687160090::0::1::::<>Node<>::
+test.tscn::PackedScene::-1::1687160128::0::1::::<><>::
+::res://Game/::1687160325
+game.gd::GDScript::-1::1687160090::0::1::::<>Node<>::
+game.tscn::PackedScene::-1::1687160090::0::1::::<><>::
+::res://Game/All/::1687160325
+Button3.gd::GDScript::-1::1687160128::0::1::::<>Button<>::
+Button.gd::GDScript::-1::1687160128::0::1::::<>Button<>::
+Button.tscn::PackedScene::260866317640818143::1687160128::0::1::::<><>::res://Game/All/Button.gd<>res://Game/All/Button3.gd
+cable_fix.gd::GDScript::-1::1687160128::0::1::::<>Node<>::
+Fuze Box Minigame.gd::GDScript::-1::1687160128::0::1::::<>Node3D<>::
+Fuze Box.glb::PackedScene::5079608140501716186::1687160128::1687160128::1::::<><>::
+icon.svg::CompressedTexture2D::1232284458929523310::1687160128::1687160338::1::::<><>::
+timer_show.tscn::PackedScene::1204188408407241805::1687160128::0::1::::<><>::
+Truck.glb::PackedScene::1459320662813803445::1687160128::1687160128::1::::<><>::
+::res://Game/Events/::1687160128
+::res://Game/Events/Cable_Theft/::1687160128
+cable_fix.tscn::PackedScene::1827405654294446400::1687160128::0::1::::<><>::uid://u152eu2jw8ib<>res://Game/All/cable_fix.gd<>uid://dymoviftbvyd<>uid://rfk2pcky0wg8
+Global.gd::GDScript::-1::1687160128::0::1::::<>Node<>::
+PathFollow3D.gd::GDScript::-1::1687160128::0::1::::<>Node3D<>::
+::res://Game/GameUI/::1687160090
+::res://Game/GameUI/Characters/::1687160090
+light_bulb.tscn::PackedScene::8841033142910202298::1687160090::0::1::::<><>::
+::res://Game/GameUI/Characters/Idle/::1687160090
+Idle0000.png::CompressedTexture2D::2113669855722880034::1687160090::1687160090::1::::<><>::
+Idle0005.png::CompressedTexture2D::40681759499938822::1687160090::1687160090::1::::<><>::
+Idle0006.png::CompressedTexture2D::2351256110274650396::1687160090::1687160090::1::::<><>::
+Idle0007.png::CompressedTexture2D::2982761855930486339::1687160090::1687160090::1::::<><>::
+Idle0009.png::CompressedTexture2D::4914365456875548593::1687160090::1687160090::1::::<><>::
+Idle0010.png::CompressedTexture2D::1199209722955983004::1687160090::1687160090::1::::<><>::
+Idle0015.png::CompressedTexture2D::581082461803830483::1687160090::1687160090::1::::<><>::
+::res://Game/GameUI/Clock/::1687160090
+clock.gd::GDScript::-1::1687160090::0::1::::<>Control<>::
+::res://Game/GameUI/InfoBar/::1687160090
+infobar.gd::GDScript::-1::1687160090::0::1::::<>Control<>::
+::res://Game/GameUI/Popup/::1687160090
+Bubbles Line 2.png::CompressedTexture2D::1216236872506622972::1687160090::1687160090::1::::<><>::
+Bubbles Line.png::CompressedTexture2D::8373327017042264097::1687160090::1687160090::1::::<><>::
+Bubbles Square.png::CompressedTexture2D::3927666933053021842::1687160090::1687160090::1::::<><>::
+Bubbles.png::CompressedTexture2D::2477215762222531145::1687160090::1687160090::1::::<><>::
+popup.gd::GDScript::-1::1687160090::0::1::::<>Control<>::
+::res://Game/GameWorld/::1687160090
+::res://Game/GameWorld/Environment/::1687160090
+environment.tscn::PackedScene::141396271167558774::1687160090::0::1::::<><>::uid://b1xqh28la1jm
+Game Level.glb::PackedScene::8427162135858851631::1687160090::1687160090::1::::<><>::
+Terrain.glb::PackedScene::125288139666962870::1687160090::1687160090::1::::<><>::
+::res://Game/GameWorld/Zones/::1687160090
+zone.gd::GDScript::-1::1687160090::0::1::::<>Node<>::
+::res://Game/GameWorld/Zones/City/::1687160090
+city.gd::GDScript::-1::1687160090::0::1::::<>Node<>::
+City.glb::PackedScene::7276361032559904116::1687160090::1687160090::1::::<><>::
+city.tscn::PackedScene::1580859473972305051::1687160090::0::1::::<><>::uid://dbwyurg5o511i<>res://Game/GameWorld/Zones/City/city.gd
+::res://Game/GameWorld/Zones/Stadium/::1687160090
+stadium.gd::GDScript::-1::1687160090::0::1::::<>Node<>::
+Stadium.glb::PackedScene::8983888554817620347::1687160090::1687160090::1::::<><>::
+stadium.tscn::PackedScene::7108142801550991970::1687160090::0::1::::<><>::res://Game/GameWorld/Zones/Stadium/stadium.gd<>uid://d084ljyndf1il
+::res://Game/GameWorld/Zones/Suburb/::1687160090
+suburb.gd::GDScript::-1::1687160090::0::1::::<>Node<>::
+Suburb.glb::PackedScene::3842169718234907102::1687160090::1687160090::1::::<><>::
+suburb.tscn::PackedScene::7226914403379527103::1687160090::0::1::::<><>::uid://bu0f8d3u0hdpm<>res://Game/GameWorld/Zones/Suburb/suburb.gd
+::res://Game/GameWorld/Zones/Township/::1687160090
+township.gd::GDScript::-1::1687160090::0::1::::<>Node<>::
+Township.glb::PackedScene::8421843249173586801::1687160090::1687160090::1::::<><>::
+township.tscn::PackedScene::5910836703646997224::1687160090::0::1::::<><>::uid://dr8ur7hj6wcg4<>res://Game/GameWorld/Zones/Township/township.gd
+::res://MainMenu/::1687160090
+main_menu.gd::GDScript::-1::1687160090::0::1::::<>Node<>::
+main_menu.tscn::PackedScene::3181139706348550075::1687160090::0::1::::<><>::res://MainMenu/main_menu.gd<>uid://b32gmntm3ldd0
+::res://MainMenu/MenuBackgrounds/::1687160090
+Main Menu 1.png::CompressedTexture2D::4407832949138993507::1687160090::1687160090::1::::<><>::
