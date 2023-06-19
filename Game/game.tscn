@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=20 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://cqhiu8fvdw425" path="res://Game/GameWorld/Zones/Township/township.tscn" id="3_v308r"]
 [ext_resource type="PackedScene" uid="uid://da71hvmgak7ff" path="res://Game/GameWorld/Zones/Suburb/suburb.tscn" id="4_0fdj6"]
 [ext_resource type="PackedScene" uid="uid://caq1m8cmbily" path="res://Game/GameWorld/Environment/environment.tscn" id="6_o23yh"]
+[ext_resource type="Script" path="res://Game/Events/events.gd" id="7_ac6kk"]
 [ext_resource type="PackedScene" uid="uid://dscgenki4uhit" path="res://Game/GameWorld/Environment/Game Level.glb" id="7_anif8"]
+[ext_resource type="PackedScene" uid="uid://bqdk2qcadj3t8" path="res://Game/Events/RepairTruck/repair_truck.tscn" id="7_ferf2"]
 [ext_resource type="Script" path="res://Game/GameUI/InfoBar/infobar.gd" id="8_0p0d2"]
 [ext_resource type="Texture2D" uid="uid://s6ug8hnn127a" path="res://Game/GameUI/Clock/alarm.png" id="9_weqbt"]
 [ext_resource type="Script" path="res://Game/GameUI/Popup/popup.gd" id="10_cp3k4"]
@@ -41,27 +43,29 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="Camera3D" type="Camera3D" parent="GameWorld"]
-transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766045, 0, -0.766045, 0.642788, 0, 20, 20)
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 0, 20, 23)
 
 [node name="Zones" type="Node3D" parent="GameWorld"]
 
 [node name="City" parent="GameWorld/Zones" instance=ExtResource("1_61u5i")]
-transform = Transform3D(0.545561, 0, -0.838071, 0, 1, 0, 0.838071, 0, 0.545561, 1.0374, -1.72011, -3.52384)
+transform = Transform3D(0.545561, 0, -0.838071, 0, 1, 0, 0.838071, 0, 0.545561, 1.037, -3.72, -3.524)
 
 [node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("4_0fdj6")]
-transform = Transform3D(0.672202, 0, -0.332632, 0, 0.75, 0, 0.332632, 0, 0.672202, 10.2237, -0.66745, 9.99552)
+transform = Transform3D(0.672202, 0, -0.332632, 0, 0.75, 0, 0.332632, 0, 0.672202, 10.224, -2.667, 9.996)
 
 [node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("2_p7jbk")]
-transform = Transform3D(0.99854, 0, -0.0540091, 0, 1, 0, 0.0540091, 0, 0.99854, 25.2654, -1.88875, -7.37432)
+transform = Transform3D(0.99854, 0, -0.0540091, 0, 1, 0, 0.0540091, 0, 0.99854, 25.265, -3.889, -7.374)
 
 [node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_v308r")]
-transform = Transform3D(-0.637743, 0, -0.394694, 0, 0.75, 0, 0.394694, 0, -0.637743, -8.2588, -0.205477, 9.72965)
+transform = Transform3D(-0.637743, 0, -0.394694, 0, 0.75, 0, 0.394694, 0, -0.637743, -8.259, -2.205, 9.73)
 
 [node name="Environment" parent="GameWorld" instance=ExtResource("6_o23yh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39546, 0, -35.617)
 
 [node name="Events" type="Node3D" parent="GameWorld"]
-visible = false
+script = ExtResource("7_ac6kk")
+
+[node name="RepairTruck" parent="GameWorld/Events" instance=ExtResource("7_ferf2")]
 
 [node name="Game Level" parent="GameWorld" instance=ExtResource("7_anif8")]
 transform = Transform3D(0.957788, 0, -0.287478, 0, 1, 0, 0.287478, 0, 0.957788, 0, 0, 1.81378)
@@ -281,10 +285,13 @@ text = "PLAY"
 [connection signal="game_timer" from="." to="GameWorld/Zones/Stadium" method="_on_game_game_timer"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/Township" method="_on_game_game_timer"]
 [connection signal="game_timer" from="." to="GameUI/Clock" method="_on_game_game_timer"]
+[connection signal="start_event" from="." to="GameWorld/Events" method="_on_game_start_event"]
 [connection signal="zone_clicked" from="GameWorld/Zones/City" to="." method="_on_city_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Suburb" to="." method="_on_suburb_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Stadium" to="." method="_on_stadium_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Township" to="." method="_on_township_zone_clicked"]
+[connection signal="repair_truck_event" from="GameWorld/Events" to="GameWorld/Events/RepairTruck" method="_on_events_repair_truck_event"]
+[connection signal="event_time" from="GameUI/Clock" to="." method="_on_clock_event_time"]
 [connection signal="toggle_power" from="GameUI/InfoBar" to="." method="_on_info_bar_toggle_power"]
 [connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]
 [connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]

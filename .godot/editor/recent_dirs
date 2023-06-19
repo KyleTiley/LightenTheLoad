@@ -1,9 +1,4 @@
-res://Game/GameWorld/Environment
-res://Game/GameWorld/Zones/Township
-res://Game/GameWorld/Zones/Suburb
-res://Game/GameWorld/Zones/Stadium
-res://Game/GameWorld/Zones/City
-res://Game/GameUI/Characters
-res://Game
-res://MainMenu
+res://Game/Events/RepairTruck
+res://Game/Events/RepairTruck/DBBoard
 res://
+res://Game

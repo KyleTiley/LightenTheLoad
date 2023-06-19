@@ -5,3 +5,4 @@
 [node name="Environment" type="Node3D"]
 
 [node name="Terrain" parent="." instance=ExtResource("1_0lixs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)

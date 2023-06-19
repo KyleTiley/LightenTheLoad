@@ -1,6 +1,6 @@
-[gd_scene load_steps=87 format=3 uid="uid://74mvtu6rk8fc"]
+[gd_scene load_steps=87 format=3 uid="uid://cvt0r0g8vub60"]
 
-[ext_resource type="Script" path="res://Game/All/Fuze Box Minigame.gd" id="1_h0sxt"]
+[ext_resource type="Script" path="res://Game/Events/RepairTruck/DBBoard/All/Fuze Box Minigame.gd" id="1_fcdmo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_22i7k"]
 resource_name = "Box "
@@ -1268,7 +1268,7 @@ transform = Transform3D(15, 0, 0, 0, -6.55671e-07, 15, 0, -15, -6.55671e-07, -0.
 [node name="Fuze Box" type="Node3D" parent="."]
 unique_name_in_owner = true
 transform = Transform3D(-1, -6.79044e-22, -1.50996e-07, 0, 1, -4.49711e-15, 1.50996e-07, -4.49711e-15, -1, -0.00402765, -3.48196, -5.98263)
-script = ExtResource("1_h0sxt")
+script = ExtResource("1_fcdmo")
 
 [node name="PoweBox Casing" type="MeshInstance3D" parent="Fuze Box"]
 transform = Transform3D(3.56589, 0, 0, 0, 2.60959, 0, 0, 0, 0.341424, 0, 6.27796, 0)

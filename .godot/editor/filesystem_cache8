@@ -1,26 +1,30 @@
 2a60927148abd1d33b818b535e306557
-::res://::1687160344
-DB_Board.tscn::PackedScene::-1::1687160128::0::1::::<><>::
+::res://::1687166952
 global.gd::GDScript::-1::1687160090::0::1::::<>Node<>::
-test.tscn::PackedScene::6066372337485520400::1687160344::0::1::::<><>::res://Game/All/cable_fix.gd<>uid://dymoviftbvyd<>uid://rfk2pcky0wg8<>uid://u152eu2jw8ib
-::res://Game/::1687160325
+icon.svg::CompressedTexture2D::5902817450916580271::1687163270::1687163311::1::::<><>::
+test.tscn::PackedScene::6066372337485520400::1687166952::0::1::::<><>::res://Game/Events/RepairTruck/DBBoard/All/cable_fix.gd<>uid://dymoviftbvyd<>uid://rfk2pcky0wg8<>uid://u152eu2jw8ib
+::res://Game/::1687166951
 game.gd::GDScript::-1::1687160090::0::1::::<>Node<>::
-game.tscn::PackedScene::-1::1687160090::0::1::::<><>::
-::res://Game/All/::1687160338
-Button3.gd::GDScript::-1::1687160128::0::1::::<>Button<>::
-Button.gd::GDScript::-1::1687160128::0::1::::<>Button<>::
-Button.tscn::PackedScene::260866317640818143::1687160128::0::1::::<><>::res://Game/All/Button.gd<>res://Game/All/Button3.gd
-cable_fix.gd::GDScript::-1::1687160128::0::1::::<>Node<>::
-Fuze Box Minigame.gd::GDScript::-1::1687160128::0::1::::<>Node3D<>::
-Fuze Box.glb::PackedScene::5079608140501716186::1687160128::1687160128::1::::<><>::
-icon.svg::CompressedTexture2D::1232284458929523310::1687160128::1687160338::1::::<><>::
-timer_show.tscn::PackedScene::1204188408407241805::1687160128::0::1::::<><>::
-Truck.glb::PackedScene::1459320662813803445::1687160128::1687160128::1::::<><>::
-::res://Game/Events/::1687160128
-::res://Game/Events/Cable_Theft/::1687160128
-cable_fix.tscn::PackedScene::1827405654294446400::1687160128::0::1::::<><>::uid://u152eu2jw8ib<>res://Game/All/cable_fix.gd<>uid://dymoviftbvyd<>uid://rfk2pcky0wg8
-Global.gd::GDScript::-1::1687160128::0::1::::<>Node<>::
-PathFollow3D.gd::GDScript::-1::1687160128::0::1::::<>Node3D<>::
+game.tscn::PackedScene::7256353932380393759::1687166957::0::1::::<><>::uid://wr1r3nxugw24<>res://Game/GameUI/Clock/clock.gd<>res://Game/game.gd<>uid://dx7wr27c0njgs<>uid://c8jicq5bwrdnu<>uid://cqhiu8fvdw425<>uid://da71hvmgak7ff<>uid://caq1m8cmbily<>uid://dscgenki4uhit<>uid://bqdk2qcadj3t8<>res://Game/GameUI/InfoBar/infobar.gd<>uid://s6ug8hnn127a<>res://Game/GameUI/Popup/popup.gd<>uid://bv7udoh684mcg<>uid://drkdqcls3f43n
+events.gd::GDScript::-1::1687166990::0::1::::<>Node3D<>::
+::res://Game/Events/::1687163411
+::res://Game/Events/RepairTruck/::1687166952
+cable_fix.tscn::PackedScene::1827405654294446400::1687166952::0::1::::<><>::uid://u152eu2jw8ib<>res://Game/Events/RepairTruck/DBBoard/All/cable_fix.gd<>uid://dymoviftbvyd<>uid://rfk2pcky0wg8
+PathFollow3D.gd::GDScript::-1::1687163299::0::1::::<>Node3D<>::
+repair_truck.gd::GDScript::-1::1687165537::0::1::::<>Node3D<>::
+repair_truck.tscn::PackedScene::3516291544994502287::1687166952::0::1::::<><>::res://Game/Events/RepairTruck/repair_truck.gd<>uid://u152eu2jw8ib
+Truck.glb::PackedScene::1459320662813803445::1687163299::1687165730::1::::<><>::
+::res://Game/Events/RepairTruck/DBBoard/::1687166952
+DBBoard.glb::PackedScene::5079608140501716186::1687163299::1687164757::1::::<><>::
+DB_Board.tscn::PackedScene::6287579868308363211::1687166951::0::1::::<><>::res://Game/Events/RepairTruck/DBBoard/All/Fuze Box Minigame.gd
+db_board.tscn::PackedScene::7680702373423252546::1687166952::0::1::::<><>::
+::res://Game/Events/RepairTruck/DBBoard/All/::1687165729
+Button3.gd::GDScript::-1::1687163299::0::1::::<>Button<>::
+Button.gd::GDScript::-1::1687163299::0::1::::<>Button<>::
+Button.tscn::PackedScene::260866317640818143::1687164683::0::1::::<><>::res://Game/Events/RepairTruck/DBBoard/All/Button.gd<>res://Game/Events/RepairTruck/DBBoard/All/Button3.gd
+cable_fix.gd::GDScript::-1::1687163299::0::1::::<>Node<>::
+Fuze Box Minigame.gd::GDScript::-1::1687163299::0::1::::<>Node3D<>::
+timer_show.tscn::PackedScene::1204188408407241805::1687163299::0::1::::<><>::
 ::res://Game/GameUI/::1687160090
 ::res://Game/GameUI/Characters/::1687160090
 light_bulb.tscn::PackedScene::8841033142910202298::1687160090::0::1::::<><>::
@@ -32,8 +36,8 @@ Idle0007.png::CompressedTexture2D::2982761855930486339::1687160090::1687160090::
 Idle0009.png::CompressedTexture2D::4914365456875548593::1687160090::1687160090::1::::<><>::
 Idle0010.png::CompressedTexture2D::1199209722955983004::1687160090::1687160090::1::::<><>::
 Idle0015.png::CompressedTexture2D::581082461803830483::1687160090::1687160090::1::::<><>::
-::res://Game/GameUI/Clock/::1687163043
-alarm.png::CompressedTexture2D::1328621695172467372::1687163025::1687163046::1::::<><>::
+::res://Game/GameUI/Clock/::1687163299
+alarm.png::CompressedTexture2D::1328621695172467372::1687163299::1687163299::1::::<><>::
 clock.gd::GDScript::-1::1687160090::0::1::::<>Control<>::
 ::res://Game/GameUI/InfoBar/::1687160090
 infobar.gd::GDScript::-1::1687160090::0::1::::<>Control<>::
@@ -44,8 +48,8 @@ Bubbles Square.png::CompressedTexture2D::3927666933053021842::1687160090::168716
 Bubbles.png::CompressedTexture2D::2477215762222531145::1687160090::1687160090::1::::<><>::
 popup.gd::GDScript::-1::1687160090::0::1::::<>Control<>::
 ::res://Game/GameWorld/::1687160090
-::res://Game/GameWorld/Environment/::1687160090
-environment.tscn::PackedScene::141396271167558774::1687160090::0::1::::<><>::uid://b1xqh28la1jm
+::res://Game/GameWorld/Environment/::1687166952
+environment.tscn::PackedScene::141396271167558774::1687166952::0::1::::<><>::uid://b1xqh28la1jm
 Game Level.glb::PackedScene::8427162135858851631::1687160090::1687160090::1::::<><>::
 Terrain.glb::PackedScene::125288139666962870::1687160090::1687160090::1::::<><>::
 ::res://Game/GameWorld/Zones/::1687160090

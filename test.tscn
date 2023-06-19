@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://csoujbuobodu3"]
 
-[ext_resource type="Script" path="res://Game/All/cable_fix.gd" id="1_kr63e"]
-[ext_resource type="PackedScene" uid="uid://dymoviftbvyd" path="res://Game/All/Button.tscn" id="2_eq4yy"]
-[ext_resource type="PackedScene" uid="uid://rfk2pcky0wg8" path="res://Game/All/timer_show.tscn" id="3_djf71"]
-[ext_resource type="PackedScene" uid="uid://u152eu2jw8ib" path="res://Game/All/Truck.glb" id="4_2daiy"]
+[ext_resource type="Script" path="res://Game/Events/RepairTruck/DBBoard/All/cable_fix.gd" id="1_kr63e"]
+[ext_resource type="PackedScene" uid="uid://dymoviftbvyd" path="res://Game/Events/RepairTruck/DBBoard/All/Button.tscn" id="2_eq4yy"]
+[ext_resource type="PackedScene" uid="uid://rfk2pcky0wg8" path="res://Game/Events/RepairTruck/DBBoard/All/timer_show.tscn" id="3_djf71"]
+[ext_resource type="PackedScene" uid="uid://u152eu2jw8ib" path="res://Game/Events/RepairTruck/Truck.glb" id="4_2daiy"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_thbp7"]
 
@@ -44,7 +44,6 @@ unique_name_in_owner = true
 transform = Transform3D(1.455, 0, 0, 0, 1.455, 0, 0, 0, 1.455, 0, 0, 0)
 
 [node name="Truck" parent="Path3D2/PathFollow3D/MeshInstance3D" instance=ExtResource("4_2daiy")]
-unique_name_in_owner = true
 transform = Transform3D(-1, 0, -8.75443e-08, 0, 1, 0, 8.75443e-08, 0, -1, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]

@@ -4,6 +4,7 @@ extends Node
 
 signal game_timer
 signal display_info
+signal start_event
 
 # REFERENCES
 @onready var city_zone = $GameWorld/Zones/City
@@ -77,3 +78,7 @@ func _on_suburb_zone_clicked(_name, _is_using_electricity, _electricity_used, _c
 # Calls to toggle the active zone's power on or off
 func _on_info_bar_toggle_power():
 	active_zone.toggle_zone_power()
+
+# Marks the time for an event to be called
+func _on_clock_event_time():
+	start_event.emit()

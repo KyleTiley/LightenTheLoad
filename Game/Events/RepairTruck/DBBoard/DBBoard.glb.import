@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cemuny7ht0hok"
-path="res://.godot/imported/Fuze Box.glb-d103c42162105ed8e050369cac006ea2.scn"
+path="res://.godot/imported/DBBoard.glb-2026564cffcb10575f92b22ac4783cf8.scn"
 
 [deps]
 
-source_file="res://Game/All/Fuze Box.glb"
-dest_files=["res://.godot/imported/Fuze Box.glb-d103c42162105ed8e050369cac006ea2.scn"]
+source_file="res://Game/Events/RepairTruck/DBBoard/DBBoard.glb"
+dest_files=["res://.godot/imported/DBBoard.glb-2026564cffcb10575f92b22ac4783cf8.scn"]
 
 [params]
 

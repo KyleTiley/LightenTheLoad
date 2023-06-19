@@ -2,3 +2,15 @@ res://test.tscn
 res://Game/Events/Cable_Theft/PathFollow3D.gd
 res://Game/GameWorld/Zones/Stadium/stadium.gd
 res://Game/game.tscn
+res://DB_Board.tscn
+res://Game/Events/RepairTruck/repair_truck.tscn
+res://Game/Events/RepairTruck/Global.gd
+res://Game/Events/RepairTruck/repair_truck.gd
+res://Game/Events/RepairTruck/DBBoard/DB_Board.tscn
+res://Game/Events/RepairTruck/DBBoard/All/Button.tscn
+res://Game/Events/RepairTruck/cable_fix.tscn
+res://Game/GameWorld/Environment/environment.tscn
+res://Game/Events/RepairTruck/DBBoard/db_board.tscn
+res://Game/Events/events.gd
+res://Game/GameUI/Clock/clock.gd
+res://Game/game.gd
