@@ -7,9 +7,11 @@ var switch_on = 40
 
 var switch_counter = 0
 
+func _ready():
+	_on_node_3d_visibility_changed()
+
 func _process(delta):
 	if switch_counter == 9:
-		Global.enable_minigame_retun_button = true
 		return_vehicle.emit()
 
 func _on_area_3d_1_input_event(camera, event, position, normal, shape_idx):

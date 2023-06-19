@@ -1,4 +1,4 @@
-[gd_scene load_steps=87 format=3 uid="uid://b7wva1famyy18"]
+[gd_scene load_steps=87 format=3 uid="uid://cn537q3hyui7k"]
 
 [ext_resource type="Script" path="res://Game/Events/RepairTruck/DBBoard/db_board.gd" id="1_fcdmo"]
 

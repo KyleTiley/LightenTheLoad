@@ -28,7 +28,7 @@ func _process(_delta):
 		Global.next_day()
 	change_clock_time()
 	# Marks the point where events are called
-	if clock_hours == 12 and clock_minutes == 0:
+	if clock_hours == 9 and clock_minutes == 0:
 		if !event_time_reached:
 			event_time.emit()
 			event_time_reached = true
