@@ -59,7 +59,6 @@ func return_truck(_delta):
 	# Rotates truck before returning
 	const move_speed = 10.0
 	truck.rotation_degrees.y = 0
-	print(truck_path.progress_ratio)
 	if truck_path.progress_ratio >= 0.1:
 		truck_path.progress -= move_speed * _delta
 
