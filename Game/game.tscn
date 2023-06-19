@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cg31em10epawl"]
+[gd_scene load_steps=18 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://caq1m8cmbily" path="res://Game/GameWorld/Environment/environment.tscn" id="6_o23yh"]
 [ext_resource type="PackedScene" uid="uid://dscgenki4uhit" path="res://Game/GameWorld/Environment/Game Level.glb" id="7_anif8"]
 [ext_resource type="Script" path="res://Game/GameUI/InfoBar/infobar.gd" id="8_0p0d2"]
+[ext_resource type="Texture2D" uid="uid://s6ug8hnn127a" path="res://Game/GameUI/Clock/alarm.png" id="9_weqbt"]
 [ext_resource type="Script" path="res://Game/GameUI/Popup/popup.gd" id="10_cp3k4"]
 [ext_resource type="Texture2D" uid="uid://bv7udoh684mcg" path="res://Game/GameUI/Popup/Bubbles Square.png" id="12_hbq03"]
 [ext_resource type="Texture2D" uid="uid://drkdqcls3f43n" path="res://Game/GameUI/Popup/Bubbles Line.png" id="13_5trs7"]
@@ -81,11 +82,22 @@ offset_right = 300.0
 offset_bottom = 150.0
 script = ExtResource("1_edsui")
 
+[node name="TextureRect" type="TextureRect" parent="GameUI/Clock"]
+layout_mode = 0
+offset_left = -14.0
+offset_top = -96.0
+offset_right = 1010.0
+offset_bottom = 928.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("9_weqbt")
+
 [node name="Day" type="Label" parent="GameUI/Clock"]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
-offset_bottom = 72.0
+offset_top = 16.0
+offset_right = 30.0
+offset_bottom = 88.0
 grow_horizontal = 2
 theme_override_font_sizes/font_size = 50
 text = "Day"
@@ -98,7 +110,9 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -72.0
+offset_top = -68.0
+offset_right = 30.0
+offset_bottom = 4.00002
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 50

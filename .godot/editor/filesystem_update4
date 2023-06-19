@@ -1,3 +1,4 @@
 res://test.tscn
 res://Game/Events/Cable_Theft/PathFollow3D.gd
 res://Game/GameWorld/Zones/Stadium/stadium.gd
+res://Game/game.tscn

@@ -1,8 +1,8 @@
+TextureRect
 Label
 ColorRect
 Control
 Container
-TextureRect
 Button
 HBoxContainer
 TextureButton
