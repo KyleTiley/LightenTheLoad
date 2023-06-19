@@ -28,6 +28,7 @@ func change_scene(_scene):
 			game_has_started = false
 			get_tree().change_scene_to_file(main_menu)
 
+# Sets variables for the next day
 func next_day():
 	match day_of_the_week:
 		"Monday":

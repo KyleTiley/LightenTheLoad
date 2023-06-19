@@ -66,6 +66,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39546, 0, -35.617)
 script = ExtResource("7_ac6kk")
 
 [node name="RepairTruck" parent="GameWorld/Events" instance=ExtResource("7_ferf2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
 
 [node name="Game Level" parent="GameWorld" instance=ExtResource("7_anif8")]
 transform = Transform3D(0.957788, 0, -0.287478, 0, 1, 0, 0.287478, 0, 0.957788, 0, 0, 1.81378)
@@ -295,3 +296,5 @@ text = "PLAY"
 [connection signal="toggle_power" from="GameUI/InfoBar" to="." method="_on_info_bar_toggle_power"]
 [connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]
 [connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]
+
+[editable path="GameWorld/Events/RepairTruck"]

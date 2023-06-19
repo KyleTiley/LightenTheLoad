@@ -14,3 +14,6 @@ res://Game/Events/RepairTruck/DBBoard/db_board.tscn
 res://Game/Events/events.gd
 res://Game/GameUI/Clock/clock.gd
 res://Game/game.gd
+res://Game/Events/RepairTruck/DBBoard/All/timer_show.tscn
+res://Game/Events/RepairTruck/DBBoard/All/Fuze Box Minigame.gd
+res://global.gd

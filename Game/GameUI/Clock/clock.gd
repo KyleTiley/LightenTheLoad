@@ -34,7 +34,7 @@ func _process(_delta):
 			event_time_reached = true
 
 func _on_game_game_timer():
-	clock_minutes += 60
+	clock_minutes += 30
 
 func change_clock_time():
 	var _time : String = "%02d:%02d" % [clock_hours, clock_minutes]

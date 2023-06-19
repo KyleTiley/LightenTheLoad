@@ -18,7 +18,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 
 curve = SubResource("Curve3D_5e87o")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.0323998, 0, 0.999473, 0, 1, 0, -0.999474, 0, -0.0323998, 0, 0, 0)
+transform = Transform3D(-0.0323998, 0, 0.999472, 0, 1, 0, -0.999473, 0, -0.0323998, 0, 0, 0)
 
 [node name="Truck" parent="Path3D/PathFollow3D" instance=ExtResource("2_7b1p2")]
 transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0, 1.637, 0)
