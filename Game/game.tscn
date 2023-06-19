@@ -263,9 +263,9 @@ text = "PLAY"
 
 [connection signal="display_info" from="." to="GameUI/InfoBar" method="_on_game_display_info"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/City" method="_on_game_game_timer"]
+[connection signal="game_timer" from="." to="GameWorld/Zones/Suburb" method="_on_game_game_timer"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/Stadium" method="_on_game_game_timer"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/Township" method="_on_game_game_timer"]
-[connection signal="game_timer" from="." to="GameWorld/Zones/Suburb" method="_on_game_game_timer"]
 [connection signal="game_timer" from="." to="GameUI/Clock" method="_on_game_game_timer"]
 [connection signal="zone_clicked" from="GameWorld/Zones/City" to="." method="_on_city_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Suburb" to="." method="_on_suburb_zone_clicked"]
