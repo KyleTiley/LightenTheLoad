@@ -1,0 +1,55 @@
+extends Node
+
+# REFERENCES
+
+@onready var button_container = $PlayMenu/ButtonContainer
+@onready var monday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonMonday
+@onready var tuesday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonTuesday
+@onready var wednesday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonWednesday
+@onready var thursday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonThursday
+@onready var friday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonFriday
+
+# FUNCTIONS
+
+func _ready():
+	if Global.monday_unlocked:
+		monday_button.disabled = false
+	if Global.tuesday_unlocked:
+		tuesday_button.disabled = false
+	if Global.wednesday_unlocked:
+		wednesday_button.disabled = false
+	if Global.thursday_unlocked:
+		thursday_button.disabled = false
+	if Global.friday_unlocked:
+		friday_button.disabled = false
+
+func StartGame():
+	Global.change_scene("Game")
+
+# Buttons to start each day from the menu
+
+func _on_button_monday_pressed():
+	Global.day_of_the_week = "Monday"
+	StartGame()
+
+func _on_button_tuesday_pressed():
+	Global.day_of_the_week = "Tuesday"
+	StartGame()
+
+func _on_button_wednesday_pressed():
+	Global.day_of_the_week = "Wednesday"
+	StartGame()
+
+func _on_button_thursday_pressed():
+	Global.day_of_the_week = "Thursday"
+	StartGame()
+
+func _on_button_friday_pressed():
+	Global.day_of_the_week = "Friday"
+	StartGame()
+
+func _on_play_button_pressed():
+	button_container.show()
+
+func _on_settings_button_pressed():
+	print("OPTIONS")

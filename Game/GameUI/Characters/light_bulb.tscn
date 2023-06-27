@@ -1,0 +1,59 @@
+[gd_scene load_steps=9 format=3 uid="uid://dx7wr27c0njgs"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xpdqn"]
+load_path = "res://.godot/imported/Idle0000.png-11e5c9c6a6d2a66bf718d15076165f8d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7pybt"]
+load_path = "res://.godot/imported/Idle0005.png-46ed603f09d6fd3379bc2201c9d089a3.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_76yjm"]
+load_path = "res://.godot/imported/Idle0006.png-b0b7022dbfff96411ff91f417e1be331.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_va2qc"]
+load_path = "res://.godot/imported/Idle0007.png-7279b69c1d6684f8881e9d852ace5f83.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_b7hpu"]
+load_path = "res://.godot/imported/Idle0009.png-93e6d5565d2c26302610c6f0226e8066.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mrxmn"]
+load_path = "res://.godot/imported/Idle0010.png-25629afc0b68378ebe522d0853bb7c58.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_d8l0j"]
+load_path = "res://.godot/imported/Idle0015.png-5a39f1de4136b09fb7652c512bd99773.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ma3d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_xpdqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_7pybt")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_76yjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_va2qc")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_b7hpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_mrxmn")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_d8l0j")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 7.0
+}]
+
+[node name="LightBulb" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4ma3d")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.818824
