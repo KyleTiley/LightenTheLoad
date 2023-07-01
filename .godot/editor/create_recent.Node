@@ -1,3 +1,5 @@
+RichTextLabel
+Control
 CollisionShape3D
 Area3D
 PathFollow3D
@@ -5,12 +7,10 @@ Path3D
 TextureRect
 Label
 ColorRect
-Control
 Container
 Button
 HBoxContainer
 TextureButton
-RichTextLabel
 Panel
 AnimatedSprite2D
 Node3D

@@ -12,7 +12,7 @@ var stadium_loadshedding_offset = 8
 var daily_event_reminder: String
 
 func _ready():
-	# Sets unique variables for each day
+	# Sets popup variables for each day
 	match Global.day_of_the_week:
 		"Monday":
 			loadshedding_offset = 2

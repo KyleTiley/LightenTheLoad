@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=21 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dscgenki4uhit" path="res://Game/GameWorld/Environment/Game Level.glb" id="7_anif8"]
 [ext_resource type="PackedScene" uid="uid://bqdk2qcadj3t8" path="res://Game/Events/RepairTruck/repair_truck.tscn" id="7_ferf2"]
 [ext_resource type="Script" path="res://Game/GameUI/InfoBar/infobar.gd" id="8_0p0d2"]
+[ext_resource type="PackedScene" uid="uid://djso7gp30eqqh" path="res://Game/Events/BigGame/big_game.tscn" id="9_4t3mn"]
 [ext_resource type="Texture2D" uid="uid://s6ug8hnn127a" path="res://Game/GameUI/Clock/alarm.png" id="9_weqbt"]
 [ext_resource type="Script" path="res://Game/GameUI/Popup/popup.gd" id="10_cp3k4"]
 [ext_resource type="Texture2D" uid="uid://bv7udoh684mcg" path="res://Game/GameUI/Popup/Bubbles Square.png" id="12_hbq03"]
@@ -67,6 +68,8 @@ script = ExtResource("7_ac6kk")
 
 [node name="RepairTruck" parent="GameWorld/Events" instance=ExtResource("7_ferf2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+
+[node name="BigGame" parent="GameWorld/Events" instance=ExtResource("9_4t3mn")]
 
 [node name="Game Level" parent="GameWorld" instance=ExtResource("7_anif8")]
 transform = Transform3D(0.957788, 0, -0.287478, 0, 1, 0, 0.287478, 0, 0.957788, 0, 0, 1.81378)
@@ -200,10 +203,10 @@ position = Vector2(150, 150)
 
 [node name="PowerLeftLabel" type="Label" parent="GameUI/InfoBar"]
 layout_mode = 0
-offset_left = 50.0
-offset_top = -175.0
-offset_right = 250.0
-offset_bottom = -100.0
+offset_left = 330.0
+offset_top = -880.0
+offset_right = 530.0
+offset_bottom = -805.0
 theme_override_font_sizes/font_size = 50
 
 [node name="Popup" type="Control" parent="GameUI"]
@@ -280,6 +283,37 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "PLAY"
 
+[node name="Schedule" type="Control" parent="GameUI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GameUI/Schedule"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 19.5
+anchor_right = 7.5
+anchor_bottom = 19.5
+offset_left = 25.0
+offset_top = -615.0
+offset_right = -25.0
+theme_override_font_sizes/normal_font_size = 28
+text = "City:
+00:00 - 00:00
+00:00 - 00:00
+
+Suburb:
+00:00 - 00:00
+00:00 - 00:00
+
+Stadium:
+00:00 - 00:00
+00:00 - 00:00
+
+Township:
+00:00 - 00:00
+00:00 - 00:00"
+
 [connection signal="display_info" from="." to="GameUI/InfoBar" method="_on_game_display_info"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/City" method="_on_game_game_timer"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/Suburb" method="_on_game_game_timer"]
@@ -291,7 +325,9 @@ text = "PLAY"
 [connection signal="zone_clicked" from="GameWorld/Zones/Suburb" to="." method="_on_suburb_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Stadium" to="." method="_on_stadium_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Township" to="." method="_on_township_zone_clicked"]
+[connection signal="big_game_event" from="GameWorld/Events" to="GameWorld/Events/BigGame" method="_on_events_big_game_event"]
 [connection signal="repair_truck_event" from="GameWorld/Events" to="GameWorld/Events/RepairTruck" method="_on_events_repair_truck_event"]
+[connection signal="start_big_game" from="GameWorld/Events/BigGame" to="GameWorld/Zones/Stadium" method="_on_big_game_start_big_game"]
 [connection signal="event_time" from="GameUI/Clock" to="." method="_on_clock_event_time"]
 [connection signal="toggle_power" from="GameUI/InfoBar" to="." method="_on_info_bar_toggle_power"]
 [connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://djso7gp30eqqh"]
+
+[ext_resource type="Script" path="res://Game/Events/BigGame/big_game.gd" id="1_bc7d6"]
+
+[node name="BigGame" type="Node3D"]
+script = ExtResource("1_bc7d6")

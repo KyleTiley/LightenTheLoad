@@ -2,6 +2,7 @@ extends Node3D
 
 # SIGNALS
 signal repair_truck_event
+signal big_game_event
 
 # VARIABLES
 var started_daily_event

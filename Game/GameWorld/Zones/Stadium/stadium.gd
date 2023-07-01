@@ -7,3 +7,7 @@ func _ready():
 
 func _on_game_game_timer():
 	run_controllers()
+
+func _on_big_game_start_big_game():
+	electricity_usage = 50
+	happiness_loss = 20
