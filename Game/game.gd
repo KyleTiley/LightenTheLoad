@@ -20,7 +20,7 @@ var active_zone
 # FUNCTIONS
 
 func _ready():
-	set_total_allocated_electricity(Global.day_of_the_week)
+	set_daily_variables(Global.day_of_the_week)
 
 # Increments timer
 func _physics_process(delta):
@@ -37,18 +37,23 @@ func _process(_delta):
 		active_zone.get_zone_info()
 
 # Sets unique variables for each day
-func set_total_allocated_electricity(_day):
+func set_daily_variables(_day):
 	match _day:
 		"Monday":
 			Global.total_allocated_electricity = 10000
+			Global.numberOfEvents = 0
 		"Tuesday":
 			Global.total_allocated_electricity = 12000
+			Global.numberOfEvents = 1
 		"Wednesday":
 			Global.total_allocated_electricity = 14000
+			Global.numberOfEvents = 2
 		"Thursday":
 			Global.total_allocated_electricity = 8000
+			Global.numberOfEvents = 3
 		"Friday":
-			Global.total_allocated_electricity = 1000
+			Global.total_allocated_electricity = 6000
+			Global.numberOfEvents = 4
 
 # Delegates info regarding the currently selected zone
 func selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness):

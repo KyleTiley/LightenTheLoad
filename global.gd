@@ -10,6 +10,7 @@ var game = "res://Game/game.tscn"
 var day_of_the_week: String
 var game_has_started = false
 var total_allocated_electricity
+var numberOfEvents
 
 # Sets which days can be played from the main menu
 var monday_unlocked = true

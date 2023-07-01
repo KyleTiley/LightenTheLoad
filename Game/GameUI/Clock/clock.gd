@@ -28,13 +28,18 @@ func _process(_delta):
 		Global.next_day()
 	change_clock_time()
 	# Marks the points where events are called
-	if clock_hours == 9 and clock_minutes == 0:
-		if !event_time_reached:
-			event_time.emit()
-			event_time_reached = true
+	if clock_minutes == 0:
+		if clock_hours == 10 or clock_hours == 12 or clock_hours == 14:
+			if !event_time_reached:
+				event_time.emit()
+				event_time_reached = true
+		# Resets event time
+		elif event_time_reached == true:
+			event_time_reached = false
 
+# Controls the speed of the clock
 func _on_game_game_timer():
-	clock_minutes += 30
+	clock_minutes += 20
 
 func change_clock_time():
 	var _time : String = "%02d:%02d" % [clock_hours, clock_minutes]

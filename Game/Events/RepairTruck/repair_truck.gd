@@ -42,8 +42,6 @@ func _process(delta):
 		return_truck(delta)
 
 func _on_events_repair_truck_event():
-	print("truck event started")
-#	spawn_db_board()
 	send_out_truck = true
 
 func drive_truck(_delta):
