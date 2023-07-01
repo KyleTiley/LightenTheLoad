@@ -1,13 +1,4 @@
 res://Game/game.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.gd
-res://Game/Events/RepairTruck/repair_truck.tscn
-res://Game/Events/RepairTruck/DBBoard/db_board.tscn
-res://Game/Events/events.gd
-res://Game/game.gd
-res://global.gd
-res://Game/Events/RepairTruck/repair_truck.gd
-res://Game/GameUI/Clock/clock.gd
-res://Game/Events/BigGame/big_game.tscn
-res://Game/Events/BigGame/big_game.gd
 res://Game/GameUI/Popup/popup.gd
 res://Game/GameUI/Schedule/schedule.gd

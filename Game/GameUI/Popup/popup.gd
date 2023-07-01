@@ -7,14 +7,14 @@ signal set_schedule
 @onready var popup_text = $PopupBubble/RichTextLabel
 # Unique variables for each day
 var loadshedding_offset = 1
-var city_schedule1
-var city_schedule2
-var suburb_schedule1
-var suburb_schedule2
-var stadium_schedule1
-var stadium_schedule2
-var township_schedule1
-var township_schedule2
+var city_schedule1 = "08"
+var city_schedule2 = "10"
+var suburb_schedule1 = "12"
+var suburb_schedule2 = "14"
+var stadium_schedule1 = "08"
+var stadium_schedule2 = "10"
+var township_schedule1 = "12"
+var township_schedule2 = "14"
 var daily_event_reminder: String
 
 func _ready():

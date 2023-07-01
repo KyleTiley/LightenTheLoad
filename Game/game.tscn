@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://caq1m8cmbily" path="res://Game/GameWorld/Environment/environment.tscn" id="6_o23yh"]
 [ext_resource type="Script" path="res://Game/Events/events.gd" id="7_ac6kk"]
 [ext_resource type="PackedScene" uid="uid://dscgenki4uhit" path="res://Game/GameWorld/Environment/Game Level.glb" id="7_anif8"]
-[ext_resource type="PackedScene" path="res://Game/Events/RepairTruck/repair_truck.tscn" id="7_ferf2"]
+[ext_resource type="PackedScene" uid="uid://bqdk2qcadj3t8" path="res://Game/Events/RepairTruck/repair_truck.tscn" id="7_ferf2"]
 [ext_resource type="Script" path="res://Game/GameUI/InfoBar/infobar.gd" id="8_0p0d2"]
 [ext_resource type="PackedScene" uid="uid://djso7gp30eqqh" path="res://Game/Events/BigGame/big_game.tscn" id="9_4t3mn"]
 [ext_resource type="Texture2D" uid="uid://s6ug8hnn127a" path="res://Game/GameUI/Clock/alarm.png" id="9_weqbt"]
@@ -290,7 +290,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("18_o0xj2")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="GameUI/Schedule"]
+[node name="LoadSheddingSchedule" type="RichTextLabel" parent="GameUI/Schedule"]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 19.5
