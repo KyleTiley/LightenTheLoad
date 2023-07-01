@@ -2,7 +2,7 @@ extends Control
 
 func _on_popup_set_schedule(city1, city2, suburb1, suburb2, stadium1, stadium2, township1, township2):
 	var schedule_text = $LoadSheddingSchedule
-	schedule_text.text = ""
+	schedule_text.text = "Loadshedding Schedule"
 	
 	schedule_text.text += "City:" + '\n'
 	schedule_text.text += city1 + ":00" + '\n'
