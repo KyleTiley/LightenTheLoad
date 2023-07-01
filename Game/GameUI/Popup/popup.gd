@@ -1,14 +1,20 @@
 extends Control
 
-# VARIABLES
+# SIGNALS
+signal set_schedule
 
+# VARIABLES
 @onready var popup_text = $PopupBubble/RichTextLabel
 # Unique variables for each day
-var loadshedding_offset
-var city_loadshedding_offset = 2
-var suburb_loadshedding_offset = 4
-var twonship_loadshedding_offset = 6
-var stadium_loadshedding_offset = 8
+var loadshedding_offset = 1
+var city_schedule1
+var city_schedule2
+var suburb_schedule1
+var suburb_schedule2
+var stadium_schedule1
+var stadium_schedule2
+var township_schedule1
+var township_schedule2
 var daily_event_reminder: String
 
 func _ready():
@@ -34,8 +40,10 @@ func _ready():
 	# Displays all relevent info on the popup
 	popup_text.text += "Welcome to " + Global.day_of_the_week + '\n'
 	popup_text.text += "Today's loadshedding schedule is:" + '\n'
-	popup_text.text += str(city_loadshedding_offset) + '\n'
+	popup_text.text += str(loadshedding_offset) + '\n'
 	popup_text.text += daily_event_reminder
+	
+	set_schedule.emit(city_schedule1, city_schedule2, suburb_schedule1, suburb_schedule2, stadium_schedule1, stadium_schedule2, township_schedule1, township_schedule2)
 
 # Hides the entire popup and starts the game
 func _on_popup_button_pressed():
