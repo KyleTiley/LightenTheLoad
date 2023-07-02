@@ -7,3 +7,9 @@ func _ready():
 
 func _on_game_game_timer():
 	run_controllers()
+
+func _on_clock_loadshedding_time(_loadshedding_time):
+	if _loadshedding_time == Global.township_schedule1 or _loadshedding_time == Global.township_schedule2:
+		print("loadshedding started at: " + name)
+	if _loadshedding_time == Global.township_schedule1 or _loadshedding_time == Global.township_schedule2:
+		print("loadshedding started at: " + name)

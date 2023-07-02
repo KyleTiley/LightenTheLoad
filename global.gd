@@ -19,6 +19,15 @@ var wednesday_unlocked = false
 var thursday_unlocked = false
 var friday_unlocked = false
 
+var city_schedule1
+var city_schedule2
+var suburb_schedule1
+var suburb_schedule2
+var stadium_schedule1
+var stadium_schedule2
+var township_schedule1
+var township_schedule2
+
 # FUNCTIONS
 
 func change_scene(_scene):

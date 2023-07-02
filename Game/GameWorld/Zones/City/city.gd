@@ -7,3 +7,7 @@ func _ready():
 
 func _on_game_game_timer():
 	run_controllers()
+
+
+func _on_clock_loadshedding_time():
+	pass # Replace with function body.
