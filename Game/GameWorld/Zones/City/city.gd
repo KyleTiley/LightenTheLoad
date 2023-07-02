@@ -9,5 +9,5 @@ func _on_game_game_timer():
 	run_controllers()
 
 
-func _on_clock_loadshedding_time():
+func _on_clock_loadshedding_time(_clock_hours, _clock_minutes):
 	pass # Replace with function body.

@@ -30,14 +30,14 @@ func _process(_delta):
 	change_clock_time()
 	# Marks the points where events are called
 	if clock_minutes == 0:
-		if clock_hours % 2 == 0:
-			if clock_hours != 8 and clock_hours != 18:
+		if clock_hours == 10 or clock_hours == 12 or clock_hours == 14 or clock_hours == 16:
+			if !event_time_reached:
 				event_time.emit()
 				event_time_reached = true
-			loadshedding_time.emit(clock_hours)
 		# Resets event time
 		elif event_time_reached == true:
 			event_time_reached = false
+	loadshedding_time.emit(clock_hours, clock_minutes)
 
 # Controls the speed of the clock
 func _on_game_game_timer():
