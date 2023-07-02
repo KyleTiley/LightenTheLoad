@@ -1,7 +1,7 @@
 extends "res://Game/GameWorld/Zones/zone.gd"
 
-var base_happiness_gain = 10
-var base_happiness_loss = 10
+var base_happiness_gain = 6
+var base_happiness_loss = 8
 
 func _ready():
 	electricity_usage = 5
@@ -14,7 +14,7 @@ func _on_game_game_timer():
 # Sets variables for the big game event
 func _on_big_game_start_big_game():
 	electricity_usage = 50
-	happiness_loss = 20
+	happiness_loss = base_happiness_loss * 4
 
 func _on_clock_loadshedding_time(_clock_hours, _clock_minutes):
 	if _clock_minutes == 0:
