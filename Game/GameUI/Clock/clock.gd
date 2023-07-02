@@ -14,11 +14,13 @@ var clock_hours = 0
 var start_time = 7
 var end_time = 18
 var event_time_reached
+var schedule_time_reached
 
 func _ready():
 	day_label.text = Global.day_of_the_week
 	clock_hours = start_time
 	event_time_reached = false
+	schedule_time_reached = false
 
 func _process(_delta):
 	if clock_minutes == 60:
@@ -37,7 +39,13 @@ func _process(_delta):
 		# Resets event time
 		elif event_time_reached == true:
 			event_time_reached = false
-	loadshedding_time.emit(clock_hours, clock_minutes)
+	
+	if clock_minutes == 0 or clock_minutes == 30:
+		if !schedule_time_reached:
+			loadshedding_time.emit(clock_hours, clock_minutes)
+			schedule_time_reached = true
+	else:
+		schedule_time_reached = false
 
 # Controls the speed of the clock
 func _on_game_game_timer():

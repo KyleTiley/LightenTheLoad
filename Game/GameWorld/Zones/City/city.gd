@@ -8,6 +8,14 @@ func _ready():
 func _on_game_game_timer():
 	run_controllers()
 
-
 func _on_clock_loadshedding_time(_clock_hours, _clock_minutes):
-	pass # Replace with function body.
+	if _clock_minutes == 0:
+		if _clock_hours == int(Global.city_schedule1) or _clock_hours == int(Global.city_schedule2):
+			print("loadshedding started at: " + name)
+			happiness_gain = 6
+			happiness_loss = 3
+	elif _clock_minutes == 30:
+		if _clock_hours == (int(Global.city_schedule1) + 2) or _clock_hours == (int(Global.city_schedule2) + 2):
+			print("loadshedding ended at: " + name)
+			happiness_loss = 6
+			happiness_gain = 3
