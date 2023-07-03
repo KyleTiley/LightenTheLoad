@@ -1,10 +1,4 @@
 res://Game/game.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.gd
-res://Game/GameUI/Schedule/schedule.gd
-res://global.gd
-res://Game/GameUI/Popup/popup.gd
 res://Game/GameUI/Clock/clock.gd
-res://Game/Events/events.gd
-res://Game/GameWorld/Zones/City/city.gd
-res://Game/GameWorld/Zones/Suburb/suburb.gd
-res://Game/GameWorld/Zones/Township/township.gd
+res://Game/GameUI/Popup/popup.gd

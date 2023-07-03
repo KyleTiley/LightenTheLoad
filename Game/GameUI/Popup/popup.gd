@@ -6,6 +6,7 @@ signal set_schedule
 # VARIABLES
 @onready var popup_text = $PopupBubble/RichTextLabel
 var daily_event_reminder: String
+var start_day = true
 
 func _ready():
 	# Sets popup variables for each day
@@ -71,5 +72,18 @@ func _ready():
 
 # Hides the entire popup and starts the game
 func _on_popup_button_pressed():
-	hide()
-	Global.game_has_started = true
+	if start_day:
+		hide()
+		Global.game_has_started = true
+	else:
+		Global.next_day()
+
+func _on_clock_day_over():
+	show()
+	Global.game_has_started = false
+	start_day = false
+	# Empties text
+	popup_text.text = ""
+	# Displays all relevent info on the popup
+	popup_text.text += "Congratulations! You finished " + Global.day_of_the_week + '\n'
+	popup_text.text += "Start next day?"

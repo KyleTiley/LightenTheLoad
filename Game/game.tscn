@@ -334,6 +334,7 @@ text = "PLAY"
 [connection signal="big_game_event" from="GameWorld/Events" to="GameWorld/Events/BigGame" method="_on_events_big_game_event"]
 [connection signal="repair_truck_event" from="GameWorld/Events" to="GameWorld/Events/RepairTruck" method="_on_events_repair_truck_event"]
 [connection signal="start_big_game" from="GameWorld/Events/BigGame" to="GameWorld/Zones/Stadium" method="_on_big_game_start_big_game"]
+[connection signal="day_over" from="GameUI/Clock" to="GameUI/Popup" method="_on_clock_day_over"]
 [connection signal="event_time" from="GameUI/Clock" to="." method="_on_clock_event_time"]
 [connection signal="loadshedding_time" from="GameUI/Clock" to="GameWorld/Zones/City" method="_on_clock_loadshedding_time"]
 [connection signal="loadshedding_time" from="GameUI/Clock" to="GameWorld/Zones/Suburb" method="_on_clock_loadshedding_time"]
