@@ -85,5 +85,7 @@ func _on_clock_day_over():
 	# Empties text
 	popup_text.text = ""
 	# Displays all relevent info on the popup
-	popup_text.text += "Congratulations! You finished " + Global.day_of_the_week + '\n'
+	popup_text.text += "Congratulations!" + '\n'
+	popup_text.text += "You finished your shift on " + Global.day_of_the_week  + '\n'
+	popup_text.text += "with " + str(Global.total_allocated_electricity) + " units of electricity left." + '\n'
 	popup_text.text += "Start next day?"

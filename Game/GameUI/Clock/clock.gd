@@ -44,8 +44,11 @@ func _process(_delta):
 	if clock_minutes == 0 or clock_minutes == 30:
 		if !schedule_time_reached:
 			loadshedding_time.emit(clock_hours, clock_minutes)
+			print("YES")
 			schedule_time_reached = true
 	else:
+		print("NO")
+		# this code is never reached???
 		schedule_time_reached = false
 
 # Controls the speed of the clock
