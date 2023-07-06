@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Game/Events/RepairTruck/repair_truck.gd" id="1_1kika"]
 [ext_resource type="PackedScene" uid="uid://u152eu2jw8ib" path="res://Game/Events/RepairTruck/Truck.glb" id="2_7b1p2"]
-[ext_resource type="PackedScene" uid="uid://dhoubtdccbcpu" path="res://Game/Events/RepairTruck/DBBoard/db_board.tscn" id="3_yc1pt"]
+[ext_resource type="PackedScene" uid="uid://cn537q3hyui7k" path="res://Game/Events/RepairTruck/DBBoard/db_board.tscn" id="3_yc1pt"]
 
 [sub_resource type="Curve3D" id="Curve3D_5e87o"]
 _data = {
@@ -26,5 +26,3 @@ transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 
 
 [node name="DBBoard" parent="." instance=ExtResource("3_yc1pt")]
 transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3.77489e-07, -1.91511, -1.60697, 0, 0, -1)
-
-[connection signal="return_vehicle" from="DBBoard" to="." method="_on_db_board_return_vehicle"]
