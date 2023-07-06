@@ -23,7 +23,6 @@ func _on_area_3d_1_input_event(camera, event, position, normal, shape_idx):
 			elif %"Switch_1".rotation_degrees.x > 0:
 				%"Switch_1".rotation_degrees.x = -40
 				switch_counter -= 1
-			print(switch_counter)
 
 func _on_area_3d_2_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
