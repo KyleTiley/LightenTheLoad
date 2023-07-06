@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://ohff5tdyqgqo"]
+
+[ext_resource type="PackedScene" uid="uid://v1pj6toq56h2" path="res://Roads/StraightRoad.glb" id="1_7ljsw"]
+
+[node name="StraightRoad" instance=ExtResource("1_7ljsw")]
+
+[node name="Cube002" parent="." index="0"]
+transform = Transform3D(0.6, 0, 0, 0, 0.306, 0, 0, 0, 0.6, -0.0219612, 0.512543, 0.0573491)

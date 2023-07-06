@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://vf282wd1r1i3"]
+
+[ext_resource type="PackedScene" uid="uid://bi873cfsrmfy5" path="res://Roads/CornerRoad.glb" id="1_7nq7e"]
+
+[node name="CornerRoad" instance=ExtResource("1_7nq7e")]
+
+[node name="Cube001" parent="." index="0"]
+transform = Transform3D(0.6, 0, 0, 0, 0.306, 0, 0, 0, 0.6, 0.62729, 0.512543, 0.185323)

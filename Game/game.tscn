@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=28 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -20,6 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://ctrroxd77j87v" path="res://Game/GameUI/InfoBar/Text_Icon.png" id="14_xtbs4"]
 [ext_resource type="Script" path="res://Game/GameUI/Schedule/schedule.gd" id="18_o0xj2"]
 [ext_resource type="Texture2D" uid="uid://bxh5ssoo2ou6i" path="res://Game/GameUI/Schedule/List UI 3.png" id="20_nhxy6"]
+[ext_resource type="PackedScene" uid="uid://b04r53dh8abu7" path="res://Roads/Turningcirlcescene.tscn" id="21_n3ct1"]
+[ext_resource type="PackedScene" uid="uid://ohff5tdyqgqo" path="res://Roads/Straightroad.tscn" id="22_xcibf"]
+[ext_resource type="PackedScene" uid="uid://vf282wd1r1i3" path="res://Roads/CornerRoadscene.tscn" id="23_vk12k"]
+[ext_resource type="PackedScene" uid="uid://dauxp5jreywid" path="res://Roads/BendingRoad2Scene.tscn" id="25_58s0k"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -52,16 +56,16 @@ transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 
 [node name="Zones" type="Node3D" parent="GameWorld"]
 
 [node name="City" parent="GameWorld/Zones" instance=ExtResource("1_61u5i")]
-transform = Transform3D(0.545561, 0, -0.838071, 0, 1, 0, 0.838071, 0, 0.545561, 1.037, -3.72, -3.524)
+transform = Transform3D(0.545561, 0, -0.838071, 0, 1, 0, 0.838071, 0, 0.545561, -2.71136, -3.72, -5.01378)
 
 [node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("4_0fdj6")]
-transform = Transform3D(0.672202, 0, -0.332632, 0, 0.75, 0, 0.332632, 0, 0.672202, 10.224, -2.667, 9.996)
+transform = Transform3D(0.672202, 0, -0.332632, 0, 0.75, 0, 0.332632, 0, 0.672202, 16.7528, -2.667, 11.7601)
 
 [node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("2_p7jbk")]
-transform = Transform3D(0.99854, 0, -0.0540091, 0, 1, 0, 0.0540091, 0, 0.99854, 25.265, -3.889, -7.374)
+transform = Transform3D(0.99854, 0, -0.0540091, 0, 1, 0, 0.0540091, 0, 0.99854, 24.6809, -3.889, -7.374)
 
 [node name="Township" parent="GameWorld/Zones" instance=ExtResource("3_v308r")]
-transform = Transform3D(-0.637743, 0, -0.394694, 0, 0.75, 0, 0.394694, 0, -0.637743, -8.259, -2.205, 9.73)
+transform = Transform3D(-0.637743, 0, -0.394694, 0, 0.75, 0, 0.394694, 0, -0.637743, -12.4093, -2.205, 10.0735)
 
 [node name="Environment" parent="GameWorld" instance=ExtResource("6_o23yh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39546, 0, -35.617)
@@ -319,6 +323,101 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "PLAY"
+
+[node name="Roads" type="Node3D" parent="."]
+
+[node name="TurningCirlce2" parent="Roads" instance=ExtResource("21_n3ct1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32779, -0.372324, 7.41619)
+
+[node name="SuberbRoads" type="Node3D" parent="Roads"]
+
+[node name="CornerRoad" parent="Roads/SuberbRoads" instance=ExtResource("23_vk12k")]
+transform = Transform3D(-0.0212041, 0, 0.999775, 0, 1, 0, -0.999775, 0, -0.0212041, 4.697, 0, 10.049)
+
+[node name="CornerRoad2" parent="Roads/SuberbRoads" instance=ExtResource("23_vk12k")]
+transform = Transform3D(0.0136655, 0, -0.999907, 0, 1, 0, 0.999907, 0, 0.0136655, 6.237, 0, 8.765)
+
+[node name="StraightRoad2" parent="Roads/SuberbRoads" instance=ExtResource("22_xcibf")]
+transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927, 7.29861, 0, 11.6939)
+
+[node name="BendingRoads3" parent="Roads/SuberbRoads" instance=ExtResource("25_58s0k")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.91776, 0, 14.7807)
+
+[node name="CornerRoad3" parent="Roads/SuberbRoads" instance=ExtResource("23_vk12k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2325, 0, 15.0061)
+
+[node name="CornerRoad4" parent="Roads/SuberbRoads" instance=ExtResource("23_vk12k")]
+transform = Transform3D(0.00279246, 0, 0.999996, 0, 1, 0, -0.999996, 0, 0.00279246, 8.26592, 0, 18.1602)
+
+[node name="CornerRoad5" parent="Roads/SuberbRoads" instance=ExtResource("23_vk12k")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 11.4753, 0, 16.545)
+
+[node name="StadiumRoad" type="Node3D" parent="Roads"]
+
+[node name="StraightRoad" parent="Roads/StadiumRoad" instance=ExtResource("22_xcibf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.67998, 0.36, 7.255)
+
+[node name="StraightRoad2" parent="Roads/StadiumRoad" instance=ExtResource("22_xcibf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.87928, 0.36, 7.257)
+
+[node name="CornerRoad" parent="Roads/StadiumRoad" instance=ExtResource("23_vk12k")]
+transform = Transform3D(-0.999975, 0, 0.00703356, 0, 1, 0, -0.00703356, 0, -0.999975, 21.9579, 0.36, -0.75953)
+
+[node name="BendingRoads2" parent="Roads/StadiumRoad" instance=ExtResource("25_58s0k")]
+transform = Transform3D(0.00740008, 0, 0.999973, 0, 1, 0, -0.999973, 0, 0.00740008, 17.1116, 0.36, -0.184)
+
+[node name="CornerRoad2" parent="Roads/StadiumRoad" instance=ExtResource("23_vk12k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.6675, 0.36, 1.167)
+
+[node name="CornerRoad3" parent="Roads/StadiumRoad" instance=ExtResource("23_vk12k")]
+transform = Transform3D(-0.999996, 0, -0.00298443, 0, 1, 0, 0.00298443, 0, -0.999996, 14.9175, 0.36, 2.735)
+
+[node name="StraightRoad4" parent="Roads/StadiumRoad" instance=ExtResource("22_xcibf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.8485, 0.36, 3.696)
+
+[node name="StraightRoad5" parent="Roads/StadiumRoad" instance=ExtResource("22_xcibf")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.6705, 0.36, 3.704)
+
+[node name="CornerRoad4" parent="Roads/StadiumRoad" instance=ExtResource("23_vk12k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.7053, 0.36, 4.745)
+
+[node name="CornerRoad5" parent="Roads/StadiumRoad" instance=ExtResource("23_vk12k")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.94948, 0.36, 6.30187)
+
+[node name="TownshipRoads" type="Node3D" parent="Roads"]
+
+[node name="CornerRoad" parent="Roads/TownshipRoads" instance=ExtResource("23_vk12k")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.965, 0.32, 16.66)
+
+[node name="BendingRoads2" parent="Roads/TownshipRoads" instance=ExtResource("25_58s0k")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6.38665, 0.036, 13.263)
+
+[node name="StraightRoad" parent="Roads/TownshipRoads" instance=ExtResource("22_xcibf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.524, 0.32, 16.064)
+
+[node name="StraightRoad2" parent="Roads/TownshipRoads" instance=ExtResource("22_xcibf")]
+transform = Transform3D(-4.25643e-08, 0.227586, -0.973758, 9.94811e-09, 0.973758, 0.227586, 1, 0, -4.37114e-08, -8.5203, 0.194238, 16.068)
+
+[node name="CornerRoad2" parent="Roads/TownshipRoads" instance=ExtResource("23_vk12k")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.38482, 0.0362743, 15.0585)
+
+[node name="StraightRoad3" parent="Roads/TownshipRoads" instance=ExtResource("22_xcibf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.984, 0.036, 10.185)
+
+[node name="StraightRoad4" parent="Roads/TownshipRoads" instance=ExtResource("22_xcibf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.54787, 0.036, 7.86312)
+
+[node name="CornerRoad3" parent="Roads/TownshipRoads" instance=ExtResource("23_vk12k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.63332, 0.0362743, 8.85601)
+
+[node name="StraightRoad5" parent="Roads/TownshipRoads" instance=ExtResource("22_xcibf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.3465, 0.036, 7.86312)
+
+[node name="StraightRoad6" parent="Roads/TownshipRoads" instance=ExtResource("22_xcibf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.16408, 0.036, 7.86312)
+
+[node name="StraightRoad7" parent="Roads/TownshipRoads" instance=ExtResource("22_xcibf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0504162, 0.036, 7.86312)
 
 [connection signal="display_info" from="." to="GameUI/InfoBar" method="_on_game_display_info"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/City" method="_on_game_game_timer"]

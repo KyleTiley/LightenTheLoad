@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8mb1ehn1hot"]
+
+[ext_resource type="PackedScene" uid="uid://cc7a6af6bwhex" path="res://Roads/BendingRoads.glb" id="1_1cgky"]
+
+[node name="BendingRoads" instance=ExtResource("1_1cgky")]
+
+[node name="Cube" parent="." index="0"]
+transform = Transform3D(0.6, 0, 0, 0, 0.306, 0, 0, 0, 0.6, -0.0194325, 0.512543, -0.211858)
