@@ -1,9 +1,8 @@
-res://Game/game.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.gd
-res://Roads/Turningcirlcescene.tscn
-res://Roads/Straightroad.tscn
-res://Roads/CornerRoadscene.tscn
-res://Roads/BendingRoad1Scene.tscn
-res://Roads/BendingRoad2Scene.tscn
-res://Game/Events/RepairTruck/repair_truck.tscn
-res://Game/Events/RepairTruck/DBBoard/db_board.tscn
+res://Game/game.tscn
+res://Decorations/Tree1.Scene.tscn
+res://Decorations/Tree2.Scene.tscn
+res://Decorations/Tree3.Scene.tscn
+res://Decorations/Tree4.Scene.tscn
+res://Decorations/BT2.Scene.tscn
+res://Decorations/Shrub.Scene.tscn
