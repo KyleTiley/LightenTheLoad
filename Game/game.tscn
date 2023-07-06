@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=24 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -17,7 +17,9 @@
 [ext_resource type="Script" path="res://Game/GameUI/Popup/popup.gd" id="10_cp3k4"]
 [ext_resource type="Texture2D" uid="uid://bv7udoh684mcg" path="res://Game/GameUI/Popup/Bubbles Square.png" id="12_hbq03"]
 [ext_resource type="Texture2D" uid="uid://drkdqcls3f43n" path="res://Game/GameUI/Popup/Bubbles Line.png" id="13_5trs7"]
+[ext_resource type="Texture2D" uid="uid://ctrroxd77j87v" path="res://Game/GameUI/InfoBar/Text_Icon.png" id="14_xtbs4"]
 [ext_resource type="Script" path="res://Game/GameUI/Schedule/schedule.gd" id="18_o0xj2"]
+[ext_resource type="Texture2D" uid="uid://bxh5ssoo2ou6i" path="res://Game/GameUI/Schedule/List UI 3.png" id="20_nhxy6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -129,6 +131,45 @@ text = "00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Schedule" type="Control" parent="GameUI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("18_o0xj2")
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/Schedule"]
+layout_mode = 0
+offset_top = 159.0
+offset_right = 270.0
+offset_bottom = 799.0
+texture = ExtResource("20_nhxy6")
+
+[node name="LoadSheddingSchedule" type="RichTextLabel" parent="GameUI/Schedule"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 19.5
+anchor_right = 7.5
+anchor_bottom = 19.5
+offset_left = 25.0
+offset_top = -603.0
+offset_right = -25.0
+theme_override_font_sizes/normal_font_size = 28
+text = "City:
+00:00 - 00:00
+00:00 - 00:00
+
+Suburb:
+00:00 - 00:00
+00:00 - 00:00
+
+Stadium:
+00:00 - 00:00
+00:00 - 00:00
+
+Township:
+00:00 - 00:00
+00:00 - 00:00"
+
 [node name="InfoBar" type="Control" parent="GameUI"]
 layout_mode = 1
 anchors_preset = 12
@@ -136,18 +177,20 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = -200.0
+offset_bottom = -0.000488281
 grow_horizontal = 2
 grow_vertical = 0
 script = ExtResource("8_0p0d2")
 
-[node name="ColorRect" type="ColorRect" parent="GameUI/InfoBar"]
+[node name="TextureRect" type="TextureRect" parent="GameUI/InfoBar"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.490196, 0.192157, 0.196078, 1)
+texture = ExtResource("14_xtbs4")
+expand_mode = 1
 
 [node name="GameInfo" type="RichTextLabel" parent="GameUI/InfoBar"]
 layout_mode = 1
@@ -161,6 +204,7 @@ offset_right = -320.0
 offset_bottom = -25.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 50
 text = "Click on a zone to toggle its power on or off"
 
@@ -168,18 +212,19 @@ text = "Click on a zone to toggle its power on or off"
 visible = false
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.875
+anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 10.0
-offset_top = 10.0
-offset_right = -10.0
-offset_bottom = -10.0
+offset_left = -320.0
+offset_top = -165.0
+offset_right = -100.0
+offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 50
 text = "Power:
-On / Off"
+OFF"
 
 [node name="Portrait" type="Control" parent="GameUI/InfoBar"]
 layout_mode = 1
@@ -189,15 +234,6 @@ anchor_bottom = 1.0
 offset_top = -300.0
 offset_right = 300.0
 grow_vertical = 0
-
-[node name="ColorRect2" type="ColorRect" parent="GameUI/InfoBar/Portrait"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.364706, 1, 1, 1)
 
 [node name="LightBulb" parent="GameUI/InfoBar/Portrait" instance=ExtResource("1_wo4ky")]
 position = Vector2(150, 150)
@@ -284,38 +320,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "PLAY"
 
-[node name="Schedule" type="Control" parent="GameUI"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("18_o0xj2")
-
-[node name="LoadSheddingSchedule" type="RichTextLabel" parent="GameUI/Schedule"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 19.5
-anchor_right = 7.5
-anchor_bottom = 19.5
-offset_left = 25.0
-offset_top = -615.0
-offset_right = -25.0
-theme_override_font_sizes/normal_font_size = 28
-text = "City:
-00:00 - 00:00
-00:00 - 00:00
-
-Suburb:
-00:00 - 00:00
-00:00 - 00:00
-
-Stadium:
-00:00 - 00:00
-00:00 - 00:00
-
-Township:
-00:00 - 00:00
-00:00 - 00:00"
-
 [connection signal="display_info" from="." to="GameUI/InfoBar" method="_on_game_display_info"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/City" method="_on_game_game_timer"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/Suburb" method="_on_game_game_timer"]
@@ -330,7 +334,12 @@ Township:
 [connection signal="big_game_event" from="GameWorld/Events" to="GameWorld/Events/BigGame" method="_on_events_big_game_event"]
 [connection signal="repair_truck_event" from="GameWorld/Events" to="GameWorld/Events/RepairTruck" method="_on_events_repair_truck_event"]
 [connection signal="start_big_game" from="GameWorld/Events/BigGame" to="GameWorld/Zones/Stadium" method="_on_big_game_start_big_game"]
+[connection signal="day_over" from="GameUI/Clock" to="GameUI/Popup" method="_on_clock_day_over"]
 [connection signal="event_time" from="GameUI/Clock" to="." method="_on_clock_event_time"]
+[connection signal="loadshedding_time" from="GameUI/Clock" to="GameWorld/Zones/City" method="_on_clock_loadshedding_time"]
+[connection signal="loadshedding_time" from="GameUI/Clock" to="GameWorld/Zones/Suburb" method="_on_clock_loadshedding_time"]
+[connection signal="loadshedding_time" from="GameUI/Clock" to="GameWorld/Zones/Stadium" method="_on_clock_loadshedding_time"]
+[connection signal="loadshedding_time" from="GameUI/Clock" to="GameWorld/Zones/Township" method="_on_clock_loadshedding_time"]
 [connection signal="toggle_power" from="GameUI/InfoBar" to="." method="_on_info_bar_toggle_power"]
 [connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]
 [connection signal="set_schedule" from="GameUI/Popup" to="GameUI/Schedule" method="_on_popup_set_schedule"]

@@ -1,10 +1,10 @@
+TextureRect
 RichTextLabel
 Control
 CollisionShape3D
 Area3D
 PathFollow3D
 Path3D
-TextureRect
 Label
 ColorRect
 Container

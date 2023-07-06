@@ -1,2 +1,4 @@
 res://Game/game.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.gd
+res://Game/GameUI/Clock/clock.gd
+res://Game/GameUI/Popup/popup.gd

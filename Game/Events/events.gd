@@ -17,13 +17,17 @@ func _on_game_start_event():
 	var eventNumber = newRandomNumber.randi_range(1, Global.numberOfEvents)
 	
 	# Makes sure that the first event for a day is the daily event
-	if !started_daily_event:
+	if !started_daily_event and Global.day_of_the_week != "Friday":
 		eventNumber = Global.numberOfEvents
 		started_daily_event = true
 	
 	# Stops events on the first day
 	if Global.day_of_the_week == "Monday":
 		eventNumber = 0
+	
+	# Fixes the friday event's time
+	if Global.day_of_the_week == "Friday":
+		pass # fix this
 	
 	match eventNumber:
 		0:
