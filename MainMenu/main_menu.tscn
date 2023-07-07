@@ -39,7 +39,16 @@ offset_right = 1020.0
 offset_bottom = 1020.0
 flat = true
 
+[node name="ColorRect" type="ColorRect" parent="PlayMenu"]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 45.0
+offset_right = 408.0
+offset_bottom = 152.0
+color = Color(0.14902, 0.168627, 0.266667, 1)
+
 [node name="SettingsButton" type="Button" parent="PlayMenu"]
+visible = false
 layout_mode = 0
 offset_left = 112.0
 offset_top = 53.0

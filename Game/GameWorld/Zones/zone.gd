@@ -7,7 +7,6 @@ signal zone_clicked
 
 # REFERENCES
 
-
 # VARIABLES
 var active_zone
 
@@ -28,6 +27,7 @@ func _process(_delta):
 	if active_zone != null:
 		print(active_zone)
 		active_zone.zone_clicked.emit(name, is_using_electricity, electricity_used, current_happiness)
+	
 
 # Runs all controllers
 func run_controllers():

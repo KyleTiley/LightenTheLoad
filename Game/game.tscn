@@ -20,9 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://cn537q3hyui7k" path="res://Game/Events/RepairTruck/DBBoard/db_board.tscn" id="11_lyuaq"]
 [ext_resource type="Texture2D" uid="uid://bv7udoh684mcg" path="res://Game/GameUI/Popup/Bubbles Square.png" id="12_hbq03"]
 [ext_resource type="Texture2D" uid="uid://drkdqcls3f43n" path="res://Game/GameUI/Popup/Bubbles Line.png" id="13_5trs7"]
-[ext_resource type="Texture2D" path="res://Game/GameUI/InfoBar/Text_Icon.png" id="14_xtbs4"]
+[ext_resource type="Texture2D" uid="uid://ctrroxd77j87v" path="res://Game/GameUI/InfoBar/Text_Icon.png" id="14_xtbs4"]
 [ext_resource type="Script" path="res://Game/GameUI/Schedule/schedule.gd" id="18_o0xj2"]
-[ext_resource type="Texture2D" path="res://Game/GameUI/Schedule/List UI 3.png" id="20_nhxy6"]
+[ext_resource type="Texture2D" uid="uid://bxh5ssoo2ou6i" path="res://Game/GameUI/Schedule/List UI 3.png" id="20_nhxy6"]
 [ext_resource type="PackedScene" uid="uid://b04r53dh8abu7" path="res://Roads/Turningcirlcescene.tscn" id="21_n3ct1"]
 [ext_resource type="PackedScene" uid="uid://ohff5tdyqgqo" path="res://Roads/Straightroad.tscn" id="22_xcibf"]
 [ext_resource type="PackedScene" uid="uid://vf282wd1r1i3" path="res://Roads/CornerRoadscene.tscn" id="23_vk12k"]
@@ -139,7 +139,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.2217
 curve = SubResource("Curve3D_icwxq")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckSuburb/Path3D"]
-transform = Transform3D(-0.0238572, 0, 0.999705, 0, 1, 0, -0.999707, 0, -0.0238572, -2.49883, -4.91142e-05, -0.184835)
+transform = Transform3D(-0.0238571, 0, 0.999705, 0, 1, 0, -0.999707, 0, -0.023857, -2.49883, -4.91142e-05, -0.184835)
 
 [node name="Truck" parent="GameWorld/Events/RepairTruckSuburb/Path3D/PathFollow3D" instance=ExtResource("10_dkhao")]
 transform = Transform3D(-0.117, 0, -1.76665e-08, 0, 0.117, 0, 1.76665e-08, 0, -0.117, 0, 0, 0)

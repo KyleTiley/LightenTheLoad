@@ -1,3 +1,4 @@
+ColorRect
 Node3D
 AudioStreamPlayer2D
 AudioStreamPlayer
@@ -12,7 +13,6 @@ Area3D
 PathFollow3D
 Path3D
 Label
-ColorRect
 Container
 Button
 HBoxContainer
