@@ -477,6 +477,7 @@ transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.20394, -1.03801, -2.72535)
 
 [node name="Tree1" parent="Decorations/Trees" instance=ExtResource("25_dyxas")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07816, 0)
 
 [node name="Tree2" parent="Decorations/Trees" instance=ExtResource("26_7ax31")]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.47162, 1.40576, 7.01036)

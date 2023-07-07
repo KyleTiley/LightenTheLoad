@@ -1,8 +1,2 @@
-res://Game/GameWorld/Zones/Stadium/stadium.gd
 res://Game/game.tscn
-res://Decorations/Tree1.Scene.tscn
-res://Decorations/Tree2.Scene.tscn
-res://Decorations/Tree3.Scene.tscn
-res://Decorations/Tree4.Scene.tscn
-res://Decorations/BT2.Scene.tscn
-res://Decorations/Shrub.Scene.tscn
+res://Game/GameWorld/Zones/Stadium/stadium.gd
