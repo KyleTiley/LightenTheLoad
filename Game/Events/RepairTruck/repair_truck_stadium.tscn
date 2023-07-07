@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6hh03ip0poq1"]
+
+[ext_resource type="Script" path="res://Game/Events/RepairTruck/repair_truck.gd" id="1_c4vp8"]
+[ext_resource type="PackedScene" uid="uid://u152eu2jw8ib" path="res://Game/Events/RepairTruck/Truck.glb" id="2_2vuxc"]
+[ext_resource type="PackedScene" uid="uid://cn537q3hyui7k" path="res://Game/Events/RepairTruck/DBBoard/db_board.tscn" id="3_r2an8"]
+
+[sub_resource type="Curve3D" id="Curve3D_5e87o"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19.2318, -0.525602, -0.207902, 0, 0, 0, 0, 0, 0, 49, 1, 13),
+"tilts": PackedFloat32Array(0, 0, 0)
+}
+point_count = 3
+
+[node name="RepairTruckStadium" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+script = ExtResource("1_c4vp8")
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 21)
+curve = SubResource("Curve3D_5e87o")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-0.0108097, 0.0273164, 0.999565, 0, 0.999627, -0.0273179, -0.99994, -0.000295301, -0.0108057, 0, 0, 0)
+
+[node name="Truck" parent="Path3D/PathFollow3D" instance=ExtResource("2_2vuxc")]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0, 1.637, 0)
+
+[node name="DBBoard" parent="." instance=ExtResource("3_r2an8")]
+transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3.77489e-07, -1.91511, -1.60697, 0, 0, -1)
+
+[connection signal="return_vehicle" from="DBBoard" to="." method="_on_db_board_return_vehicle" flags=18]

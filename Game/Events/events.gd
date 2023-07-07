@@ -2,6 +2,10 @@ extends Node3D
 
 # SIGNALS
 signal repair_truck_event
+signal city_truck
+signal suburb_truck
+signal stadium_truck
+signal township_truck
 signal big_game_event
 
 # VARIABLES
@@ -34,7 +38,16 @@ func _on_game_start_event():
 			print("no events today")
 		1:
 			print("repair truck event started")
-			repair_truck_event.emit()
+			var repair_random = newRandomNumber.randi_range(1, 4)
+			match repair_random:
+				1:
+					city_truck.emit()
+				2:
+					suburb_truck.emit()
+				3:
+					stadium_truck.emit()
+				4:
+					township_truck.emit()
 		2:
 			print("storm event started")
 		3:
