@@ -41,9 +41,6 @@ func _process(delta):
 	if return_truck_driving:
 		return_truck(delta)
 
-func _on_events_repair_truck_event():
-	send_out_truck = true
-
 func drive_truck(_delta):
 	const move_speed = 10.0
 	truck_path.progress += move_speed * _delta
@@ -63,3 +60,15 @@ func return_truck(_delta):
 func _on_db_board_return_vehicle():
 	db_board.hide()
 	return_truck_driving = true
+
+func _on_events_city_truck():
+	send_out_truck = true
+
+func _on_events_stadium_truck():
+	send_out_truck = true
+
+func _on_events_suburb_truck():
+	send_out_truck = true
+
+func _on_events_township_truck():
+	send_out_truck = true

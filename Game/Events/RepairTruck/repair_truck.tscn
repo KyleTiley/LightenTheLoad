@@ -6,7 +6,7 @@
 
 [sub_resource type="Curve3D" id="Curve3D_5e87o"]
 _data = {
-"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 21.3826, 0, -0.693161, 0, 0, 0, 0, 0, 0, 41.4172, 0, 0.414277),
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 19.2318, -0.525602, -0.207902, 0, 0, 0, 0, 0, 0, 42.5942, -9.27575, 8.17187),
 "tilts": PackedFloat32Array(0, 0, 0)
 }
 point_count = 3
@@ -19,9 +19,19 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 
 curve = SubResource("Curve3D_5e87o")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
-transform = Transform3D(-0.0323998, 0, 0.999472, 0, 1, 0, -0.999473, 0, -0.0323998, 0, 0, 0)
+transform = Transform3D(-0.0108097, 0.0273165, 0.999565, 9.31321e-10, 0.999627, -0.027318, -0.99994, -0.000295301, -0.0108057, 0, 0, 0)
 
 [node name="Truck" parent="Path3D/PathFollow3D" instance=ExtResource("2_7b1p2")]
+transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0, 1.637, 0)
+
+[node name="Path3D2" type="Path3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 21)
+curve = SubResource("Curve3D_5e87o")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D2"]
+transform = Transform3D(-0.0108097, 0.0273165, 0.999565, 9.31321e-10, 0.999627, -0.027318, -0.99994, -0.000295301, -0.0108057, 0, 0, 0)
+
+[node name="Truck" parent="Path3D2/PathFollow3D" instance=ExtResource("2_7b1p2")]
 transform = Transform3D(-0.5, 0, -7.54979e-08, 0, 0.5, 0, 7.54979e-08, 0, -0.5, 0, 1.637, 0)
 
 [node name="DBBoard" parent="." instance=ExtResource("3_yc1pt")]
