@@ -1,10 +1,5 @@
-res://MainMenu/main_menu.tscn
-res://Game/GameWorld/Zones/Stadium/stadium.gd
-<<<<<<< Updated upstream
 res://Game/game.tscn
-res://Game/Events/events.gd
-res://Game/Events/RepairTruck/repair_truck.gd
-=======
+res://Game/GameWorld/Zones/Stadium/stadium.gd
 res://Game/Events/RepairTruck/DBBoard/db_board.tscn
 res://Game/GameUI/Popup/popup.gd
 res://Game/GameWorld/Zones/Suburb/suburb.gd
@@ -12,4 +7,3 @@ res://global.gd
 res://Game/GameWorld/Zones/zone.gd
 res://Game/game.gd
 res://Game/Events/events.gd
->>>>>>> Stashed changes

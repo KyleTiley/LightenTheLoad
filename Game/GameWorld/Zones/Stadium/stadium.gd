@@ -13,8 +13,12 @@ func _on_game_game_timer():
 
 # Sets variables for the big game event
 func _on_big_game_start_big_game():
+	MusicController.play_stadium_crowd()
 	electricity_usage = 50
 	happiness_loss = base_happiness_loss * 4
+	await get_tree().create_timer(5).timeout
+	electricity_usage = 5
+	happiness_loss = base_happiness_loss
 
 func _on_clock_loadshedding_time(_clock_hours, _clock_minutes):
 	if _clock_minutes == 0:
