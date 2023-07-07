@@ -1,9 +1,3 @@
-res://MainMenu/main_menu.tscn
-res://Game/GameWorld/Zones/Stadium/stadium.gd
-res://global.gd
 res://Game/game.tscn
-res://Game/Events/RepairTruck/DBBoard/db_board.gd
-res://Game/GameUI/Clock/clock.gd
+res://Game/GameWorld/Zones/Stadium/stadium.gd
 res://Game/Events/RepairTruck/repair_truck.gd
-res://Game/Events/RepairTruck/repair_truck.tscn
-res://Game/Events/RepairTruck/DBBoard/db_board.tscn
