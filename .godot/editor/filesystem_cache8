@@ -1,7 +1,18 @@
 2a60927148abd1d33b818b535e306557
-::res://::1688737885
+::res://::1688738220
 global.gd::GDScript::-1::1688665705::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::5902817450916580271::1688217767::1688217767::1::::<><>::
+MusicController.gd::GDScript::-1::1688738220::0::1::::<>Node<>::
+::res://Audio/::1688738220
+mixkit-animated-small-group-applause-523.wav::AudioStreamWAV::2588093683600464138::1688738220::1688738220::1::::<><>::
+mixkit-car-double-horn-719.wav::::-1::0::0::0::::<><>::
+mixkit-chanting-sports-crowd-433.wav::AudioStreamWAV::2695647201717282016::1688738220::1688738220::1::::<><>::
+mixkit-comical-2.mp3::AudioStreamMP3::3982881792430345314::1688738220::1688738220::1::::<><>::
+mixkit-forest-rain-loop-1225.wav::AudioStreamWAV::6521395998650805189::1688738220::1688738220::1::::<><>::
+mixkit-game-quick-warning-notification-268.wav::AudioStreamWAV::8124644535157569472::1688738220::1688738220::1::::<><>::
+mixkit-people-moaning-sadly-469.wav::::-1::0::0::0::::<><>::
+mixkit-truck-accelerating-1617.wav::::-1::0::0::0::::<><>::
+music_controller.tscn::PackedScene::470446769600953479::1688738220::0::1::::<><>::res://MusicController.gd
 ::res://Decorations/::1688733405
 Shrub.glb::PackedScene::2080810504590659103::1688733405::1688733405::1::::<><>::
 Shrub.Scene.tscn::PackedScene::2017165921499804293::1688733405::0::1::::<><>::uid://4v7v6vdie4df
@@ -13,9 +24,9 @@ Tree3.glb::PackedScene::31585428847145382::1688733405::1688733405::1::::<><>::
 Tree3.Scene.tscn::PackedScene::400274843652497002::1688733405::0::1::::<><>::uid://pkhb0t8ku35
 Tree4.glb::PackedScene::7884592095437229635::1688733405::1688733405::1::::<><>::
 Tree4.Scene.tscn::PackedScene::3815521875263783798::1688733405::0::1::::<><>::uid://dklmcyk03e04f
-::res://Game/::1688737842
+::res://Game/::1688738409
 game.gd::GDScript::-1::1688217767::0::1::::<>Node<>::
-game.tscn::PackedScene::7256353932380393759::1688737842::0::1::::<><>::uid://wr1r3nxugw24<>res://Game/GameUI/Clock/clock.gd<>res://Game/game.gd<>uid://dx7wr27c0njgs<>uid://c8jicq5bwrdnu<>uid://cqhiu8fvdw425<>uid://da71hvmgak7ff<>uid://caq1m8cmbily<>res://Game/Events/events.gd<>uid://dscgenki4uhit<>res://Game/GameUI/InfoBar/infobar.gd<>uid://djso7gp30eqqh<>res://Game/Events/RepairTruck/repair_truck.gd<>uid://c52cmetd3jx8q<>uid://s6ug8hnn127a<>uid://gv37msbydpp8<>res://Game/GameUI/Popup/popup.gd<>uid://u152eu2jw8ib<>uid://cn537q3hyui7k<>uid://bv7udoh684mcg<>uid://drkdqcls3f43n<>uid://c6hh03ip0poq1<>uid://ctrroxd77j87v<>res://Game/GameUI/Schedule/schedule.gd<>uid://bxh5ssoo2ou6i<>uid://b04r53dh8abu7<>uid://ohff5tdyqgqo<>uid://vf282wd1r1i3<>uid://dauxp5jreywid<>uid://bp0w10flslua8<>uid://rnygscluquqv<>uid://fx5p6h5udaek<>uid://bumjc8sds56h3<>uid://30eos1yqp1e4
+game.tscn::PackedScene::7256353932380393759::1688738409::0::1::::<><>::uid://wr1r3nxugw24<>res://Game/GameUI/Clock/clock.gd<>res://Game/game.gd<>uid://dx7wr27c0njgs<>uid://c8jicq5bwrdnu<>uid://cqhiu8fvdw425<>uid://da71hvmgak7ff<>uid://caq1m8cmbily<>res://Game/Events/events.gd<>uid://dscgenki4uhit<>res://Game/GameUI/InfoBar/infobar.gd<>uid://djso7gp30eqqh<>res://Game/Events/RepairTruck/repair_truck.gd<>uid://c52cmetd3jx8q<>uid://s6ug8hnn127a<>uid://gv37msbydpp8<>res://Game/GameUI/Popup/popup.gd<>uid://u152eu2jw8ib<>uid://cn537q3hyui7k<>uid://bv7udoh684mcg<>uid://drkdqcls3f43n<>uid://c6hh03ip0poq1<>uid://ctrroxd77j87v<>res://Game/GameUI/Schedule/schedule.gd<>uid://bxh5ssoo2ou6i<>uid://b04r53dh8abu7<>uid://ohff5tdyqgqo<>uid://vf282wd1r1i3<>uid://dauxp5jreywid<>uid://bp0w10flslua8<>uid://rnygscluquqv<>uid://fx5p6h5udaek<>uid://bumjc8sds56h3<>uid://30eos1yqp1e4
 ::res://Game/Events/::1688734389
 events.gd::GDScript::-1::1688734389::0::1::::<>Node3D<>::
 ::res://Game/Events/BigGame/::1688217767
@@ -31,10 +42,10 @@ repair_truck_stadium.tscn::PackedScene::6963617311968397530::1688734674::0::1:::
 repair_truck_suburb.tscn::PackedScene::466242874030191763::1688734703::0::1::::<><>::res://Game/Events/RepairTruck/repair_truck.gd<>uid://u152eu2jw8ib<>uid://cn537q3hyui7k
 repair_truck_township.tscn::PackedScene::321469443455282004::1688734864::0::1::::<><>::res://Game/Events/RepairTruck/repair_truck.gd<>uid://u152eu2jw8ib<>uid://cn537q3hyui7k
 Truck.glb::PackedScene::1459320662813803445::1688217767::1688217767::1::::<><>::
-::res://Game/Events/RepairTruck/DBBoard/::1688737843
+::res://Game/Events/RepairTruck/DBBoard/::1688738409
 DBBoard.glb::PackedScene::5079608140501716186::1688217767::1688217767::1::::<><>::
-db_board.gd::GDScript::-1::1688666016::0::1::::<>Node3D<>::
-db_board.tscn::PackedScene::5748985772483876458::1688737843::0::1::::<><>::res://Game/Events/RepairTruck/DBBoard/db_board.gd
+db_board.gd::GDScript::-1::1688738220::0::1::::<>Node3D<>::
+db_board.tscn::PackedScene::5748985772483876458::1688738409::0::1::::<><>::res://Game/Events/RepairTruck/DBBoard/db_board.gd
 ::res://Game/GameUI/::1688217767
 ::res://Game/GameUI/Characters/::1688220439
 light_bulb.tscn::PackedScene::8841033142910202298::1688220439::0::1::::<><>::
@@ -46,18 +57,18 @@ Idle0007.png::CompressedTexture2D::2982761855930486339::1688217767::1688217767::
 Idle0009.png::CompressedTexture2D::4914365456875548593::1688217767::1688217767::1::::<><>::
 Idle0010.png::CompressedTexture2D::1199209722955983004::1688217767::1688217767::1::::<><>::
 Idle0015.png::CompressedTexture2D::581082461803830483::1688217767::1688217767::1::::<><>::
-::res://Game/GameUI/Clock/::1688736377
+::res://Game/GameUI/Clock/::1688738227
 alarm.png::CompressedTexture2D::1328621695172467372::1688217767::1688217767::1::::<><>::
-clock.gd::GDScript::-1::1688736377::0::1::::<>Control<>::
+clock.gd::GDScript::-1::1688738227::0::1::::<>Control<>::
 ::res://Game/GameUI/InfoBar/::1688636806
 infobar.gd::GDScript::-1::1688217767::0::1::::<>Control<>::
 Text_Icon.png::CompressedTexture2D::6142582222488087905::1688636806::1688636806::1::::<><>::
-::res://Game/GameUI/Popup/::1688737480
+::res://Game/GameUI/Popup/::1688738227
 Bubbles Line 2.png::CompressedTexture2D::1216236872506622972::1688217767::1688217767::1::::<><>::
 Bubbles Line.png::CompressedTexture2D::8373327017042264097::1688217767::1688217767::1::::<><>::
 Bubbles Square.png::CompressedTexture2D::3927666933053021842::1688217767::1688217767::1::::<><>::
 Bubbles.png::CompressedTexture2D::2477215762222531145::1688217767::1688217767::1::::<><>::
-popup.gd::GDScript::-1::1688737480::0::1::::<>Control<>::
+popup.gd::GDScript::-1::1688738227::0::1::::<>Control<>::
 ::res://Game/GameUI/Schedule/::1688636806
 List UI 2.png::CompressedTexture2D::3611034607913266343::1688636806::1688636806::1::::<><>::
 List UI 3.png::CompressedTexture2D::4017069353439862230::1688636806::1688636806::1::::<><>::
@@ -75,8 +86,8 @@ zone.gd::GDScript::-1::1688217767::0::1::::<>Node<>::
 city.gd::GDScript::-1::1688636806::0::1::::<>Node<>::
 City.glb::PackedScene::7276361032559904116::1688217767::1688217767::1::::<><>::
 city.tscn::PackedScene::1580859473972305051::1688217767::0::1::::<><>::uid://dbwyurg5o511i<>res://Game/GameWorld/Zones/City/city.gd
-::res://Game/GameWorld/Zones/Stadium/::1688735227
-stadium.gd::GDScript::-1::1688735227::0::1::::<>Node<>::
+::res://Game/GameWorld/Zones/Stadium/::1688737895
+stadium.gd::GDScript::-1::1688737895::0::1::::<>Node<>::
 Stadium.glb::PackedScene::8983888554817620347::1688217767::1688217767::1::::<><>::
 stadium.tscn::PackedScene::7108142801550991970::1688217767::0::1::::<><>::res://Game/GameWorld/Zones/Stadium/stadium.gd<>uid://d084ljyndf1il
 ::res://Game/GameWorld/Zones/Suburb/::1688636806
@@ -87,8 +98,8 @@ suburb.tscn::PackedScene::7226914403379527103::1688217767::0::1::::<><>::uid://b
 township.gd::GDScript::-1::1688636806::0::1::::<>Node<>::
 Township.glb::PackedScene::8421843249173586801::1688217767::1688217767::1::::<><>::
 township.tscn::PackedScene::5910836703646997224::1688217767::0::1::::<><>::uid://dr8ur7hj6wcg4<>res://Game/GameWorld/Zones/Township/township.gd
-::res://MainMenu/::1688665968
-main_menu.gd::GDScript::-1::1688217767::0::1::::<>Node<>::
+::res://MainMenu/::1688738220
+main_menu.gd::GDScript::-1::1688738220::0::1::::<>Node<>::
 main_menu.tscn::PackedScene::3181139706348550075::1688665968::0::1::::<><>::res://MainMenu/main_menu.gd<>uid://b32gmntm3ldd0
 ::res://MainMenu/MenuBackgrounds/::1688217767
 Main Menu 1.png::CompressedTexture2D::4407832949138993507::1688217767::1688217767::1::::<><>::
