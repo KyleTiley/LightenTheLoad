@@ -113,6 +113,7 @@ script = ExtResource("7_ac6kk")
 
 [node name="RepairTruckCity" type="Node3D" parent="GameWorld/Events"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+visible = false
 script = ExtResource("9_8mpy6")
 
 [node name="Path3D" type="Path3D" parent="GameWorld/Events/RepairTruckCity"]
@@ -120,7 +121,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.2217
 curve = SubResource("Curve3D_5e87o")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckCity/Path3D"]
-transform = Transform3D(-0.0238025, 0, 0.999712, 0, 1, 0, -0.999714, 0, -0.0238025, -6.38652, -3.74317e-05, -0.135338)
+transform = Transform3D(-0.0238026, 0, 0.999712, 0, 1, 0, -0.999714, 0, -0.0238026, -6.38652, -3.74317e-05, -0.135338)
 
 [node name="Truck" parent="GameWorld/Events/RepairTruckCity/Path3D/PathFollow3D" instance=ExtResource("10_dkhao")]
 transform = Transform3D(-0.117, 0, -1.76665e-08, 0, 0.117, 0, 1.76665e-08, 0, -0.117, 0, 0, 0)
@@ -130,6 +131,7 @@ transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3
 
 [node name="RepairTruckSuburb" type="Node3D" parent="GameWorld/Events"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+visible = false
 script = ExtResource("9_8mpy6")
 
 [node name="Path3D" type="Path3D" parent="GameWorld/Events/RepairTruckSuburb"]
@@ -147,6 +149,7 @@ transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3
 
 [node name="RepairTruckStadium" type="Node3D" parent="GameWorld/Events"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+visible = false
 script = ExtResource("9_8mpy6")
 
 [node name="Path3D" type="Path3D" parent="GameWorld/Events/RepairTruckStadium"]
@@ -154,7 +157,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.8846
 curve = SubResource("Curve3D_jwyh6")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckStadium/Path3D"]
-transform = Transform3D(-0.0106005, 2.61915e-06, 0.99994, -3.4106e-13, 1, -2.61929e-06, -0.999942, -2.77663e-08, -0.0106005, 0, 0, 0)
+transform = Transform3D(-0.0106005, 2.61915e-06, 0.99994, -2.27373e-13, 1, -2.61929e-06, -0.999942, -2.77662e-08, -0.0106005, 0, 0, 0)
 
 [node name="Truck" parent="GameWorld/Events/RepairTruckStadium/Path3D/PathFollow3D" instance=ExtResource("10_dkhao")]
 transform = Transform3D(-0.117, 0, -1.76665e-08, 0, 0.117, 0, 1.76665e-08, 0, -0.117, 0, 0, 0)
@@ -164,6 +167,7 @@ transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3
 
 [node name="RepairTruckTownship" type="Node3D" parent="GameWorld/Events"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+visible = false
 script = ExtResource("9_8mpy6")
 
 [node name="Path3D" type="Path3D" parent="GameWorld/Events/RepairTruckTownship"]
@@ -171,13 +175,15 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.2217
 curve = SubResource("Curve3D_68tms")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckTownship/Path3D"]
-transform = Transform3D(-0.0165289, -4.37287e-07, 0.999853, 1.42108e-14, 1, 4.37343e-07, -0.99986, 7.22891e-09, -0.0165288, -4.24767, 0.999994, -0.138017)
+transform = Transform3D(-0.0165289, -4.0698e-07, 0.999854, 1.42108e-14, 1, 4.07032e-07, -0.99986, 6.7279e-09, -0.0165288, -4.24767, 0.999994, -0.138017)
 
 [node name="Truck" parent="GameWorld/Events/RepairTruckTownship/Path3D/PathFollow3D" instance=ExtResource("10_dkhao")]
 transform = Transform3D(-0.117, 3.27418e-11, -1.87429e-08, 1.81899e-11, 0.117, -4.42378e-09, 1.73459e-08, -5.3551e-09, -0.117, 0, 0, 0)
 
 [node name="DBBoard" parent="GameWorld/Events/RepairTruckTownship" instance=ExtResource("11_lyuaq")]
 transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3.77489e-07, -1.91511, -1.60697, 0, 0, -1)
+
+[node name="RainStormCity" type="Node3D" parent="GameWorld/Events"]
 
 [node name="Game Level" parent="GameWorld" instance=ExtResource("7_anif8")]
 transform = Transform3D(0.957788, 0, -0.287478, 0, 1, 0, 0.287478, 0, 0.957788, 0, -1.51726, 1.81378)

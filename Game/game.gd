@@ -87,3 +87,5 @@ func _on_info_bar_toggle_power():
 # Marks the time for an event to be called
 func _on_clock_event_time():
 	start_event.emit()
+
+
