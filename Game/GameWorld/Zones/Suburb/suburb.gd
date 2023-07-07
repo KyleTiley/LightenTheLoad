@@ -11,7 +11,6 @@ func _ready():
 func _on_game_game_timer():
 	run_controllers()
 
-
 func _on_clock_loadshedding_time(_clock_hours, _clock_minutes):
 	if _clock_minutes == 0:
 		if _clock_hours == int(Global.suburb_schedule1) or _clock_hours == int(Global.suburb_schedule2):

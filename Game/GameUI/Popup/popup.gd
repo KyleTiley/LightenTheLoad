@@ -12,8 +12,7 @@ func _ready():
 	# Sets popup variables for each day
 	match Global.day_of_the_week:
 		"Monday":
-			daily_event_reminder = "Today's loadshedding schedule isGood luck for your first day!"
-			daily_event_reminder += ""
+			daily_event_reminder = "Welcome to your first day! Follow the loadshedding schedule on the left and try to keep everyone happy as best you can. Good luck!"
 			Global.city_schedule1 = "08"
 			Global.city_schedule2 = "12"
 			Global.suburb_schedule1 = "10"
@@ -23,7 +22,7 @@ func _ready():
 			Global.township_schedule1 = "10"
 			Global.township_schedule2 = "16"
 		"Tuesday":
-			daily_event_reminder = "Watch out for cable theft today!"
+			daily_event_reminder = "Watch out for cable theft today! Repair trucks will be sent out to solve any grid problems, you'll just have to flip the switches up."
 			Global.city_schedule1 = "10"
 			Global.city_schedule2 = "14"
 			Global.suburb_schedule1 = "12"
@@ -33,7 +32,7 @@ func _ready():
 			Global.township_schedule1 = "08"
 			Global.township_schedule2 = "14"
 		"Wednesday":
-			daily_event_reminder = "Weather Forecast: Rainstorms!"
+			daily_event_reminder = "Weather Forecast: Rainstorms! If a zone gets a little too cloudy, try clicking away that cumulonimbus before everyone gets too unhappy!"
 			Global.city_schedule1 = "12"
 			Global.city_schedule2 = "16"
 			Global.suburb_schedule1 = "10"
@@ -43,7 +42,7 @@ func _ready():
 			Global.township_schedule1 = "08"
 			Global.township_schedule2 = "12"
 		"Thursday":
-			daily_event_reminder = "Budget has been cut for the rest of the week!"
+			daily_event_reminder = "Someone pocketed a part of this week's budget! We will update you when we know how much was lost, for now just be as stingy as possbile!"
 			Global.city_schedule1 = "10"
 			Global.city_schedule2 = "16"
 			Global.suburb_schedule1 = "08"
@@ -53,7 +52,7 @@ func _ready():
 			Global.township_schedule1 = "10"
 			Global.township_schedule2 = "16"
 		"Friday":
-			daily_event_reminder = "Big Game Today at the Stadium!"
+			daily_event_reminder = "Big Game Today at the Stadium! Everyone will be there, and they will definitely not be happy if they lose power during the game!"
 			Global.city_schedule1 = "08"
 			Global.city_schedule2 = "14"
 			Global.suburb_schedule1 = "08"
@@ -65,8 +64,7 @@ func _ready():
 	# Empties text
 	popup_text.text = ""
 	# Displays all relevent info on the popup
-	popup_text.text += "Welcome to " + Global.day_of_the_week + '\n'
-	popup_text.text += "Today's loadshedding schedule is:" + '\n'
+#	popup_text.text += "Welcome to " + Global.day_of_the_week + '\n'
 	popup_text.text += daily_event_reminder
 	
 	set_schedule.emit(Global.city_schedule1, Global.city_schedule2, Global.suburb_schedule1, Global.suburb_schedule2, Global.stadium_schedule1, Global.stadium_schedule2, Global.township_schedule1, Global.township_schedule2)

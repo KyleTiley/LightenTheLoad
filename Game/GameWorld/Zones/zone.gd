@@ -42,6 +42,10 @@ func electricity_controller():
 		Global.total_allocated_electricity -= electricity_usage
 	else:
 		is_happy = false
+		
+	if Global.total_allocated_electricity <= 0:
+		print("GAME OVER")
+		Global.change_scene("MainMenu")
 
 # Controlls happiness usage
 func happiness_controller():

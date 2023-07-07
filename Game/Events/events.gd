@@ -50,7 +50,9 @@ func _on_game_start_event():
 		2:
 			print("storm event started")
 		3:
-			print("traffic jam event started")
+			print("budget cuts event")
+			Global.total_allocated_electricity -= 500
 		4:
 			print("game day event started")
+			big_game_event.emit()
 	

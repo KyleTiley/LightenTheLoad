@@ -43,16 +43,16 @@ func set_daily_variables(_day):
 			Global.total_allocated_electricity = 10000
 			Global.numberOfEvents = 0
 		"Tuesday":
-			Global.total_allocated_electricity = 12000
+			Global.total_allocated_electricity = 9000
 			Global.numberOfEvents = 1
 		"Wednesday":
-			Global.total_allocated_electricity = 14000
+			Global.total_allocated_electricity = 8000
 			Global.numberOfEvents = 2
 		"Thursday":
-			Global.total_allocated_electricity = 8000
+			Global.total_allocated_electricity = 7000
 			Global.numberOfEvents = 3
 		"Friday":
-			Global.total_allocated_electricity = 6000
+			Global.total_allocated_electricity = 5000
 			Global.numberOfEvents = 4
 
 # Delegates info regarding the currently selected zone

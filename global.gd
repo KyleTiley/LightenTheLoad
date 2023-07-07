@@ -54,5 +54,6 @@ func next_day():
 			day_of_the_week = "Friday"
 			friday_unlocked = true
 		"Friday":
+			# None
 			pass
 	change_scene("Game")
