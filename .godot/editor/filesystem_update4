@@ -4,3 +4,7 @@ res://Game/game.tscn
 res://Game/Events/events.gd
 res://Game/Events/RepairTruck/repair_truck.gd
 res://Game/game.gd
+res://Game/Events/Storm/storm.tscn
+res://cloud_2.tscn
+res://Audio/music_controller.tscn
+res://Game/Events/Storm/storm.gd

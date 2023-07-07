@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://beyjda6gdx18i"]
+
+[ext_resource type="Script" path="res://Game/Events/Storm/storm.gd" id="1_j2jkp"]
+[ext_resource type="PackedScene" uid="uid://b2dxvpq6f3cj2" path="res://Game/Events/Storm/Cloud1.glb" id="2_hjjxq"]
+[ext_resource type="PackedScene" uid="uid://dyc855301b5mi" path="res://Game/Events/Storm/Cloud2.glb" id="3_5ijo2"]
+[ext_resource type="PackedScene" uid="uid://ckgttxcm5oj6d" path="res://Game/Events/Storm/Cloud3.glb" id="4_c7oax"]
+[ext_resource type="PackedScene" uid="uid://dnnu5q4f6duab" path="res://Game/Events/Storm/Cloud4.glb" id="5_ybg6a"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_nsgb0"]
+size = Vector3(0.015, 0.5, 0.015)
+
+[sub_resource type="Animation" id="Animation_fpxgt"]
+resource_name = "Grow"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kfbnj"]
+resource_name = "Shrink"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iawlb"]
+_data = {
+"Grow": SubResource("Animation_fpxgt"),
+"Shrink": SubResource("Animation_kfbnj")
+}
+
+[node name="Storm" type="Node3D"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+script = ExtResource("1_j2jkp")
+
+[node name="Cloud1" parent="." instance=ExtResource("2_hjjxq")]
+transform = Transform3D(0.728465, 4.38215e-06, 11.9771, 3.16943e-12, 11.9992, -4.39025e-06, -11.9771, 2.66509e-07, 0.728464, 1.10504, -0.13761, -8.42168)
+
+[node name="Cloud2" parent="." instance=ExtResource("3_5ijo2")]
+transform = Transform3D(0.728464, 4.38215e-06, 11.9771, 3.16943e-12, 11.9992, -4.39025e-06, -11.9771, 2.66509e-07, 0.728465, -1.93395, 0.0172259, -4.78106)
+
+[node name="Cloud3" parent="." instance=ExtResource("4_c7oax")]
+transform = Transform3D(0.728465, 4.38215e-06, 11.9771, 3.16943e-12, 11.9992, -4.39025e-06, -11.9771, 2.66509e-07, 0.728464, 1.78689, -0.156099, 1.29534)
+
+[node name="Cloud4" parent="." instance=ExtResource("5_ybg6a")]
+transform = Transform3D(0.728466, 4.38215e-06, 11.9771, 2.26388e-12, 11.9992, -4.39025e-06, -11.9771, 2.66509e-07, 0.728464, -0.587348, 1.58674, 12.0355)
+
+[node name="CPUParticles3D" type="CPUParticles3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0020771, -19.8983, 0.0545173)
+amount = 400
+mesh = SubResource("BoxMesh_nsgb0")
+emission_shape = 3
+emission_box_extents = Vector3(4, 20, 6)
+color = Color(0.329412, 0.819608, 1, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_iawlb")
+}

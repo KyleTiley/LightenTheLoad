@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=40 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -14,14 +14,15 @@
 [ext_resource type="PackedScene" uid="uid://djso7gp30eqqh" path="res://Game/Events/BigGame/big_game.tscn" id="9_4t3mn"]
 [ext_resource type="Script" path="res://Game/Events/RepairTruck/repair_truck.gd" id="9_8mpy6"]
 [ext_resource type="Texture2D" uid="uid://s6ug8hnn127a" path="res://Game/GameUI/Clock/alarm.png" id="9_weqbt"]
+[ext_resource type="PackedScene" uid="uid://beyjda6gdx18i" path="res://Game/Events/Storm/storm.tscn" id="10_6q6fl"]
 [ext_resource type="Script" path="res://Game/GameUI/Popup/popup.gd" id="10_cp3k4"]
 [ext_resource type="PackedScene" uid="uid://u152eu2jw8ib" path="res://Game/Events/RepairTruck/Truck.glb" id="10_dkhao"]
 [ext_resource type="PackedScene" uid="uid://cn537q3hyui7k" path="res://Game/Events/RepairTruck/DBBoard/db_board.tscn" id="11_lyuaq"]
 [ext_resource type="Texture2D" uid="uid://bv7udoh684mcg" path="res://Game/GameUI/Popup/Bubbles Square.png" id="12_hbq03"]
 [ext_resource type="Texture2D" uid="uid://drkdqcls3f43n" path="res://Game/GameUI/Popup/Bubbles Line.png" id="13_5trs7"]
-[ext_resource type="Texture2D" uid="uid://ctrroxd77j87v" path="res://Game/GameUI/InfoBar/Text_Icon.png" id="14_xtbs4"]
+[ext_resource type="Texture2D" path="res://Game/GameUI/InfoBar/Text_Icon.png" id="14_xtbs4"]
 [ext_resource type="Script" path="res://Game/GameUI/Schedule/schedule.gd" id="18_o0xj2"]
-[ext_resource type="Texture2D" uid="uid://bxh5ssoo2ou6i" path="res://Game/GameUI/Schedule/List UI 3.png" id="20_nhxy6"]
+[ext_resource type="Texture2D" path="res://Game/GameUI/Schedule/List UI 3.png" id="20_nhxy6"]
 [ext_resource type="PackedScene" uid="uid://b04r53dh8abu7" path="res://Roads/Turningcirlcescene.tscn" id="21_n3ct1"]
 [ext_resource type="PackedScene" uid="uid://ohff5tdyqgqo" path="res://Roads/Straightroad.tscn" id="22_xcibf"]
 [ext_resource type="PackedScene" uid="uid://vf282wd1r1i3" path="res://Roads/CornerRoadscene.tscn" id="23_vk12k"]
@@ -121,7 +122,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.2217
 curve = SubResource("Curve3D_5e87o")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckCity/Path3D"]
-transform = Transform3D(-0.0238026, 0, 0.999712, 0, 1, 0, -0.999714, 0, -0.0238026, -6.38652, -3.74317e-05, -0.135338)
+transform = Transform3D(-0.0238025, 0, 0.999712, 0, 1, 0, -0.999714, 0, -0.0238025, -6.38652, -3.74317e-05, -0.135338)
 
 [node name="Truck" parent="GameWorld/Events/RepairTruckCity/Path3D/PathFollow3D" instance=ExtResource("10_dkhao")]
 transform = Transform3D(-0.117, 0, -1.76665e-08, 0, 0.117, 0, 1.76665e-08, 0, -0.117, 0, 0, 0)
@@ -131,7 +132,6 @@ transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3
 
 [node name="RepairTruckSuburb" type="Node3D" parent="GameWorld/Events"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
-visible = false
 script = ExtResource("9_8mpy6")
 
 [node name="Path3D" type="Path3D" parent="GameWorld/Events/RepairTruckSuburb"]
@@ -139,7 +139,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.2217
 curve = SubResource("Curve3D_icwxq")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckSuburb/Path3D"]
-transform = Transform3D(-0.0238571, 0, 0.999705, 0, 1, 0, -0.999707, 0, -0.023857, -2.49883, -4.91142e-05, -0.184835)
+transform = Transform3D(-0.0238572, 0, 0.999705, 0, 1, 0, -0.999707, 0, -0.0238572, -2.49883, -4.91142e-05, -0.184835)
 
 [node name="Truck" parent="GameWorld/Events/RepairTruckSuburb/Path3D/PathFollow3D" instance=ExtResource("10_dkhao")]
 transform = Transform3D(-0.117, 0, -1.76665e-08, 0, 0.117, 0, 1.76665e-08, 0, -0.117, 0, 0, 0)
@@ -149,7 +149,6 @@ transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3
 
 [node name="RepairTruckStadium" type="Node3D" parent="GameWorld/Events"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
-visible = false
 script = ExtResource("9_8mpy6")
 
 [node name="Path3D" type="Path3D" parent="GameWorld/Events/RepairTruckStadium"]
@@ -157,7 +156,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.8846
 curve = SubResource("Curve3D_jwyh6")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckStadium/Path3D"]
-transform = Transform3D(-0.0106005, 2.61915e-06, 0.99994, -2.27373e-13, 1, -2.61929e-06, -0.999942, -2.77662e-08, -0.0106005, 0, 0, 0)
+transform = Transform3D(-0.0106005, 2.61915e-06, 0.999939, -3.4106e-13, 1, -2.61929e-06, -0.999941, -2.77663e-08, -0.0106005, 0, 0, 0)
 
 [node name="Truck" parent="GameWorld/Events/RepairTruckStadium/Path3D/PathFollow3D" instance=ExtResource("10_dkhao")]
 transform = Transform3D(-0.117, 0, -1.76665e-08, 0, 0.117, 0, 1.76665e-08, 0, -0.117, 0, 0, 0)
@@ -167,7 +166,6 @@ transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3
 
 [node name="RepairTruckTownship" type="Node3D" parent="GameWorld/Events"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
-visible = false
 script = ExtResource("9_8mpy6")
 
 [node name="Path3D" type="Path3D" parent="GameWorld/Events/RepairTruckTownship"]
@@ -175,7 +173,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.2217
 curve = SubResource("Curve3D_68tms")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckTownship/Path3D"]
-transform = Transform3D(-0.0165289, -4.0698e-07, 0.999854, 1.42108e-14, 1, 4.07032e-07, -0.99986, 6.7279e-09, -0.0165288, -4.24767, 0.999994, -0.138017)
+transform = Transform3D(-0.0165289, -4.37287e-07, 0.999854, 1.42108e-14, 1, 4.37343e-07, -0.99986, 7.22891e-09, -0.0165288, -4.24767, 0.999994, -0.138017)
 
 [node name="Truck" parent="GameWorld/Events/RepairTruckTownship/Path3D/PathFollow3D" instance=ExtResource("10_dkhao")]
 transform = Transform3D(-0.117, 3.27418e-11, -1.87429e-08, 1.81899e-11, 0.117, -4.42378e-09, 1.73459e-08, -5.3551e-09, -0.117, 0, 0, 0)
@@ -183,7 +181,8 @@ transform = Transform3D(-0.117, 3.27418e-11, -1.87429e-08, 1.81899e-11, 0.117, -
 [node name="DBBoard" parent="GameWorld/Events/RepairTruckTownship" instance=ExtResource("11_lyuaq")]
 transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3.77489e-07, -1.91511, -1.60697, 0, 0, -1)
 
-[node name="RainStormCity" type="Node3D" parent="GameWorld/Events"]
+[node name="Storm" parent="GameWorld/Events" instance=ExtResource("10_6q6fl")]
+transform = Transform3D(0.168011, 0, -0.884179, 0, 0.9, 0, 0.884179, 0, 0.168011, 4.4131, 13.1463, 72.3158)
 
 [node name="Game Level" parent="GameWorld" instance=ExtResource("7_anif8")]
 transform = Transform3D(0.957788, 0, -0.287478, 0, 1, 0, 0.287478, 0, 0.957788, 0, -1.51726, 1.81378)
@@ -633,10 +632,14 @@ transform = Transform3D(-0.993447, 0, 0.114296, 0, 1, 0, -0.114296, 0, -0.993447
 [connection signal="zone_clicked" from="GameWorld/Zones/Stadium" to="." method="_on_stadium_zone_clicked"]
 [connection signal="zone_clicked" from="GameWorld/Zones/Township" to="." method="_on_township_zone_clicked"]
 [connection signal="big_game_event" from="GameWorld/Events" to="GameWorld/Events/BigGame" method="_on_events_big_game_event"]
+[connection signal="city_storm" from="GameWorld/Events" to="GameWorld/Events/Storm" method="_on_events_city_storm"]
 [connection signal="city_truck" from="GameWorld/Events" to="GameWorld/Events/RepairTruckCity" method="_on_events_city_truck"]
+[connection signal="stadium_storm" from="GameWorld/Events" to="GameWorld/Events/Storm" method="_on_events_stadium_storm"]
 [connection signal="stadium_truck" from="GameWorld/Events" to="GameWorld/Events/RepairTruckStadium" method="_on_events_stadium_truck"]
+[connection signal="suburb_storm" from="GameWorld/Events" to="GameWorld/Events/Storm" method="_on_events_suburb_storm"]
 [connection signal="suburb_truck" from="GameWorld/Events" to="GameWorld/Events/RepairTruckSuburb" method="_on_events_suburb_truck"]
-[connection signal="township_truck" from="GameWorld/Events" to="GameWorld/Events/RepairTruckTownship" method="_on_events_township_truck"]
+[connection signal="township_storm" from="GameWorld/Events" to="GameWorld/Events/Storm" method="_on_events_township_storm"]
+[connection signal="township_truck" from="GameWorld/Events" to="GameWorld/Zones/Township" method="_on_events_township_truck"]
 [connection signal="start_big_game" from="GameWorld/Events/BigGame" to="GameWorld/Zones/Stadium" method="_on_big_game_start_big_game"]
 [connection signal="return_vehicle" from="GameWorld/Events/RepairTruckCity/DBBoard" to="GameWorld/Events/RepairTruckCity" method="_on_db_board_return_vehicle" flags=18]
 [connection signal="return_vehicle" from="GameWorld/Events/RepairTruckSuburb/DBBoard" to="GameWorld/Events/RepairTruckSuburb" method="_on_db_board_return_vehicle" flags=18]
