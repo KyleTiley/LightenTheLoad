@@ -1,6 +1,6 @@
 2a60927148abd1d33b818b535e306557
-::res://::1688740580
-global.gd::GDScript::-1::1688740580::0::1::::<>Node<>::
+::res://::1688745039
+global.gd::GDScript::-1::1688745039::0::1::::<>Node<>::
 icon.svg::CompressedTexture2D::5902817450916580271::1688217767::1688217767::1::::<><>::
 MusicController.gd::GDScript::-1::1688738220::0::1::::<>Node<>::
 ::res://Audio/::1688738220
@@ -24,9 +24,9 @@ Tree3.glb::PackedScene::31585428847145382::1688733405::1688733405::1::::<><>::
 Tree3.Scene.tscn::PackedScene::400274843652497002::1688733405::0::1::::<><>::uid://pkhb0t8ku35
 Tree4.glb::PackedScene::7884592095437229635::1688733405::1688733405::1::::<><>::
 Tree4.Scene.tscn::PackedScene::3815521875263783798::1688733405::0::1::::<><>::uid://dklmcyk03e04f
-::res://Game/::1688744222
+::res://Game/::1688745038
 game.gd::GDScript::-1::1688743168::0::1::::<>Node<>::
-game.tscn::PackedScene::7256353932380393759::1688744222::0::1::::<><>::uid://wr1r3nxugw24<>res://Game/GameUI/Clock/clock.gd<>res://Game/game.gd<>uid://dx7wr27c0njgs<>uid://c8jicq5bwrdnu<>uid://cqhiu8fvdw425<>uid://da71hvmgak7ff<>uid://caq1m8cmbily<>res://Game/Events/events.gd<>uid://dscgenki4uhit<>res://Game/GameUI/InfoBar/infobar.gd<>uid://djso7gp30eqqh<>res://Game/Events/RepairTruck/repair_truck.gd<>uid://s6ug8hnn127a<>uid://beyjda6gdx18i<>res://Game/GameUI/Popup/popup.gd<>uid://u152eu2jw8ib<>uid://cn537q3hyui7k<>uid://bv7udoh684mcg<>uid://drkdqcls3f43n<>uid://ctrroxd77j87v<>res://Game/GameUI/Schedule/schedule.gd<>uid://bxh5ssoo2ou6i<>uid://b04r53dh8abu7<>uid://ohff5tdyqgqo<>uid://vf282wd1r1i3<>uid://dauxp5jreywid<>uid://bp0w10flslua8<>uid://rnygscluquqv<>uid://fx5p6h5udaek<>uid://bumjc8sds56h3<>uid://30eos1yqp1e4
+game.tscn::PackedScene::7256353932380393759::1688745038::0::1::::<><>::uid://wr1r3nxugw24<>res://Game/GameUI/Clock/clock.gd<>res://Game/game.gd<>uid://dx7wr27c0njgs<>uid://c8jicq5bwrdnu<>uid://cqhiu8fvdw425<>uid://da71hvmgak7ff<>uid://caq1m8cmbily<>res://Game/Events/events.gd<>uid://dscgenki4uhit<>res://Game/GameUI/InfoBar/infobar.gd<>uid://djso7gp30eqqh<>res://Game/Events/RepairTruck/repair_truck.gd<>uid://s6ug8hnn127a<>uid://beyjda6gdx18i<>res://Game/GameUI/Popup/popup.gd<>uid://u152eu2jw8ib<>uid://cn537q3hyui7k<>uid://bv7udoh684mcg<>uid://drkdqcls3f43n<>uid://ctrroxd77j87v<>res://Game/GameUI/Schedule/schedule.gd<>uid://bxh5ssoo2ou6i<>uid://b04r53dh8abu7<>uid://ohff5tdyqgqo<>uid://vf282wd1r1i3<>uid://dauxp5jreywid<>uid://bp0w10flslua8<>uid://rnygscluquqv<>uid://fx5p6h5udaek<>uid://bumjc8sds56h3<>uid://30eos1yqp1e4
 ::res://Game/Events/::1688743639
 events.gd::GDScript::-1::1688743168::0::1::::<>Node3D<>::
 ::res://Game/Events/BigGame/::1688217767
@@ -87,12 +87,12 @@ Tabs.png::CompressedTexture2D::1047176680493351910::1688636806::1688636806::1:::
 environment.tscn::PackedScene::141396271167558774::1688217767::0::1::::<><>::uid://b1xqh28la1jm
 Game Level.glb::PackedScene::8427162135858851631::1688217767::1688217767::1::::<><>::
 Terrain.glb::PackedScene::125288139666962870::1688217767::1688217767::1::::<><>::
-::res://Game/GameWorld/Zones/::1688744553
-zone.gd::GDScript::-1::1688744553::0::1::::<>Node<>::
-::res://Game/GameWorld/Zones/City/::1688744612
-city.gd::GDScript::-1::1688636806::0::1::::<>Node<>::
+::res://Game/GameWorld/Zones/::1688744820
+zone.gd::GDScript::-1::1688744820::0::1::::<>Node<>::
+::res://Game/GameWorld/Zones/City/::1688744974
+city.gd::GDScript::-1::1688744974::0::1::::<>Node<>::
 City.glb::PackedScene::7276361032559904116::1688217767::1688217767::1::::<><>::
-city.tscn::PackedScene::1580859473972305051::1688744612::0::1::::<><>::uid://dbwyurg5o511i<>res://Game/GameWorld/Zones/City/city.gd
+city.tscn::PackedScene::1580859473972305051::1688744974::0::1::::<><>::uid://dbwyurg5o511i<>res://Game/GameWorld/Zones/City/city.gd
 ::res://Game/GameWorld/Zones/Stadium/::1688742342
 stadium.gd::GDScript::-1::1688742342::0::1::::<>Node<>::
 Stadium.glb::PackedScene::8983888554817620347::1688217767::1688217767::1::::<><>::

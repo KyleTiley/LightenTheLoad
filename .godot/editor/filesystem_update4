@@ -10,3 +10,4 @@ res://Game/Events/events.gd
 res://MainMenu/main_menu.tscn
 res://Game/GameWorld/Zones/City/city.tscn
 res://Game/GameUI/Clock/clock.gd
+res://Game/GameWorld/Zones/City/city.gd
