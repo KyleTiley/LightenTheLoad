@@ -35,7 +35,7 @@ func _ready():
 	
 
 func _process(delta):
-	const move_speed = 50.0
+	const move_speed = 10.0
 	if send_out_truck:
 		drive_truck(delta)
 	if return_truck_driving:

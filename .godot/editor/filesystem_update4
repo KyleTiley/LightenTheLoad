@@ -1,4 +1,5 @@
-res://Game/game.tscn
+res://MainMenu/main_menu.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.gd
-res://Game/Events/RepairTruck/DBBoard/db_board.tscn
-res://Game/GameUI/Popup/popup.gd
+res://Game/game.tscn
+res://Game/Events/events.gd
+res://Game/Events/RepairTruck/repair_truck.gd

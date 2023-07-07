@@ -1,7 +1,6 @@
 extends Node3D
 
 # SIGNALS
-signal repair_truck_event
 signal city_truck
 signal suburb_truck
 signal stadium_truck
