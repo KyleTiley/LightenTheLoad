@@ -1,3 +1,8 @@
+AudioStreamPlayer2D
+AudioStreamPlayer
+Node
+AudioListener2D
+Node2D
 Node3D
 TextureRect
 RichTextLabel
@@ -14,7 +19,6 @@ HBoxContainer
 TextureButton
 Panel
 AnimatedSprite2D
-Node
 VBoxContainer
 PanelContainer
 MarginContainer

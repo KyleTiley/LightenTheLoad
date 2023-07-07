@@ -22,6 +22,8 @@ func _ready():
 		thursday_button.disabled = false
 	if Global.friday_unlocked:
 		friday_button.disabled = false
+		
+	MusicController.play_music()
 
 func StartGame():
 	Global.change_scene("Game")

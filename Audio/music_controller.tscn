@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://gx5gpes1xegt"]
+
+[ext_resource type="Script" path="res://MusicController.gd" id="1_4fn34"]
+
+[node name="MusicController" type="Node"]
+script = ExtResource("1_4fn34")
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+volume_db = -30.646
+mix_target = 2
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]

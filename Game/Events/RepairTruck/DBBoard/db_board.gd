@@ -23,6 +23,7 @@ func _on_area_3d_1_input_event(camera, event, position, normal, shape_idx):
 			elif %"Switch_1".rotation_degrees.x > 0:
 				%"Switch_1".rotation_degrees.x = -40
 				switch_counter -= 1
+			MusicController.play_switch_click()
 
 func _on_area_3d_2_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
@@ -33,6 +34,7 @@ func _on_area_3d_2_input_event(camera, event, position, normal, shape_idx):
 			elif %"Switch_2".rotation_degrees.x > 0:
 				%"Switch_2".rotation_degrees.x = -40
 				switch_counter -= 1
+			MusicController.play_switch_click()
 
 func _on_area_3d_3_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
@@ -43,6 +45,7 @@ func _on_area_3d_3_input_event(camera, event, position, normal, shape_idx):
 			elif %"Switch_3".rotation_degrees.x > 0:
 				%"Switch_3".rotation_degrees.x = -40
 				switch_counter -= 1
+			MusicController.play_switch_click()
 
 func _on_area_3d_4_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
@@ -53,6 +56,7 @@ func _on_area_3d_4_input_event(camera, event, position, normal, shape_idx):
 			elif %"Switch_4".rotation_degrees.x > 0:
 				%"Switch_4".rotation_degrees.x = -40
 				switch_counter -= 1
+			MusicController.play_switch_click()
 
 func _on_area_3d_5_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
@@ -63,6 +67,7 @@ func _on_area_3d_5_input_event(camera, event, position, normal, shape_idx):
 			elif %"Switch_5".rotation_degrees.x > 0:
 				%"Switch_5".rotation_degrees.x = -40
 				switch_counter -= 1
+			MusicController.play_switch_click()
 
 func _on_area_3d_6_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
@@ -73,6 +78,7 @@ func _on_area_3d_6_input_event(camera, event, position, normal, shape_idx):
 			elif %"Switch_6".rotation_degrees.x > 0:
 				%"Switch_6".rotation_degrees.x = -40
 				switch_counter -= 1
+			MusicController.play_switch_click()
 
 func _on_area_3d_7_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
@@ -83,6 +89,7 @@ func _on_area_3d_7_input_event(camera, event, position, normal, shape_idx):
 			elif %"Switch_7".rotation_degrees.x > 0:
 				%"Switch_7".rotation_degrees.x = -40
 				switch_counter -= 1
+			MusicController.play_switch_click()
 
 func _on_area_3d_8_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
@@ -93,6 +100,7 @@ func _on_area_3d_8_input_event(camera, event, position, normal, shape_idx):
 			elif %"Switch_8".rotation_degrees.x > 0:
 				%"Switch_8".rotation_degrees.x = -40
 				switch_counter -= 1
+			MusicController.play_switch_click()
 
 func _on_area_3d_9_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
@@ -103,6 +111,7 @@ func _on_area_3d_9_input_event(camera, event, position, normal, shape_idx):
 			elif %"Switch_9".rotation_degrees.x > 0:
 				%"Switch_9".rotation_degrees.x = -40
 				switch_counter -= 1
+			MusicController.play_switch_click()
 
 func _on_node_3d_visibility_changed():
 	switch_counter = 0
