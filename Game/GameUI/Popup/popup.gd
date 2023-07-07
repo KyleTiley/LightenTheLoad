@@ -12,7 +12,8 @@ func _ready():
 	# Sets popup variables for each day
 	match Global.day_of_the_week:
 		"Monday":
-			daily_event_reminder = "Good luck for your first day!"
+			daily_event_reminder = "Today's loadshedding schedule isGood luck for your first day!"
+			daily_event_reminder += ""
 			Global.city_schedule1 = "08"
 			Global.city_schedule2 = "12"
 			Global.suburb_schedule1 = "10"

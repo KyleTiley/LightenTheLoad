@@ -10,7 +10,7 @@ signal day_over
 @onready var time_label = $Time
 
 # VARIABLES
-var time_elapsed_per_second = 30
+var time_elapsed_per_second = 5
 var clock_minutes = 30
 var clock_hours = 0
 var start_time = 7

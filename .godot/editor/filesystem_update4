@@ -1,5 +1,6 @@
 res://Game/game.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.gd
+<<<<<<< Updated upstream
 res://Roads/Turningcirlcescene.tscn
 res://Roads/Straightroad.tscn
 res://Roads/CornerRoadscene.tscn
@@ -16,3 +17,7 @@ res://Game/game.gd
 res://Audio/music_controller.tscn
 res://MainMenu/main_menu.gd
 res://Game/Events/RepairTruck/DBBoard/db_board.gd
+=======
+res://Game/Events/RepairTruck/DBBoard/db_board.tscn
+res://Game/GameUI/Popup/popup.gd
+>>>>>>> Stashed changes
