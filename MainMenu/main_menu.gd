@@ -33,25 +33,32 @@ func StartGame():
 func _on_button_monday_pressed():
 	Global.day_of_the_week = "Monday"
 	StartGame()
+	MusicController.play_ui_button()
 
 func _on_button_tuesday_pressed():
 	Global.day_of_the_week = "Tuesday"
 	StartGame()
+	MusicController.play_ui_button()
 
 func _on_button_wednesday_pressed():
 	Global.day_of_the_week = "Wednesday"
 	StartGame()
+	MusicController.play_ui_button()
 
 func _on_button_thursday_pressed():
 	Global.day_of_the_week = "Thursday"
 	StartGame()
+	MusicController.play_ui_button()
 
 func _on_button_friday_pressed():
 	Global.day_of_the_week = "Friday"
 	StartGame()
+	MusicController.play_ui_button()
 
 func _on_play_button_pressed():
 	button_container.show()
+	MusicController.play_ui_button()
 
 func _on_settings_button_pressed():
 	print("OPTIONS")
+	MusicController.play_ui_button()

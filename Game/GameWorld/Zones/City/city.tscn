@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Game/GameWorld/Zones/City/city.gd" id="1_xtan1"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qmruk"]
-size = Vector3(15.5, 15.5, 15.5)
+size = Vector3(15.5, 11.2852, 15.5)
 
 [node name="City" type="Node3D"]
 script = ExtResource("1_xtan1")

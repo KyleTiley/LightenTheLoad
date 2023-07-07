@@ -35,6 +35,7 @@ func display_info(_name, _using_electricity, _electricity, _happiness):
 func _on_power_button_pressed():
 	toggle_power.emit()
 	print("POWER TOGGLED")
+	MusicController.play_ui_button()
 
 func _on_game_display_info(_selected_zone, _is_using_electricity, _electricity_used, _current_happiness):
 	should_display_info = true

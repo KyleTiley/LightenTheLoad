@@ -76,6 +76,7 @@ func _on_popup_button_pressed():
 		Global.game_has_started = true
 	else:
 		Global.next_day()
+	MusicController.play_ui_button()
 
 func _on_clock_day_over():
 	show()

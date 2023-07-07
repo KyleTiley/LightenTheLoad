@@ -60,15 +60,25 @@ func return_truck(_delta):
 func _on_db_board_return_vehicle():
 	db_board.hide()
 	return_truck_driving = true
+	MusicController.play_repair_truck()
+	MusicController.stop_if_done()
 
 func _on_events_city_truck():
 	send_out_truck = true
+	MusicController.play_repair_truck()
+	MusicController.stop_if_done()
 
 func _on_events_stadium_truck():
 	send_out_truck = true
+	MusicController.play_repair_truck()
+	MusicController.stop_if_done()
 
 func _on_events_suburb_truck():
 	send_out_truck = true
+	MusicController.play_repair_truck()
+	MusicController.stop_if_done()
 
 func _on_events_township_truck():
 	send_out_truck = true
+	MusicController.play_repair_truck()
+	MusicController.stop_if_done()

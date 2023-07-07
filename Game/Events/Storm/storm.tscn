@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://beyjda6gdx18i"]
+[gd_scene load_steps=11 format=3 uid="uid://beyjda6gdx18i"]
 
 [ext_resource type="Script" path="res://Game/Events/Storm/storm.gd" id="1_j2jkp"]
 [ext_resource type="PackedScene" uid="uid://b2dxvpq6f3cj2" path="res://Game/Events/Storm/Cloud1.glb" id="2_hjjxq"]
@@ -45,8 +45,11 @@ _data = {
 "Shrink": SubResource("Animation_kfbnj")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_0yqy2"]
+size = Vector3(8.64048, 5.29558, 11.5068)
+
 [node name="Storm" type="Node3D"]
-transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 script = ExtResource("1_j2jkp")
 
 [node name="Cloud1" parent="." instance=ExtResource("2_hjjxq")]
@@ -73,3 +76,11 @@ color = Color(0.329412, 0.819608, 1, 1)
 libraries = {
 "": SubResource("AnimationLibrary_iawlb")
 }
+
+[node name="AreaCloud" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaCloud"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.707, 0)
+shape = SubResource("BoxShape3D_0yqy2")
+
+[connection signal="input_event" from="AreaCloud" to="." method="_on_area_cloud_input_event"]
