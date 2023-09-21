@@ -26,3 +26,7 @@ func _on_clock_loadshedding_time(_clock_hours, _clock_minutes):
 
 func _on_popup_button_button_up():
 	pass # Replace with function body.
+
+
+func _on_tutorial_game_timer():
+	run_controllers()

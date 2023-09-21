@@ -85,7 +85,7 @@ func _ready():
 func _on_popup_button_pressed():
 	if start_day:
 		hide()
-		#Global.game_has_started = true
+		Global.game_has_started = true
 		if Global.day_of_the_week == "Tutorial" && tutorial_Int == 0:
 			tutorial_Int += 1
 			popup_text.text = "Make use of the load shedding schedule on the left of your screen.\nThe residents wont be unhappy if their power is turned off during the time they expect."

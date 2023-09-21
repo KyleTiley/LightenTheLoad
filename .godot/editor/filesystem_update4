@@ -7,3 +7,8 @@ res://MainMenu/main_menu.tscn
 res://MainMenu/main_menu.gd
 res://Game/GameWorld/Zones/City/city.gd
 res://Game/game.gd
+res://Game/GameUI/InfoBar/infobar.gd
+res://Game/GameWorld/Zones/Suburb/suburb.gd
+res://Game/GameWorld/Zones/Township/township.gd
+res://Game/GameUI/Clock/clock.gd
+res://Game/Events/events.gd

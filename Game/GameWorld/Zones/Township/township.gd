@@ -22,3 +22,7 @@ func _on_clock_loadshedding_time(_clock_hours, _clock_minutes):
 			print("loadshedding ended at: " + name)
 			happiness_gain = base_happiness_gain
 			happiness_loss = base_happiness_loss
+
+
+func _on_tutorial_game_timer():
+	run_controllers()
