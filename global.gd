@@ -35,7 +35,7 @@ var township_schedule2
 func change_scene(_scene):
 	match _scene:
 		"Tutorial":
-			get_tree().change_scene_to_file(tutorial)
+			get_tree().change_scene_to_file(game)
 		"Game":
 			get_tree().change_scene_to_file(game)
 		"MainMenu":
@@ -64,4 +64,4 @@ func next_day():
 			# None
 			pass
 	change_scene("Game")
-	change_scene("Tutorial")
+	#change_scene("Tutorial")
