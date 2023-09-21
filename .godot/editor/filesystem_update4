@@ -12,3 +12,5 @@ res://Game/GameWorld/Zones/Suburb/suburb.gd
 res://Game/GameWorld/Zones/Township/township.gd
 res://Game/GameUI/Clock/clock.gd
 res://Game/Events/events.gd
+res://Game/Events/Storm/storm.gd
+res://Game/Events/RepairTruck/repair_truck.gd

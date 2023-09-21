@@ -5,6 +5,8 @@ extends Node3D
 @onready var db_board = $DBBoard
 @onready var truck_path = $Path3D/PathFollow3D
 @onready var truck = $Path3D/PathFollow3D/Truck
+@onready var popup_text = $"../../../GameUI/Popup/PopupBubble/RichTextLabel"
+@onready var popup = $"../../../GameUI/Popup"
 
 # VARIABLES
 
@@ -62,23 +64,38 @@ func _on_db_board_return_vehicle():
 	return_truck_driving = true
 	MusicController.play_repair_truck()
 	MusicController.stop_if_done()
+	if Global.day_of_the_week == "Tutorial":
+		popup_text.text = "Well done!!!\nThe truck will return now."
+		popup.show()
 
 func _on_events_city_truck():
 	send_out_truck = true
 	MusicController.play_repair_truck()
 	MusicController.stop_if_done()
+	if Global.day_of_the_week == "Tutorial":
+		popup_text.text = "Oh no!\n A suburbs power has tripped, turn on all the switches"
+		popup.show()
 
 func _on_events_stadium_truck():
 	send_out_truck = true
 	MusicController.play_repair_truck()
 	MusicController.stop_if_done()
+	if Global.day_of_the_week == "Tutorial":
+		popup_text.text = "Oh no!\n A suburbs power has tripped, turn on all the switches"
+		popup.show()
 
 func _on_events_suburb_truck():
 	send_out_truck = true
 	MusicController.play_repair_truck()
 	MusicController.stop_if_done()
+	if Global.day_of_the_week == "Tutorial":
+		popup_text.text = "Oh no!\n A suburbs power has tripped, turn on all the switches"
+		popup.show()
 
 func _on_events_township_truck():
 	send_out_truck = true
 	MusicController.play_repair_truck()
 	MusicController.stop_if_done()
+	if Global.day_of_the_week == "Tutorial":
+		popup_text.text = "Oh no!\n A suburbs power has tripped, turn on all the switches"
+		popup.show()

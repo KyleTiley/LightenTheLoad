@@ -41,7 +41,7 @@ func set_daily_variables(_day):
 	match _day:
 		"Tutorial":
 			Global.total_allocated_electricity = 1000000
-			Global.numberOfEvents = 1
+			Global.numberOfEvents = 3
 		"Monday":
 			Global.total_allocated_electricity = 10000
 			Global.numberOfEvents = 0

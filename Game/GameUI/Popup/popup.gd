@@ -90,26 +90,31 @@ func _on_popup_button_pressed():
 			tutorial_Int += 1
 			popup_text.text = "Make use of the load shedding schedule on the left of your screen.\nThe residents wont be unhappy if their power is turned off during the time they expect."
 			show()
+			MusicController.play_ui_button()
 			return
 		elif tutorial_Int == 1:
 			tutorial_Int += 1
 			popup_text.text = "Click on suburbs to toggle their power preferably in the suggested time zones."
 			show()
+			MusicController.play_ui_button()
 			return
 		elif tutorial_Int == 2:
 			tutorial_Int += 1
 			popup_text.text = "Some times a storm will break out, spam the clouds with clicks to remove them."
 			show()
+			MusicController.play_ui_button()
 			return
 		elif tutorial_Int == 3:
 			tutorial_Int += 1
 			popup_text.text = "A repair truck will go to a suburb thats power has tripped, flick all the switches up to turn their power back on."
 			show()
+			MusicController.play_ui_button()
 			return
 		elif tutorial_Int == 4:
 			tutorial_Int += 1
 			popup_text.text = "On the top left of your screen you will see the clock, when the clock gets to 18:30 the game ends and you win."
 			show()
+			MusicController.play_ui_button()
 			return
 	else:
 		Global.next_day()
