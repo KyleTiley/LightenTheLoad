@@ -13,8 +13,8 @@ var total_allocated_electricity
 var numberOfEvents
 
 # Sets which days can be played from the main menu
-var tutorial_unlocked = false
-var monday_unlocked = true
+var tutorial_unlocked = true
+var monday_unlocked = false
 var tuesday_unlocked = false
 var wednesday_unlocked = false
 var thursday_unlocked = false

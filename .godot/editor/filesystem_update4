@@ -3,3 +3,5 @@ res://Game/GameWorld/Zones/Stadium/stadium.gd
 res://Game/Tutorial_Level/Tutorial.tscn
 res://global.gd
 res://Game/GameUI/Popup/popup.gd
+res://MainMenu/main_menu.tscn
+res://MainMenu/main_menu.gd

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://y7g46npaxry8"]
+[gd_scene load_steps=39 format=3 uid="uid://y7g46npaxry8"]
 
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_arwdj"]
 [ext_resource type="Texture2D" uid="uid://s6ug8hnn127a" path="res://Game/GameUI/Clock/alarm.png" id="2_kwfos"]
@@ -10,6 +10,68 @@
 [ext_resource type="Script" path="res://Game/GameUI/Popup/popup.gd" id="8_2pm0b"]
 [ext_resource type="Texture2D" uid="uid://bv7udoh684mcg" path="res://Game/GameUI/Popup/Bubbles Square.png" id="9_s6puu"]
 [ext_resource type="Texture2D" uid="uid://drkdqcls3f43n" path="res://Game/GameUI/Popup/Bubbles Line.png" id="10_xlii7"]
+[ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="11_myht5"]
+[ext_resource type="PackedScene" uid="uid://da71hvmgak7ff" path="res://Game/GameWorld/Zones/Suburb/suburb.tscn" id="12_jk480"]
+[ext_resource type="PackedScene" uid="uid://c8jicq5bwrdnu" path="res://Game/GameWorld/Zones/Stadium/stadium.tscn" id="13_hp1lu"]
+[ext_resource type="PackedScene" uid="uid://cqhiu8fvdw425" path="res://Game/GameWorld/Zones/Township/township.tscn" id="14_tvtor"]
+[ext_resource type="PackedScene" uid="uid://caq1m8cmbily" path="res://Game/GameWorld/Environment/environment.tscn" id="15_22uav"]
+[ext_resource type="Script" path="res://Game/Events/events.gd" id="16_3ekgd"]
+[ext_resource type="PackedScene" uid="uid://djso7gp30eqqh" path="res://Game/Events/BigGame/big_game.tscn" id="17_g6d7r"]
+[ext_resource type="Script" path="res://Game/Events/RepairTruck/repair_truck.gd" id="18_16lar"]
+[ext_resource type="PackedScene" uid="uid://u152eu2jw8ib" path="res://Game/Events/RepairTruck/Truck.glb" id="19_wgf32"]
+[ext_resource type="PackedScene" uid="uid://cn537q3hyui7k" path="res://Game/Events/RepairTruck/DBBoard/db_board.tscn" id="20_ylg5a"]
+[ext_resource type="PackedScene" uid="uid://beyjda6gdx18i" path="res://Game/Events/Storm/storm.tscn" id="21_tm6rt"]
+[ext_resource type="PackedScene" uid="uid://dscgenki4uhit" path="res://Game/GameWorld/Environment/Game Level.glb" id="22_vbsbn"]
+[ext_resource type="PackedScene" uid="uid://b04r53dh8abu7" path="res://Roads/Turningcirlcescene.tscn" id="23_h610g"]
+[ext_resource type="PackedScene" uid="uid://vf282wd1r1i3" path="res://Roads/CornerRoadscene.tscn" id="24_5dby7"]
+[ext_resource type="PackedScene" uid="uid://ohff5tdyqgqo" path="res://Roads/Straightroad.tscn" id="25_cmv5l"]
+[ext_resource type="PackedScene" uid="uid://dauxp5jreywid" path="res://Roads/BendingRoad2Scene.tscn" id="26_rx1c8"]
+[ext_resource type="PackedScene" uid="uid://bp0w10flslua8" path="res://Decorations/Tree1.Scene.tscn" id="27_kleha"]
+[ext_resource type="PackedScene" uid="uid://rnygscluquqv" path="res://Decorations/Tree2.Scene.tscn" id="28_uuhuf"]
+[ext_resource type="PackedScene" uid="uid://fx5p6h5udaek" path="res://Decorations/Tree3.Scene.tscn" id="29_cc53p"]
+[ext_resource type="PackedScene" uid="uid://bumjc8sds56h3" path="res://Decorations/Tree4.Scene.tscn" id="30_d542x"]
+[ext_resource type="PackedScene" uid="uid://30eos1yqp1e4" path="res://Decorations/Shrub.Scene.tscn" id="31_3lk13"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4s6ec"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_sao6l"]
+sky_material = SubResource("ProceduralSkyMaterial_4s6ec")
+
+[sub_resource type="Environment" id="Environment_ibss4"]
+background_mode = 2
+sky = SubResource("Sky_sao6l")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="Curve3D" id="Curve3D_a3gr6"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -6.38652, -3.74317e-05, -0.135338, -0.264191, 0, 0.0715097, 0.264191, 0, -0.0715097, 9.70191, -3.74317e-05, -0.518394, -0.277348, 0, 0.057049, 0.277348, 0, -0.057049, 11.3179, -3.74317e-05, -2.15162, -0.281506, 0, -0.131015, 0.281506, 0, 0.131015, 12.9266, -3.74317e-05, -0.696479, -0.852334, 0, 0.165091, 0.852334, 0, -0.165091, 14.5966, -3.74317e-05, -1.68517, -0.158245, 0, -0.397538, 0.158245, 0, 0.397538, 16.329, -3.74317e-05, -0.539881, -0.326702, 0, 0.0891547, 0.326702, 0, -0.0891547, 17.4344, -3.74317e-05, -0.192901, -0.0619926, 0, 0.190458, 0.0619926, 0, -0.190458, 17.6398, -3.74317e-05, -1.67222, -0.00283432, 0, 0.406004, 0.00283432, 0, -0.406004, 19.3059, -3.74317e-05, -3.40657, 0.200943, 0, 0.275198, -0.200943, 0, -0.275198, 17.7722, -3.74317e-05, -5.07813, -0.3123, 0, 0.353392, 0.3123, 0, -0.353392, 17.8216, -3.74317e-05, -8.2751, 0, 0, 0, 0, 0, 0, 21.812, -3.74317e-05, -8.36269),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 12
+
+[sub_resource type="Curve3D" id="Curve3D_auegt"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -2.49883, -4.91142e-05, -0.184835, -0.39882, 0, 0.11953, 0.39882, 0, -0.11953, 9.64631, -4.91142e-05, -0.474667, -0.234215, 0, 0.0289633, 0.234215, 0, -0.0289633, 11.3432, -4.91142e-05, -2.1331, -0.524232, 0, 0.762052, 0.524232, 0, -0.762052, 13.3674, -4.91142e-05, -0.843033, -0.810851, 0, -1.91807, 0.810851, 0, 1.91807, 16.3033, -4.91142e-05, -0.508374, 0.946716, 0, 0.187768, -0.946716, 0, -0.187768, 13.839, -4.91142e-05, 1.63648, 0.441139, 0, -0.152118, -0.441139, 0, 0.152118, 13.2913, -4.91142e-05, 5.21123, 0.35576, 0, -0.115037, -0.35576, 0, 0.115037, 10.2285, -4.91142e-05, 5.33101, 0.392784, 0, 0.174376, -0.392784, 0, -0.174376, 8.36647, -4.91142e-05, 6.9445, 0.438419, 0, 0.0831056, -0.438419, 0, -0.0831056, 6.69318, -4.91142e-05, 5.34727, 0.240667, 0, -0.190705, -0.240667, 0, 0.190705, 5.32413, -4.91142e-05, 5.3929, -0.23315, 0, -0.209659, 0.23315, 0, 0.209659, 5.24807, -4.91142e-05, 8.25271, -0.40048, 0, -0.1336, 0.40048, 0, 0.1336, 8.50338, -4.91142e-05, 8.32877, 0, 0, 0, 0, 0, 0, 8.64028, -4.91142e-05, 9.65219),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 14
+
+[sub_resource type="Curve3D" id="Curve3D_8le6i"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 0, 0, 0, -0.464577, 0, 0.0373244, 0.464577, 0, -0.0373244, 12.6516, -3.31402e-05, -0.134123, -0.398176, 0, -0.0291551, 0.398176, 0, 0.0291551, 14.3345, -3.31402e-05, -1.77135, -0.459023, 0, -0.105214, 0.459023, 0, 0.105214, 15.9899, -3.31402e-05, -0.355397, -1.14121, 0, -1.34134, 1.14121, 0, 1.34134, 19.0227, -3.31402e-05, -0.720923, 0.213301, 0, -0.316733, -0.213301, 0, 0.316733, 18.5667, -3.31402e-05, 1.94383, -0.453701, 0, -0.396272, 0.453701, 0, 0.396272, 18.6175, -3.31402e-05, 5.84763, -0.547373, 0, -0.260614, 0.547373, 0, 0.260614, 21.797, -3.31402e-05, 6.06333, -0.247459, 0, -0.253271, 0.247459, 0, 0.253271, 22.0184, -3.31402e-05, 11.9188, -0.382704, 0, -0.25224, 0.382704, 0, 0.25224, 28.7112, -3.31402e-05, 12.0231, 0, 0, 0, 0, 0, 0, 28.5049, -3.31402e-05, 13.2611),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 11
+
+[sub_resource type="Curve3D" id="Curve3D_1yvwy"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -4.24767, 0.999994, -0.138017, -0.303079, -5.60284e-06, 0.0149469, 0.303079, 5.60284e-06, -0.0149469, 9.51542, 1, -0.365538, 0, 0, 0, 0, 0, 0, 10.0465, 1, -0.631065, -0.297877, 5.60284e-06, 0.150599, 0.297877, -5.60284e-06, -0.150599, 11.181, 1, -1.93457, 0, 0, 0, 0, 0, 0, 11.8086, 1, -1.78973, -0.372851, -5.60284e-06, 0.0505741, 0.372851, 5.60284e-06, -0.0505741, 13.0156, 1, -0.437955, -0.0808487, -5.60284e-06, 0.299936, 0.0808487, 5.60284e-06, -0.299936, 14.1614, 1, -1.49253, 0.0908623, -5.60284e-06, 0.31953, -0.0908623, 5.60284e-06, -0.31953, 14.1373, 1, -7.45484, 0.297163, 0, 0.00958586, -0.297163, 0, -0.00958586, 13.423, 0.999994, -7.85425, 0.27297, -5.60284e-06, -0.227936, -0.27297, 5.60284e-06, 0.227936, 11.4015, 1, -7.89179, 0.364264, 0, 0.0287576, -0.364264, 0, -0.0287576, 9.66784, 0.999994, -6.24777, 0.436104, -5.60284e-06, 0.0830307, -0.436104, 5.60284e-06, -0.0830307, 8.0703, 1, -7.84351, 0.555479, -5.60284e-06, 0.347861, -0.555479, 5.60284e-06, -0.347861, 6.13919, 1, -8.01248, 0, 0, 0, 0, 0, 0, 6.16832, 0.999994, -9.87558, 0, 0, 0, 0, 0, 0, 6.21309, 1.29626, -11.0695, 0, 0, 0, 0, 0, 0, 6.15718, 1.27161, -14.2254, 0, 0, 0, 0, 0, 0, 6.8951, 1.25961, -14.4528),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 17
 
 [node name="Tutorial" type="Node3D"]
 
@@ -256,7 +318,317 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "PLAY"
 
+[node name="GameWorld" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="GameWorld"]
+environment = SubResource("Environment_ibss4")
+
+[node name="Camera3D" type="Camera3D" parent="GameWorld"]
+transform = Transform3D(1, 0, 0, 0, 0.642788, 0.766044, 0, -0.766044, 0.642788, 0, 20, 23)
+current = true
+
+[node name="Zones" type="Node3D" parent="GameWorld"]
+
+[node name="City" parent="GameWorld/Zones" instance=ExtResource("11_myht5")]
+transform = Transform3D(0.6957, 0, -0.718332, 0, 1, 0, 0.718332, 0, 0.6957, -4.0759, -3.72, -6.26243)
+
+[node name="Suburb" parent="GameWorld/Zones" instance=ExtResource("12_jk480")]
+transform = Transform3D(0.672202, 0, -0.332632, 0, 0.75, 0, 0.332632, 0, 0.672202, 16.7528, -2.667, 11.7601)
+
+[node name="Stadium" parent="GameWorld/Zones" instance=ExtResource("13_hp1lu")]
+transform = Transform3D(0.99854, 0, -0.0540091, 0, 1, 0, 0.0540091, 0, 0.99854, 18.7415, -3.889, -9.67496)
+
+[node name="Township" parent="GameWorld/Zones" instance=ExtResource("14_tvtor")]
+transform = Transform3D(-0.637743, 0, -0.394694, 0, 0.75, 0, 0.394694, 0, -0.637743, -12.4093, -2.205, 10.0735)
+
+[node name="Environment" parent="GameWorld" instance=ExtResource("15_22uav")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39546, 0, -35.617)
+
+[node name="Events" type="Node3D" parent="GameWorld"]
+script = ExtResource("16_3ekgd")
+
+[node name="BigGame" parent="GameWorld/Events" instance=ExtResource("17_g6d7r")]
+
+[node name="RepairTruckCity" type="Node3D" parent="GameWorld/Events"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+script = ExtResource("18_16lar")
+
+[node name="Path3D" type="Path3D" parent="GameWorld/Events/RepairTruckCity"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.22172, 1.38677, -3.79225)
+curve = SubResource("Curve3D_a3gr6")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckCity/Path3D"]
+transform = Transform3D(0.0238025, 0, -0.999712, 0, 1, 0, 0.999714, 0, 0.0238025, -6.38652, -3.74317e-05, -0.135338)
+
+[node name="Truck" parent="GameWorld/Events/RepairTruckCity/Path3D/PathFollow3D" instance=ExtResource("19_wgf32")]
+transform = Transform3D(-0.117, 0, -1.76665e-08, 0, 0.117, 0, 1.76665e-08, 0, -0.117, 0, 0, 0)
+
+[node name="DBBoard" parent="GameWorld/Events/RepairTruckCity" instance=ExtResource("20_ylg5a")]
+transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3.77489e-07, -1.91511, -1.60697, 0, 0, -1)
+
+[node name="RepairTruckSuburb" type="Node3D" parent="GameWorld/Events"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+script = ExtResource("18_16lar")
+
+[node name="Path3D" type="Path3D" parent="GameWorld/Events/RepairTruckSuburb"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.22172, 1.36215, -3.79225)
+curve = SubResource("Curve3D_auegt")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckSuburb/Path3D"]
+transform = Transform3D(0.0238571, 0, -0.999705, 0, 1, 0, 0.999707, 0, 0.0238571, -2.49883, -4.91142e-05, -0.184835)
+
+[node name="Truck" parent="GameWorld/Events/RepairTruckSuburb/Path3D/PathFollow3D" instance=ExtResource("19_wgf32")]
+transform = Transform3D(-0.117, 0, -1.76665e-08, 0, 0.117, 0, 1.76665e-08, 0, -0.117, 0, 0, 0)
+
+[node name="DBBoard" parent="GameWorld/Events/RepairTruckSuburb" instance=ExtResource("20_ylg5a")]
+transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3.77489e-07, -1.91511, -1.60697, 0, 0, -1)
+
+[node name="RepairTruckStadium" type="Node3D" parent="GameWorld/Events"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+script = ExtResource("18_16lar")
+
+[node name="Path3D" type="Path3D" parent="GameWorld/Events/RepairTruckStadium"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.88461, 1.39548, -0.775955)
+curve = SubResource("Curve3D_8le6i")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckStadium/Path3D"]
+transform = Transform3D(0.0106009, 2.61915e-06, -0.999937, -2.27373e-13, 1, 2.61928e-06, 0.999939, -2.77668e-08, 0.0106009, 0, 0, 0)
+
+[node name="Truck" parent="GameWorld/Events/RepairTruckStadium/Path3D/PathFollow3D" instance=ExtResource("19_wgf32")]
+transform = Transform3D(-0.117, 0, -1.76665e-08, 0, 0.117, 0, 1.76665e-08, 0, -0.117, 0, 0, 0)
+
+[node name="DBBoard" parent="GameWorld/Events/RepairTruckStadium" instance=ExtResource("20_ylg5a")]
+transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3.77489e-07, -1.91511, -1.60697, 0, 0, -1)
+
+[node name="RepairTruckTownship" type="Node3D" parent="GameWorld/Events"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 26)
+script = ExtResource("18_16lar")
+
+[node name="Path3D" type="Path3D" parent="GameWorld/Events/RepairTruckTownship"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.22172, 0.395881, -3.79225)
+curve = SubResource("Curve3D_1yvwy")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckTownship/Path3D"]
+transform = Transform3D(0.0165288, -4.37287e-07, -0.999854, -1.42108e-14, 1, -4.37343e-07, 0.99986, 7.22887e-09, 0.0165287, -4.24767, 0.999994, -0.138017)
+
+[node name="Truck" parent="GameWorld/Events/RepairTruckTownship/Path3D/PathFollow3D" instance=ExtResource("19_wgf32")]
+transform = Transform3D(-0.117, 3.27418e-11, -1.87429e-08, 1.81899e-11, 0.117, -4.42378e-09, 1.73459e-08, -5.3551e-09, -0.117, 0, 0, 0)
+
+[node name="DBBoard" parent="GameWorld/Events/RepairTruckTownship" instance=ExtResource("20_ylg5a")]
+transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3.77489e-07, -1.91511, -1.60697, 0, 0, -1)
+
+[node name="Storm" parent="GameWorld/Events" instance=ExtResource("21_tm6rt")]
+transform = Transform3D(0.112007, 0, -0.589453, 0, 0.6, 0, 0.589453, 0, 0.112007, 4.413, 12, 72.316)
+
+[node name="Game Level" parent="GameWorld" instance=ExtResource("22_vbsbn")]
+transform = Transform3D(0.957788, 0, -0.287478, 0, 1, 0, 0.287478, 0, 0.957788, 0, -1.51726, 1.81378)
+visible = false
+
+[node name="Roads" type="Node3D" parent="."]
+
+[node name="TurningCirlce2" parent="Roads" instance=ExtResource("23_h610g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.32779, -0.372324, 7.41619)
+
+[node name="SuberbRoads" type="Node3D" parent="Roads"]
+
+[node name="CornerRoad" parent="Roads/SuberbRoads" instance=ExtResource("24_5dby7")]
+transform = Transform3D(-0.0212041, 0, 0.999775, 0, 1, 0, -0.999775, 0, -0.0212041, 4.697, 0.36, 9.71504)
+
+[node name="CornerRoad2" parent="Roads/SuberbRoads" instance=ExtResource("24_5dby7")]
+transform = Transform3D(0.0136655, 0, -0.999907, 0, 1, 0, 0.999907, 0, 0.0136655, 6.237, 0.36, 8.46068)
+
+[node name="StraightRoad2" parent="Roads/SuberbRoads" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927, 7.29861, 0.36, 11.4018)
+
+[node name="BendingRoads3" parent="Roads/SuberbRoads" instance=ExtResource("26_rx1c8")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.91776, 0.337801, 14.4768)
+
+[node name="CornerRoad3" parent="Roads/SuberbRoads" instance=ExtResource("24_5dby7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2325, 0.36, 14.776)
+
+[node name="CornerRoad4" parent="Roads/SuberbRoads" instance=ExtResource("24_5dby7")]
+transform = Transform3D(0.00279246, 0, 0.999996, 0, 1, 0, -0.999996, 0, 0.00279246, 8.26592, 0.36, 17.93)
+
+[node name="CornerRoad5" parent="Roads/SuberbRoads" instance=ExtResource("24_5dby7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 11.4753, 0.36, 16.3148)
+
+[node name="StadiumRoad" type="Node3D" parent="Roads"]
+
+[node name="StraightRoad" parent="Roads/StadiumRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.49781, 0.36, 7.01848)
+
+[node name="StraightRoad2" parent="Roads/StadiumRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.69142, 0.36, 7.02048)
+
+[node name="CornerRoad2" parent="Roads/StadiumRoad" instance=ExtResource("24_5dby7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4687, 0.36, -2.59136)
+
+[node name="CornerRoad3" parent="Roads/StadiumRoad" instance=ExtResource("24_5dby7")]
+transform = Transform3D(-0.999996, 0, -0.00298443, 0, 1, 0, 0.00298443, 0, -0.999996, 14.7505, 0.36, 2.49848)
+
+[node name="StraightRoad4" parent="Roads/StadiumRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 11.6711, 0.36, 3.45948)
+
+[node name="StraightRoad5" parent="Roads/StadiumRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.4826, 0.36, 3.46748)
+
+[node name="CornerRoad4" parent="Roads/StadiumRoad" instance=ExtResource("24_5dby7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.51745, 0.36, 4.50848)
+
+[node name="CornerRoad5" parent="Roads/StadiumRoad" instance=ExtResource("24_5dby7")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 8.77206, 0.36, 6.06535)
+
+[node name="StraightRoad3" parent="Roads/StadiumRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1183, 0.36, -1.26893)
+
+[node name="StraightRoad6" parent="Roads/StadiumRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14.0783, 0.36, 0.035784)
+
+[node name="StraightRoad7" parent="Roads/StadiumRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14.0783, 0.36, 1.22996)
+
+[node name="TownshipRoads" type="Node3D" parent="Roads"]
+
+[node name="CornerRoad" parent="Roads/TownshipRoads" instance=ExtResource("24_5dby7")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -10.965, 0.613, 16.66)
+
+[node name="BendingRoads2" parent="Roads/TownshipRoads" instance=ExtResource("26_rx1c8")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -6.38665, 0.36, 13.263)
+
+[node name="StraightRoad" parent="Roads/TownshipRoads" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.524, 0.612532, 16.064)
+
+[node name="StraightRoad2" parent="Roads/TownshipRoads" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-4.25643e-08, 0.227586, -0.973758, 9.94811e-09, 0.973758, 0.227586, 1, 0, -4.37114e-08, -8.5203, 0.49505, 16.068)
+
+[node name="CornerRoad2" parent="Roads/TownshipRoads" instance=ExtResource("24_5dby7")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.38482, 0.36, 15.0585)
+
+[node name="StraightRoad3" parent="Roads/TownshipRoads" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.984, 0.36, 10.185)
+
+[node name="StraightRoad4" parent="Roads/TownshipRoads" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.54787, 0.36, 7.86312)
+
+[node name="CornerRoad3" parent="Roads/TownshipRoads" instance=ExtResource("24_5dby7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.63332, 0.36, 8.85601)
+
+[node name="StraightRoad5" parent="Roads/TownshipRoads" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.3465, 0.36, 7.86312)
+
+[node name="StraightRoad6" parent="Roads/TownshipRoads" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.16408, 0.36, 7.86312)
+
+[node name="StraightRoad7" parent="Roads/TownshipRoads" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0504162, 0.36, 7.86312)
+
+[node name="CityRoads" type="Node3D" parent="Roads"]
+
+[node name="CornerRoad" parent="Roads/CityRoads" instance=ExtResource("24_5dby7")]
+transform = Transform3D(-0.0073652, 0, 0.999973, 0, 1, 0, -0.999973, 0, -0.0073652, -4.885, 0.36, 4.91371)
+
+[node name="StraightRoad" parent="Roads/CityRoads" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.56376, 0.36, 4.25941)
+
+[node name="BendingRoads2" parent="Roads/CityRoads" instance=ExtResource("26_rx1c8")]
+transform = Transform3D(-0.00537554, 0, -0.999986, 0, 1, 0, 0.999986, 0, -0.00537554, -0.506032, 0.36, 4.68487)
+
+[node name="CornerRoad2" parent="Roads/CityRoads" instance=ExtResource("24_5dby7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.30288, 0.36, 3.6797)
+
+[node name="StraightRoad2" parent="Roads/CityRoads" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.90014, 0.36, 1.99507)
+
+[node name="StraightRoad3" parent="Roads/CityRoads" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.90014, 0.36, 0.796893)
+
+[node name="MainRoad" type="Node3D" parent="Roads"]
+
+[node name="BendingRoads2" parent="Roads/MainRoad" instance=ExtResource("26_rx1c8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.4, 0.338, 10.137)
+
+[node name="StraightRoad2" parent="Roads/MainRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927, 2.05148, 0.36, 13.0832)
+
+[node name="StraightRoad3" parent="Roads/MainRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927, 2.07357, 0.36, 14.2715)
+
+[node name="StraightRoad4" parent="Roads/MainRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927, 2.09155, 0.36, 15.4652)
+
+[node name="StraightRoad5" parent="Roads/MainRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927, 2.11364, 0.36, 16.6535)
+
+[node name="StraightRoad6" parent="Roads/MainRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927, 2.13259, 0.36, 17.8513)
+
+[node name="StraightRoad7" parent="Roads/MainRoad" instance=ExtResource("25_cmv5l")]
+transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927, 2.15468, 0.36, 19.0395)
+
+[node name="Decorations" type="Node3D" parent="."]
+
+[node name="Trees" type="Node3D" parent="Decorations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.20394, -1.03801, -2.72535)
+
+[node name="Tree1" parent="Decorations/Trees" instance=ExtResource("27_kleha")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07816, 0)
+
+[node name="Tree2" parent="Decorations/Trees" instance=ExtResource("28_uuhuf")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.47162, 1.40576, 7.01036)
+
+[node name="Tree3" parent="Decorations/Trees" instance=ExtResource("29_cc53p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.36963, 1.33892, 17.7301)
+
+[node name="Tree4" parent="Decorations/Trees" instance=ExtResource("30_d542x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9961, 1.03801, 14.8609)
+
+[node name="Bushes" type="Node3D" parent="Decorations"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0796058, 1.30671)
+
+[node name="Shrub" parent="Decorations/Bushes" instance=ExtResource("31_3lk13")]
+
+[node name="Shrub2" parent="Decorations/Bushes" instance=ExtResource("31_3lk13")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94095, 0.0796058, -0.707303)
+
+[node name="Shrub3" parent="Decorations/Bushes" instance=ExtResource("31_3lk13")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96949, 0.0796058, 0.919667)
+
+[node name="Shrub4" parent="Decorations/Bushes" instance=ExtResource("31_3lk13")]
+transform = Transform3D(-0.993447, 0, 0.114296, 0, 1, 0, -0.114296, 0, -0.993447, -3.05947, 0.364498, 11.2689)
+
+[node name="Shrub5" parent="Decorations/Bushes" instance=ExtResource("31_3lk13")]
+transform = Transform3D(-0.993447, 0, 0.114296, 0, 1, 0, -0.114296, 0, -0.993447, 0, 0.364498, 12.8073)
+
+[node name="Shrub6" parent="Decorations/Bushes" instance=ExtResource("31_3lk13")]
+transform = Transform3D(-0.773166, 0, 0.634205, 0, 1, 0, -0.634205, 0, -0.773166, 4.52024, 0.364498, 14.0622)
+
+[node name="Shrub7" parent="Decorations/Bushes" instance=ExtResource("31_3lk13")]
+transform = Transform3D(-0.701979, 0, -0.712198, 0.423701, 0.803784, -0.417622, 0.572453, -0.594921, -0.56424, -1.95746, 0.171738, 4.6609)
+
+[node name="Shrub8" parent="Decorations/Bushes" instance=ExtResource("31_3lk13")]
+transform = Transform3D(-0.993447, 0, 0.114296, 0, 1, 0, -0.114296, 0, -0.993447, 4.76004, 0.364498, 9.35443)
+
+[node name="Shrub9" parent="Decorations/Bushes" instance=ExtResource("31_3lk13")]
+transform = Transform3D(-0.993447, 0, 0.114296, 0, 1, 0, -0.114296, 0, -0.993447, 8.50637, 0.364498, 14.5803)
+
+[node name="Shrub10" parent="Decorations/Bushes" instance=ExtResource("31_3lk13")]
+transform = Transform3D(-0.993447, 0, 0.114296, 0, 1, 0, -0.114296, 0, -0.993447, 11.4994, 0.755412, 4.1082)
+
 [connection signal="day_over" from="GameUI/Clock" to="GameUI/Popup" method="_on_clock_day_over"]
 [connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]
 [connection signal="set_schedule" from="GameUI/Popup" to="GameUI/Schedule" method="_on_popup_set_schedule"]
 [connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]
+[connection signal="big_game_event" from="GameWorld/Events" to="GameWorld/Events/BigGame" method="_on_events_big_game_event"]
+[connection signal="city_storm" from="GameWorld/Events" to="GameWorld/Events/Storm" method="_on_events_city_storm"]
+[connection signal="city_truck" from="GameWorld/Events" to="GameWorld/Events/RepairTruckCity" method="_on_events_city_truck"]
+[connection signal="stadium_storm" from="GameWorld/Events" to="GameWorld/Events/Storm" method="_on_events_stadium_storm"]
+[connection signal="stadium_truck" from="GameWorld/Events" to="GameWorld/Events/RepairTruckStadium" method="_on_events_stadium_truck"]
+[connection signal="suburb_storm" from="GameWorld/Events" to="GameWorld/Events/Storm" method="_on_events_suburb_storm"]
+[connection signal="suburb_truck" from="GameWorld/Events" to="GameWorld/Events/RepairTruckSuburb" method="_on_events_suburb_truck"]
+[connection signal="township_storm" from="GameWorld/Events" to="GameWorld/Events/Storm" method="_on_events_township_storm"]
+[connection signal="township_truck" from="GameWorld/Events" to="GameWorld/Zones/Township" method="_on_events_township_truck"]
+[connection signal="start_big_game" from="GameWorld/Events/BigGame" to="GameWorld/Zones/Stadium" method="_on_big_game_start_big_game"]
+[connection signal="return_vehicle" from="GameWorld/Events/RepairTruckCity/DBBoard" to="GameWorld/Events/RepairTruckCity" method="_on_db_board_return_vehicle" flags=18]
+[connection signal="return_vehicle" from="GameWorld/Events/RepairTruckSuburb/DBBoard" to="GameWorld/Events/RepairTruckSuburb" method="_on_db_board_return_vehicle" flags=18]
+[connection signal="return_vehicle" from="GameWorld/Events/RepairTruckStadium/DBBoard" to="GameWorld/Events/RepairTruckStadium" method="_on_db_board_return_vehicle" flags=18]
+[connection signal="return_vehicle" from="GameWorld/Events/RepairTruckTownship/DBBoard" to="GameWorld/Events/RepairTruckTownship" method="_on_db_board_return_vehicle" flags=18]
