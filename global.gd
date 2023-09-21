@@ -13,6 +13,7 @@ var total_allocated_electricity
 var numberOfEvents
 
 # Sets which days can be played from the main menu
+var tutorial_unlocked = false
 var monday_unlocked = true
 var tuesday_unlocked = false
 var wednesday_unlocked = false
@@ -41,6 +42,9 @@ func change_scene(_scene):
 # Sets variables for the next day
 func next_day():
 	match day_of_the_week:
+		"Tutorial":
+			day_of_the_week = "Monday"
+			monday_unlocked = true
 		"Monday":
 			day_of_the_week = "Tuesday"
 			tuesday_unlocked = true

@@ -1,0 +1,262 @@
+[gd_scene load_steps=11 format=3 uid="uid://y7g46npaxry8"]
+
+[ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_arwdj"]
+[ext_resource type="Texture2D" uid="uid://s6ug8hnn127a" path="res://Game/GameUI/Clock/alarm.png" id="2_kwfos"]
+[ext_resource type="Script" path="res://Game/GameUI/Schedule/schedule.gd" id="3_twu8s"]
+[ext_resource type="Texture2D" uid="uid://bxh5ssoo2ou6i" path="res://Game/GameUI/Schedule/List UI 3.png" id="4_nqroc"]
+[ext_resource type="Script" path="res://Game/GameUI/InfoBar/infobar.gd" id="5_aidhi"]
+[ext_resource type="Texture2D" uid="uid://ctrroxd77j87v" path="res://Game/GameUI/InfoBar/Text_Icon.png" id="6_fiihv"]
+[ext_resource type="PackedScene" uid="uid://dx7wr27c0njgs" path="res://Game/GameUI/Characters/light_bulb.tscn" id="7_jleu6"]
+[ext_resource type="Script" path="res://Game/GameUI/Popup/popup.gd" id="8_2pm0b"]
+[ext_resource type="Texture2D" uid="uid://bv7udoh684mcg" path="res://Game/GameUI/Popup/Bubbles Square.png" id="9_s6puu"]
+[ext_resource type="Texture2D" uid="uid://drkdqcls3f43n" path="res://Game/GameUI/Popup/Bubbles Line.png" id="10_xlii7"]
+
+[node name="Tutorial" type="Node3D"]
+
+[node name="GameUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Clock" type="Control" parent="GameUI"]
+anchors_preset = 0
+offset_right = 300.0
+offset_bottom = 150.0
+script = ExtResource("1_arwdj")
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/Clock"]
+layout_mode = 0
+offset_left = -14.0
+offset_top = -96.0
+offset_right = 1010.0
+offset_bottom = 928.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_kwfos")
+
+[node name="Day" type="Label" parent="GameUI/Clock"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 16.0
+offset_right = 30.0
+offset_bottom = 88.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "Day"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Time" type="Label" parent="GameUI/Clock"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -68.0
+offset_right = 30.0
+offset_bottom = 4.00002
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 50
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Schedule" type="Control" parent="GameUI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_twu8s")
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/Schedule"]
+layout_mode = 0
+offset_top = 159.0
+offset_right = 270.0
+offset_bottom = 799.0
+texture = ExtResource("4_nqroc")
+
+[node name="LoadSheddingSchedule" type="RichTextLabel" parent="GameUI/Schedule"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 19.5
+anchor_right = 7.5
+anchor_bottom = 19.5
+offset_left = 25.0
+offset_top = -603.0
+offset_right = -25.0
+theme_override_font_sizes/normal_font_size = 28
+text = "City:
+00:00 - 00:00
+00:00 - 00:00
+
+Suburb:
+00:00 - 00:00
+00:00 - 00:00
+
+Stadium:
+00:00 - 00:00
+00:00 - 00:00
+
+Township:
+00:00 - 00:00
+00:00 - 00:00"
+
+[node name="InfoBar" type="Control" parent="GameUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -200.0
+offset_bottom = -0.000488281
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("5_aidhi")
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/InfoBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_fiihv")
+expand_mode = 1
+
+[node name="GameInfo" type="RichTextLabel" parent="GameUI/InfoBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.156
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.48
+offset_top = 25.0
+offset_right = -320.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "Click on a zone to toggle its power on or off"
+
+[node name="PowerButton" type="Button" parent="GameUI/InfoBar"]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -320.0
+offset_top = -165.0
+offset_right = -100.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 50
+text = "Power:
+OFF"
+
+[node name="Portrait" type="Control" parent="GameUI/InfoBar"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -300.0
+offset_right = 300.0
+grow_vertical = 0
+
+[node name="LightBulb" parent="GameUI/InfoBar/Portrait" instance=ExtResource("7_jleu6")]
+position = Vector2(150, 150)
+
+[node name="PowerLeftLabel" type="Label" parent="GameUI/InfoBar"]
+layout_mode = 0
+offset_left = 330.0
+offset_top = -880.0
+offset_right = 530.0
+offset_bottom = -805.0
+theme_override_font_sizes/font_size = 50
+
+[node name="Popup" type="Control" parent="GameUI"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_2pm0b")
+
+[node name="Panel" type="Panel" parent="GameUI/Popup"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PopupBubble" type="Control" parent="GameUI/Popup"]
+anchors_preset = 0
+offset_left = 460.0
+offset_top = 270.0
+offset_right = 1460.0
+offset_bottom = 770.0
+
+[node name="TextureRect" type="TextureRect" parent="GameUI/Popup/PopupBubble"]
+layout_mode = 0
+offset_left = -242.0
+offset_top = -192.0
+offset_right = 1806.0
+offset_bottom = 832.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("9_s6puu")
+
+[node name="TextureRect2" type="TextureRect" parent="GameUI/Popup/PopupBubble"]
+layout_mode = 0
+offset_left = -394.0
+offset_top = -163.0
+offset_right = 630.0
+offset_bottom = 861.0
+rotation = 0.226893
+texture = ExtResource("10_xlii7")
+flip_h = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GameUI/Popup/PopupBubble"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = 0.05
+anchor_right = 0.95
+anchor_bottom = 0.65
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 50
+text = "default text"
+
+[node name="PopupButton" type="Button" parent="GameUI/Popup/PopupBubble"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -190.0
+offset_right = 63.0
+offset_bottom = -110.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[connection signal="day_over" from="GameUI/Clock" to="GameUI/Popup" method="_on_clock_day_over"]
+[connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]
+[connection signal="set_schedule" from="GameUI/Popup" to="GameUI/Schedule" method="_on_popup_set_schedule"]
+[connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]

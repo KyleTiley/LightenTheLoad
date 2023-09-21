@@ -1,3 +1,5 @@
 res://Game/game.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.gd
-res://Game/GameUI/Schedule/schedule.gd
+res://Game/Tutorial_Level/Tutorial.tscn
+res://global.gd
+res://Game/GameUI/Popup/popup.gd

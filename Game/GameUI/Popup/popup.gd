@@ -11,6 +11,9 @@ var start_day = true
 func _ready():
 	# Sets popup variables for each day
 	match Global.day_of_the_week:
+		"Tutorial":
+			daily_event_reminder = "Welcome to LightenTheLoad. \n You can call me MR. Bulby, I will be your guide throughout the tutorial."
+		
 		"Monday":
 			daily_event_reminder = "Welcome to your first day! Follow the loadshedding schedule on the left and try to keep everyone happy as best you can. Good luck!"
 			Global.city_schedule1 = "08"
