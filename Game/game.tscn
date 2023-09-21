@@ -151,7 +151,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.8846
 curve = SubResource("Curve3D_jwyh6")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckStadium/Path3D"]
-transform = Transform3D(0.0106009, 2.61915e-06, -0.999937, -2.27373e-13, 1, 2.61928e-06, 0.999939, -2.77668e-08, 0.0106009, 0, 0, 0)
+transform = Transform3D(0.0106009, 2.61915e-06, -0.999937, -2.27373e-13, 1, 2.61928e-06, 0.999939, -2.77668e-08, 0.0106008, 0, 0, 0)
 
 [node name="Truck" parent="GameWorld/Events/RepairTruckStadium/Path3D/PathFollow3D" instance=ExtResource("10_dkhao")]
 transform = Transform3D(-0.117, 0, -1.76665e-08, 0, 0.117, 0, 1.76665e-08, 0, -0.117, 0, 0, 0)

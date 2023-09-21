@@ -4,6 +4,7 @@ extends Node
 
 var main_menu = "res://MainMenu/main_menu.tscn"
 var game = "res://Game/game.tscn"
+var tutorial = "res://Game/Tutorial_Level/Tutorial.tscn"
 
 # VARIABLES
 
@@ -14,7 +15,7 @@ var numberOfEvents
 
 # Sets which days can be played from the main menu
 var tutorial_unlocked = true
-var monday_unlocked = false
+var monday_unlocked = true
 var tuesday_unlocked = false
 var wednesday_unlocked = false
 var thursday_unlocked = false
@@ -33,6 +34,8 @@ var township_schedule2
 
 func change_scene(_scene):
 	match _scene:
+		"Tutorial":
+			get_tree().change_scene_to_file(tutorial)
 		"Game":
 			get_tree().change_scene_to_file(game)
 		"MainMenu":
@@ -61,3 +64,4 @@ func next_day():
 			# None
 			pass
 	change_scene("Game")
+	change_scene("Tutorial")

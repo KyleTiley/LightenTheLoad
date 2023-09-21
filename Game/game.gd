@@ -39,6 +39,9 @@ func _process(_delta):
 # Sets unique variables for each day
 func set_daily_variables(_day):
 	match _day:
+		"Tutorial":
+			Global.total_allocated_electricity = 10000
+			Global.numberOfEvents = 0
 		"Monday":
 			Global.total_allocated_electricity = 10000
 			Global.numberOfEvents = 0
@@ -66,6 +69,7 @@ func selected_zone_manager(_name, _is_using_electricity, _electricity_used, _cur
 # Individual zone click functions to store variables
 func _on_city_zone_clicked(_name, _is_using_electricity, _electricity_used, _current_happiness):
 	active_zone = city_zone
+	print_debug("ssss")
 	selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness)
 
 func _on_stadium_zone_clicked(_name, _is_using_electricity, _electricity_used, _current_happiness):

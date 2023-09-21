@@ -5,3 +5,5 @@ res://global.gd
 res://Game/GameUI/Popup/popup.gd
 res://MainMenu/main_menu.tscn
 res://MainMenu/main_menu.gd
+res://Game/GameWorld/Zones/City/city.gd
+res://Game/game.gd

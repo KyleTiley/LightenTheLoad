@@ -1,13 +1,10 @@
-<<<<<<< Updated upstream
+Node
 ColorRect
-=======
 CollisionShape3D
 Area3D
->>>>>>> Stashed changes
 Node3D
 AudioStreamPlayer2D
 AudioStreamPlayer
-Node
 AudioListener2D
 Node2D
 TextureRect
