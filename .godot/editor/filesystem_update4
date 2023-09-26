@@ -1,16 +1,4 @@
 res://Game/game.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.gd
-res://Game/Tutorial_Level/Tutorial.tscn
-res://global.gd
-res://Game/GameUI/Popup/popup.gd
 res://MainMenu/main_menu.tscn
-res://MainMenu/main_menu.gd
-res://Game/GameWorld/Zones/City/city.gd
-res://Game/game.gd
-res://Game/GameUI/InfoBar/infobar.gd
-res://Game/GameWorld/Zones/Suburb/suburb.gd
-res://Game/GameWorld/Zones/Township/township.gd
-res://Game/GameUI/Clock/clock.gd
-res://Game/Events/events.gd
-res://Game/Events/Storm/storm.gd
-res://Game/Events/RepairTruck/repair_truck.gd
+res://Game/GameUI/Popup/popup.gd
