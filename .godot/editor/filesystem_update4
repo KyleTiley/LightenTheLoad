@@ -1,2 +1,6 @@
 res://Game/game.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.gd
+res://Game/GameWorld/Zones/City/city.gd
+res://Game/GameWorld/Zones/zone.gd
+res://Game/Events/RepairTruck/repair_truck.gd
+res://Game/Events/Storm/storm.gd
