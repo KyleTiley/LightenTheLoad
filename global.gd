@@ -15,7 +15,7 @@ var numberOfEvents
 # Sets which days can be played from the main menu
 var monday_unlocked = true
 var tuesday_unlocked = false
-var wednesday_unlocked = false
+var wednesday_unlocked = true
 var thursday_unlocked = false
 var friday_unlocked = false
 
