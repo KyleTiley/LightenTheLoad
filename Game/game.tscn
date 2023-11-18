@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=42 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -32,7 +32,6 @@
 [ext_resource type="PackedScene" uid="uid://b47uk2qfcypre" path="res://Decorations/Tree2.glb" id="30_d1tcj"]
 [ext_resource type="PackedScene" uid="uid://cglxmpsjfrqp5" path="res://Decorations/Tree1.glb" id="31_8wlbx"]
 [ext_resource type="PackedScene" uid="uid://bt8e1xpfjo173" path="res://Decorations/Sbrub.glb" id="32_1t2sk"]
-[ext_resource type="PackedScene" uid="uid://dlss5s3dsqgdy" path="res://Decorations/Bush.glb" id="33_i5s8p"]
 [ext_resource type="PackedScene" uid="uid://de2iaa01t0n4e" path="res://Decorations/Grass.glb" id="34_dto3v"]
 [ext_resource type="PackedScene" uid="uid://tjxkxqgt4lbf" path="res://Decorations/Mountain.glb" id="35_bt5dt"]
 
@@ -576,38 +575,137 @@ transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927
 
 [node name="Decorations" type="Node3D" parent="."]
 
-[node name="Tree3" parent="." instance=ExtResource("29_7wg6f")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.34283, 0, -2.74131)
+[node name="Tree3" parent="Decorations" instance=ExtResource("29_7wg6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.46962, -0.112987, -20.7424)
 
-[node name="Tree2" parent="." instance=ExtResource("30_d1tcj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.2765, 0.918974, -2.14586)
+[node name="Tree14" parent="Decorations" instance=ExtResource("29_7wg6f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.43167, -0.112987, -14.5583)
 
-[node name="Tree4" parent="." instance=ExtResource("30_d1tcj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.650908, 0, -0.220235)
+[node name="Tree5" parent="Decorations" instance=ExtResource("29_7wg6f")]
+transform = Transform3D(0.803732, 0, -0.594991, 0, 1, 0, 0.594991, 0, 0.803732, 18.8403, -0.112987, -21.5085)
 
-[node name="Tree1" parent="." instance=ExtResource("31_8wlbx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30.3067, 0, 3.40586)
+[node name="Tree6" parent="Decorations" instance=ExtResource("29_7wg6f")]
+transform = Transform3D(0.803732, 0, -0.594991, 0, 1, 0, 0.594991, 0, 0.803732, -6.44798, -0.112987, -19.087)
 
-[node name="Sbrub" parent="." instance=ExtResource("32_1t2sk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0683, 0, 2.33066)
+[node name="Tree2" parent="Decorations" instance=ExtResource("30_d1tcj")]
+transform = Transform3D(0.876113, 0, 0.482105, 0, 1, 0, -0.482105, 0, 0.876113, 19.1184, 0.069154, 0.807506)
 
-[node name="Bush" parent="." instance=ExtResource("33_i5s8p")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.55536, 0.628502, 5.87226)
+[node name="Tree11" parent="Decorations" instance=ExtResource("30_d1tcj")]
+transform = Transform3D(0.876113, 0, 0.482105, 0, 1, 0, -0.482105, 0, 0.876113, -19.6046, 0.069154, -9.28178)
 
-[node name="Grass" parent="." instance=ExtResource("34_dto3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3174, 0.365146, 1.17591)
+[node name="Tree4" parent="Decorations" instance=ExtResource("30_d1tcj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1012, 0.815368, 2.38876)
 
-[node name="Grass2" parent="." instance=ExtResource("34_dto3v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.4684, 0.442828, 4.85506)
+[node name="Tree10" parent="Decorations" instance=ExtResource("30_d1tcj")]
+transform = Transform3D(0.590732, 0, -0.806868, 0, 1, 0, 0.806868, 0, 0.590732, 3.64261, 0.182038, -10.8619)
 
-[node name="Mountain" parent="." instance=ExtResource("35_bt5dt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.28767, -12.988, -42.6782)
+[node name="Tree9" parent="Decorations" instance=ExtResource("30_d1tcj")]
+transform = Transform3D(0.882562, 0, -0.470196, 0, 1, 0, 0.470196, 0, 0.882562, 19.0878, 0.330465, 4.64988)
 
-[node name="Mountain3" parent="." instance=ExtResource("35_bt5dt")]
-transform = Transform3D(0.636496, 0, 0.77128, 0, 1, 0, -0.77128, 0, 0.636496, -13.3358, -12.988, -16.2959)
+[node name="Tree1" parent="Decorations" instance=ExtResource("31_8wlbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.4415, 0.960404, 2.8693)
 
-[node name="Mountain2" parent="." instance=ExtResource("35_bt5dt")]
-transform = Transform3D(0.404711, 0, -0.914445, 0, 1, 0, 0.914445, 0, 0.404711, 31.9768, -12.988, -14.3716)
+[node name="Tree12" parent="Decorations" instance=ExtResource("31_8wlbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.6549, 0.960404, 2.8693)
+
+[node name="Tree7" parent="Decorations" instance=ExtResource("31_8wlbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -39.7249, 0.960404, 11.4059)
+
+[node name="Tree15" parent="Decorations" instance=ExtResource("31_8wlbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.2977, 0.128193, 18.4333)
+
+[node name="Tree8" parent="Decorations" instance=ExtResource("31_8wlbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.1608, 0.244112, -5.90683)
+
+[node name="Tree13" parent="Decorations" instance=ExtResource("31_8wlbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6854, 0.244112, -16.4236)
+
+[node name="Sbrub" parent="Decorations" instance=ExtResource("32_1t2sk")]
+transform = Transform3D(0.897235, 0, -0.441553, 0, 1, 0, 0.441553, 0, 0.897235, -5.57286, 0, 5.7069)
+
+[node name="Sbrub5" parent="Decorations" instance=ExtResource("32_1t2sk")]
+transform = Transform3D(0.654952, 0, 0.755671, 0, 1, 0, -0.755671, 0, 0.654952, 28.7981, 0, 11.5882)
+
+[node name="Sbrub2" parent="Decorations" instance=ExtResource("32_1t2sk")]
+transform = Transform3D(0.851535, 0, -0.524298, 0, 1, 0, 0.524298, 0, 0.851535, 12.648, 0, -6.19717)
+
+[node name="Sbrub6" parent="Decorations" instance=ExtResource("32_1t2sk")]
+transform = Transform3D(0.381393, 0, 0.924413, 0, 1, 0, -0.924413, 0, 0.381393, 7.54342, 0, -6.47337)
+
+[node name="Sbrub4" parent="Decorations" instance=ExtResource("32_1t2sk")]
+transform = Transform3D(0.851535, 0, -0.524298, 0, 1, 0, 0.524298, 0, 0.851535, 2.51417, 0.427414, 15.7727)
+
+[node name="Sbrub3" parent="Decorations" instance=ExtResource("32_1t2sk")]
+transform = Transform3D(-0.179266, 0, -0.983801, 0, 1, 0, 0.983801, 0, -0.179266, 8.38336, 0, 16.0025)
+
+[node name="Grass" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3174, 0.478574, 1.17591)
+
+[node name="Grass15" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.32725, 0.478574, 4.36909)
+
+[node name="Grass16" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14587, 0.828216, 4.06785)
+
+[node name="Grass14" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.48395, 0.117705, -0.862034)
+
+[node name="Grass2" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2127, 0.556256, 5.36656)
+
+[node name="Grass3" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8568, 0.556256, 5.36656)
+
+[node name="Grass7" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.62925, 0.868818, 14.5767)
+
+[node name="Grass8" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.56702, 0.868818, 12.917)
+
+[node name="Grass9" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1593, 0.350251, 10.8128)
+
+[node name="Grass10" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.589, 0.350251, 10.8128)
+
+[node name="Grass11" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.1593, 0.350251, 12.8823)
+
+[node name="Grass12" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.4246, 0.350251, 13.4266)
+
+[node name="Grass13" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3811, 0.350251, 15.5913)
+
+[node name="Grass4" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0029, 0.556256, 5.03774)
+
+[node name="Grass5" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.9206, 0.556256, 5.03774)
+
+[node name="Grass17" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.6606, 0.556256, 15.8428)
+
+[node name="Grass18" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.5975, 0.556256, 17.1086)
+
+[node name="Grass19" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.6104, 0.556256, 17.9818)
+
+[node name="Grass20" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9264, 0.556256, 18.2096)
+
+[node name="Grass6" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.094, 0.442828, 5.03774)
+
+[node name="Mountain" parent="Decorations" instance=ExtResource("35_bt5dt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.28767, -10.7824, -35.8118)
+
+[node name="Mountain3" parent="Decorations" instance=ExtResource("35_bt5dt")]
+transform = Transform3D(0.636496, 0, 0.77128, 0, 1, 0, -0.77128, 0, 0.636496, -22.2144, -12.988, -16.2959)
+
+[node name="Mountain2" parent="Decorations" instance=ExtResource("35_bt5dt")]
+transform = Transform3D(0.457284, 0, -0.889321, 0, 1, 0, 0.889321, 0, 0.457284, 38.7187, -12.988, -9.6378)
 
 [connection signal="display_info" from="." to="GameUI/InfoBar" method="_on_game_display_info"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/City" method="_on_game_game_timer"]
