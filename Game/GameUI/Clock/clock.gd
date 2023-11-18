@@ -33,6 +33,7 @@ func _process(_delta):
 	if clock_minutes == 60:
 		clock_hours += 1
 		clock_minutes = 0
+		print(sun.rotation.x)
 	if clock_hours == end_time:
 		day_over.emit()
 	change_clock_time()
@@ -55,14 +56,15 @@ func _process(_delta):
 		schedule_time_reached = false
 	
 	# sun
-	var day_ratio : float
-	day_ratio = float(clock_hours - start_time) / float(end_time - start_time)
-	var sun_rotation = (1 - day_ratio) * sun_start
-	sun.rotate_x(sun_rotation)
+#	var day_ratio : float
+#	day_ratio = float(clock_hours - start_time) / float(end_time - start_time)
+#	var sun_rotation = (1 - day_ratio) * sun_start
+#	sun.rotate_x(sun_rotation)
 
 # Controls the speed of the clock
 func _on_game_game_timer():
 	clock_minutes += time_elapsed_per_second
+	sun.rotate_z(deg_to_rad(1.5))
 
 func change_clock_time():
 	var _time : String = "%02d:%02d" % [clock_hours, clock_minutes]
