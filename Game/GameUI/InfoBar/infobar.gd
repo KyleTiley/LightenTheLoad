@@ -6,7 +6,6 @@ signal toggle_power
 # REFERENCES
 @onready var game_info = $GameInfo
 @onready var power_button = $PowerButton
-@onready var power_left_label = $PowerLeftLabel
 @onready var power_bar = $TextureProgressBar
 
 # VARIABLES
@@ -27,7 +26,6 @@ func _process(_delta):
 	current_elec = starting_elec - Global.total_allocated_electricity
 	var elec_ratio = current_elec / starting_elec
 	power_bar.value = int(elec_ratio*100)
-	power_left_label.text = str(Global.total_allocated_electricity)
 	if should_display_info:
 		display_info(selected_zone, is_using_electricity, electricity_used, current_happiness)
 

@@ -55,9 +55,10 @@ func _process(_delta):
 		schedule_time_reached = false
 	
 	# sun
-	var day_ratio = end_time - start_time
-	var sun_ratio = sun_end - sun_start
-	sun.ro
+	var day_ratio : float
+	day_ratio = float(clock_hours - start_time) / float(end_time - start_time)
+	var sun_rotation = (1 - day_ratio) * sun_start
+	sun.rotate_x(sun_rotation)
 
 # Controls the speed of the clock
 func _on_game_game_timer():
