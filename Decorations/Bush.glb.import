@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://4v7v6vdie4df"
-path="res://.godot/imported/Shrub.glb-2bacb174785d9104034473a1f6a963e8.scn"
+uid="uid://dlss5s3dsqgdy"
+path="res://.godot/imported/Bush.glb-bd5073260da4f086f38da5c40c6d5b88.scn"
 
 [deps]
 
-source_file="res://Decorations/Shrub.glb"
-dest_files=["res://.godot/imported/Shrub.glb-2bacb174785d9104034473a1f6a963e8.scn"]
+source_file="res://Decorations/Bush.glb"
+dest_files=["res://.godot/imported/Bush.glb-bd5073260da4f086f38da5c40c6d5b88.scn"]
 
 [params]
 
