@@ -13,6 +13,7 @@ signal day_over
 # SUN
 var sun_start = -180
 var sun_end = 0
+var rot_val = 0.025
 
 # VARIABLES
 var time_elapsed_per_second = 5
@@ -54,17 +55,13 @@ func _process(_delta):
 	else:
 		# this code is never reached???
 		schedule_time_reached = false
-	
-	# sun
-#	var day_ratio : float
-#	day_ratio = float(clock_hours - start_time) / float(end_time - start_time)
-#	var sun_rotation = (1 - day_ratio) * sun_start
-#	sun.rotate_x(sun_rotation)
+
+func _physics_process(delta):
+	sun.rotate_z(deg_to_rad(rot_val))
 
 # Controls the speed of the clock
 func _on_game_game_timer():
 	clock_minutes += time_elapsed_per_second
-	sun.rotate_z(deg_to_rad(1.5))
 
 func change_clock_time():
 	var _time : String = "%02d:%02d" % [clock_hours, clock_minutes]
