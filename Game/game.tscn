@@ -1,10 +1,9 @@
-[gd_scene load_steps=43 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=42 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
 [ext_resource type="Script" path="res://Game/game.gd" id="1_vwxi5"]
 [ext_resource type="PackedScene" uid="uid://dx7wr27c0njgs" path="res://Game/GameUI/Characters/light_bulb.tscn" id="1_wo4ky"]
-[ext_resource type="Script" path="res://Game/SunController.gd" id="2_4s4jj"]
 [ext_resource type="PackedScene" uid="uid://c8jicq5bwrdnu" path="res://Game/GameWorld/Zones/Stadium/stadium.tscn" id="2_p7jbk"]
 [ext_resource type="PackedScene" uid="uid://cqhiu8fvdw425" path="res://Game/GameWorld/Zones/Township/township.tscn" id="3_v308r"]
 [ext_resource type="PackedScene" uid="uid://da71hvmgak7ff" path="res://Game/GameWorld/Zones/Suburb/suburb.tscn" id="4_0fdj6"]
@@ -81,9 +80,8 @@ point_count = 17
 script = ExtResource("1_vwxi5")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.227303, 0.973609, -0.0204757, -0.579016, -0.118214, 0.806701, 0.78299, 0.195221, 0.590606, 11.0656, 16.7967, 0)
+transform = Transform3D(0.0801989, 4.02058e-08, -0.996779, 0.996779, -4.35706e-08, 0.0801989, -4.02058e-08, -1, -4.35706e-08, 0, 20, 0)
 shadow_enabled = true
-script = ExtResource("2_4s4jj")
 
 [node name="GameWorld" type="Node3D" parent="."]
 

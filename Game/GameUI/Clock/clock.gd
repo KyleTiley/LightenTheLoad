@@ -8,6 +8,11 @@ signal day_over
 # REFERENCES
 @onready var day_label = $Day
 @onready var time_label = $Time
+@onready var sun = $"../../DirectionalLight3D"
+
+# SUN
+var sun_start = -180
+var sun_end = 0
 
 # VARIABLES
 var time_elapsed_per_second = 5
@@ -48,6 +53,11 @@ func _process(_delta):
 	else:
 		# this code is never reached???
 		schedule_time_reached = false
+	
+	# sun
+	var day_ratio = end_time - start_time
+	var sun_ratio = sun_end - sun_start
+	sun.ro
 
 # Controls the speed of the clock
 func _on_game_game_timer():
