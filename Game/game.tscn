@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=43 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -25,7 +25,9 @@
 [ext_resource type="Script" path="res://Game/GameUI/Schedule/schedule.gd" id="18_o0xj2"]
 [ext_resource type="Texture2D" uid="uid://bxh5ssoo2ou6i" path="res://Game/GameUI/Schedule/List UI 3.png" id="20_nhxy6"]
 [ext_resource type="PackedScene" uid="uid://b04r53dh8abu7" path="res://Roads/Turningcirlcescene.tscn" id="21_n3ct1"]
+[ext_resource type="Texture2D" uid="uid://dbf34eb5m88bk" path="res://Game/GameUI/InfoBar/OnLighting.png" id="22_sli78"]
 [ext_resource type="PackedScene" uid="uid://ohff5tdyqgqo" path="res://Roads/Straightroad.tscn" id="22_xcibf"]
+[ext_resource type="Texture2D" uid="uid://crh1v0didcr2" path="res://Game/GameUI/InfoBar/OffLighting.png" id="23_dmeu5"]
 [ext_resource type="PackedScene" uid="uid://vf282wd1r1i3" path="res://Roads/CornerRoadscene.tscn" id="23_vk12k"]
 [ext_resource type="PackedScene" uid="uid://dauxp5jreywid" path="res://Roads/BendingRoad2Scene.tscn" id="25_58s0k"]
 [ext_resource type="PackedScene" uid="uid://bp0w10flslua8" path="res://Decorations/Tree1.Scene.tscn" id="25_dyxas"]
@@ -79,7 +81,7 @@ point_count = 17
 script = ExtResource("1_vwxi5")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.227303, 0.973609, -0.0204761, -0.579016, -0.118214, 0.8067, 0.78299, 0.195221, 0.590606, 0, 16.7967, 0)
+transform = Transform3D(-0.227303, 0.973609, -0.0204757, -0.579016, -0.118214, 0.806701, 0.78299, 0.195221, 0.590606, 11.0656, 16.7967, 0)
 shadow_enabled = true
 script = ExtResource("2_4s4jj")
 
@@ -356,6 +358,16 @@ offset_top = -880.0
 offset_right = 530.0
 offset_bottom = -805.0
 theme_override_font_sizes/font_size = 50
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="GameUI/InfoBar"]
+layout_mode = 0
+offset_left = 349.0
+offset_top = -865.0
+offset_right = 605.0
+offset_bottom = -609.0
+fill_mode = 2
+texture_under = ExtResource("22_sli78")
+texture_progress = ExtResource("23_dmeu5")
 
 [node name="Popup" type="Control" parent="GameUI"]
 layout_mode = 1

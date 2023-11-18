@@ -19,7 +19,7 @@ var active_zone
 
 # FUNCTIONS
 
-func _ready():
+func _init():
 	set_daily_variables(Global.day_of_the_week)
 
 # Increments timer
