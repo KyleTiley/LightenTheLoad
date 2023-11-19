@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=50 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -34,6 +34,8 @@
 [ext_resource type="PackedScene" uid="uid://vf282wd1r1i3" path="res://Roads/CornerRoadscene.tscn" id="23_vk12k"]
 [ext_resource type="PackedScene" uid="uid://dauxp5jreywid" path="res://Roads/BendingRoad2Scene.tscn" id="25_58s0k"]
 [ext_resource type="PackedScene" uid="uid://c41mcg2hfpiqr" path="res://decorations.tscn" id="34_rtdb1"]
+[ext_resource type="Texture2D" uid="uid://brfqajolvc8wb" path="res://Particles/ParticleImages/Angry.png" id="35_0gaj8"]
+[ext_resource type="Texture2D" uid="uid://bgayrc3ehfqq" path="res://Particles/ParticleImages/Happy.png" id="36_3ie2f"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -75,6 +77,32 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 17
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6e7uy"]
+gravity = Vector3(0, 9.8, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vvvxu"]
+transparency = 1
+albedo_texture = ExtResource("35_0gaj8")
+
+[sub_resource type="QuadMesh" id="QuadMesh_edp8h"]
+material = SubResource("StandardMaterial3D_vvvxu")
+size = Vector2(3.5, 3.55)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vpjom"]
+gravity = Vector3(0, 9.8, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kte1y"]
+transparency = 1
+albedo_texture = ExtResource("36_3ie2f")
+
+[sub_resource type="QuadMesh" id="QuadMesh_cs48b"]
+material = SubResource("StandardMaterial3D_kte1y")
+size = Vector2(3.5, 3.5)
 
 [node name="Game" type="Node"]
 script = ExtResource("1_vwxi5")
@@ -676,6 +704,24 @@ transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927
 transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927, 2.15468, 0.36, 19.0395)
 
 [node name="Decorations" parent="." instance=ExtResource("34_rtdb1")]
+
+[node name="Particle Effects" type="Node3D" parent="."]
+
+[node name="Angry Particles" type="GPUParticles3D" parent="Particle Effects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5627, 4.49321, -9.34961)
+amount = 10
+lifetime = 4.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_6e7uy")
+draw_pass_1 = SubResource("QuadMesh_edp8h")
+
+[node name="Happy Particles" type="GPUParticles3D" parent="Particle Effects"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0365, 4.49321, 10.2257)
+amount = 10
+lifetime = 4.0
+fixed_fps = 60
+process_material = SubResource("ParticleProcessMaterial_vpjom")
+draw_pass_1 = SubResource("QuadMesh_cs48b")
 
 [connection signal="display_info" from="." to="GameUI/InfoBar" method="_on_game_display_info"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/City" method="_on_game_game_timer"]
