@@ -597,7 +597,7 @@ transform = Transform3D(0.876113, 0, 0.482105, 0, 1, 0, -0.482105, 0, 0.876113, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1012, 0.815368, 2.38876)
 
 [node name="Tree10" parent="Decorations" instance=ExtResource("30_d1tcj")]
-transform = Transform3D(0.590732, 0, -0.806868, 0, 1, 0, 0.806868, 0, 0.590732, 3.64261, 0.182038, -10.8619)
+transform = Transform3D(0.590732, 0, -0.806868, 0, 1, 0, 0.806868, 0, 0.590732, 2.87806, 0.182038, -12.808)
 
 [node name="Tree9" parent="Decorations" instance=ExtResource("30_d1tcj")]
 transform = Transform3D(0.882562, 0, -0.470196, 0, 1, 0, 0.470196, 0, 0.882562, 19.0878, 0.330465, 4.64988)
@@ -620,8 +620,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.1608, 0.244112, -5.90683)
 [node name="Tree13" parent="Decorations" instance=ExtResource("31_8wlbx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.6854, 0.244112, -16.4236)
 
+[node name="Tree16" parent="Decorations" instance=ExtResource("31_8wlbx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.0373, 0.244112, -1.34097)
+
 [node name="Sbrub" parent="Decorations" instance=ExtResource("32_1t2sk")]
 transform = Transform3D(0.897235, 0, -0.441553, 0, 1, 0, 0.441553, 0, 0.897235, -5.57286, 0, 5.7069)
+
+[node name="Sbrub7" parent="Decorations" instance=ExtResource("32_1t2sk")]
+transform = Transform3D(0.998928, 0, -0.0462873, 0, 1, 0, 0.0462873, 0, 0.998928, 3.52502, 2.38419e-07, 7.19399)
 
 [node name="Sbrub5" parent="Decorations" instance=ExtResource("32_1t2sk")]
 transform = Transform3D(0.654952, 0, 0.755671, 0, 1, 0, -0.755671, 0, 0.654952, 28.7981, 0, 11.5882)
@@ -630,7 +636,7 @@ transform = Transform3D(0.654952, 0, 0.755671, 0, 1, 0, -0.755671, 0, 0.654952, 
 transform = Transform3D(0.851535, 0, -0.524298, 0, 1, 0, 0.524298, 0, 0.851535, 12.648, 0, -6.19717)
 
 [node name="Sbrub6" parent="Decorations" instance=ExtResource("32_1t2sk")]
-transform = Transform3D(0.381393, 0, 0.924413, 0, 1, 0, -0.924413, 0, 0.381393, 7.54342, 0, -6.47337)
+transform = Transform3D(0.490158, 0, 0.871633, 0, 1, 0, -0.871633, 0, 0.490158, 10.1846, 0, -3.41514)
 
 [node name="Sbrub4" parent="Decorations" instance=ExtResource("32_1t2sk")]
 transform = Transform3D(0.851535, 0, -0.524298, 0, 1, 0, 0.524298, 0, 0.851535, 2.51417, 0.427414, 15.7727)
@@ -655,6 +661,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.2127, 0.556256, 5.36656)
 
 [node name="Grass3" parent="Decorations" instance=ExtResource("34_dto3v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.8568, 0.556256, 5.36656)
+
+[node name="Grass21" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.882, 0.556256, 15.2782)
+
+[node name="Grass22" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8712, 0.556256, 16.4009)
+
+[node name="Grass23" parent="Decorations" instance=ExtResource("34_dto3v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3381, 0.556256, 15.057)
 
 [node name="Grass7" parent="Decorations" instance=ExtResource("34_dto3v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.62925, 0.868818, 14.5767)
