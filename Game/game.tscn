@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=43 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://ctrroxd77j87v" path="res://Game/GameUI/InfoBar/Text_Icon.png" id="14_xtbs4"]
 [ext_resource type="Texture2D" uid="uid://bjm711tkfvrig" path="res://Game/GameUI/Clock/2_hours.png" id="16_8rlsn"]
 [ext_resource type="Texture2D" uid="uid://crhrv3sa8cdug" path="res://Game/GameUI/Clock/Clock_boarder.png" id="16_cn6tn"]
+[ext_resource type="Texture2D" uid="uid://cnhcqk7nc14xh" path="res://Game/GameUI/Clock/Clock_Middle_Piece.png" id="17_epdny"]
 [ext_resource type="Texture2D" uid="uid://4bygcbgll6oi" path="res://Game/GameUI/Clock/New_hand.png" id="17_m45e0"]
 [ext_resource type="Script" path="res://Game/GameUI/Schedule/schedule.gd" id="18_o0xj2"]
 [ext_resource type="Texture2D" uid="uid://bxh5ssoo2ou6i" path="res://Game/GameUI/Schedule/List UI 3.png" id="20_nhxy6"]
@@ -255,57 +256,77 @@ scale = Vector2(0.8, 0.8)
 [node name="hours1" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
 modulate = Color(1, 0.372549, 1, 1)
 layout_mode = 0
-offset_top = -1.0
-offset_right = 512.0
-offset_bottom = 511.0
-rotation = -1.11177
+offset_left = 3.75002
+offset_top = -5.0
+offset_right = 515.75
+offset_bottom = 507.0
+rotation = -2.13105
 pivot_offset = Vector2(257.5, 254.75)
 texture = ExtResource("16_8rlsn")
 
 [node name="hours2" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
 modulate = Color(0.592157, 0.360784, 1, 1)
 layout_mode = 0
-offset_top = -1.0
-offset_right = 512.0
-offset_bottom = 511.0
+offset_left = 8.74998
+offset_top = -4.99992
+offset_right = 520.75
+offset_bottom = 507.0
+rotation = -1.09083
 pivot_offset = Vector2(257.5, 254.75)
 texture = ExtResource("16_8rlsn")
 
 [node name="hours3" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+modulate = Color(1, 1, 0.321569, 1)
 layout_mode = 0
-offset_top = -1.0
-offset_right = 512.0
-offset_bottom = 511.0
-rotation = 1.11177
+offset_left = 5.0
+offset_right = 517.0
+offset_bottom = 512.0
+scale = Vector2(0.95, 0.95)
 pivot_offset = Vector2(257.5, 254.75)
 texture = ExtResource("16_8rlsn")
 
 [node name="hours4" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+modulate = Color(1, 0.290196, 0.184314, 1)
 layout_mode = 0
-offset_top = -1.0
-offset_right = 512.0
-offset_bottom = 511.0
-rotation = 2.16246
+offset_left = -1.24996
+offset_top = 7.50001
+offset_right = 510.75
+offset_bottom = 519.5
+rotation = 1.08036
 pivot_offset = Vector2(257.5, 254.75)
 texture = ExtResource("16_8rlsn")
 
 [node name="hours5" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+modulate = Color(0.490196, 1, 0.317647, 1)
 layout_mode = 0
-offset_top = -1.0
-offset_right = 512.0
-offset_bottom = 511.0
-rotation = 3.10843
+offset_left = -2.49996
+offset_top = 5.0
+offset_right = 509.5
+offset_bottom = 517.0
+rotation = 2.16595
 pivot_offset = Vector2(257.5, 254.75)
 texture = ExtResource("16_8rlsn")
 
 [node name="hours6" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+modulate = Color(1, 0.52549, 0.321569, 1)
 layout_mode = 0
-offset_top = -1.0
-offset_right = 512.0
-offset_bottom = 511.0
-rotation = 4.18879
+offset_left = -16.25
+offset_top = 18.75
+offset_right = 495.75
+offset_bottom = 530.75
+rotation = 3.13287
+scale = Vector2(0.9, 0.9)
 pivot_offset = Vector2(257.5, 254.75)
 texture = ExtResource("16_8rlsn")
+
+[node name="middle" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_left = -255.0
+offset_top = -260.0
+offset_right = 257.0
+offset_bottom = 252.0
+scale = Vector2(2, 2)
+texture = ExtResource("17_epdny")
 
 [node name="Hand" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
 layout_mode = 0
