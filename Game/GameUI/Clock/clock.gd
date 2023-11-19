@@ -24,6 +24,12 @@ var end_time = 18
 var event_time_reached
 var schedule_time_reached
 
+#Analog Clock
+var township_color = Color.hex(0xBE4A2Fff)
+var city_color = Color.hex(0x124E89ff)
+var suburb_color = Color.hex(0x265C42ff)
+var stadium_color = Color.hex(0xF77622ff)
+
 func _ready():
 	day_label.text = Global.day_of_the_week
 	clock_hours = start_time

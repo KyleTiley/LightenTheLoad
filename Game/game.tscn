@@ -255,11 +255,56 @@ offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.8, 0.8)
 
-[node name="2hours" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+[node name="hours1" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
 layout_mode = 0
 offset_top = -1.0
 offset_right = 512.0
 offset_bottom = 511.0
+rotation = -0.977384
+pivot_offset = Vector2(257.5, 254.75)
+texture = ExtResource("16_8rlsn")
+
+[node name="hours2" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 511.0
+pivot_offset = Vector2(257.5, 254.75)
+texture = ExtResource("16_8rlsn")
+
+[node name="hours3" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 511.0
+rotation = 1.11177
+pivot_offset = Vector2(257.5, 254.75)
+texture = ExtResource("16_8rlsn")
+
+[node name="hours4" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 511.0
+rotation = 2.16246
+pivot_offset = Vector2(257.5, 254.75)
+texture = ExtResource("16_8rlsn")
+
+[node name="hours5" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 511.0
+rotation = 3.10843
+pivot_offset = Vector2(257.5, 254.75)
+texture = ExtResource("16_8rlsn")
+
+[node name="hours6" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 511.0
+rotation = 4.18879
 pivot_offset = Vector2(257.5, 254.75)
 texture = ExtResource("16_8rlsn")
 
