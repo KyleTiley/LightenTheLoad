@@ -1,7 +1,7 @@
 extends "res://Game/GameWorld/Zones/zone.gd"
 
-var base_happiness_gain = 6
-var base_happiness_loss = 6
+var base_happiness_gain : int = 6
+var base_happiness_loss : int  = 6
 
 func _ready():
 	electricity_usage = 20

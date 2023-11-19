@@ -12,13 +12,13 @@ var active_zone
 
 # Electricity variables
 var is_using_electricity = true
-var electricity_used = 0
-var electricity_usage
+var electricity_used : int = 0
+var electricity_usage : int
 # Happiness variables
 var is_happy = true
-var current_happiness = 50
-var happiness_loss
-var happiness_gain
+var current_happiness : int = 50
+var happiness_loss : int
+var happiness_gain : int
 
 # FUNCTIONS
 

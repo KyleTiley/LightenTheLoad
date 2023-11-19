@@ -1,10 +1,9 @@
-[gd_scene load_steps=41 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=46 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
 [ext_resource type="Script" path="res://Game/game.gd" id="1_vwxi5"]
 [ext_resource type="PackedScene" uid="uid://dx7wr27c0njgs" path="res://Game/GameUI/Characters/light_bulb.tscn" id="1_wo4ky"]
-[ext_resource type="Script" path="res://Game/SunController.gd" id="2_4s4jj"]
 [ext_resource type="PackedScene" uid="uid://c8jicq5bwrdnu" path="res://Game/GameWorld/Zones/Stadium/stadium.tscn" id="2_p7jbk"]
 [ext_resource type="PackedScene" uid="uid://cqhiu8fvdw425" path="res://Game/GameWorld/Zones/Township/township.tscn" id="3_v308r"]
 [ext_resource type="PackedScene" uid="uid://da71hvmgak7ff" path="res://Game/GameWorld/Zones/Suburb/suburb.tscn" id="4_0fdj6"]
@@ -22,10 +21,16 @@
 [ext_resource type="Texture2D" uid="uid://bv7udoh684mcg" path="res://Game/GameUI/Popup/Bubbles Square.png" id="12_hbq03"]
 [ext_resource type="Texture2D" uid="uid://drkdqcls3f43n" path="res://Game/GameUI/Popup/Bubbles Line.png" id="13_5trs7"]
 [ext_resource type="Texture2D" uid="uid://ctrroxd77j87v" path="res://Game/GameUI/InfoBar/Text_Icon.png" id="14_xtbs4"]
+[ext_resource type="Texture2D" uid="uid://bjm711tkfvrig" path="res://Game/GameUI/Clock/2_hours.png" id="16_8rlsn"]
+[ext_resource type="Texture2D" uid="uid://crhrv3sa8cdug" path="res://Game/GameUI/Clock/Clock_boarder.png" id="16_cn6tn"]
+[ext_resource type="Texture2D" uid="uid://4bygcbgll6oi" path="res://Game/GameUI/Clock/New_hand.png" id="17_m45e0"]
 [ext_resource type="Script" path="res://Game/GameUI/Schedule/schedule.gd" id="18_o0xj2"]
 [ext_resource type="Texture2D" uid="uid://bxh5ssoo2ou6i" path="res://Game/GameUI/Schedule/List UI 3.png" id="20_nhxy6"]
+[ext_resource type="Texture2D" uid="uid://c81w1la3ue28s" path="res://Game/GameUI/InfoBar/Outline.png" id="21_4x0k1"]
 [ext_resource type="PackedScene" uid="uid://b04r53dh8abu7" path="res://Roads/Turningcirlcescene.tscn" id="21_n3ct1"]
+[ext_resource type="Texture2D" uid="uid://cdvi255kmq4qr" path="res://Game/GameUI/InfoBar/Blot Fill.png" id="22_iqom8"]
 [ext_resource type="PackedScene" uid="uid://ohff5tdyqgqo" path="res://Roads/Straightroad.tscn" id="22_xcibf"]
+[ext_resource type="Texture2D" uid="uid://ditgjbtfdb6de" path="res://Game/GameUI/InfoBar/Bolt Empty.png" id="23_3ynuy"]
 [ext_resource type="PackedScene" uid="uid://vf282wd1r1i3" path="res://Roads/CornerRoadscene.tscn" id="23_vk12k"]
 [ext_resource type="PackedScene" uid="uid://dauxp5jreywid" path="res://Roads/BendingRoad2Scene.tscn" id="25_58s0k"]
 [ext_resource type="PackedScene" uid="uid://bp0w10flslua8" path="res://Decorations/Tree1.Scene.tscn" id="25_dyxas"]
@@ -79,9 +84,8 @@ point_count = 17
 script = ExtResource("1_vwxi5")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.227303, 0.973609, -0.0204761, -0.579016, -0.118214, 0.8067, 0.78299, 0.195221, 0.590606, 0, 16.7967, 0)
+transform = Transform3D(-8.74228e-08, 4.37114e-08, 1, -1, 4.37114e-08, -8.74228e-08, -4.37114e-08, -1, 4.37114e-08, 0, 20, 0)
 shadow_enabled = true
-script = ExtResource("2_4s4jj")
 
 [node name="GameWorld" type="Node3D" parent="."]
 
@@ -157,7 +161,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.8846
 curve = SubResource("Curve3D_jwyh6")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckStadium/Path3D"]
-transform = Transform3D(0.0106009, 2.61915e-06, -0.999938, -2.27373e-13, 1, 2.61928e-06, 0.99994, -2.77668e-08, 0.0106009, 0, 0, 0)
+transform = Transform3D(0.0106009, 2.61915e-06, -0.999937, -2.27373e-13, 1, 2.61928e-06, 0.999939, -2.77668e-08, 0.0106008, 0, 0, 0)
 
 [node name="Truck" parent="GameWorld/Events/RepairTruckStadium/Path3D/PathFollow3D" instance=ExtResource("10_dkhao")]
 transform = Transform3D(-0.117, 0, -1.76665e-08, 0, 0.117, 0, 1.76665e-08, 0, -0.117, 0, 0, 0)
@@ -242,7 +246,86 @@ text = "00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="AnalogClock" type="Control" parent="GameUI/Clock"]
+anchors_preset = 0
+offset_left = -5.0
+offset_top = 157.0
+offset_right = 35.0
+offset_bottom = 197.0
+scale = Vector2(0.8, 0.8)
+
+[node name="hours1" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 511.0
+rotation = -1.11177
+pivot_offset = Vector2(257.5, 254.75)
+texture = ExtResource("16_8rlsn")
+
+[node name="hours2" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 511.0
+pivot_offset = Vector2(257.5, 254.75)
+texture = ExtResource("16_8rlsn")
+
+[node name="hours3" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 511.0
+rotation = 1.11177
+pivot_offset = Vector2(257.5, 254.75)
+texture = ExtResource("16_8rlsn")
+
+[node name="hours4" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 511.0
+rotation = 2.16246
+pivot_offset = Vector2(257.5, 254.75)
+texture = ExtResource("16_8rlsn")
+
+[node name="hours5" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 511.0
+rotation = 3.10843
+pivot_offset = Vector2(257.5, 254.75)
+texture = ExtResource("16_8rlsn")
+
+[node name="hours6" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 511.0
+rotation = 4.18879
+pivot_offset = Vector2(257.5, 254.75)
+texture = ExtResource("16_8rlsn")
+
+[node name="Hand" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_left = 42.5
+offset_top = -28.75
+offset_right = 554.5
+offset_bottom = 483.25
+rotation = -3.35976
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(215, 281.25)
+texture = ExtResource("17_m45e0")
+
+[node name="Border" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 512.0
+texture = ExtResource("16_cn6tn")
+
 [node name="Schedule" type="Control" parent="GameUI"]
+visible = false
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
@@ -356,6 +439,25 @@ offset_top = -880.0
 offset_right = 530.0
 offset_bottom = -805.0
 theme_override_font_sizes/font_size = 50
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="GameUI/InfoBar"]
+layout_mode = 0
+offset_left = 1668.0
+offset_top = -847.0
+offset_right = 1924.0
+offset_bottom = -591.0
+fill_mode = 2
+texture_under = ExtResource("22_iqom8")
+texture_progress = ExtResource("23_3ynuy")
+
+[node name="Outline" type="TextureRect" parent="GameUI/InfoBar/TextureProgressBar"]
+layout_mode = 0
+offset_left = -74.0
+offset_top = -45.0
+offset_right = 182.0
+offset_bottom = 211.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("21_4x0k1")
 
 [node name="Popup" type="Control" parent="GameUI"]
 layout_mode = 1

@@ -1,2 +1,0 @@
-extends DirectionalLight3D
-

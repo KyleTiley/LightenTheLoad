@@ -6,3 +6,4 @@
 
 [node name="Cube" parent="." index="0"]
 transform = Transform3D(0.6, 0, 0, 0, 0.306, 0, 0, 0, 0.6, -0.0194325, 0.512543, -0.211858)
+cast_shadow = 0
