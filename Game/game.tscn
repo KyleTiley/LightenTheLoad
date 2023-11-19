@@ -89,7 +89,7 @@ albedo_texture = ExtResource("35_0gaj8")
 
 [sub_resource type="QuadMesh" id="QuadMesh_edp8h"]
 material = SubResource("StandardMaterial3D_vvvxu")
-size = Vector2(1.5, 1.5)
+size = Vector2(2, 2)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vpjom"]
 gravity = Vector3(0, 9.8, 0)
@@ -102,7 +102,7 @@ albedo_texture = ExtResource("36_3ie2f")
 
 [sub_resource type="QuadMesh" id="QuadMesh_cs48b"]
 material = SubResource("StandardMaterial3D_kte1y")
-size = Vector2(1.5, 1.5)
+size = Vector2(2, 2)
 
 [node name="Game" type="Node"]
 script = ExtResource("1_vwxi5")
@@ -717,7 +717,7 @@ draw_pass_1 = SubResource("QuadMesh_edp8h")
 
 [node name="Happy Particles" type="GPUParticles3D" parent="Particle Effects"]
 transform = Transform3D(1, 0, 0, 0, 0.871821, 0.489824, 0, -0.489824, 0.871821, -13.0365, 4.49321, 10.2257)
-amount = 10
+amount = 5
 lifetime = 4.0
 fixed_fps = 60
 process_material = SubResource("ParticleProcessMaterial_vpjom")
