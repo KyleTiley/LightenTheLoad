@@ -246,13 +246,14 @@ vertical_alignment = 1
 
 [node name="AnalogClock" type="Control" parent="GameUI/Clock"]
 anchors_preset = 0
-offset_left = -12.0
+offset_left = -13.0
 offset_top = -431.0
-offset_right = 28.0
+offset_right = 27.0
 offset_bottom = -391.0
 scale = Vector2(0.8, 0.8)
 
 [node name="hours1" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+modulate = Color(1, 0.372549, 1, 1)
 layout_mode = 0
 offset_top = -1.0
 offset_right = 512.0
@@ -262,6 +263,7 @@ pivot_offset = Vector2(257.5, 254.75)
 texture = ExtResource("16_8rlsn")
 
 [node name="hours2" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+modulate = Color(0.592157, 0.360784, 1, 1)
 layout_mode = 0
 offset_top = -1.0
 offset_right = 512.0
@@ -440,10 +442,10 @@ theme_override_font_sizes/font_size = 50
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="GameUI/InfoBar"]
 layout_mode = 0
-offset_left = 1668.0
-offset_top = -847.0
-offset_right = 1924.0
-offset_bottom = -591.0
+offset_left = 1669.0
+offset_top = -853.0
+offset_right = 1925.0
+offset_bottom = -597.0
 fill_mode = 2
 texture_under = ExtResource("22_iqom8")
 texture_progress = ExtResource("23_3ynuy")
