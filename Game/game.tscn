@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=46 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://bv7udoh684mcg" path="res://Game/GameUI/Popup/Bubbles Square.png" id="12_hbq03"]
 [ext_resource type="Texture2D" uid="uid://drkdqcls3f43n" path="res://Game/GameUI/Popup/Bubbles Line.png" id="13_5trs7"]
 [ext_resource type="Texture2D" uid="uid://ctrroxd77j87v" path="res://Game/GameUI/InfoBar/Text_Icon.png" id="14_xtbs4"]
+[ext_resource type="Texture2D" uid="uid://bjm711tkfvrig" path="res://Game/GameUI/Clock/2_hours.png" id="16_8rlsn"]
 [ext_resource type="Texture2D" uid="uid://crhrv3sa8cdug" path="res://Game/GameUI/Clock/Clock_boarder.png" id="16_cn6tn"]
 [ext_resource type="Texture2D" uid="uid://4bygcbgll6oi" path="res://Game/GameUI/Clock/New_hand.png" id="17_m45e0"]
 [ext_resource type="Script" path="res://Game/GameUI/Schedule/schedule.gd" id="18_o0xj2"]
@@ -208,6 +209,7 @@ offset_bottom = 150.0
 script = ExtResource("1_edsui")
 
 [node name="TextureRect" type="TextureRect" parent="GameUI/Clock"]
+visible = false
 layout_mode = 0
 offset_left = -14.0
 offset_top = -96.0
@@ -217,6 +219,7 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("9_weqbt")
 
 [node name="Day" type="Label" parent="GameUI/Clock"]
+visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -230,6 +233,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Time" type="Label" parent="GameUI/Clock"]
+visible = false
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -245,22 +249,35 @@ text = "00:00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Analog" type="TextureRect" parent="GameUI/Clock"]
-layout_mode = 0
+[node name="AnalogClock" type="Control" parent="GameUI/Clock"]
+anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.8, 0.8)
-texture = ExtResource("16_cn6tn")
 
-[node name="Hand" type="TextureRect" parent="GameUI/Clock/Analog"]
+[node name="2hours" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
 layout_mode = 0
-offset_left = 43.75
-offset_top = -20.0
-offset_right = 555.75
-offset_bottom = 492.0
+offset_top = -1.0
+offset_right = 512.0
+offset_bottom = 511.0
+pivot_offset = Vector2(257.5, 254.75)
+texture = ExtResource("16_8rlsn")
+
+[node name="Hand" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_left = 42.5
+offset_top = -28.75
+offset_right = 554.5
+offset_bottom = 483.25
 scale = Vector2(0.8, 0.8)
 pivot_offset = Vector2(215, 281.25)
 texture = ExtResource("17_m45e0")
+
+[node name="Border" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
+layout_mode = 0
+offset_right = 512.0
+offset_bottom = 512.0
+texture = ExtResource("16_cn6tn")
 
 [node name="Schedule" type="Control" parent="GameUI"]
 visible = false
