@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=41 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -33,11 +33,6 @@
 [ext_resource type="Texture2D" uid="uid://ditgjbtfdb6de" path="res://Game/GameUI/InfoBar/Bolt Empty.png" id="23_3ynuy"]
 [ext_resource type="PackedScene" uid="uid://vf282wd1r1i3" path="res://Roads/CornerRoadscene.tscn" id="23_vk12k"]
 [ext_resource type="PackedScene" uid="uid://dauxp5jreywid" path="res://Roads/BendingRoad2Scene.tscn" id="25_58s0k"]
-[ext_resource type="PackedScene" uid="uid://bp0w10flslua8" path="res://Decorations/Tree1.Scene.tscn" id="25_dyxas"]
-[ext_resource type="PackedScene" uid="uid://rnygscluquqv" path="res://Decorations/Tree2.Scene.tscn" id="26_7ax31"]
-[ext_resource type="PackedScene" uid="uid://fx5p6h5udaek" path="res://Decorations/Tree3.Scene.tscn" id="27_csim6"]
-[ext_resource type="PackedScene" uid="uid://bumjc8sds56h3" path="res://Decorations/Tree4.Scene.tscn" id="28_2tyd6"]
-[ext_resource type="PackedScene" uid="uid://30eos1yqp1e4" path="res://Decorations/Shrub.Scene.tscn" id="29_eddep"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -675,53 +670,6 @@ transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927
 transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927, 2.15468, 0.36, 19.0395)
 
 [node name="Decorations" type="Node3D" parent="."]
-
-[node name="Trees" type="Node3D" parent="Decorations"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.20394, -1.03801, -2.72535)
-
-[node name="Tree1" parent="Decorations/Trees" instance=ExtResource("25_dyxas")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.07816, 0)
-
-[node name="Tree2" parent="Decorations/Trees" instance=ExtResource("26_7ax31")]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 1.47162, 1.40576, 7.01036)
-
-[node name="Tree3" parent="Decorations/Trees" instance=ExtResource("27_csim6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.36963, 1.33892, 17.7301)
-
-[node name="Tree4" parent="Decorations/Trees" instance=ExtResource("28_2tyd6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9961, 1.03801, 14.8609)
-
-[node name="Bushes" type="Node3D" parent="Decorations"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0796058, 1.30671)
-
-[node name="Shrub" parent="Decorations/Bushes" instance=ExtResource("29_eddep")]
-
-[node name="Shrub2" parent="Decorations/Bushes" instance=ExtResource("29_eddep")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.94095, 0.0796058, -0.707303)
-
-[node name="Shrub3" parent="Decorations/Bushes" instance=ExtResource("29_eddep")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.96949, 0.0796058, 0.919667)
-
-[node name="Shrub4" parent="Decorations/Bushes" instance=ExtResource("29_eddep")]
-transform = Transform3D(-0.993447, 0, 0.114296, 0, 1, 0, -0.114296, 0, -0.993447, -3.05947, 0.364498, 11.2689)
-
-[node name="Shrub5" parent="Decorations/Bushes" instance=ExtResource("29_eddep")]
-transform = Transform3D(-0.993447, 0, 0.114296, 0, 1, 0, -0.114296, 0, -0.993447, 0, 0.364498, 12.8073)
-
-[node name="Shrub6" parent="Decorations/Bushes" instance=ExtResource("29_eddep")]
-transform = Transform3D(-0.773166, 0, 0.634205, 0, 1, 0, -0.634205, 0, -0.773166, 4.52024, 0.364498, 14.0622)
-
-[node name="Shrub7" parent="Decorations/Bushes" instance=ExtResource("29_eddep")]
-transform = Transform3D(-0.701979, 0, -0.712198, 0.423701, 0.803784, -0.417622, 0.572453, -0.594921, -0.56424, -1.95746, 0.171738, 4.6609)
-
-[node name="Shrub8" parent="Decorations/Bushes" instance=ExtResource("29_eddep")]
-transform = Transform3D(-0.993447, 0, 0.114296, 0, 1, 0, -0.114296, 0, -0.993447, 4.76004, 0.364498, 9.35443)
-
-[node name="Shrub9" parent="Decorations/Bushes" instance=ExtResource("29_eddep")]
-transform = Transform3D(-0.993447, 0, 0.114296, 0, 1, 0, -0.114296, 0, -0.993447, 8.50637, 0.364498, 14.5803)
-
-[node name="Shrub10" parent="Decorations/Bushes" instance=ExtResource("29_eddep")]
-transform = Transform3D(-0.993447, 0, 0.114296, 0, 1, 0, -0.114296, 0, -0.993447, 11.4994, 0.755412, 4.1082)
 
 [connection signal="display_info" from="." to="GameUI/InfoBar" method="_on_game_display_info"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/City" method="_on_game_game_timer"]
