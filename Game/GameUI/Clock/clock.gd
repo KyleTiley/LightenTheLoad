@@ -29,6 +29,9 @@ var township_color = Color.hex(0xBE4A2Fff)
 var city_color = Color.hex(0x124E89ff)
 var suburb_color = Color.hex(0x265C42ff)
 var stadium_color = Color.hex(0xF77622ff)
+var analog_start = -190
+@onready var hand = $AnalogClock/Hand
+var analog_rot = 0.039
 
 func _ready():
 	day_label.text = Global.day_of_the_week
@@ -63,7 +66,10 @@ func _process(_delta):
 		schedule_time_reached = false
 
 func _physics_process(delta):
+	if Global.game_has_started == false:
+		return
 	sun.rotate_z(deg_to_rad(rot_val))
+	hand.rotation += deg_to_rad(analog_rot)
 
 # Controls the speed of the clock
 func _on_game_game_timer():
