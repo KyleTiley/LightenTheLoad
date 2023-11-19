@@ -1,5 +1,6 @@
 res://Game/game.tscn
-res://Game/GameUI/Schedule/schedule.gd
 res://Game/GameWorld/Zones/Stadium/stadium.gd
-res://Game/GameWorld/Zones/City/city.tscn
-res://decorations.tscn
+res://MainMenu/main_menu.tscn
+res://MainMenu/main_menu.gd
+res://global.gd
+res://Game/game.gd

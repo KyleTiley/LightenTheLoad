@@ -39,6 +39,9 @@ func _process(_delta):
 # Sets unique variables for each day
 func set_daily_variables(_day):
 	match _day:
+		"Tutorial":
+			Global.total_allocated_electricity = 10000
+			Global.numberOfEvents = 0
 		"Monday":
 			Global.total_allocated_electricity = 10000
 			Global.numberOfEvents = 0
