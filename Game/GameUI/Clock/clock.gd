@@ -28,10 +28,10 @@ var schedule_time_reached
 var township_color = Color.hex(0xBE4A2Fff)
 var city_color = Color.hex(0x124E89ff)
 var suburb_color = Color.hex(0x265C42ff)
-var stadium_color = Color.hex(0xF77622ff)
+var stadium_color = Color.hex(0xfee761ff)
 var analog_start = -190
 @onready var hand = $AnalogClock/Hand
-var analog_rot = 0.039
+var analog_rot = 0.0415
 
 func _ready():
 	day_label.text = Global.day_of_the_week

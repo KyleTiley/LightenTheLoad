@@ -1,5 +1,5 @@
-res://Game/game.tscn
-res://Game/GameWorld/Zones/Stadium/stadium.gd
 res://Game/GameWorld/Zones/City/city.tscn
 res://Game/GameUI/Schedule/schedule.gd
+res://Game/GameWorld/Zones/Stadium/stadium.gd
 res://Game/GameUI/Clock/clock.gd
+res://Game/game.tscn

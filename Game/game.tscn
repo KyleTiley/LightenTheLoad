@@ -259,7 +259,7 @@ layout_mode = 0
 offset_top = -1.0
 offset_right = 512.0
 offset_bottom = 511.0
-rotation = -0.977384
+rotation = -1.11177
 pivot_offset = Vector2(257.5, 254.75)
 texture = ExtResource("16_8rlsn")
 
@@ -313,7 +313,7 @@ offset_left = 42.5
 offset_top = -28.75
 offset_right = 554.5
 offset_bottom = 483.25
-rotation = -3.31613
+rotation = -3.35976
 scale = Vector2(0.8, 0.8)
 pivot_offset = Vector2(215, 281.25)
 texture = ExtResource("17_m45e0")
