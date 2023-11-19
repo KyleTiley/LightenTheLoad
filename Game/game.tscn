@@ -326,15 +326,16 @@ offset_top = -260.0
 offset_right = 257.0
 offset_bottom = 252.0
 scale = Vector2(2, 2)
+mouse_filter = 2
 texture = ExtResource("17_epdny")
 
 [node name="Hand" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
 layout_mode = 0
-offset_left = 42.5
+offset_left = 37.5
 offset_top = -28.75
-offset_right = 554.5
+offset_right = 549.5
 offset_bottom = 483.25
-rotation = -3.39467
+rotation = -3.40339
 scale = Vector2(0.8, 0.8)
 pivot_offset = Vector2(215, 281.25)
 texture = ExtResource("17_m45e0")
