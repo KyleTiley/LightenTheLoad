@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crh1v0didcr2"
-path="res://.godot/imported/OffLighting.png-acfcb03da531e904dfdbe022eac7ab34.ctex"
+uid="uid://c81w1la3ue28s"
+path="res://.godot/imported/Outline.png-5370222db86912ed344aa2d65f85f766.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/GameUI/InfoBar/OffLighting.png"
-dest_files=["res://.godot/imported/OffLighting.png-acfcb03da531e904dfdbe022eac7ab34.ctex"]
+source_file="res://Game/GameUI/InfoBar/Outline.png"
+dest_files=["res://.godot/imported/Outline.png-5370222db86912ed344aa2d65f85f766.ctex"]
 
 [params]
 

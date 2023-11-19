@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbf34eb5m88bk"
-path="res://.godot/imported/OnLighting.png-85649134cc7eb0fba8f2dbf8ff96bb0e.ctex"
+uid="uid://cdvi255kmq4qr"
+path="res://.godot/imported/Blot Fill.png-b4f265032bb312f504da4d8904151370.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Game/GameUI/InfoBar/OnLighting.png"
-dest_files=["res://.godot/imported/OnLighting.png-85649134cc7eb0fba8f2dbf8ff96bb0e.ctex"]
+source_file="res://Game/GameUI/InfoBar/Blot Fill.png"
+dest_files=["res://.godot/imported/Blot Fill.png-b4f265032bb312f504da4d8904151370.ctex"]
 
 [params]
 

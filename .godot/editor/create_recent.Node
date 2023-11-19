@@ -1,3 +1,4 @@
+TextureRect
 TextureProgressBar
 Sprite2D
 ColorRect
@@ -9,7 +10,6 @@ AudioStreamPlayer
 Node
 AudioListener2D
 Node2D
-TextureRect
 RichTextLabel
 Control
 PathFollow3D
