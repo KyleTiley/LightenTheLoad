@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=42 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -33,6 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://ditgjbtfdb6de" path="res://Game/GameUI/InfoBar/Bolt Empty.png" id="23_3ynuy"]
 [ext_resource type="PackedScene" uid="uid://vf282wd1r1i3" path="res://Roads/CornerRoadscene.tscn" id="23_vk12k"]
 [ext_resource type="PackedScene" uid="uid://dauxp5jreywid" path="res://Roads/BendingRoad2Scene.tscn" id="25_58s0k"]
+[ext_resource type="PackedScene" uid="uid://c41mcg2hfpiqr" path="res://decorations.tscn" id="34_rtdb1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -199,11 +200,14 @@ mouse_filter = 1
 
 [node name="Clock" type="Control" parent="GameUI"]
 anchors_preset = 0
-offset_right = 300.0
-offset_bottom = 150.0
+offset_left = 14.0
+offset_top = 432.0
+offset_right = 314.0
+offset_bottom = 582.0
 script = ExtResource("1_edsui")
 
 [node name="TextureRect" type="TextureRect" parent="GameUI/Clock"]
+visible = false
 layout_mode = 0
 offset_left = -14.0
 offset_top = -96.0
@@ -213,6 +217,7 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("9_weqbt")
 
 [node name="Day" type="Label" parent="GameUI/Clock"]
+visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -226,6 +231,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Time" type="Label" parent="GameUI/Clock"]
+visible = false
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -243,10 +249,10 @@ vertical_alignment = 1
 
 [node name="AnalogClock" type="Control" parent="GameUI/Clock"]
 anchors_preset = 0
-offset_left = -5.0
-offset_top = 157.0
-offset_right = 35.0
-offset_bottom = 197.0
+offset_left = -12.0
+offset_top = -431.0
+offset_right = 28.0
+offset_bottom = -391.0
 scale = Vector2(0.8, 0.8)
 
 [node name="hours1" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
@@ -669,7 +675,7 @@ transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927
 [node name="StraightRoad7" parent="Roads/MainRoad" instance=ExtResource("22_xcibf")]
 transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927, 2.15468, 0.36, 19.0395)
 
-[node name="Decorations" type="Node3D" parent="."]
+[node name="Decorations" parent="." instance=ExtResource("34_rtdb1")]
 
 [connection signal="display_info" from="." to="GameUI/InfoBar" method="_on_game_display_info"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/City" method="_on_game_game_timer"]
