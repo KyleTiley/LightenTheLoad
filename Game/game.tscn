@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=42 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://da71hvmgak7ff" path="res://Game/GameWorld/Zones/Suburb/suburb.tscn" id="4_0fdj6"]
 [ext_resource type="PackedScene" uid="uid://caq1m8cmbily" path="res://Game/GameWorld/Environment/environment.tscn" id="6_o23yh"]
 [ext_resource type="Script" path="res://Game/Events/events.gd" id="7_ac6kk"]
-[ext_resource type="PackedScene" uid="uid://dscgenki4uhit" path="res://Game/GameWorld/Environment/Game Level.glb" id="7_anif8"]
 [ext_resource type="Script" path="res://Game/GameUI/InfoBar/infobar.gd" id="8_0p0d2"]
 [ext_resource type="PackedScene" uid="uid://djso7gp30eqqh" path="res://Game/Events/BigGame/big_game.tscn" id="9_4t3mn"]
 [ext_resource type="Script" path="res://Game/Events/RepairTruck/repair_truck.gd" id="9_8mpy6"]
@@ -186,10 +185,6 @@ transform = Transform3D(-2.5, 2.89173e-07, 2.42646e-07, 0, 1.60697, -1.91511, -3
 [node name="Storm" parent="GameWorld/Events" instance=ExtResource("10_6q6fl")]
 transform = Transform3D(0.112007, 0, -0.589453, 0, 0.6, 0, 0.589453, 0, 0.112007, 4.413, 12, 72.316)
 
-[node name="Game Level" parent="GameWorld" instance=ExtResource("7_anif8")]
-transform = Transform3D(0.957788, 0, -0.287478, 0, 1, 0, 0.287478, 0, 0.957788, 0, -1.51726, 1.81378)
-visible = false
-
 [node name="GameUI" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -308,7 +303,6 @@ pivot_offset = Vector2(257.5, 254.75)
 texture = ExtResource("16_8rlsn")
 
 [node name="hours6" type="TextureRect" parent="GameUI/Clock/AnalogClock"]
-modulate = Color(1, 0.52549, 0.321569, 1)
 layout_mode = 0
 offset_left = -16.25
 offset_top = 18.75
@@ -731,5 +725,6 @@ transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927
 [connection signal="loadshedding_time" from="GameUI/Clock" to="GameWorld/Zones/Township" method="_on_clock_loadshedding_time"]
 [connection signal="toggle_power" from="GameUI/InfoBar" to="." method="_on_info_bar_toggle_power"]
 [connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]
+[connection signal="set_schedule" from="GameUI/Popup" to="GameUI/Clock" method="_on_popup_set_schedule"]
 [connection signal="set_schedule" from="GameUI/Popup" to="GameUI/Schedule" method="_on_popup_set_schedule"]
 [connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]
