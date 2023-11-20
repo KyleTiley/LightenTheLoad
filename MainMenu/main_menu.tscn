@@ -1,12 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://blk752tav070r"]
+[gd_scene load_steps=4 format=3 uid="uid://blk752tav070r"]
 
 [ext_resource type="Script" path="res://MainMenu/main_menu.gd" id="1_ohyn0"]
 [ext_resource type="Texture2D" uid="uid://b32gmntm3ldd0" path="res://MainMenu/MenuBackgrounds/Main Menu 1.png" id="2_qeum1"]
+[ext_resource type="Texture2D" uid="uid://ccas47r34kvwr" path="res://Game/GameUI/Characters/Idle/Idle0009.png" id="3_unuqn"]
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_ohyn0")
 
 [node name="MenuCamera" type="Camera2D" parent="."]
+visible = false
 position = Vector2(960, 540)
 
 [node name="PlayMenu" type="Control" parent="."]
@@ -137,6 +139,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 disabled = true
 text = "Friday"
+
+[node name="Idle0009" type="Sprite2D" parent="."]
+position = Vector2(177, 482)
+texture = ExtResource("3_unuqn")
 
 [connection signal="pressed" from="PlayMenu/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="PlayMenu/SettingsButton" to="." method="_on_settings_button_pressed"]

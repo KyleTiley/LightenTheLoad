@@ -1,6 +1,2 @@
-res://Game/game.tscn
-res://Game/GameWorld/Zones/Stadium/stadium.gd
-res://Game/GameWorld/Zones/City/city.tscn
-res://decorations.tscn
 res://MainMenu/main_menu.tscn
-res://Game/Events/events.gd
+res://Game/GameWorld/Zones/Stadium/stadium.gd
