@@ -33,11 +33,6 @@ func StartGame():
 
 # Buttons to start each day from the menu
 
-func _on_tutorial_pressed():
-	Global.day_of_the_week = "Tutorial"
-	StartGame()
-	MusicController.play_ui_button()
-
 func _on_button_monday_pressed():
 	Global.day_of_the_week = "Monday"
 	StartGame()
@@ -71,4 +66,7 @@ func _on_settings_button_pressed():
 	print("OPTIONS")
 	MusicController.play_ui_button()
 
-
+func _on_button_tutorial_pressed():
+	Global.day_of_the_week = "Tutorial"
+	StartGame()
+	MusicController.play_ui_button()

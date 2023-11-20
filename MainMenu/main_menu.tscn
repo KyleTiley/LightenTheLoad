@@ -140,7 +140,7 @@ text = "Friday"
 
 [connection signal="pressed" from="PlayMenu/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="PlayMenu/SettingsButton" to="." method="_on_settings_button_pressed"]
-[connection signal="pressed" from="PlayMenu/ButtonContainer/VBoxContainer/ButtonTutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="PlayMenu/ButtonContainer/VBoxContainer/ButtonTutorial" to="." method="_on_button_tutorial_pressed"]
 [connection signal="pressed" from="PlayMenu/ButtonContainer/VBoxContainer/ButtonMonday" to="." method="_on_button_monday_pressed"]
 [connection signal="pressed" from="PlayMenu/ButtonContainer/VBoxContainer/ButtonTuesday" to="." method="_on_button_tuesday_pressed"]
 [connection signal="pressed" from="PlayMenu/ButtonContainer/VBoxContainer/ButtonWednesday" to="." method="_on_button_wednesday_pressed"]

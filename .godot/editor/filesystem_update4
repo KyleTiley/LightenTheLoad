@@ -4,3 +4,5 @@ res://MainMenu/main_menu.tscn
 res://MainMenu/main_menu.gd
 res://global.gd
 res://Game/game.gd
+res://Game/GameUI/Schedule/schedule.gd
+res://Game/GameUI/Popup/popup.gd
