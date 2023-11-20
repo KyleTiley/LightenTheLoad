@@ -1,7 +1,7 @@
-TextureRect
 Control
-TextureProgressBar
 Sprite2D
+TextureRect
+TextureProgressBar
 ColorRect
 CollisionShape3D
 Area3D

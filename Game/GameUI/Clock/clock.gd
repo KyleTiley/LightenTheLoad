@@ -40,6 +40,7 @@ func _ready():
 	schedule_time_reached = false
 
 func _process(_delta):
+	tutorial_help()
 	if clock_minutes == 60:
 		clock_hours += 1
 		clock_minutes = 0
@@ -78,3 +79,15 @@ func _on_game_game_timer():
 func change_clock_time():
 	var _time : String = "%02d:%02d" % [clock_hours, clock_minutes]
 	time_label.text = _time
+	
+	
+func tutorial_help():
+	if clock_hours < 8:
+		Global.tut_prog = 0
+	if clock_hours == 8:
+		if 	Global.tut_prog == 0:
+			Global.tut_prog = 1
+	if  clock_hours == 9:
+		Global.tut_prog = 4
+	
+

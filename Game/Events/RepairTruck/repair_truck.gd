@@ -81,3 +81,8 @@ func _on_events_township_truck():
 	send_out_truck = true
 	MusicController.play_repair_truck()
 	MusicController.stop_if_done()
+
+func _on_tutorial_spotlight_truck_tut():
+	send_out_truck = true
+	MusicController.play_repair_truck()
+	MusicController.stop_if_done()
