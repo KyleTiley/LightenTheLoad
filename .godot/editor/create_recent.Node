@@ -1,8 +1,8 @@
+Sprite2D
+Control
 TextureButton
 TextureRect
-Control
 TextureProgressBar
-Sprite2D
 ColorRect
 CollisionShape3D
 Area3D

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=46 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -34,6 +34,8 @@
 [ext_resource type="Texture2D" uid="uid://ditgjbtfdb6de" path="res://Game/GameUI/InfoBar/Bolt Empty.png" id="23_3ynuy"]
 [ext_resource type="PackedScene" uid="uid://vf282wd1r1i3" path="res://Roads/CornerRoadscene.tscn" id="23_vk12k"]
 [ext_resource type="PackedScene" uid="uid://dauxp5jreywid" path="res://Roads/BendingRoad2Scene.tscn" id="25_58s0k"]
+[ext_resource type="Script" path="res://Game/GameUI/Tutorial/Tutorial Spotlight.gd" id="32_d67l5"]
+[ext_resource type="Texture2D" uid="uid://cj2ri81ik8j6s" path="res://Game/GameUI/Tutorial/Spotlight.png" id="33_et7pf"]
 [ext_resource type="PackedScene" uid="uid://c41mcg2hfpiqr" path="res://decorations.tscn" id="34_rtdb1"]
 [ext_resource type="Texture2D" uid="uid://bod8j8jilk2v7" path="res://Game/GameUI/Clock/Light_On.png" id="36_v40a6"]
 
@@ -484,6 +486,18 @@ offset_bottom = 211.0
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("21_4x0k1")
 
+[node name="Tutorial Spotlight" type="Control" parent="GameUI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("32_d67l5")
+
+[node name="Spotlight" type="Sprite2D" parent="GameUI/Tutorial Spotlight"]
+visible = false
+modulate = Color(1, 1, 1, 0.752941)
+scale = Vector2(9.376, 7.885)
+texture = ExtResource("33_et7pf")
+
 [node name="Popup" type="Control" parent="GameUI"]
 layout_mode = 1
 anchors_preset = 15
@@ -734,6 +748,8 @@ transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927
 [connection signal="loadshedding_time" from="GameUI/Clock" to="GameWorld/Zones/Township" method="_on_clock_loadshedding_time"]
 [connection signal="toggle_power" from="GameUI/InfoBar" to="." method="_on_info_bar_toggle_power"]
 [connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]
+[connection signal="storm_tut" from="GameUI/Tutorial Spotlight" to="GameWorld/Events" method="_on_tutorial_spotlight_storm_tut"]
+[connection signal="truck_tut" from="GameUI/Tutorial Spotlight" to="GameWorld/Events" method="_on_tutorial_spotlight_truck_tut"]
 [connection signal="set_schedule" from="GameUI/Popup" to="GameUI/Clock" method="_on_popup_set_schedule"]
 [connection signal="set_schedule" from="GameUI/Popup" to="GameUI/Schedule" method="_on_popup_set_schedule"]
 [connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]

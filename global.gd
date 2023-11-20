@@ -18,11 +18,11 @@ var tut_active = false;
 
 # Sets which days can be played from the main menu
 var tutorial_unlocked = true
-var monday_unlocked = true
-var tuesday_unlocked = true
-var wednesday_unlocked = true
-var thursday_unlocked = true
-var friday_unlocked = true
+var monday_unlocked = false
+var tuesday_unlocked = false
+var wednesday_unlocked = false
+var thursday_unlocked = false
+var friday_unlocked = false
 
 var city_schedule1
 var city_schedule2
@@ -48,6 +48,7 @@ func next_day():
 	match day_of_the_week:
 		"Tutorial":
 			day_of_the_week = "Monday"
+			monday_unlocked = true
 		"Monday":
 			day_of_the_week = "Tuesday"
 			tuesday_unlocked = true
