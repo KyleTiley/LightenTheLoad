@@ -5,3 +5,4 @@ res://Game/GameWorld/Zones/City/city.tscn
 res://decorations.tscn
 res://Game/GameUI/Popup/popup.gd
 res://Game/GameUI/Clock/clock.gd
+res://global.gd

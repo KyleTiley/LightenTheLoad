@@ -41,10 +41,25 @@ var analog_rot = 0.0415
 
 
 func _ready():
-	day_label.text = Global.day_of_the_week
+	day_label.text = short_day()
 	clock_hours = start_time
 	event_time_reached = false
 	schedule_time_reached = false
+
+func short_day():
+	var day_short = ""
+	match Global.day_of_the_week:
+		"Monday":
+			day_short = "Mon"
+		"Tuesday":
+			day_short = "Tue"
+		"Wednesday":
+			day_short = "Wed"
+		"Thursday":
+			day_short = "Thu"
+		"Friday":
+			day_short = "Fri"
+	return day_short
 
 func _process(_delta):
 	if clock_minutes == 60:
@@ -98,20 +113,19 @@ func _on_popup_set_schedule(city1, city2, suburb1, suburb2, stadium1, stadium2, 
 		"township2": int(township2)
 	}
 	for item in sched_dic:
-		print(sched_dic[item])
 		match sched_dic[item]:
 			8:
-				zone_modulator(sched_dic.values()[sched_dic[item]], seg1)
+				zone_modulator(item, seg1)
 			10:
-				zone_modulator(sched_dic.values()[sched_dic[item]], seg2)
+				zone_modulator(item, seg2)
 			12:
-				zone_modulator(sched_dic.values()[sched_dic[item]], seg3)
+				zone_modulator(item, seg3)
 			14:
-				zone_modulator(sched_dic.values()[sched_dic[item]], seg4)
+				zone_modulator(item, seg4)
 			16:
-				zone_modulator(sched_dic.values()[sched_dic[item]], seg5)
+				zone_modulator(item, seg5)
 			18:
-				zone_modulator(sched_dic.values()[sched_dic[item]], seg6)
+				zone_modulator(item, seg6)
 
 func zone_modulator(name, segement):
 	if name == "city1" or name == "city2":
