@@ -6,3 +6,4 @@ res://decorations.tscn
 res://Game/GameUI/Popup/popup.gd
 res://Game/GameUI/Clock/clock.gd
 res://global.gd
+res://Game/GameUI/InfoBar/infobar.gd

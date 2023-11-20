@@ -1,3 +1,4 @@
+TextureButton
 TextureRect
 Control
 TextureProgressBar
@@ -18,7 +19,6 @@ Label
 Container
 Button
 HBoxContainer
-TextureButton
 Panel
 AnimatedSprite2D
 VBoxContainer

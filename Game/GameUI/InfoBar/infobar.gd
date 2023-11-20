@@ -7,6 +7,8 @@ signal toggle_power
 @onready var game_info = $GameInfo
 @onready var power_button = $PowerButton
 @onready var power_bar = $TextureProgressBar
+@onready var on_button_sprite = load("res://Game/GameUI/Clock/Light_On.png")
+@onready var off_button_sprite = load("res://Game/GameUI/Clock/Light_Off.png")
 
 # VARIABLES
 var should_display_info = false
@@ -36,12 +38,16 @@ func display_info(_name, _using_electricity, _electricity, _happiness):
 	game_info.text += " and is at " + str(_happiness) + " happiness"
 	power_button.visible = true
 	if _using_electricity:
-		power_button.text = "Power:" + '\n' + "ON"
+		power_button.texture_normal = on_button_sprite
 	else:
-		power_button.text = "Power:" + '\n' + "OFF"
+		power_button.texture_normal = off_button_sprite
 
 func _on_power_button_pressed():
 	toggle_power.emit()
+	if power_button.texture_normal == on_button_sprite:
+		power_button.texture_normal = off_button_sprite
+	elif power_button.texture_normal == off_button_sprite:
+		power_button.texture_normal = on_button_sprite
 	print("POWER TOGGLED")
 	MusicController.play_ui_button()
 
