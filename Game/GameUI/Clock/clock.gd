@@ -9,7 +9,9 @@ signal day_over
 @onready var day_label = $Day
 @onready var time_label = $Time
 @onready var sun = $"../../DirectionalLight3D"
-@onready var popup_button = $"../Popup/PopupBubble/PopupButton"
+
+#Tutorial
+var called_show = false
 
 # SUN
 var sun_start = -180
@@ -146,17 +148,21 @@ func tutorial_help():
 	if clock_hours < 8:
 		Global.tut_prog = 0
 	elif clock_hours == 8:
-		if     Global.tut_prog == 0:
+		if Global.tut_prog == 0:
 			Global.tut_prog = 1
 	elif clock_hours == 9:
-		Global.tut_prog = 4
-		popup_button.hide()
+		if called_show == false:
+			Global.tut_prog = 4
+			called_show = true
 	elif clock_hours == 10:
-		popup_button.show()
+		called_show = false
 	elif clock_hours == 11:
-		popup_button.hide()
-		Global.tut_prog = 7
+		if called_show == false:
+			Global.tut_prog = 7
+			called_show = true
 	elif clock_hours == 12:
-		popup_button.show()
+		called_show = false
 	elif clock_hours == 13 && clock_minutes == 30:
-		Global.tut_prog = 10
+		if called_show == false:
+			Global.tut_prog = 10
+			called_show = true

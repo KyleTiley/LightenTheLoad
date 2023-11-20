@@ -752,4 +752,5 @@ transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927
 [connection signal="truck_tut" from="GameUI/Tutorial Spotlight" to="GameWorld/Events" method="_on_tutorial_spotlight_truck_tut"]
 [connection signal="set_schedule" from="GameUI/Popup" to="GameUI/Clock" method="_on_popup_set_schedule"]
 [connection signal="set_schedule" from="GameUI/Popup" to="GameUI/Schedule" method="_on_popup_set_schedule"]
+[connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Tutorial Spotlight" method="_on_popup_button_pressed"]
 [connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]

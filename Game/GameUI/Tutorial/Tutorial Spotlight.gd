@@ -2,7 +2,6 @@ extends Control
 
 @onready var popup_text = $"../Popup/PopupBubble/RichTextLabel"
 @onready var popup_bubble = $"../Popup"
-@onready var popup_button = $"../Popup/PopupBubble/PopupButton"
 
 signal truck_tut
 signal storm_tut
@@ -15,6 +14,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	print_debug(Global.tut_prog)
 	if Global.tut_active == true:
 		if Global.tut_prog == 1:
 			$Spotlight.position.x = 270
@@ -22,6 +22,7 @@ func _process(delta):
 			$Spotlight.visible = true
 			popup_text.text = "This is the clock, pay attention to the color sections on the clock!"
 			show_stop_popup()
+			
 		elif Global.tut_prog == 2:
 			called_show = false
 			show_stop_popup()
@@ -40,6 +41,7 @@ func _process(delta):
 			popup_text.text = "This is the repair truck event. Just make sure all the switches are turned on!"
 		
 		elif Global.tut_prog == 5:
+			called_show = false
 			truck_tut.emit()
 			Global.tut_prog = 6
 			
@@ -49,6 +51,7 @@ func _process(delta):
 			popup_text.text = "This storm event. Make sure you click the clouds away before citizens get upset!"
 			
 		elif Global.tut_prog == 8:
+			called_show = false
 			storm_tut.emit()
 			$Spotlight.position.x = 484
 			$Spotlight.position.y = 437
@@ -85,7 +88,6 @@ func _process(delta):
 			popup_text.text = "Click here to switch power on/off!"
 			called_show = false
 			show_stop_popup()
-			popup_button.show()
 			$Spotlight.position.x = 1732
 			$Spotlight.position.y = 1025
 			$Spotlight.visible = true
