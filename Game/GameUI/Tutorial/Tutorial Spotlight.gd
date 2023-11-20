@@ -39,7 +39,7 @@ func _process(delta):
 			truck_tut.emit()
 			Global.tut_prog = 6
 			
-		elif Global.tut_prog == 7:
+		elif Global.tut_prog == 7:  ## clouds
 			popup_bubble.show()
 			popup_text.text = "This storm event. Make sure you click the clouds away before citizens get upset!"
 			
@@ -53,7 +53,7 @@ func _process(delta):
 		elif Global.tut_prog == 9:
 			$Spotlight.visible = false
 			
-		elif Global.tut_prog == 10:
+		elif Global.tut_prog == 10:   ## power 
 			$Spotlight.visible = true
 			$Spotlight.position.x = 1795
 			$Spotlight.position.y = 186
@@ -74,7 +74,6 @@ func _process(delta):
 		elif Global.tut_prog == 13:
 			$Spotlight.visible = true
 			
-			
 		elif Global.tut_prog == 14:
 			popup_text.text = "Click here to switch power on/off!"
 			popup_bubble.show()
@@ -82,6 +81,7 @@ func _process(delta):
 			$Spotlight.position.x = 1732
 			$Spotlight.position.y = 1025
 			$Spotlight.visible = true
+			
 		elif Global.tut_prog == 15:
 			$Spotlight.visible = false
 
