@@ -3,6 +3,4 @@ res://Game/GameWorld/Zones/Stadium/stadium.gd
 res://Game/GameWorld/Zones/City/city.tscn
 res://decorations.tscn
 res://MainMenu/main_menu.tscn
-res://Game/GameUI/Popup/popup.gd
-res://Game/GameUI/Tutorial/Tutorial Spotlight.gd
-res://Game/GameUI/Clock/clock.gd
+res://Game/Events/events.gd

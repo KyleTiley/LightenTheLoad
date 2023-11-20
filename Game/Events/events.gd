@@ -31,7 +31,7 @@ func _on_game_start_event():
 		started_daily_event = true
 	
 	# Stops events on the first day
-	if Global.day_of_the_week == "Monday":
+	if Global.day_of_the_week == "Monday" or Global.day_of_the_week == "Tutorial":
 		eventNumber = 0
 	
 	# Fixes the friday event's time
