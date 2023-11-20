@@ -456,8 +456,10 @@ offset_top = -300.0
 offset_right = 300.0
 grow_vertical = 0
 
-[node name="LightBulb" parent="GameUI/InfoBar/Portrait" instance=ExtResource("1_wo4ky")]
-position = Vector2(150, 150)
+[node name="CanvasLayer" type="CanvasLayer" parent="GameUI/InfoBar/Portrait"]
+
+[node name="LightBulb" parent="GameUI/InfoBar/Portrait/CanvasLayer" instance=ExtResource("1_wo4ky")]
+position = Vector2(150, 930)
 
 [node name="PowerLeftLabel" type="Label" parent="GameUI/InfoBar"]
 layout_mode = 0
