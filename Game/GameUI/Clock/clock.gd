@@ -9,6 +9,7 @@ signal day_over
 @onready var day_label = $Day
 @onready var time_label = $Time
 @onready var sun = $"../../DirectionalLight3D"
+@onready var popup_button = $"../Popup/PopupBubble/PopupButton"
 
 # SUN
 var sun_start = -180
@@ -40,7 +41,8 @@ func _ready():
 	schedule_time_reached = false
 
 func _process(_delta):
-	tutorial_help()
+	if Global.tut_active == true:
+		tutorial_help()
 	if clock_minutes == 60:
 		clock_hours += 1
 		clock_minutes = 0
@@ -84,10 +86,19 @@ func change_clock_time():
 func tutorial_help():
 	if clock_hours < 8:
 		Global.tut_prog = 0
-	if clock_hours == 8:
+	elif clock_hours == 8:
 		if 	Global.tut_prog == 0:
 			Global.tut_prog = 1
-	if  clock_hours == 9:
+	elif clock_hours == 9:
 		Global.tut_prog = 4
+		popup_button.hide()
+	elif clock_hours == 10:
+		popup_button.show()
+	elif clock_hours == 11:
+		popup_button.hide()
+		Global.tut_prog = 7
+	elif clock_hours == 12:
+		popup_button.show()
+	elif clock_hours == 13 && clock_minutes == 30:
+		Global.tut_prog = 10
 	
-

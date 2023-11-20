@@ -14,6 +14,7 @@ var numberOfEvents
 
 #Tutorial
 var tut_prog = 0;
+var tut_active = false;
 
 # Sets which days can be played from the main menu
 var tutorial_unlocked = true

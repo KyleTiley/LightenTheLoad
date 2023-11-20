@@ -35,7 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://vf282wd1r1i3" path="res://Roads/CornerRoadscene.tscn" id="23_vk12k"]
 [ext_resource type="PackedScene" uid="uid://dauxp5jreywid" path="res://Roads/BendingRoad2Scene.tscn" id="25_58s0k"]
 [ext_resource type="Texture2D" uid="uid://cj2ri81ik8j6s" path="res://Game/GameUI/Tutorial/Spotlight.png" id="28_bpmkj"]
-[ext_resource type="Script" path="res://Game/Tutorial Spotlight.gd" id="28_wvxcw"]
+[ext_resource type="Script" path="res://Game/GameUI/Tutorial/Tutorial Spotlight.gd" id="28_ugk0i"]
 [ext_resource type="PackedScene" uid="uid://c41mcg2hfpiqr" path="res://decorations.tscn" id="34_rtdb1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
@@ -160,7 +160,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.8846
 curve = SubResource("Curve3D_jwyh6")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="GameWorld/Events/RepairTruckStadium/Path3D"]
-transform = Transform3D(0.0106009, 2.61915e-06, -0.999936, -2.27372e-13, 1, 2.61928e-06, 0.999938, -2.77668e-08, 0.0106008, 0, 0, 0)
+transform = Transform3D(0.0106008, 2.61915e-06, -0.999934, -2.27372e-13, 1, 2.61928e-06, 0.999936, -2.77668e-08, 0.0106008, 0, 0, 0)
 
 [node name="Truck" parent="GameWorld/Events/RepairTruckStadium/Path3D/PathFollow3D" instance=ExtResource("10_dkhao")]
 transform = Transform3D(-0.117, 0, -1.76665e-08, 0, 0.117, 0, 1.76665e-08, 0, -0.117, 0, 0, 0)
@@ -487,12 +487,12 @@ texture = ExtResource("21_4x0k1")
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("28_wvxcw")
+script = ExtResource("28_ugk0i")
 
 [node name="Spotlight" type="Sprite2D" parent="GameUI/Tutorial Spotlight"]
 visible = false
 modulate = Color(1, 1, 1, 0.752941)
-position = Vector2(1535, 720)
+position = Vector2(1732, 1025)
 scale = Vector2(9.37609, 7.88498)
 texture = ExtResource("28_bpmkj")
 
@@ -746,8 +746,9 @@ transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927
 [connection signal="loadshedding_time" from="GameUI/Clock" to="GameWorld/Zones/Township" method="_on_clock_loadshedding_time"]
 [connection signal="toggle_power" from="GameUI/InfoBar" to="." method="_on_info_bar_toggle_power"]
 [connection signal="pressed" from="GameUI/InfoBar/PowerButton" to="GameUI/InfoBar" method="_on_power_button_pressed"]
+[connection signal="storm_tut" from="GameUI/Tutorial Spotlight" to="GameWorld/Events" method="_on_tutorial_spotlight_storm_tut"]
 [connection signal="truck_tut" from="GameUI/Tutorial Spotlight" to="GameWorld/Events" method="_on_tutorial_spotlight_truck_tut"]
 [connection signal="truck_tut" from="GameUI/Tutorial Spotlight" to="GameWorld/Events/RepairTruckCity" method="_on_tutorial_spotlight_truck_tut"]
 [connection signal="set_schedule" from="GameUI/Popup" to="GameUI/Schedule" method="_on_popup_set_schedule"]
-[connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]
 [connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Tutorial Spotlight" method="_on_popup_button_pressed"]
+[connection signal="pressed" from="GameUI/Popup/PopupBubble/PopupButton" to="GameUI/Popup" method="_on_popup_button_pressed"]

@@ -99,3 +99,5 @@ func _on_clock_day_over():
 	popup_text.text += "You finished your shift on " + Global.day_of_the_week  + '\n'
 	popup_text.text += "with " + str(Global.total_allocated_electricity) + " units of electricity left." + '\n'
 	popup_text.text += "Start next day?"
+	if Global.tut_active == true:
+		Global.tut_active = false

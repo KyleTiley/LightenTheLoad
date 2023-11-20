@@ -67,6 +67,7 @@ func _on_settings_button_pressed():
 	MusicController.play_ui_button()
 
 func _on_button_tutorial_pressed():
+	Global.tut_active = true
 	Global.day_of_the_week = "Tutorial"
 	StartGame()
 	MusicController.play_ui_button()

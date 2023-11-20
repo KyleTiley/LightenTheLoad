@@ -71,8 +71,9 @@ func _on_game_start_event():
 		4:
 			print("game day event started")
 			big_game_event.emit()
-	
-
 
 func _on_tutorial_spotlight_truck_tut():
 	city_truck.emit()
+
+func _on_tutorial_spotlight_storm_tut():
+	township_storm.emit()
