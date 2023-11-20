@@ -11,6 +11,16 @@ var start_day = true
 func _ready():
 	# Sets popup variables for each day
 	match Global.day_of_the_week:
+		"Tutorial":
+			daily_event_reminder = "Welcome to lighten the load! I am Bulby and I will guide you as best I can. Lets do this!"
+			Global.city_schedule1 = "08"
+			Global.city_schedule2 = "12"
+			Global.suburb_schedule1 = "10"
+			Global.suburb_schedule2 = "14"
+			Global.stadium_schedule1 = "12"
+			Global.stadium_schedule2 = "16"
+			Global.township_schedule1 = "10"
+			Global.township_schedule2 = "16"
 		"Monday":
 			daily_event_reminder = "Welcome to your first day! Follow the loadshedding schedule on the left and try to keep everyone happy as best you can. Good luck!"
 			Global.city_schedule1 = "12"
@@ -89,3 +99,5 @@ func _on_clock_day_over():
 	popup_text.text += "You finished your shift on " + Global.day_of_the_week  + '\n'
 	popup_text.text += "with " + str(Global.total_allocated_electricity) + " units of electricity left." + '\n'
 	popup_text.text += "Start next day?"
+	if Global.tut_active == true:
+		Global.tut_active = false

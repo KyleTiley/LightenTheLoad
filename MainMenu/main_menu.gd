@@ -3,6 +3,7 @@ extends Node
 # REFERENCES
 
 @onready var button_container = $PlayMenu/ButtonContainer
+@onready var tutorial_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonTutorial
 @onready var monday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonMonday
 @onready var tuesday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonTuesday
 @onready var wednesday_button = $PlayMenu/ButtonContainer/VBoxContainer/ButtonWednesday
@@ -12,6 +13,8 @@ extends Node
 # FUNCTIONS
 
 func _ready():
+	if Global.tutorial_unlocked:
+		tutorial_button.disabled = false
 	if Global.monday_unlocked:
 		monday_button.disabled = false
 	if Global.tuesday_unlocked:
@@ -61,4 +64,10 @@ func _on_play_button_pressed():
 
 func _on_settings_button_pressed():
 	print("OPTIONS")
+	MusicController.play_ui_button()
+
+func _on_button_tutorial_pressed():
+	Global.tut_active = true
+	Global.day_of_the_week = "Tutorial"
+	StartGame()
 	MusicController.play_ui_button()

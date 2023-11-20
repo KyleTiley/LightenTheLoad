@@ -39,6 +39,9 @@ func _process(_delta):
 # Sets unique variables for each day
 func set_daily_variables(_day):
 	match _day:
+		"Tutorial":
+			Global.total_allocated_electricity = 10000
+			Global.numberOfEvents = 0
 		"Monday":
 			Global.total_allocated_electricity = 10000
 			Global.numberOfEvents = 0
@@ -79,6 +82,8 @@ func _on_township_zone_clicked(_name, _is_using_electricity, _electricity_used, 
 func _on_suburb_zone_clicked(_name, _is_using_electricity, _electricity_used, _current_happiness):
 	active_zone = suburb_zone
 	selected_zone_manager(_name, _is_using_electricity, _electricity_used, _current_happiness)
+	if Global.tut_prog == 13:
+		Global.tut_prog = 14
 
 # Calls to toggle the active zone's power on or off
 func _on_info_bar_toggle_power():
