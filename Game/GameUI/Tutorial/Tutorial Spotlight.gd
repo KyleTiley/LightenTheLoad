@@ -14,7 +14,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	print_debug(Global.tut_prog)
 	if Global.tut_active == true:
 		if Global.tut_prog == 1:
 			$Spotlight.position.x = 270
@@ -98,7 +97,6 @@ func _process(delta):
 func _on_popup_button_pressed():
 	Global.tut_prog += 1
 	popup_bubble.hide()
-	print_debug(Global.tut_prog)
 	
 func show_stop_popup():
 	if called_show == false:
