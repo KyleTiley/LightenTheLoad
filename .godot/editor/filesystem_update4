@@ -9,3 +9,4 @@ res://Game/GameUI/Characters/light_bulb.tscn
 res://Game/Events/RepairTruck/repair_truck.gd
 res://Audio/music_controller.tscn
 res://Game/Events/RepairTruck/DBBoard/db_board.gd
+res://Emojis.tscn
