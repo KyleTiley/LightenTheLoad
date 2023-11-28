@@ -10,3 +10,5 @@ res://Game/Events/RepairTruck/repair_truck.gd
 res://Audio/music_controller.tscn
 res://Game/Events/RepairTruck/DBBoard/db_board.gd
 res://Emojis.tscn
+res://Game/Events/Storm/storm.tscn
+res://global.gd

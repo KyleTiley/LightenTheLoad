@@ -19,7 +19,7 @@ var tut_active = false;
 # Sets which days can be played from the main menu
 var tutorial_unlocked = true
 var monday_unlocked = false
-var tuesday_unlocked = false
+var tuesday_unlocked = true
 var wednesday_unlocked = false
 var thursday_unlocked = false
 var friday_unlocked = false
