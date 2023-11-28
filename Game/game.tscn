@@ -20,10 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://bv7udoh684mcg" path="res://Game/GameUI/Popup/Bubbles Square.png" id="12_hbq03"]
 [ext_resource type="Texture2D" uid="uid://drkdqcls3f43n" path="res://Game/GameUI/Popup/Bubbles Line.png" id="13_5trs7"]
 [ext_resource type="Texture2D" uid="uid://ctrroxd77j87v" path="res://Game/GameUI/InfoBar/Text_Icon.png" id="14_xtbs4"]
-[ext_resource type="Texture2D" uid="uid://ckst2rbccw5a5" path="res://Game/GameUI/Clock/Calander.png" id="15_08bik"]
+[ext_resource type="Texture2D" path="res://Game/GameUI/Clock/Calander.png" id="15_08bik"]
 [ext_resource type="Texture2D" uid="uid://bjm711tkfvrig" path="res://Game/GameUI/Clock/2_hours.png" id="16_8rlsn"]
 [ext_resource type="Texture2D" uid="uid://crhrv3sa8cdug" path="res://Game/GameUI/Clock/Clock_boarder.png" id="16_cn6tn"]
-[ext_resource type="Texture2D" uid="uid://cnhcqk7nc14xh" path="res://Game/GameUI/Clock/Clock_Middle_Piece.png" id="17_epdny"]
+[ext_resource type="Texture2D" path="res://Game/GameUI/Clock/Clock_Middle_Piece.png" id="17_epdny"]
 [ext_resource type="Texture2D" uid="uid://4bygcbgll6oi" path="res://Game/GameUI/Clock/New_hand.png" id="17_m45e0"]
 [ext_resource type="Script" path="res://Game/GameUI/Schedule/schedule.gd" id="18_o0xj2"]
 [ext_resource type="Texture2D" uid="uid://bxh5ssoo2ou6i" path="res://Game/GameUI/Schedule/List UI 3.png" id="20_nhxy6"]
@@ -37,7 +37,7 @@
 [ext_resource type="Script" path="res://Game/GameUI/Tutorial/Tutorial Spotlight.gd" id="32_d67l5"]
 [ext_resource type="Texture2D" uid="uid://cj2ri81ik8j6s" path="res://Game/GameUI/Tutorial/Spotlight.png" id="33_et7pf"]
 [ext_resource type="PackedScene" uid="uid://c41mcg2hfpiqr" path="res://decorations.tscn" id="34_rtdb1"]
-[ext_resource type="Texture2D" uid="uid://bod8j8jilk2v7" path="res://Game/GameUI/Clock/Light_On.png" id="36_v40a6"]
+[ext_resource type="Texture2D" path="res://Game/GameUI/Clock/Light_On.png" id="36_v40a6"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
