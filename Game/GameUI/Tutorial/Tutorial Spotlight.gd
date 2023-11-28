@@ -37,7 +37,7 @@ func _process(delta):
 		elif Global.tut_prog == 4:
 			called_show = false
 			show_stop_popup()
-			popup_text.text = "This is the repair truck event. Just make sure that all of the switches are flipped up to restore power"
+			popup_text.text = "This is the repair truck event. Just make sure that all of the switches are flipped up to restore power."
 		
 		elif Global.tut_prog == 5:
 			called_show = false
@@ -47,7 +47,7 @@ func _process(delta):
 		elif Global.tut_prog == 7:  ## clouds
 			called_show = false
 			show_stop_popup()
-			popup_text.text = "This is the storm event. Make sure you click the clouds away before citizens get upset!"
+			popup_text.text = "This is the storm event. Make sure you click the clouds away before citizens get upset."
 			
 		elif Global.tut_prog == 8:
 			called_show = false
@@ -66,14 +66,14 @@ func _process(delta):
 			$Spotlight.position.y = 186
 			called_show = false
 			show_stop_popup()
-			popup_text.text = "This is your remaining power!\nRemember to preserve as much as possible!"
+			popup_text.text = "This is your remaining power.\nRemember to preserve as much as possible!"
 			
 		elif Global.tut_prog == 11:
 			$Spotlight.visible = false
 			Global.tut_prog += 1
 			
 		elif Global.tut_prog == 12:
-			popup_text.text = "Click on the suburb."
+			popup_text.text = "Click on the suburb, one of the four zones in the game, to gain more information on the zone's power and happiness."
 			called_show = false
 			show_stop_popup()
 			$Spotlight.visible = true
@@ -84,7 +84,7 @@ func _process(delta):
 			$Spotlight.visible = true
 			
 		elif Global.tut_prog == 14:
-			popup_text.text = "Click here to switch the power ON or OFF!"
+			popup_text.text = "Toggle power ON or OFF. People in the zones with be unhappy when their power is off, and even more so outside of loadshedding!"
 			called_show = false
 			show_stop_popup()
 			$Spotlight.position.x = 1732
