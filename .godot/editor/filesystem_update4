@@ -1,7 +1,15 @@
 res://Game/game.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.gd
+
 res://Game/GameUI/Tutorial/Tutorial Spotlight.gd
+
 res://Game/GameWorld/Zones/City/city.tscn
 res://decorations.tscn
 res://MainMenu/main_menu.tscn
 res://Game/GameUI/Characters/light_bulb.tscn
+res://Game/Events/RepairTruck/repair_truck.gd
+res://Audio/music_controller.tscn
+res://Game/Events/RepairTruck/DBBoard/db_board.gd
+res://Emojis.tscn
+res://Game/Events/Storm/storm.tscn
+res://global.gd
