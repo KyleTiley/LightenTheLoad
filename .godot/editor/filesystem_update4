@@ -1,6 +1,11 @@
-res://MainMenu/main_menu.tscn
-res://Game/GameWorld/Zones/Stadium/stadium.gd
 res://Game/game.tscn
+res://Game/GameWorld/Zones/Stadium/stadium.gd
+res://MainMenu/main_menu.gd
+res://MusicController.gd
 res://Game/GameWorld/Zones/City/city.tscn
 res://decorations.tscn
+res://MainMenu/main_menu.tscn
 res://Game/GameUI/Characters/light_bulb.tscn
+res://Game/Events/RepairTruck/repair_truck.gd
+res://Audio/music_controller.tscn
+res://Game/Events/RepairTruck/DBBoard/db_board.gd

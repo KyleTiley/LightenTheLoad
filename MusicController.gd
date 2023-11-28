@@ -9,6 +9,8 @@ var uibutton = load("res://Audio/mixkit-game-quick-warning-notification-268.wav"
 var switchclick = load("res://Audio/mixkit-quick-switch-click-2582.wav")
 var repairtruck = load("res://Audio/mixkit-software-interface-start-2574.wav")
 
+var musicProgress = 0.0
+
 func play_music():
 	$Music.stream = background_music
 	$Music.play()

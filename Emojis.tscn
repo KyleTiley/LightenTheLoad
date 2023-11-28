@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://dqvdf6on438ll"]
+
+[ext_resource type="Texture2D" uid="uid://8e046jg8p2b8" path="res://Game/GameUI/Emojis/Happy Gif/Blush/Happy Blush0000.png" id="1_ijne3"]
+
+[node name="Emojis" type="Node2D"]
+
+[node name="HappyBlush0000" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+texture = ExtResource("1_ijne3")
+
+[node name="HappyBlush0001" type="Sprite2D" parent="."]
+position = Vector2(1, -1)
+texture = ExtResource("1_ijne3")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
