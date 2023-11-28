@@ -708,18 +708,24 @@ transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927
 [node name="Particle Effects" type="Node3D" parent="."]
 
 [node name="Angry Particles" type="GPUParticles3D" parent="Particle Effects"]
-transform = Transform3D(1, 0, 0, 0, 0.872069, 0.489382, 0, -0.489382, 0.872069, 17.5627, 4.49321, -9.34961)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.5627, 7.37513, -9.34961)
+cast_shadow = 0
 amount = 5
-lifetime = 4.0
+lifetime = 0.63
+speed_scale = 0.4
 fixed_fps = 60
+trail_lifetime = 0.01
 process_material = SubResource("ParticleProcessMaterial_6e7uy")
 draw_pass_1 = SubResource("QuadMesh_edp8h")
 
 [node name="Happy Particles" type="GPUParticles3D" parent="Particle Effects"]
-transform = Transform3D(1, 0, 0, 0, 0.871821, 0.489824, 0, -0.489824, 0.871821, -13.0365, 4.49321, 10.2257)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.0365, 4.49321, 10.2257)
+cast_shadow = 0
 amount = 5
-lifetime = 4.0
+lifetime = 0.6
+speed_scale = 0.4
 fixed_fps = 60
+trail_lifetime = 0.01
 process_material = SubResource("ParticleProcessMaterial_vpjom")
 draw_pass_1 = SubResource("QuadMesh_cs48b")
 
