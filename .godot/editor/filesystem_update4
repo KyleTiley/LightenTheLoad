@@ -1,7 +1,8 @@
 res://Game/game.tscn
 res://Game/GameWorld/Zones/Stadium/stadium.gd
-res://MainMenu/main_menu.gd
-res://MusicController.gd
+
+res://Game/GameUI/Tutorial/Tutorial Spotlight.gd
+
 res://Game/GameWorld/Zones/City/city.tscn
 res://decorations.tscn
 res://MainMenu/main_menu.tscn
