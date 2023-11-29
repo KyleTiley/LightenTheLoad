@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://dbnbda88f5vfb"]
+[gd_scene load_steps=54 format=3 uid="uid://dbnbda88f5vfb"]
 
 [ext_resource type="PackedScene" uid="uid://wr1r3nxugw24" path="res://Game/GameWorld/Zones/City/city.tscn" id="1_61u5i"]
 [ext_resource type="Script" path="res://Game/GameUI/Clock/clock.gd" id="1_edsui"]
@@ -20,10 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://bv7udoh684mcg" path="res://Game/GameUI/Popup/Bubbles Square.png" id="12_hbq03"]
 [ext_resource type="Texture2D" uid="uid://drkdqcls3f43n" path="res://Game/GameUI/Popup/Bubbles Line.png" id="13_5trs7"]
 [ext_resource type="Texture2D" uid="uid://ctrroxd77j87v" path="res://Game/GameUI/InfoBar/Text_Icon.png" id="14_xtbs4"]
-[ext_resource type="Texture2D" path="res://Game/GameUI/Clock/Calander.png" id="15_08bik"]
+[ext_resource type="Texture2D" uid="uid://ckst2rbccw5a5" path="res://Game/GameUI/Clock/Calander.png" id="15_08bik"]
 [ext_resource type="Texture2D" uid="uid://bjm711tkfvrig" path="res://Game/GameUI/Clock/2_hours.png" id="16_8rlsn"]
 [ext_resource type="Texture2D" uid="uid://crhrv3sa8cdug" path="res://Game/GameUI/Clock/Clock_boarder.png" id="16_cn6tn"]
-[ext_resource type="Texture2D" path="res://Game/GameUI/Clock/Clock_Middle_Piece.png" id="17_epdny"]
+[ext_resource type="Texture2D" uid="uid://cnhcqk7nc14xh" path="res://Game/GameUI/Clock/Clock_Middle_Piece.png" id="17_epdny"]
 [ext_resource type="Texture2D" uid="uid://4bygcbgll6oi" path="res://Game/GameUI/Clock/New_hand.png" id="17_m45e0"]
 [ext_resource type="Script" path="res://Game/GameUI/Schedule/schedule.gd" id="18_o0xj2"]
 [ext_resource type="Texture2D" uid="uid://bxh5ssoo2ou6i" path="res://Game/GameUI/Schedule/List UI 3.png" id="20_nhxy6"]
@@ -37,7 +37,10 @@
 [ext_resource type="Script" path="res://Game/GameUI/Tutorial/Tutorial Spotlight.gd" id="32_d67l5"]
 [ext_resource type="Texture2D" uid="uid://cj2ri81ik8j6s" path="res://Game/GameUI/Tutorial/Spotlight.png" id="33_et7pf"]
 [ext_resource type="PackedScene" uid="uid://c41mcg2hfpiqr" path="res://decorations.tscn" id="34_rtdb1"]
-[ext_resource type="Texture2D" path="res://Game/GameUI/Clock/Light_On.png" id="36_v40a6"]
+[ext_resource type="Texture2D" uid="uid://bod8j8jilk2v7" path="res://Game/GameUI/Clock/Light_On.png" id="36_v40a6"]
+[ext_resource type="Texture2D" uid="uid://bsb3q1c8c777c" path="res://Game/GameUI/Emojis/Angry.png" id="39_0mpru"]
+[ext_resource type="Script" path="res://Game/Particles_Emojis.gd" id="39_do1yw"]
+[ext_resource type="Texture2D" path="res://Game/GameUI/Emojis/Happy.png" id="40_rupu1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -79,6 +82,27 @@ _data = {
 "tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 }
 point_count = 17
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vpjom"]
+gravity = Vector3(0, 9.8, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 10.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kte1y"]
+transparency = 1
+albedo_texture = ExtResource("39_0mpru")
+
+[sub_resource type="QuadMesh" id="QuadMesh_cs48b"]
+material = SubResource("StandardMaterial3D_kte1y")
+size = Vector2(2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjovk"]
+transparency = 1
+albedo_texture = ExtResource("40_rupu1")
+
+[sub_resource type="QuadMesh" id="QuadMesh_vissb"]
+material = SubResource("StandardMaterial3D_vjovk")
+size = Vector2(2, 2)
 
 [node name="Game" type="Node"]
 script = ExtResource("1_vwxi5")
@@ -716,6 +740,97 @@ transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927
 transform = Transform3D(0.999927, 0, 0.0121123, 0, 1, 0, -0.0121123, 0, 0.999927, 2.15468, 0.36, 19.0395)
 
 [node name="Decorations" parent="." instance=ExtResource("34_rtdb1")]
+
+[node name="Particles_Emojis" type="Node3D" parent="."]
+script = ExtResource("39_do1yw")
+
+[node name="Stadium" type="GPUParticles3D" parent="Particles_Emojis"]
+transform = Transform3D(0.763604, 0, -0.645684, 0, 1, 0, 0.645684, 0, 0.763604, 18.1565, 7.41513, -9.22612)
+cast_shadow = 0
+amount = 5
+lifetime = 0.6
+speed_scale = 0.4
+fixed_fps = 60
+trail_lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_vpjom")
+draw_pass_1 = SubResource("QuadMesh_cs48b")
+
+[node name="Town" type="GPUParticles3D" parent="Particles_Emojis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6772, 3.67769, 10.358)
+cast_shadow = 0
+amount = 5
+lifetime = 0.6
+speed_scale = 0.4
+fixed_fps = 60
+trail_lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_vpjom")
+draw_pass_1 = SubResource("QuadMesh_cs48b")
+
+[node name="City" type="GPUParticles3D" parent="Particles_Emojis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.96729, 6.68867, -0.393726)
+cast_shadow = 0
+amount = 5
+lifetime = 0.6
+speed_scale = 0.4
+fixed_fps = 60
+trail_lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_vpjom")
+draw_pass_1 = SubResource("QuadMesh_cs48b")
+
+[node name="Suburb" type="GPUParticles3D" parent="Particles_Emojis"]
+transform = Transform3D(0.80393, 0, -0.594725, 0, 1, 0, 0.594725, 0, 0.80393, 14.7188, 5.14233, 15.569)
+cast_shadow = 0
+amount = 5
+lifetime = 0.6
+speed_scale = 0.4
+fixed_fps = 60
+trail_lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_vpjom")
+draw_pass_1 = SubResource("QuadMesh_cs48b")
+
+[node name="Stadium2" type="GPUParticles3D" parent="Particles_Emojis"]
+transform = Transform3D(0.763604, 0, -0.645684, 0, 1, 0, 0.645684, 0, 0.763604, 18.1565, 7.41513, -9.22612)
+cast_shadow = 0
+amount = 5
+lifetime = 0.6
+speed_scale = 0.4
+fixed_fps = 60
+trail_lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_vpjom")
+draw_pass_1 = SubResource("QuadMesh_vissb")
+
+[node name="Town2" type="GPUParticles3D" parent="Particles_Emojis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.6772, 3.67769, 10.358)
+cast_shadow = 0
+amount = 5
+lifetime = 0.6
+speed_scale = 0.4
+fixed_fps = 60
+trail_lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_vpjom")
+draw_pass_1 = SubResource("QuadMesh_vissb")
+
+[node name="City2" type="GPUParticles3D" parent="Particles_Emojis"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.96729, 6.68867, -0.393726)
+cast_shadow = 0
+amount = 5
+lifetime = 0.6
+speed_scale = 0.4
+fixed_fps = 60
+trail_lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_vpjom")
+draw_pass_1 = SubResource("QuadMesh_vissb")
+
+[node name="Suburb2" type="GPUParticles3D" parent="Particles_Emojis"]
+transform = Transform3D(0.80393, 0, -0.594725, 0, 1, 0, 0.594725, 0, 0.80393, 14.7188, 5.14233, 15.569)
+cast_shadow = 0
+amount = 5
+lifetime = 0.6
+speed_scale = 0.4
+fixed_fps = 60
+trail_lifetime = 0.01
+process_material = SubResource("ParticleProcessMaterial_vpjom")
+draw_pass_1 = SubResource("QuadMesh_vissb")
 
 [connection signal="display_info" from="." to="GameUI/InfoBar" method="_on_game_display_info"]
 [connection signal="game_timer" from="." to="GameWorld/Zones/City" method="_on_game_game_timer"]

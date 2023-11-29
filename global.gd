@@ -35,8 +35,10 @@ var stadium_schedule2
 var township_schedule1
 var township_schedule2
 
-# FUNCTIONS
+#Clock
+var clock_turnoff = 5
 
+# FUNCTIONS
 func change_scene(_scene):
 	match _scene:
 		"Game":

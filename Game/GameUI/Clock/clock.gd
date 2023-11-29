@@ -67,6 +67,8 @@ func short_day():
 	return day_short
 
 func _process(_delta):
+	time_elapsed_per_second = Global.clock_turnoff
+	
 	if Global.tut_active == true:
 		tutorial_help()
 	if clock_minutes == 60:
@@ -97,8 +99,9 @@ func _process(_delta):
 func _physics_process(delta):
 	if Global.game_has_started == false:
 		return
-	sun.rotate_z(deg_to_rad(rot_val))
-	hand.rotation += deg_to_rad(analog_rot)
+	if Global.clock_turnoff == 5:
+		sun.rotate_z(deg_to_rad(rot_val))
+		hand.rotation += deg_to_rad(analog_rot)
 
 # Controls the speed of the clock
 func _on_game_game_timer():

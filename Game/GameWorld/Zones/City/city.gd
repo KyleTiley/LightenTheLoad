@@ -17,6 +17,7 @@ func _on_clock_loadshedding_time(_clock_hours, _clock_minutes):
 			print("loadshedding started at: " + name)
 			happiness_gain = base_happiness_gain * 2
 			happiness_loss = base_happiness_loss / 2
+			print_debug(happiness_gain)
 	elif _clock_minutes == 30:
 		if _clock_hours == (int(Global.city_schedule1) + 2) or _clock_hours == (int(Global.city_schedule2) + 2):
 			print("loadshedding ended at: " + name)
