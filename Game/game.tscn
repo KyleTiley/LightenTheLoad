@@ -40,7 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://bod8j8jilk2v7" path="res://Game/GameUI/Clock/Light_On.png" id="36_v40a6"]
 [ext_resource type="Texture2D" uid="uid://bsb3q1c8c777c" path="res://Game/GameUI/Emojis/Angry.png" id="39_0mpru"]
 [ext_resource type="Script" path="res://Game/Particles_Emojis.gd" id="39_do1yw"]
-[ext_resource type="Texture2D" path="res://Game/GameUI/Emojis/Happy.png" id="40_rupu1"]
+[ext_resource type="Texture2D" uid="uid://d3h336g548rh1" path="res://Game/GameUI/Emojis/Happy.png" id="40_rupu1"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_d1ttg"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
